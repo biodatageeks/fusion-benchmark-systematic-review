@@ -1,0 +1,29 @@
+# macOS / editor files
+.DS_Store
+._*
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.pytest_cache/
+.mypy_cache/
+.cache/
+.mplconfig/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+
+# Temporary spreadsheet locks
+~$*.xlsx
+~$*.xls
+
+# Logs
+*.log

@@ -1,0 +1,361 @@
+Benchmark,Doi,Dataset,Type_of_dataset,Read_lenght,Number_of_reads,Tool,Recall_Sensitivity,Precision,F1,DatasetType,DatasetID,Is_Edgren,Is_real,Is_simulated
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,Arriba,0.89,0.98,0.93,simulated,1.1,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.1,simulated,50.0,30000000.0,Arriba,0.842,0.885,0.863,simulated,8.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,Arriba,0.8,0.62,0.7,real,1.3,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,Arriba,0.93,0.78,0.85,simulated,7.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,Arriba,0.9,0.79,0.84,simulated,7.4,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,Arriba,0.84,0.63,0.72,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,Arriba,0.91,0.77,0.83,simulated,7.3,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,Arriba,0.1,0.1,0.1,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,Arriba,0.82,0.14,0.24,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,Arriba,0.46,0.29,0.35,real,7.7,True,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,Arriba_hc,0.78,0.99,0.87,simulated,1.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,Arriba,0.93,0.98,0.95,simulated,1.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.6,simulated,101.0,65000000.0,Arriba,0.918,0.767,0.836,simulated,8.6,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,,,Arriba,0.792,0.221,0.346,real,8.3,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.4,real,,,Arriba,0.882,0.046,0.087,real,8.4,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.7,real,,,Arriba,1.0,0.6,0.75,real,8.7,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.1,simulated,75.0,40000000.0,Arriba,0.6,0.93,0.7294117647058824,simulated,2.1,False,False,True
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.2,spike-in,101.0,154000000.0,Arriba,0.5,1.0,0.6666666666666666,spike-in,2.2,False,False,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.3,real (cells),101.0,297000000.0,Arriba,0.98,0.49,0.6533333333333333,real (cells),2.3,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.2,simulated,101.0,30000000.0,Arriba,0.922,0.899,0.91,simulated,8.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,Arriba_hc,0.81,0.99,0.89,simulated,1.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.3,real,,,Arriba_hc,0.7,0.76,0.73,real,1.3,False,True,False
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,BreakTrans,0.1,1.0,0.181818182,real,9,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,ChimeraScan,0.83,0.83,0.83,simulated,1.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,ChimeraScan,0.82,0.39,0.53,simulated,7.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,ChimeraScan,0.84,0.86,0.85,simulated,1.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,ChimeraScan,0.8,0.4,0.53,simulated,7.4,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,ChimeraScan,0.3,0.25,0.27,real,1.3,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,ChimeraScan,0.88,0.86,0.87,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,ChimeraScan,0.82,0.41,0.55,simulated,7.3,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,ChimeraScan,0.55,0.04,0.07,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,ChimeraScan,0.85,0.01,0.02,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,ChimeraScan,0.41,0.03,0.06,real,7.7,True,True,False
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,ChimeraScan,0.29,0.74,0.416699029,real,9,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,ChimeRScope,0.22,0.07,0.11,simulated,7.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,ChimeRScope,0.34,0.08,0.13,simulated,7.4,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,ChimeRScope,0.28,0.41,0.33,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,ChimeRScope,0.34,0.07,0.12,simulated,7.3,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,ChimeRScope,0.05,0.04,0.04,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,ChimeRScope,0.37,0.07,0.12,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,ChimeRScope,0.17,0.12,0.14,real,7.7,True,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,ChimPipe,0.56,0.99,0.72,simulated,1.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,ChimPipe,0.76,0.93,0.84,simulated,7.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,ChimPipe,0.78,1.0,0.88,simulated,1.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,ChimPipe,0.71,0.92,0.8,simulated,7.4,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,ChimPipe,0.55,0.97,0.7,real,1.3,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,ChimPipe,0.35,0.86,0.5,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,ChimPipe,0.75,0.93,0.83,simulated,7.3,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,ChimPipe,0.24,0.27,0.26,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,ChimPipe,0.67,0.3,0.41,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,ChimPipe,0.28,0.47,0.35,real,7.7,True,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.3,simulated,76.0,24000000.0,ChimPipe,0.21,0.41,0.28,simulated,5.3,False,False,True
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.1,real,,,ChimPipe,0.81,0.79,0.8,real,5.1,True,True,False
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,Comrad,0.1,1.0,0.181818182,real,9,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,deFuse,0.79,0.98,0.87,simulated,1.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,deFuse,0.83,0.96,0.89,simulated,1.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,deFuse,0.4,0.18,0.25,real,1.3,False,True,False
+10,https://doi.org/10.1186/s13073-015-0167-x,Dataset10,simulated,,,deFuse,0.68,1.0,0.80952381,simulated,10,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.1,simulated,50.0,30000000.0,deFuse,0.764,0.914,0.832,simulated,8.1,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.2,simulated,101.0,30000000.0,deFuse,0.876,0.875,0.875,simulated,8.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.6,simulated,101.0,65000000.0,deFuse,0.836,0.181,0.298,simulated,8.6,False,False,True
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.2,spike-in,101.0,154000000.0,deFuse,0.35,0.14,,spike-in,2.2,False,False,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.3,real (cells),101.0,297000000.0,deFuse,0.88,0.2,,real (cells),2.3,True,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.1,simulated,75.0,40000000.0,deFuse,0.0,0.0,,simulated,2.1,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,,,deFuse,0.642,0.217,0.324,real,8.3,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.4,real,,,deFuse,0.941,0.047,0.09,real,8.4,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.7,real,,,deFuse,0.833,0.625,0.714,real,8.7,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,EricScript,0.69,0.92,0.79,simulated,1.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,EricScript,0.63,0.38,0.47,simulated,7.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.1,simulated,50.0,30000000.0,EricScript,0.563,0.954,0.708,simulated,8.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,EricScript,0.72,0.9,0.8,simulated,1.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,EricScript,0.6,0.26,0.36,simulated,7.4,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.2,simulated,101.0,30000000.0,EricScript,0.689,0.795,0.738,simulated,8.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.6,simulated,101.0,65000000.0,EricScript,0.656,0.132,0.22,simulated,8.6,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,EricScript,0.32,0.1,0.15,real,1.3,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,EricScript,0.4,0.05,0.09,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,EricScript,0.62,0.86,0.72,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,EricScript,0.64,0.27,0.38,simulated,7.3,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,EricScript,0.59,0.13,0.21,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,EricScript,0.23,0.19,0.21,real,7.7,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,,,EricScript,0.547,0.197,0.29,real,8.3,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.4,real,,,EricScript,0.529,0.026,0.05,real,8.4,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.7,real,,,EricScript,0.833,0.303,0.444,real,8.7,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,FuSeq,0.84,0.63,0.72,simulated,7.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,FuSeq,0.83,0.69,0.75,simulated,7.4,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,FuSeq,0.0,0.0,0.0,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,FuSeq,0.83,0.7,0.76,simulated,7.3,False,False,True
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.1,real,50.0,28000000.0,FuSeq,0.81,0.42,0.55,real,6.1,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.2,real,50.0,28000000.0,FuSeq,0.22,0.42,0.29,real,6.2,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.3,real,50.0,12000000.0,FuSeq,0.64,0.33,0.44,real,6.3,False,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.4,real,101.0,25000000.0,FuSeq,0.94,0.15,0.26,real,6.4,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,FuSeq,0.47,0.28,0.35,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,FuSeq,0.78,0.25,0.38,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,FuSeq,0.35,0.41,0.38,real,7.7,True,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,FusionCatcher,0.77,0.98,0.86,simulated,1.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,FusionCatcher,0.6,0.78,0.68,simulated,7.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,FusionCatcher,0.83,0.98,0.9,simulated,1.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,FusionCatcher,0.66,0.72,0.69,simulated,7.4,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.3,real,,,FusionCatcher,0.66,0.5,0.57,real,1.3,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.2,spike-in,101.0,154000000.0,FusionCatcher,0.4,0.2,0.26666666666666666,spike-in,2.2,False,False,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.3,real (cells),101.0,297000000.0,FusionCatcher,0.53,0.17,0.25742857142857145,real (cells),2.3,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,FusionCatcher,0.34,0.25,0.29,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,FusionCatcher,0.74,0.45,0.56,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,FusionCatcher,0.27,0.61,0.38,real,7.7,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,FusionCatcher,0.65,0.76,0.7,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,FusionCatcher,0.64,0.79,0.71,simulated,7.3,False,False,True
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.1,simulated,75.0,40000000.0,FusionCatcher,0.0,0.0,0.0,simulated,2.1,False,False,True
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,FusionCatcher,0.25,0.95,0.395833333,real,9,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,FusionHunter,0.37,0.97,0.54,simulated,1.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,FusionHunter,0.44,0.98,0.61,simulated,1.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,FusionHunter,0.2,0.63,0.3,real,1.3,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,FusionInspector,0.0,0.0,,real,1.3,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.1,simulated,50.0,30000000.0,FusionMap,0.6,0.925,0.728,simulated,8.1,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.2,simulated,101.0,30000000.0,FusionMap,0.794,0.961,0.87,simulated,8.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.6,simulated,101.0,65000000.0,FusionMap,0.689,0.778,0.731,simulated,8.6,False,False,True
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.1,real,50.0,28000000.0,FusionMap,0.44,0.26,0.32,real,6.1,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.2,real,50.0,28000000.0,FusionMap,0.22,0.47,0.3,real,6.2,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.3,real,50.0,12000000.0,FusionMap,0.27,0.16,0.2,real,6.3,False,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.4,real,101.0,25000000.0,FusionMap,0.94,0.15,0.26,real,6.4,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,,,FusionMap,0.566,0.288,0.382,real,8.3,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.4,real,,,FusionMap,0.647,0.275,0.386,real,8.4,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.7,real,,,FusionMap,1.0,0.8,0.889,real,8.7,False,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.1,real,,,FusionMap,0.43,0.62,0.51,real,5.1,True,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.3,simulated,76.0,24000000.0,FusionMap,0.52,0.12,0.2,simulated,5.3,False,False,True
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.1,real,,,Gfusion,0.76,0.82,0.79,real,5.1,True,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.3,simulated,76.0,24000000.0,Gfusion,0.88,0.84,0.86,simulated,5.3,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,InFusion,0.76,0.99,0.86,simulated,1.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,InFusion,0.66,0.8,0.73,simulated,7.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,InFusion,0.83,0.99,0.9,simulated,1.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,InFusion,0.69,0.9,0.78,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,InFusion,0.65,0.8,0.72,simulated,7.3,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,InFusion,0.68,0.8,0.73,simulated,7.4,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,InFusion,0.16,0.29,0.21,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,InFusion,0.7,0.31,0.43,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,InFusion,0.25,0.4,0.31,real,7.7,True,True,False
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,InFusion,0.65,0.49,0.56,real,1.3,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.2,spike-in,101.0,154000000.0,InFusion,0.25,0.06,,spike-in,2.2,False,False,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.3,real (cells),101.0,297000000.0,InFusion,0.75,0.15,,real (cells),2.3,True,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.1,simulated,75.0,40000000.0,InFusion,0.13,0.54,,simulated,2.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,INTEGRATE,0.57,0.81,0.67,simulated,7.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.1,simulated,50.0,30000000.0,INTEGRATE,0.691,0.842,0.759,simulated,8.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,INTEGRATE,0.77,0.85,0.81,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,INTEGRATE,0.59,0.76,0.66,simulated,7.3,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,INTEGRATE,0.56,0.79,0.65,simulated,7.4,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.2,simulated,101.0,30000000.0,INTEGRATE,0.683,0.822,0.746,simulated,8.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.6,simulated,101.0,65000000.0,INTEGRATE,0.738,0.195,0.308,simulated,8.6,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,INTEGRATE,0.05,0.09,0.06,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,INTEGRATE,0.59,0.32,0.42,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,INTEGRATE,0.26,0.52,0.35,real,7.7,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,,,INTEGRATE,0.698,0.487,0.574,real,8.3,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.4,real,,,INTEGRATE,0.647,0.22,0.328,real,8.4,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.7,real,,,INTEGRATE,0.417,0.5,0.455,real,8.7,False,True,False
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,INTEGRATEC,0.89,0.81,0.848117647,real,9,False,True,False
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,INTEGRATEG,0.67,0.85,0.749342105,real,9,False,True,False
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,INTEGRATES,0.42,0.85,0.562204724,real,9,False,True,False
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,INTEGRATET,0.46,0.93,0.615539568,real,9,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,JAFFA,0.53,0.27,0.36,simulated,7.2,False,False,True
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.1,real,50.0,28000000.0,JAFFA,0.74,0.48,0.58,real,6.1,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.2,real,50.0,28000000.0,JAFFA,0.28,0.67,0.4,real,6.2,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.3,real,50.0,12000000.0,JAFFA,0.18,0.5,0.27,real,6.3,False,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.4,real,101.0,25000000.0,JAFFA,0.97,0.03,0.06,real,6.4,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,JAFFA,0.73,0.02,0.04,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,JAFFA,0.63,0.2,0.3,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,JAFFA,0.56,0.84,0.67,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,JAFFA,0.71,0.28,0.4,simulated,7.3,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,JAFFA,0.73,0.28,0.4,simulated,7.4,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,JAFFA,0.22,0.26,0.24,real,7.7,True,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.1,real,,,JAFFA,0.57,0.57,0.57,real,5.1,True,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.3,simulated,76.0,24000000.0,JAFFA,0.52,0.22,0.31,simulated,5.3,False,False,True
+10,https://doi.org/10.1186/s13073-015-0167-x,Dataset10,simulated,,,JAFFA-Assembly,0.78,1.0,0.876404494,simulated,10,False,False,True
+10,https://doi.org/10.1186/s13073-015-0167-x,Dataset10,simulated,,,JAFFA-Direct,0.68,1.0,0.80952381,simulated,10,False,False,True
+10,https://doi.org/10.1186/s13073-015-0167-x,Dataset10,simulated,,,JAFFA-Hybrid,0.88,1.0,0.936170213,simulated,10,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,JAFFA-Assembly,0.67,0.83,0.74,simulated,1.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,JAFFA-Assembly,0.65,0.88,0.75,simulated,1.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,JAFFA-Direct,0.84,0.97,0.9,simulated,1.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,JAFFA-Direct,0.86,0.97,0.91,simulated,1.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,JAFFA-Hybrid,0.72,0.97,0.83,simulated,1.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,JAFFA-Hybrid,0.73,0.97,0.83,simulated,1.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,JAFFA-Assembly,0.56,0.48,0.52,real,1.3,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,JAFFA-Direct,0.77,0.35,0.48,real,1.3,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,JAFFA-Hybrid,0.59,0.2,0.3,real,1.3,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,MapSplice,0.64,0.53,0.58,real,1.3,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,MapSplice,0.73,1.0,0.84,simulated,1.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,MapSplice,0.63,0.99,0.77,simulated,7.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,MapSplice,0.38,0.9,0.54,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,MapSplice,0.65,0.99,0.78,simulated,7.3,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,MapSplice,0.79,1.0,0.88,simulated,1.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,MapSplice,0.61,0.99,0.75,simulated,7.4,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,MapSplice,0.05,0.13,0.07,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,MapSplice,0.63,0.44,0.52,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,MapSplice,0.21,0.54,0.3,real,7.7,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.1,simulated,50.0,30000000.0,MetaFusion,0.836,0.927,0.879,simulated,8.1,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.2,simulated,101.0,30000000.0,MetaFusion,0.956,0.942,0.949,simulated,8.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.6,simulated,101.0,65000000.0,MetaFusion,0.934,0.826,0.877,simulated,8.6,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,,,MetaFusion,0.792,0.532,0.636,real,8.3,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.4,real,,,MetaFusion,1.0,0.395,0.566,real,8.4,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.7,real,,,MetaFusion,1.0,0.923,0.96,real,8.7,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.1,simulated,50.0,30000000.0,MetaFusion.top_3,0.796,0.957,0.869,simulated,8.1,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.2,simulated,101.0,30000000.0,MetaFusion.top_3,0.933,0.964,0.948,simulated,8.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.6,simulated,101.0,65000000.0,MetaFusion.top_3,0.918,0.949,0.933,simulated,8.6,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,,,MetaFusion.top_3,0.755,0.597,0.667,real,8.3,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.4,real,,,MetaFusion.top_3,0.941,0.615,0.744,real,8.4,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.7,real,,,MetaFusion.top_3,1.0,0.923,0.96,real,8.7,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,nFuse,0.83,0.97,0.89,simulated,1.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,nFuse,0.87,0.96,0.91,simulated,1.2,False,False,True
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,nFuse,0.33,0.44,0.377142857,real,9,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,nFuse,0.46,0.15,0.22,real,1.3,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,Pizzly,0.84,0.95,0.89,simulated,1.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,Pizzly,0.78,0.73,0.76,simulated,7.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,Pizzly,0.54,0.88,0.67,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,Pizzly,0.79,0.74,0.77,simulated,7.3,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,Pizzly,0.91,0.95,0.93,simulated,1.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,Pizzly,0.32,0.02,0.04,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,Pizzly,0.74,0.02,0.04,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,Pizzly,0.79,0.77,0.78,simulated,7.4,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,Pizzly,0.41,0.04,0.07,real,7.7,True,True,False
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,Pizzly,0.48,0.44,0.46,real,1.3,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,PRADA,0.56,1.0,0.72,simulated,1.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,PRADA,0.66,1.0,0.8,simulated,1.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,PRADA,0.38,0.9,0.54,real,1.3,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.2,spike-in,101.0,154000000.0,PRADA,0.0,0.0,,spike-in,2.2,False,False,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.3,real (cells),101.0,297000000.0,PRADA,0.0,0.0,,real (cells),2.3,True,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.1,simulated,75.0,40000000.0,PRADA,0.0,0.0,,simulated,2.1,False,False,True
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,pyPRADA,0.1,1.0,0.181818182,real,9,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,SOAPfuse,0.5,0.81,0.62,real,1.3,False,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.1,real,50.0,28000000.0,SOAPfuse,0.89,0.39,0.55,real,6.1,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.2,real,50.0,28000000.0,SOAPfuse,0.41,0.67,0.51,real,6.2,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.3,real,50.0,12000000.0,SOAPfuse,0.91,0.09,0.17,real,6.3,False,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.4,real,101.0,25000000.0,SOAPfuse,0.71,0.07,0.13,real,6.4,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,SOAPfuse,0.68,0.58,0.62,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,SOAPfuse,0.74,0.17,0.28,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,SOAPfuse,0.36,0.3,0.33,real,7.7,True,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,SOAPfuse,0.69,0.99,0.81,simulated,1.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,SOAPfuse,0.82,0.81,0.81,simulated,7.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,SOAPfuse,0.74,0.85,0.79,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,SOAPfuse,0.81,0.81,0.81,simulated,7.3,False,False,True
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.1,simulated,75.0,40000000.0,SOAPfuse,0.37,0.82,0.5099159663865547,simulated,2.1,False,False,True
+10,https://doi.org/10.1186/s13073-015-0167-x,Dataset10,simulated,,,SOAPfuse,0.74,0.973684211,0.840909091,simulated,10,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,SOAPfuse,0.71,0.99,0.83,simulated,1.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,SOAPfuse,0.8,0.82,0.81,simulated,7.4,False,False,True
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.2,spike-in,101.0,154000000.0,SOAPfuse,0.4,0.24,0.3,spike-in,2.2,False,False,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.3,real (cells),101.0,297000000.0,SOAPfuse,0.55,0.14,0.22318840579710147,real (cells),2.3,True,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.3,real,,,STAR-Fusion,0.84,0.79,0.81,real,1.3,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.2,spike-in,101.0,154000000.0,STAR-Fusion,0.35,1.0,0.25925925925925924,spike-in,2.2,False,False,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.3,real (cells),101.0,297000000.0,STAR-Fusion,0.48,0.79,0.2985826771653543,real (cells),2.3,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,STAR-Fusion,0.08,0.17,0.11,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,STAR-Fusion,0.82,0.3,0.44,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,STAR-Fusion,0.41,0.55,0.47,real,7.7,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,STAR-Fusion,0.69,0.72,0.7,simulated,7.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.1,simulated,50.0,30000000.0,STAR-Fusion,0.772,0.943,0.849,simulated,8.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,STAR-Fusion,0.84,0.98,0.9,simulated,1.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,STAR-Fusion,0.79,0.86,0.83,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,STAR-Fusion,0.7,0.69,0.69,simulated,7.3,False,False,True
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.1,simulated,75.0,40000000.0,STAR-Fusion,0.35,0.8,0.2434782608695652,simulated,2.1,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,,,STAR-Fusion,0.774,0.569,0.656,real,8.3,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.4,real,,,STAR-Fusion,0.588,0.213,0.313,real,8.4,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.7,real,,,STAR-Fusion,0.917,0.786,0.846,real,8.7,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,STAR-Fusion,0.68,0.67,0.67,simulated,7.4,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.2,simulated,101.0,30000000.0,STAR-Fusion,0.9,0.93,0.915,simulated,8.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.6,simulated,101.0,65000000.0,STAR-Fusion,0.82,0.82,0.82,simulated,8.6,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,STAR-Fusion,0.92,0.98,0.95,simulated,1.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,STAR-SEQR,0.88,0.59,0.7,real,1.3,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,STAR-SEQR,0.89,1.0,0.94,simulated,1.1,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.1,simulated,50.0,30000000.0,STAR-SEQR,0.781,0.865,0.821,simulated,8.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,STAR-SEQR,0.94,1.0,0.97,simulated,1.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.2,simulated,101.0,30000000.0,STAR-SEQR,0.935,0.884,0.909,simulated,8.2,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.6,simulated,101.0,65000000.0,STAR-SEQR,0.934,0.633,0.755,simulated,8.6,False,False,True
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,,,STAR-SEQR,0.736,0.247,0.37,real,8.3,True,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.4,real,,,STAR-SEQR,0.824,0.135,0.232,real,8.4,False,True,False
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.7,real,,,STAR-SEQR,1.0,0.8,0.889,real,8.7,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,STARChip,0.47,0.74,0.57,real,1.3,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,STARChip,0.27,0.26,0.26,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,STARChip,0.17,0.36,0.23,simulated,7.3,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,STARChip,0.0,0.0,0.0,real,7.5,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,STARChip,0.73,0.99,0.84,simulated,1.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,STARChip,0.22,0.07,0.11,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,STARChip,0.08,0.09,0.09,real,7.7,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,STARChip,0.0,0.33,0.01,simulated,7.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,STARChip,0.8,1.0,0.89,simulated,1.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,STARChip,0.17,0.3,0.22,simulated,7.4,False,False,True
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.1,real,50.0,28000000.0,TopHat-Fusion,0.89,0.09,0.17,real,6.1,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.2,real,50.0,28000000.0,TopHat-Fusion,0.35,0.13,0.19,real,6.2,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.3,real,50.0,12000000.0,TopHat-Fusion,0.36,0.14,0.2,real,6.3,False,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.4,real,101.0,25000000.0,TopHat-Fusion,0.94,0.09,0.17,real,6.4,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.5,real,101.0,65000000.0,TopHat-Fusion,0.02,0.2,0.03,real,7.5,False,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,50.0,21500000.0,TopHat-Fusion,0.44,0.3,0.36,real,7.6,True,True,False
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,50.0,21500000.0,TopHat-Fusion,0.15,0.38,0.22,real,7.7,True,True,False
+10,https://doi.org/10.1186/s13073-015-0167-x,Dataset10,simulated,,,TopHat-Fusion,0.54,1.0,0.701298701,simulated,10,False,False,True
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,TopHat-Fusion,0.1,1.0,0.181818182,real,9,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,TopHat-Fusion,0.81,0.99,0.89,simulated,1.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.2,simulated,50.0,64000000.0,TopHat-Fusion,0.41,0.55,0.47,simulated,7.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,TopHat-Fusion,0.85,0.99,0.91,simulated,1.2,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.4,simulated,101.0,31500000.0,TopHat-Fusion,0.27,0.57,0.37,simulated,7.4,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.1,simulated,75.0,307920.0,TopHat-Fusion,0.4,0.63,0.49,simulated,7.1,False,False,True
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.3,simulated,76.0,42000000.0,TopHat-Fusion,0.36,0.56,0.44,simulated,7.3,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,TopHat-Fusion,0.65,0.45,0.53,real,1.3,False,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.1,real,,,TopHat-Fusion,0.81,0.45,0.58,real,5.1,True,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.3,simulated,76.0,24000000.0,TopHat-Fusion,0.83,0.41,0.55,simulated,5.3,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,TrinityFusion-C,0.56,0.94,0.7,real,1.3,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,TrinityFusion-C,0.72,0.99,0.83,simulated,1.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,TrinityFusion-C,0.79,0.99,0.88,simulated,1.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,TrinityFusion-D,0.44,0.9,0.59,real,1.3,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,TrinityFusion-D,0.4,0.99,0.57,simulated,1.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,TrinityFusion-D,0.44,0.99,0.61,simulated,1.2,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9,Dataset1.3,real,,,TrinityFusion-UC,0.53,0.89,0.67,real,1.3,False,True,False
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.1,simulated,50.0,30000000.0,TrinityFusion-UC,0.66,1.0,0.8,simulated,1.1,False,False,True
+1,doi.org/10.1186/s13059-019-1842-9 ,Dataset1.2,simulated,101.0,30000000.0,TrinityFusion-UC,0.76,0.99,0.86,simulated,1.2,False,False,True
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.1,real,50.0,28000000.0,TRUP,0.0,0.0,0.0,real,6.1,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.2,real,50.0,28000000.0,TRUP,0.0,0.0,0.0,real,6.2,True,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.3,real,50.0,12000000.0,TRUP,0.0,0.0,0.0,real,6.3,False,True,False
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.4,real,101.0,25000000.0,TRUP,0.65,0.1,0.17,real,6.4,False,True,False
+9,https://doi.org/10.1101%2Fgr.186114.114,Dataset9,real,,,TRUP,0.1,1.0,0.181818182,real,9,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.4,real,,,Arriba,0.98,,,real,2.4,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.5,real,,,Arriba,1.0,,,real,2.5,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,Bellerophontes,0.66,0.79,,simulated,3.2,False,False,True
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,Bellerophontes,0.0,,,real,3.1B,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,BreakFusion,0.04,,,simulated,3.2,False,False,True
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,BreakFusion,0.11,,,real,3.1B,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,ChimeraScan,0.08,,,simulated,3.2,False,False,True
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,ChimeraScan,0.7,,,real,3.1B,False,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.2,real SE,76.0,14000000.0,ChimPipe,0.0,0.0,0.0,real se,5.2,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.4,real,,,deFuse,0.86,,,real,2.4,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.5,real,,,deFuse,0.22,,,real,2.5,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,EricScript,0.78,,,simulated,3.2,False,False,True
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,EricScript,0.59,,,real,3.1B,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,FusionCatcher,0.66,,,simulated,3.2,False,False,True
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,FusionCatcher,0.07,,,real,3.1B,False,True,False
+10,https://doi.org/10.1186/s13073-015-0167-x,Dataset10,simulated,,,FusionCatcher,0.0,,,simulated,10,False,False,True
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.4,real,,,FusionCatcher,0.96,,,real,2.4,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.5,real,,,FusionCatcher,0.33,,,real,2.5,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,FusionHunter,0.2,,,real,3.1B,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,FusionHunter,0.36,,,simulated,3.2,False,False,True
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,FusionMap,0.56,,,simulated,3.2,False,False,True
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,FusionMap,0.0,,,real,3.1B,False,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.2,real SE,76.0,14000000.0,FusionMap,,0.02,0.0,real se,5.2,False,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.2,real SE,76.0,14000000.0,Gfusion,,0.18,0.0,real se,5.2,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.4,real,,,InFusion,0.88,,,real,2.4,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.5,real,,,InFusion,0.56,,,real,2.5,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,JAFFA,0.88,,,simulated,3.2,False,False,True
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,JAFFA,0.02,,,real,3.1B,False,True,False
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.2,real SE,76.0,14000000.0,JAFFA,0.0,0.0,0.0,real se,5.2,False,True,False
+4,https://doi.org/10.3389/fgene.2021.739054,Dataset4.1,real,,,JAFFA-Hybrid,0.65,,,real,4.1,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,MapSplice,0.0,,,real,3.1B,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,MapSplice,0.86,,,simulated,3.2,False,False,True
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,nFuse,0.0,,,real,3.1B,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,nFuse,0.3,,,simulated,3.2,False,False,True
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.4,real,,,PRADA,0.88,,,real,2.4,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.5,real,,,PRADA,0.0,,,real,2.5,False,True,False
+4,https://doi.org/10.3389/fgene.2021.739054,Dataset4.1,real,,,SeekFusion,0.89,,,real,4.1,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,SOAPfuse,0.82,,,simulated,3.2,False,False,True
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.4,real,,,SOAPfuse,0.91,,,real,2.4,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.5,real,,,SOAPfuse,0.0,,,real,2.5,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,SOAPfuse,0.0,,,real,3.1B,False,True,False
+4,https://doi.org/10.3389/fgene.2021.739054,Dataset4.1,real,,,STAR-Fusion,0.69,,,real,4.1,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.4,real,,,STAR-Fusion,0.88,,,real,2.4,False,True,False
+2,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7919457/,Dataset2.5,real,,,STAR-Fusion,0.44,,,real,2.5,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.1B,real,100.0,60000000.0,TopHat-Fusion,0.0,,,real,3.1B,False,True,False
+4,https://doi.org/10.3389/fgene.2021.739054,Dataset4.1,real,,,TopHat-Fusion,0.01,,,real,4.1,False,True,False
+3,doi: 10.1038/srep21597,Dataset3.2,simulated,75.0,8500000.0,TopHat-Fusion,0.52,,,simulated,3.2,False,False,True
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.2,real SE,76.0,14000000.0,TopHat-Fusion,,0.04,0.0,real se,5.2,False,True,False

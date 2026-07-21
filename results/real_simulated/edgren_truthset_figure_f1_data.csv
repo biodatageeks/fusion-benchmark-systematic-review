@@ -1,0 +1,38 @@
+Benchmark,Doi,Dataset,DatasetType,Tool,TP,FP,TruthTotal,Recall,Precision,F1,Is_Edgren,new_tool,FN,Is_Edgren_Binary,Benchmark_purpose,Introduced_tool,Benchmark_label
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.1,real,ChimPipe,30.0,8.0,37.0,0.8108108108108109,0.7894736842105263,0.8,yes,"yes, GFusion",7.0,yes,new_tool,GFusion,B5 / Dataset5.1
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.1,real,FusionMap,16.0,10.0,37.0,0.43243243243243246,0.6153846153846154,0.5079365079365079,yes,"yes, GFusion",21.0,yes,new_tool,GFusion,B5 / Dataset5.1
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.1,real,JAFFA,21.0,16.0,37.0,0.5675675675675675,0.5675675675675675,0.5675675675675675,yes,"yes, GFusion",16.0,yes,new_tool,GFusion,B5 / Dataset5.1
+5,DOI:10.1038/s41598-017-07070-6 ,Dataset5.1,real,TopHat-Fusion,30.0,36.0,37.0,0.8108108108108109,0.45454545454545453,0.5825242718446602,yes,"yes, GFusion",7.0,yes,new_tool,GFusion,B5 / Dataset5.1
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.1,real,FuSeq,22.0,31.0,27.0,0.8148148148148148,0.41509433962264153,0.55,yes,"yes, FuSeq",5.0,yes,new_tool,FuSeq,B6 / Dataset6.1
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.2,real,FuSeq,22.0,31.0,99.0,0.2222222222222222,0.41509433962264153,0.2894736842105263,yes,"yes, FuSeq",77.0,yes,new_tool,FuSeq,B6 / Dataset6.2
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.1,real,FusionMap,12.0,35.0,27.0,0.4444444444444444,0.2553191489361702,0.32432432432432434,yes,"yes, FuSeq",15.0,yes,new_tool,FuSeq,B6 / Dataset6.1
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.2,real,FusionMap,22.0,25.0,99.0,0.2222222222222222,0.46808510638297873,0.3013698630136986,yes,"yes, FuSeq",77.0,yes,new_tool,FuSeq,B6 / Dataset6.2
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.1,real,JAFFA,20.0,22.0,27.0,0.7407407407407407,0.47619047619047616,0.5797101449275363,yes,"yes, FuSeq",7.0,yes,new_tool,FuSeq,B6 / Dataset6.1
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.2,real,JAFFA,28.0,14.0,99.0,0.2828282828282828,0.6666666666666666,0.39716312056737585,yes,"yes, FuSeq",71.0,yes,new_tool,FuSeq,B6 / Dataset6.2
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.1,real,SOAPfuse,24.0,37.0,27.0,0.8888888888888888,0.39344262295081966,0.5454545454545455,yes,"yes, FuSeq",3.0,yes,new_tool,FuSeq,B6 / Dataset6.1
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.2,real,SOAPfuse,41.0,20.0,99.0,0.41414141414141414,0.6721311475409836,0.5125,yes,"yes, FuSeq",58.0,yes,new_tool,FuSeq,B6 / Dataset6.2
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.1,real,TopHat-Fusion,24.0,237.0,27.0,0.8888888888888888,0.09195402298850575,0.16666666666666666,yes,"yes, FuSeq",3.0,yes,new_tool,FuSeq,B6 / Dataset6.1
+6,https://doi.org/10.1186/s12864-018-5156-1,Dataset6.2,real,TopHat-Fusion,35.0,226.0,99.0,0.35353535353535354,0.13409961685823754,0.19444444444444445,yes,"yes, FuSeq",64.0,yes,new_tool,FuSeq,B6 / Dataset6.2
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,Arriba,22.005000000000003,135.17357142857145,27.0,0.8150000000000001,0.14,0.23895287958115186,yes,no,4.994999999999997,yes,independent_comparison,,B7 / Dataset7.6
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,Arriba,45.045,110.28258620689657,99.0,0.455,0.29,0.35422818791946303,yes,no,53.955,yes,independent_comparison,,B7 / Dataset7.7
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,ChimPipe,18.009,42.021,27.0,0.667,0.3,0.41385729058945186,yes,no,8.991,yes,independent_comparison,,B7 / Dataset7.6
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,ChimPipe,28.017000000000003,31.593638297872346,99.0,0.28300000000000003,0.47,0.3532802124833998,yes,no,70.983,yes,independent_comparison,,B7 / Dataset7.7
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,EricScript,16.011,107.15053846153846,27.0,0.593,0.13,0.21325034578146615,yes,no,10.989,yes,independent_comparison,,B7 / Dataset7.6
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,EricScript,22.968,97.91621052631578,99.0,0.23199999999999998,0.19,0.20890995260663506,yes,no,76.032,yes,independent_comparison,,B7 / Dataset7.7
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,FuSeq,21.006,63.018,27.0,0.778,0.25,0.3784046692607004,yes,no,5.994,yes,independent_comparison,,B7 / Dataset7.6
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,FuSeq,35.046,50.43204878048781,99.0,0.354,0.41,0.37994764397905756,yes,no,63.954,yes,independent_comparison,,B7 / Dataset7.7
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,INTEGRATE,16.011,34.023375,27.0,0.593,0.32,0.41568455640744795,yes,no,10.989,yes,independent_comparison,,B7 / Dataset7.6
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,INTEGRATE,26.037000000000003,24.034153846153846,99.0,0.263,0.52,0.349323116219668,yes,no,72.963,yes,independent_comparison,,B7 / Dataset7.7
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,JAFFA,17.01,68.03999999999999,27.0,0.63,0.2,0.3036144578313253,yes,no,9.989999999999998,yes,independent_comparison,,B7 / Dataset7.6
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,JAFFA,21.978,62.552769230769236,99.0,0.222,0.26,0.2395020746887967,yes,no,77.02199999999999,yes,independent_comparison,,B7 / Dataset7.7
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,SOAPfuse,20.007,97.68123529411764,27.0,0.741,0.17,0.27655323819978045,yes,no,6.9929999999999986,yes,independent_comparison,,B7 / Dataset7.6
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,SOAPfuse,36.036,84.084,99.0,0.364,0.3,0.3289156626506024,yes,no,62.964,yes,independent_comparison,,B7 / Dataset7.7
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,STAR-Fusion,22.005000000000003,51.345000000000006,27.0,0.8150000000000001,0.3,0.4385650224215247,yes,no,4.994999999999997,yes,independent_comparison,,B7 / Dataset7.6
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,STAR-Fusion,40.986,33.533999999999985,99.0,0.414,0.55,0.4724066390041494,yes,no,58.014,yes,independent_comparison,,B7 / Dataset7.7
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.6,real,TopHat-Fusion,11.988,27.972,27.0,0.444,0.3,0.35806451612903223,yes,no,15.012,yes,independent_comparison,,B7 / Dataset7.6
+7,https://doi.org/10.1080/15476286.2021.1940047,Dataset7.7,real,TopHat-Fusion,15.048,24.552,99.0,0.152,0.38,0.21714285714285714,yes,no,83.952,yes,independent_comparison,,B7 / Dataset7.7
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,Arriba,42.0,148.0,53.0,0.792,0.221,0.34600000000000003,yes,"yes, MetaFusion",11.0,yes,new_tool,MetaFusion,B8 / Dataset8.3
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,EricScript,29.0,118.0,53.0,0.547,0.19699999999999998,0.29,yes,"yes, MetaFusion",24.0,yes,new_tool,MetaFusion,B8 / Dataset8.3
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,FusionMap,30.0,74.0,53.0,0.5660000000000001,0.28800000000000003,0.382,yes,"yes, MetaFusion",23.0,yes,new_tool,MetaFusion,B8 / Dataset8.3
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,INTEGRATE,37.0,39.0,53.0,0.698,0.48700000000000004,0.574,yes,"yes, MetaFusion",16.0,yes,new_tool,MetaFusion,B8 / Dataset8.3
+8,https://doi.org/10.1093/bioinformatics/btab249,Dataset8.3,real,STAR-Fusion,41.0,31.0,53.0,0.774,0.569,0.6559999999999999,yes,"yes, MetaFusion",12.0,yes,new_tool,MetaFusion,B8 / Dataset8.3

@@ -1,0 +1,11 @@
+Benchmark,Tools,Datasets,Tool version,Transcriptome,Targeted,Simulated,Real cells,Real patients,PE,SE,50 bp,75 bp,100 bp,250 bp,Runtime,Memory
+B1 (2021),7,4,full,full,absent,full,full,full,full,absent,absent,full,full,absent,full,full
+B2 (2021),4,1,full,absent,full,absent,absent,full,full,absent,unknown,unknown,unknown,unknown,full,absent
+B3 (2021),16,4,full,full,absent,full,full,absent,full,absent,full,full,full,absent,partial,partial
+B4 (2021),8,7,absent,absent,full,full,full,full,full,absent,full,absent,full,absent,absent,absent
+B5 (2019),23,3,full,full,absent,full,full,absent,full,absent,full,absent,full,absent,full,absent
+B6 (2018),6,4,absent,full,absent,full,full,full,full,absent,full,absent,full,absent,partial,partial
+B7 (2017),5,3,absent,full,absent,full,full,absent,full,full,absent,full,absent,absent,absent,absent
+B8 (2016),12,4,full,full,absent,full,full,absent,full,absent,full,full,full,absent,full,full
+B9 (2016),12,1,absent,full,absent,absent,full,absent,full,absent,unknown,unknown,unknown,unknown,absent,absent
+B10 (2015),5,7,full,full,absent,full,full,absent,full,full,full,full,full,full,absent,absent

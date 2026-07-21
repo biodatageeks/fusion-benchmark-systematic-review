@@ -1,0 +1,9 @@
+Benchmark,Study,New_tool,status,n_tools,best_new_tool,primary_metric,best_new_primary_value,best_new_primary_rank,best_new_f1,best_new_f1_rank,best_overall_tool,best_overall_f1,new_tool_is_best_by_mean_f1,new_tool_is_best_by_primary_metric,new_tool_mean_f1,other_tools_mean_f1,new_minus_other_mean_f1,best_new_precision_rank,best_new_recall_rank,datasets_with_new_tool,datasets_new_tool_best,median_dataset_rank,best_overall_primary_value
+1,Haas 2019,STAR-Fusion; TrinityFusion,ok,25,STAR-Fusion,F1,0.8866666666666667,1,0.8866666666666667,1.0,STAR-Fusion,0.8866666666666667,True,True,0.7641666666666667,0.7265,0.037666666666666626,7.0,3.0,3.0,1.0,2.0,
+2,Uhrig 2021,Arriba,ok,7,Arriba,F1,0.6831372549019608,1,0.6831372549019608,1.0,Arriba,0.6831372549019608,True,True,0.6831372549019608,0.2620577563970081,0.42107949850495263,2.0,1.0,3.0,3.0,1.0,
+4,Balan 2021,SeekFusion,recall only,4,SeekFusion,Recall_Sensitivity,0.89,1,,,SeekFusion,,,True,,,,,,,,,0.89
+5,Zhao 2017,GFusion,ok,5,Gfusion,F1,0.5499999999999999,1,0.5499999999999999,1.0,Gfusion,0.5499999999999999,True,True,0.5499999999999999,0.31666666666666665,0.23333333333333328,1.0,1.0,3.0,2.0,1.0,
+6,Vu 2018,FuSeq,ok,6,FuSeq,F1,0.385,1,0.385,1.0,FuSeq,0.385,True,True,0.385,0.2325,0.1525,2.0,2.0,4.0,2.0,1.5,
+8,Apostolides 2021,MetaFusion,ok,9,MetaFusion.top_3,F1,0.8535,1,0.8535,1.0,MetaFusion.top_3,0.8535,True,True,0.8323333333333334,0.593,0.2393333333333334,1.0,3.0,6.0,6.0,1.0,
+9,Zhang 2016,INTEGRATE,ok,12,INTEGRATE C,F1,0.848117647,1,0.848117647,1.0,INTEGRATE C,0.848117647,True,True,0.693801011,0.262345766125,0.43145524487500003,10.0,1.0,1.0,1.0,1.0,
+10,Davidson 2015,JAFFA,ok,7,JAFFA-Hybrid,F1,0.936170213,1,0.936170213,1.0,JAFFA-Hybrid,0.936170213,True,True,0.874032839,0.783910534,0.09012230499999996,1.0,1.0,1.0,1.0,1.0,
