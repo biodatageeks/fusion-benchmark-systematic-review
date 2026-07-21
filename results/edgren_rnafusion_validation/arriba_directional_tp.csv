@@ -1,0 +1,45 @@
+tool,Fusion,pred_pair,pred_key,truth_index,is_tp,matching
+Arriba,ACACA--STAC2,"(frozenset({'ACACA'}), frozenset({'STAC2'}))","('ACACA', 'STAC2')",0.0,True,directional
+Arriba,AHCTF1--NAAA,"(frozenset({'AHCTF1'}), frozenset({'NAAA'}))","('AHCTF1', 'NAAA')",17.0,True,directional
+Arriba,ANKHD1--PCDH1,"(frozenset({'ANKHD1'}), frozenset({'PCDH1'}))","('ANKHD1', 'PCDH1')",24.0,True,directional
+Arriba,ANKHD1-EIF4EBP3--PCDH1,"(frozenset({'ANKHD1-EIF4EBP3'}), frozenset({'PCDH1'}))","('ANKHD1-EIF4EBP3', 'PCDH1')",24.0,True,directional
+Arriba,ARFGEF2--SULF2,"(frozenset({'ARFGEF2'}), frozenset({'SULF2'}))","('ARFGEF2', 'SULF2')",48.0,True,directional
+Arriba,ATAD5--TLK2,"(frozenset({'ATAD5'}), frozenset({'TLK2'}))","('ATAD5', 'TLK2')",31.0,True,directional
+Arriba,ATP1A1--ZFP64,"(frozenset({'ATP1A1'}), frozenset({'ZFP64'}))","('ATP1A1', 'ZFP64')",75.0,True,directional
+Arriba,BCAS4--BCAS3,"(frozenset({'BCAS4'}), frozenset({'BCAS3'}))","('BCAS4', 'BCAS3')",47.0,True,directional
+Arriba,BSG--NFIX,"(frozenset({'BSG'}), frozenset({'NFIX'}))","('BSG', 'NFIX')",44.0,True,directional
+Arriba,CCDC85C--SETD3,"(frozenset({'CCDC85C'}), frozenset({'SETD3'}))","('CCDC85C', 'SETD3')",25.0,True,directional
+Arriba,CPNE1--PI3,"(frozenset({'CPNE1'}), frozenset({'PI3'}))","('CPNE1', 'PI3')",10.0,True,directional
+Arriba,CSE1L--AL035685.1,"(frozenset({'CSE1L'}), frozenset({'AL035685.1', 'RP4-791K14.2'}))","('CSE1L', 'AL035685.1|RP4-791K14.2')",22.0,True,directional
+Arriba,CYTH1--EIF3H,"(frozenset({'CYTH1'}), frozenset({'EIF3H'}))","('CYTH1', 'EIF3H')",28.0,True,directional
+Arriba,DHX35--ITCH,"(frozenset({'DHX35'}), frozenset({'ITCH'}))","('DHX35', 'ITCH')",29.0,True,directional
+Arriba,DIDO1--TTI1,"(frozenset({'DIDO1'}), frozenset({'TTI1'}))","('DIDO1', 'TTI1')",6.0,True,directional
+Arriba,GATAD2B--NUP210L,"(frozenset({'GATAD2B'}), frozenset({'NUP210L'}))","('GATAD2B', 'NUP210L')",65.0,True,directional
+Arriba,GLB1--CMTM7,"(frozenset({'GLB1'}), frozenset({'CMTM7'}))","('GLB1', 'CMTM7')",9.0,True,directional
+Arriba,LAMP1--MCF2L,"(frozenset({'LAMP1'}), frozenset({'MCF2L'}))","('LAMP1', 'MCF2L')",8.0,True,directional
+Arriba,MED1--STXBP4,"(frozenset({'MED1'}), frozenset({'STXBP4'}))","('MED1', 'STXBP4')",18.0,True,directional
+Arriba,MYO9B--FCHO1,"(frozenset({'MYO9B'}), frozenset({'FCHO1'}))","('MYO9B', 'FCHO1')",72.0,True,directional
+Arriba,NOTCH1--NUP214,"(frozenset({'NOTCH1'}), frozenset({'NUP214'}))","('NOTCH1', 'NUP214')",46.0,True,directional
+Arriba,PIP4K2B--RAD51C,"(frozenset({'PIP4K2B'}), frozenset({'RAD51C'}))","('PIP4K2B', 'RAD51C')",14.0,True,directional
+Arriba,PPP1R12A--SEPTIN10,"(frozenset({'PPP1R12A'}), frozenset({'SEPTIN10', 'SEPT10'}))","('PPP1R12A', 'SEPT10|SEPTIN10')",45.0,True,directional
+Arriba,PREX1--CPNE1,"(frozenset({'PREX1'}), frozenset({'CPNE1'}))","('PREX1', 'CPNE1')",37.0,True,directional
+Arriba,RAB22A--MYO9B,"(frozenset({'RAB22A'}), frozenset({'MYO9B'}))","('RAB22A', 'MYO9B')",4.0,True,directional
+Arriba,RARA--PKIA,"(frozenset({'RARA'}), frozenset({'PKIA'}))","('RARA', 'PKIA')",23.0,True,directional
+Arriba,RBM12--PI3,"(frozenset({'RBM12'}), frozenset({'PI3'}))","('RBM12', 'PI3')",10.0,True,directional
+Arriba,RPS6KB1--SNF8,"(frozenset({'RPS6KB1'}), frozenset({'SNF8'}))","('RPS6KB1', 'SNF8')",1.0,True,directional
+Arriba,RPS6KB1--VMP1,"(frozenset({'RPS6KB1'}), frozenset({'VMP1'}))","('RPS6KB1', 'VMP1')",49.0,True,directional
+Arriba,RSBN1--AP4B1-AS1,"(frozenset({'RSBN1'}), frozenset({'AP4B1-AS1'}))","('RSBN1', 'AP4B1-AS1')",90.0,True,directional
+Arriba,SKA2--MYO19,"(frozenset({'SKA2'}), frozenset({'MYO19'}))","('SKA2', 'MYO19')",5.0,True,directional
+Arriba,SMARCA4--CARM1,"(frozenset({'SMARCA4'}), frozenset({'CARM1'}))","('SMARCA4', 'CARM1')",52.0,True,directional
+Arriba,STARD3--DOK5,"(frozenset({'STARD3'}), frozenset({'DOK5'}))","('STARD3', 'DOK5')",7.0,True,directional
+Arriba,SULF2--PRICKLE2,"(frozenset({'SULF2'}), frozenset({'PRICKLE2'}))","('SULF2', 'PRICKLE2')",92.0,True,directional
+Arriba,SUMF1--LRRFIP2,"(frozenset({'SUMF1'}), frozenset({'LRRFIP2'}))","('SUMF1', 'LRRFIP2')",26.0,True,directional
+Arriba,TAF2--COLEC10,"(frozenset({'TAF2'}), frozenset({'COLEC10'}))","('TAF2', 'COLEC10')",38.0,True,directional
+Arriba,TAF4--BRIP1,"(frozenset({'TAF4'}), frozenset({'BRIP1'}))","('TAF4', 'BRIP1')",56.0,True,directional
+Arriba,TATDN1--GSDMB,"(frozenset({'TATDN1'}), frozenset({'GSDMB'}))","('TATDN1', 'GSDMB')",21.0,True,directional
+Arriba,TBC1D31--ZNF704,"(frozenset({'TBC1D31'}), frozenset({'ZNF704'}))","('TBC1D31', 'ZNF704')",27.0,True,directional
+Arriba,THRA--SKAP1,"(frozenset({'THRA'}), frozenset({'SKAP1'}))","('THRA', 'SKAP1')",19.0,True,directional
+Arriba,TRIM37--MYO19,"(frozenset({'TRIM37'}), frozenset({'MYO19'}))","('TRIM37', 'MYO19')",5.0,True,directional
+Arriba,TXLNG--SYAP1,"(frozenset({'TXLNG'}), frozenset({'SYAP1'}))","('TXLNG', 'SYAP1')",62.0,True,directional
+Arriba,VAPB--IKZF3,"(frozenset({'VAPB'}), frozenset({'IKZF3'}))","('VAPB', 'IKZF3')",2.0,True,directional
+Arriba,ZMYND8--CEP250,"(frozenset({'ZMYND8'}), frozenset({'CEP250'}))","('ZMYND8', 'CEP250')",3.0,True,directional

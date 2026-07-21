@@ -1,0 +1,61 @@
+Gene1,Gene2,truth_pair,truth_key,truth_id,truth_fusion,tool,matching
+BCAS3,MED13,"(frozenset({'BCAS3'}), frozenset({'MED13'}))","('BCAS3', 'MED13')",12,BCAS3--MED13,STAR-Fusion,directional
+MRPL45,TRPC4AP,"(frozenset({'MRPL45'}), frozenset({'TRPC4AP'}))","('MRPL45', 'TRPC4AP')",13,MRPL45--TRPC4AP,STAR-Fusion,directional
+MED1,UPS32,"(frozenset({'MED1'}), frozenset({'UPS32'}))","('MED1', 'UPS32')",14,MED1--UPS32,STAR-Fusion,directional
+RAE1,STX16-NPEPL1|STX16,"(frozenset({'RAE1'}), frozenset({'STX16-NPEPL1', 'STX16'}))","('RAE1', 'STX16|STX16-NPEPL1')",16,RAE1--STX16-NPEPL1|STX16,STAR-Fusion,directional
+ACSF2|ENSG00000167107,MED1,"(frozenset({'ACSF2', 'ENSG00000167107'}), frozenset({'MED1'}))","('ACSF2|ENSG00000167107', 'MED1')",17,ACSF2|ENSG00000167107--MED1,STAR-Fusion,directional
+THRA,AC090627.1|SKAP1,"(frozenset({'THRA'}), frozenset({'SKAP1', 'AC090627.1'}))","('THRA', 'AC090627.1|SKAP1')",20,THRA--AC090627.1|SKAP1,STAR-Fusion,directional
+SYNRG,TOB1|ENSG00000141232,"(frozenset({'SYNRG'}), frozenset({'ENSG00000141232', 'TOB1'}))","('SYNRG', 'ENSG00000141232|TOB1')",21,SYNRG--TOB1|ENSG00000141232,STAR-Fusion,directional
+NFS1,PREX1,"(frozenset({'NFS1'}), frozenset({'PREX1'}))","('NFS1', 'PREX1')",31,NFS1--PREX1,STAR-Fusion,directional
+COL14A1,MTSS1,"(frozenset({'COL14A1'}), frozenset({'MTSS1'}))","('COL14A1', 'MTSS1')",33,COL14A1--MTSS1,STAR-Fusion,directional
+DEPDC1B,PDE4D,"(frozenset({'DEPDC1B'}), frozenset({'PDE4D'}))","('DEPDC1B', 'PDE4D')",34,DEPDC1B--PDE4D,STAR-Fusion,directional
+KIAA1303,AB046838,"(frozenset({'KIAA1303'}), frozenset({'AB046838'}))","('KIAA1303', 'AB046838')",35,KIAA1303--AB046838,STAR-Fusion,directional
+PBRM1,WDR82,"(frozenset({'PBRM1'}), frozenset({'WDR82'}))","('PBRM1', 'WDR82')",36,PBRM1--WDR82,STAR-Fusion,directional
+PLDN,AKAP13,"(frozenset({'PLDN'}), frozenset({'AKAP13'}))","('PLDN', 'AKAP13')",37,PLDN--AKAP13,STAR-Fusion,directional
+TAF2,COLEC10,"(frozenset({'TAF2'}), frozenset({'COLEC10'}))","('TAF2', 'COLEC10')",39,TAF2--COLEC10,STAR-Fusion,directional
+TRIO,FBXL7,"(frozenset({'TRIO'}), frozenset({'FBXL7'}))","('TRIO', 'FBXL7')",40,TRIO--FBXL7,STAR-Fusion,directional
+WDR67,SLC30A8,"(frozenset({'WDR67'}), frozenset({'SLC30A8'}))","('WDR67', 'SLC30A8')",42,WDR67--SLC30A8,STAR-Fusion,directional
+CBX3,C15orf57,"(frozenset({'CBX3'}), frozenset({'C15ORF57'}))","('CBX3', 'C15ORF57')",43,CBX3--C15orf57,STAR-Fusion,directional
+RANBP10,PSKH1,"(frozenset({'RANBP10'}), frozenset({'PSKH1'}))","('RANBP10', 'PSKH1')",44,RANBP10--PSKH1,STAR-Fusion,directional
+MSI1,GCN1L1,"(frozenset({'MSI1'}), frozenset({'GCN1L1', 'GCN1'}))","('MSI1', 'GCN1|GCN1L1')",51,MSI1--GCN1L1,STAR-Fusion,directional
+VMP1|TMEM49,AC099850.1|ENSG00000224738,"(frozenset({'VMP1', 'TMEM49'}), frozenset({'AC099850.1', 'ENSG00000224738'}))","('TMEM49|VMP1', 'AC099850.1|ENSG00000224738')",52,VMP1|TMEM49--AC099850.1|ENSG00000224738,STAR-Fusion,directional
+SLC25A24,NBPF6|NBPF4,"(frozenset({'SLC25A24'}), frozenset({'NBPF6', 'NBPF4'}))","('SLC25A24', 'NBPF4|NBPF6')",54,SLC25A24--NBPF6|NBPF4,STAR-Fusion,directional
+USP31,CRYL1,"(frozenset({'USP31'}), frozenset({'CRYL1'}))","('USP31', 'CRYL1')",55,USP31--CRYL1,STAR-Fusion,directional
+TBL1XR1,RGS17,"(frozenset({'TBL1XR1'}), frozenset({'RGS17'}))","('TBL1XR1', 'RGS17')",56,TBL1XR1--RGS17,STAR-Fusion,directional
+TAF4,BRIP1,"(frozenset({'TAF4'}), frozenset({'BRIP1'}))","('TAF4', 'BRIP1')",57,TAF4--BRIP1,STAR-Fusion,directional
+RPS6KB1,DIAPH3,"(frozenset({'RPS6KB1'}), frozenset({'DIAPH3'}))","('RPS6KB1', 'DIAPH3')",58,RPS6KB1--DIAPH3,STAR-Fusion,directional
+AHCYL1,RAD51C,"(frozenset({'AHCYL1'}), frozenset({'RAD51C'}))","('AHCYL1', 'RAD51C')",59,AHCYL1--RAD51C,STAR-Fusion,directional
+ABCA5,PPP4R1L,"(frozenset({'ABCA5'}), frozenset({'PPP4R1L'}))","('ABCA5', 'PPP4R1L')",60,ABCA5--PPP4R1L,STAR-Fusion,directional
+C16orf45|MPV17L|RP11-1021N1.1|C16ORF45,ABCC1,"(frozenset({'MPV17L', 'C16ORF45', 'RP11-1021N1.1'}), frozenset({'ABCC1'}))","('C16ORF45|MPV17L|RP11-1021N1.1', 'ABCC1')",61,C16orf45|MPV17L|RP11-1021N1.1|C16ORF45--ABCC1,STAR-Fusion,directional
+C16orf62,IQCK,"(frozenset({'C16ORF62'}), frozenset({'IQCK'}))","('C16ORF62', 'IQCK')",62,C16orf62--IQCK,STAR-Fusion,directional
+MYO6,SENP6,"(frozenset({'MYO6'}), frozenset({'SENP6'}))","('MYO6', 'SENP6')",64,MYO6--SENP6,STAR-Fusion,directional
+POP1,MATN2,"(frozenset({'POP1'}), frozenset({'MATN2'}))","('POP1', 'MATN2')",65,POP1--MATN2,STAR-Fusion,directional
+GATAD2B,NUP210L,"(frozenset({'GATAD2B'}), frozenset({'NUP210L'}))","('GATAD2B', 'NUP210L')",66,GATAD2B--NUP210L,STAR-Fusion,directional
+ESR1,C6orf97|CCDC170,"(frozenset({'ESR1'}), frozenset({'CCDC170', 'C6ORF97'}))","('ESR1', 'C6ORF97|CCDC170')",67,ESR1--C6orf97|CCDC170,STAR-Fusion,directional
+DEPDC1B,ELOVL7,"(frozenset({'DEPDC1B'}), frozenset({'ELOVL7'}))","('DEPDC1B', 'ELOVL7')",68,DEPDC1B--ELOVL7,STAR-Fusion,directional
+ATXN7L3,FAM171A2|GRN,"(frozenset({'ATXN7L3'}), frozenset({'FAM171A2', 'GRN'}))","('ATXN7L3', 'FAM171A2|GRN')",69,ATXN7L3--FAM171A2|GRN,STAR-Fusion,directional
+SYTL2,PICALM,"(frozenset({'SYTL2'}), frozenset({'PICALM'}))","('SYTL2', 'PICALM')",70,SYTL2--PICALM,STAR-Fusion,directional
+ARHGAP19,DRG1,"(frozenset({'ARHGAP19'}), frozenset({'DRG1'}))","('ARHGAP19', 'DRG1')",72,ARHGAP19--DRG1,STAR-Fusion,directional
+AK7,PAPOLA,"(frozenset({'AK7'}), frozenset({'PAPOLA'}))","('AK7', 'PAPOLA')",74,AK7--PAPOLA,STAR-Fusion,directional
+ANKS1A,UHRF1BP1,"(frozenset({'ANKS1A'}), frozenset({'BLTP3A', 'UHRF1BP1'}))","('ANKS1A', 'BLTP3A|UHRF1BP1')",75,ANKS1A--UHRF1BP1,STAR-Fusion,directional
+B3GNTL1,SLC9A8,"(frozenset({'B3GNTL1'}), frozenset({'SLC9A8'}))","('B3GNTL1', 'SLC9A8')",77,B3GNTL1--SLC9A8,STAR-Fusion,directional
+BCAS3,AMPD1,"(frozenset({'BCAS3'}), frozenset({'AMPD1'}))","('BCAS3', 'AMPD1')",78,BCAS3--AMPD1,STAR-Fusion,directional
+BCAS3,ATXN7,"(frozenset({'BCAS3'}), frozenset({'ATXN7'}))","('BCAS3', 'ATXN7')",79,BCAS3--ATXN7,STAR-Fusion,directional
+BCAS4,ZMYND8,"(frozenset({'BCAS4'}), frozenset({'ZMYND8'}))","('BCAS4', 'ZMYND8')",80,BCAS4--ZMYND8,STAR-Fusion,directional
+CHEK2,XBP1|ENSG00000226471,"(frozenset({'CHEK2'}), frozenset({'ENSG00000226471', 'XBP1'}))","('CHEK2', 'ENSG00000226471|XBP1')",81,CHEK2--XBP1|ENSG00000226471,STAR-Fusion,directional
+KCND3,PPM1E,"(frozenset({'KCND3'}), frozenset({'PPM1E'}))","('KCND3', 'PPM1E')",82,KCND3--PPM1E,STAR-Fusion,directional
+MTAP|RP11-145E5.5,CDKN2BAS|CDKN2B-AS1,"(frozenset({'RP11-145E5.5', 'MTAP'}), frozenset({'CDKN2BAS', 'CDKN2B-AS1'}))","('MTAP|RP11-145E5.5', 'CDKN2B-AS1|CDKN2BAS')",83,MTAP|RP11-145E5.5--CDKN2BAS|CDKN2B-AS1,STAR-Fusion,directional
+NAV1|IPO9-AS1,GPR37L1,"(frozenset({'NAV1', 'IPO9-AS1'}), frozenset({'GPR37L1'}))","('IPO9-AS1|NAV1', 'GPR37L1')",84,NAV1|IPO9-AS1--GPR37L1,STAR-Fusion,directional
+NCOA3,SULF2,"(frozenset({'NCOA3'}), frozenset({'SULF2'}))","('NCOA3', 'SULF2')",85,NCOA3--SULF2,STAR-Fusion,directional
+PLCG1,TOP1,"(frozenset({'PLCG1'}), frozenset({'TOP1'}))","('PLCG1', 'TOP1')",86,PLCG1--TOP1,STAR-Fusion,directional
+PNPLA7,WDR85|DPH7,"(frozenset({'PNPLA7'}), frozenset({'DPH7', 'WDR85'}))","('PNPLA7', 'DPH7|WDR85')",87,PNPLA7--WDR85|DPH7,STAR-Fusion,directional
+PTPRG,CCDC129,"(frozenset({'PTPRG'}), frozenset({'CCDC129'}))","('PTPRG', 'CCDC129')",88,PTPRG--CCDC129,STAR-Fusion,directional
+PTPRN2,FAM62B,"(frozenset({'PTPRN2'}), frozenset({'FAM62B'}))","('PTPRN2', 'FAM62B')",89,PTPRN2--FAM62B,STAR-Fusion,directional
+RAD51C,ATXN7,"(frozenset({'RAD51C'}), frozenset({'ATXN7'}))","('RAD51C', 'ATXN7')",90,RAD51C--ATXN7,STAR-Fusion,directional
+SGPP2,ULK4,"(frozenset({'SGPP2'}), frozenset({'ULK4'}))","('SGPP2', 'ULK4')",92,SGPP2--ULK4,STAR-Fusion,directional
+TEX14,PTPRG,"(frozenset({'TEX14'}), frozenset({'PTPRG'}))","('TEX14', 'PTPRG')",94,TEX14--PTPRG,STAR-Fusion,directional
+TOP1,CR593014,"(frozenset({'TOP1'}), frozenset({'CR593014'}))","('TOP1', 'CR593014')",95,TOP1--CR593014,STAR-Fusion,directional
+TSPAN9,TEAD4,"(frozenset({'TSPAN9'}), frozenset({'TEAD4'}))","('TSPAN9', 'TEAD4')",96,TSPAN9--TEAD4,STAR-Fusion,directional
+UBE2V1|TMEM189-UBE2V1,TBX2|TBX2-AS1,"(frozenset({'TMEM189-UBE2V1', 'UBE2V1'}), frozenset({'TBX2-AS1', 'TBX2'}))","('TMEM189-UBE2V1|UBE2V1', 'TBX2|TBX2-AS1')",97,UBE2V1|TMEM189-UBE2V1--TBX2|TBX2-AS1,STAR-Fusion,directional
+VAV3,AK123199|AP4B1-AS1|AP4B1|PTPN22|RP5-1073O3.2,"(frozenset({'VAV3'}), frozenset({'AP4B1-AS1', 'AK123199', 'RP5-1073O3.2', 'PTPN22', 'AP4B1'}))","('VAV3', 'AK123199|AP4B1|AP4B1-AS1|PTPN22|RP5-1073O3.2')",98,VAV3--AK123199|AP4B1-AS1|AP4B1|PTPN22|RP5-1073O3.2,STAR-Fusion,directional
+ZMYND8,USP32,"(frozenset({'ZMYND8'}), frozenset({'USP32'}))","('ZMYND8', 'USP32')",99,ZMYND8--USP32,STAR-Fusion,directional

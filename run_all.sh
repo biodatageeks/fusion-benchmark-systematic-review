@@ -10,6 +10,7 @@ $PYTHON_BIN scripts/plot_benchmark_statistics_heatmap.py
 $PYTHON_BIN scripts/plot_benchmark_reporting_heatmap.py
 $PYTHON_BIN scripts/precision_recall_tradeoff.py
 $PYTHON_BIN scripts/new_tool_benchmark_performance.py
+$PYTHON_BIN scripts/edgren_rnafusion_validation.py
 
 # Optional exploratory random-effects summaries and forest plots.
 # Requires R and the R package 'metafor'.

@@ -31,6 +31,7 @@ docs/           Placeholder for manuscript-related notes.
 - `data/raw/heatmap.xlsx` - benchmark statistics and dataset-feature table used for the benchmark landscape heatmap.
 - `data/raw/reproducibility_and_gold_standard.xlsx` - truth-set, reproducibility, reporting, and benchmark-purpose annotations.
 - `data/raw/Benchmarki_Agnieszka.xlsx` - source workbook for the exploratory random-effects workflow.
+- `data/raw/edgren_rnafusion.xlsx` - RNAfusion-derived calls from Arriba, STAR-Fusion, and FusionCatcher on the Edgren dataset, together with the 99-fusion truth set.
 
 ## Reproducing the Python analyses
 
@@ -57,6 +58,7 @@ python scripts/plot_benchmark_statistics_heatmap.py
 python scripts/plot_benchmark_reporting_heatmap.py
 python scripts/precision_recall_tradeoff.py
 python scripts/new_tool_benchmark_performance.py
+python scripts/edgren_rnafusion_validation.py
 ```
 
 ## Optional exploratory random-effects workflow
@@ -93,6 +95,8 @@ Edgren-derived datasets were annotated as: `2.3`, `5.1`, `6.1`, `6.2`, `7.6`, `7
 - `results/real_simulated/leave_one_benchmark_out_f1.csv`
 - `results/precision_recall_tradeoff/tool_precision_recall_summary_real_without_edgren.csv`
 - `results/new_tool_performance/new_tool_benchmark_summary.csv`
+- `results/edgren_rnafusion_validation/edgren_rnafusion_metrics_summary.csv`
+- `results/edgren_rnafusion_validation/edgren_rnafusion_metrics.pdf`
 - `results/figures/edgren_drift_scatter.pdf`
 - `results/tables/pooled_estimates.csv`
 
