@@ -25,7 +25,13 @@ def jitter_positions(center: float, size: int, width: float = 0.11) -> np.ndarra
 
 def prepare_edgren_data() -> tuple[pd.DataFrame, pd.DataFrame]:
     df = normalize_columns(load_table(DEFAULT_INPUT))
-    edgren = df[df["Is_Edgren"].astype(str).str.lower().str.strip().eq("yes")].copy()
+    if "Is_Edgren_Binary" in df.columns:
+        edgren_mask = df["Is_Edgren_Binary"].astype(str).str.lower().str.strip().eq("yes")
+    elif "Is_Edgren" in df.columns:
+        edgren_mask = df["Is_Edgren"].astype(str).str.lower().str.strip().isin(["yes", "true", "1"])
+    else:
+        edgren_mask = pd.Series(False, index=df.index)
+    edgren = df[edgren_mask].copy()
     edgren = edgren.dropna(subset=["TruthTotal"])
     edgren["Benchmark_label"] = "B" + edgren["Benchmark"].astype(str) + " / " + edgren["Dataset"].astype(str)
 
@@ -70,6 +76,17 @@ def plot_truth_sets(ax: plt.Axes, truth_sets: pd.DataFrame) -> None:
 
 def plot_tool_f1(ax: plt.Axes, f1_data: pd.DataFrame) -> None:
     tools = list(f1_data["Tool"].cat.categories)
+    if not tools:
+        ax.text(
+            0.5,
+            0.5,
+            "No Edgren-derived tools with at least three F1 observations",
+            ha="center",
+            va="center",
+            transform=ax.transAxes,
+        )
+        ax.set_axis_off()
+        return
     positions = np.arange(1, len(tools) + 1)
     values = [f1_data.loc[f1_data["Tool"].eq(tool), "F1"].to_numpy() for tool in tools]
 

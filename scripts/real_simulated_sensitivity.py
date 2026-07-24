@@ -13,7 +13,7 @@ import pandas as pd
 import statsmodels.formula.api as smf
 
 
-DEFAULT_INPUT = Path(__file__).resolve().parents[1] / "data" / "raw" / "real_simulated.xlsx"
+DEFAULT_INPUT = Path(__file__).resolve().parents[1] / "data" / "raw" / "master_analysis_input.xlsx"
 DEFAULT_OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "real_simulated"
 
 
@@ -25,7 +25,7 @@ def _column_index(cell_ref: str) -> int:
     return index - 1
 
 
-def _read_xlsx_without_openpyxl(path: Path, sheet_number: int = 1) -> pd.DataFrame:
+def _read_xlsx_without_openpyxl(path: Path, sheet_number: int | str = 1) -> pd.DataFrame:
     ns = {
         "main": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
         "rel": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
@@ -47,7 +47,12 @@ def _read_xlsx_without_openpyxl(path: Path, sheet_number: int = 1) -> pd.DataFra
         sheets = workbook.findall(".//main:sheet", ns)
         if not sheets:
             raise ValueError("No worksheets found in workbook.")
-        selected = sheets[sheet_number - 1]
+        if isinstance(sheet_number, str):
+            selected = next((sheet for sheet in sheets if sheet.attrib.get("name") == sheet_number), None)
+            if selected is None:
+                raise ValueError(f"Worksheet not found: {sheet_number}")
+        else:
+            selected = sheets[sheet_number - 1]
         rel_id = selected.attrib[f"{{{ns['rel']}}}id"]
         target = relationship_targets[rel_id]
         sheet_path = "xl/" + target.lstrip("/")
@@ -91,17 +96,38 @@ def _read_xlsx_without_openpyxl(path: Path, sheet_number: int = 1) -> pd.DataFra
     return pd.DataFrame(padded[1:], columns=header)
 
 
-def load_table(path: Path) -> pd.DataFrame:
+def load_table(path: Path, sheet_name: str | int | None = None) -> pd.DataFrame:
+    read_excel_kwargs = {}
+    if sheet_name is None and path.name == "master_analysis_input.xlsx":
+        sheet_name = "observations"
+    if sheet_name is not None:
+        read_excel_kwargs["sheet_name"] = sheet_name
     try:
-        return pd.read_excel(path)
+        return pd.read_excel(path, **read_excel_kwargs)
     except ImportError:
-        return _read_xlsx_without_openpyxl(path)
+        sheet_number = sheet_name if sheet_name is not None else 1
+        return _read_xlsx_without_openpyxl(path, sheet_number=sheet_number)
 
 
 def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
     df = df.loc[:, [column for column in df.columns if str(column).strip().lower() != "nan"]].copy()
 
     aliases = {
+        "benchmark_number": "Benchmark",
+        "dataset_id": "Dataset",
+        "dataset_number": "DatasetNumber",
+        "dataset_type_reported": "DatasetType",
+        "dataset_origin": "DatasetOrigin",
+        "tool_name_clean": "Tool",
+        "tool_reported": "ToolReported",
+        "truth_total": "TruthTotal",
+        "recall": "Recall",
+        "precision": "Precision",
+        "f1_score": "F1",
+        "is_edgren": "Is_Edgren",
+        "benchmark_purpose": "Benchmark_purpose",
+        "new_tool_annotation": "new_tool",
+        "read_length_bp": "Read_length",
         "Type_of_dataset": "DatasetType",
         "type_of_dataset": "DatasetType",
         "dataset_type": "DatasetType",
@@ -111,6 +137,9 @@ def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
         "Edgren": "Is_Edgren",
     }
     df = df.rename(columns={column: aliases.get(column, column) for column in df.columns})
+
+    if "Tool" not in df.columns and "ToolReported" in df.columns:
+        df["Tool"] = df["ToolReported"]
 
     required = ["Benchmark", "Dataset", "DatasetType", "Tool"]
     missing = [column for column in required if column not in df.columns]
@@ -134,6 +163,11 @@ def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
         df["F1"] = 2 * df["Precision"] * df["Recall"] / (df["Precision"] + df["Recall"])
 
     df["DatasetType"] = df["DatasetType"].astype(str).str.lower().str.strip()
+    if "DatasetOrigin" in df.columns:
+        origin = df["DatasetOrigin"].astype(str).str.lower().str.strip()
+        df.loc[origin.eq("real"), "DatasetType"] = "real"
+        df.loc[origin.eq("simulated"), "DatasetType"] = "simulated"
+    df["DatasetType"] = np.where(df["DatasetType"].str.startswith("real"), "real", df["DatasetType"])
     df = df[df["DatasetType"].isin(["real", "simulated"])].copy()
     df["Benchmark"] = df["Benchmark"].astype(str).str.strip()
     df["Tool"] = df["Tool"].astype(str).str.strip()
@@ -145,6 +179,22 @@ def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
 
     if "Benchmark_purpose" in df.columns:
         df["Benchmark_purpose"] = df["Benchmark_purpose"].astype(str).str.lower().str.strip()
+        df["Benchmark_purpose"] = (
+            df["Benchmark_purpose"]
+            .str.replace("-", "_", regex=False)
+            .str.replace(" ", "_", regex=False)
+            .str.replace("benchmark", "", regex=False)
+            .str.strip("_")
+        )
+        df["Benchmark_purpose"] = df["Benchmark_purpose"].replace(
+            {
+                "new_tool": "new_tool",
+                "new_tool_": "new_tool",
+                "independent_comparison": "independent_comparison",
+                "independent": "independent_comparison",
+                "comparison": "independent_comparison",
+            }
+        )
     elif "new_tool" in df.columns:
         new_tool = df["new_tool"].astype(str).str.lower().str.strip()
         df["Benchmark_purpose"] = np.where(

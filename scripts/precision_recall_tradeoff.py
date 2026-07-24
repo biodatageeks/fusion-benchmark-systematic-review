@@ -16,7 +16,7 @@ from scipy import stats
 from real_simulated_sensitivity import load_table
 
 
-DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "raw" / "all_data.xlsx"
+DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "raw" / "master_analysis_input.xlsx"
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "precision_recall_tradeoff"
 EDGREN_DATASETS = {"2.3", "5.1", "6.1", "6.2", "7.6", "7.7", "8.3", "10.2"}
 
@@ -52,10 +52,17 @@ def canonical_tool(value: object) -> str:
 
 def load_clean_data() -> pd.DataFrame:
     df = load_table(DATA_PATH).copy()
-    df["Tool"] = df["Tool"].map(canonical_tool)
-    df["DatasetType"] = df["Type_of_dataset"].astype(str).str.lower().str.strip()
+    if "tool_name_clean" in df.columns:
+        df["Tool"] = df["tool_name_clean"].map(canonical_tool)
+    else:
+        df["Tool"] = df["Tool"].map(canonical_tool)
+    if "dataset_origin" in df.columns:
+        df["DatasetType"] = df["dataset_origin"].astype(str).str.lower().str.strip()
+    else:
+        df["DatasetType"] = df["Type_of_dataset"].astype(str).str.lower().str.strip()
+    dataset_column = "dataset_id" if "dataset_id" in df.columns else "Dataset"
     df["DatasetID"] = (
-        df["Dataset"]
+        df[dataset_column]
         .astype(str)
         .str.replace("Dataset", "", regex=False)
         .str.strip()
@@ -63,6 +70,13 @@ def load_clean_data() -> pd.DataFrame:
     df["Is_Edgren"] = df["DatasetID"].isin(EDGREN_DATASETS)
     df["Is_real"] = df["DatasetType"].str.startswith("real")
     df["Is_simulated"] = df["DatasetType"].eq("simulated")
+    rename = {
+        "recall": "Recall_Sensitivity",
+        "precision": "Precision",
+        "f1_score": "F1",
+        "benchmark_number": "Benchmark",
+    }
+    df = df.rename(columns={column: rename.get(column, column) for column in df.columns})
     for column in ["Recall_Sensitivity", "Precision", "F1"]:
         df[column] = pd.to_numeric(df[column], errors="coerce")
     return df

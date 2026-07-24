@@ -8,7 +8,7 @@ The analysis evaluates how reported fusion detection performance depends on benc
 
 ```text
 data/
-  raw/          Manually curated source spreadsheets used as analysis inputs.
+  raw/          Manually curated source spreadsheets and master analysis input.
   processed/    CSV exports and enriched tables derived from raw spreadsheets.
 scripts/        Python scripts for main analyses and manuscript figures.
 scripts/meta_analysis_R/
@@ -21,17 +21,21 @@ results/
   new_tool_performance/        New-tool benchmark context summaries.
   figures/                     Exploratory pooled/forest/drift figures.
   tables/                      Exploratory pooled/drift/sensitivity tables.
-docs/           Placeholder for manuscript-related notes.
+supplementary/  Suggested supplementary/additional-file manifest.
 ```
 
 ## Main input files
 
-- `data/raw/real_simulated.xlsx` - tool-dataset performance table used for real-versus-simulated, leave-one-benchmark-out, read-length, benchmark-purpose, and Edgren sensitivity analyses.
-- `data/raw/all_data.xlsx` - broader tool-level performance table used for recall-precision trade-off analyses.
-- `data/raw/heatmap.xlsx` - benchmark statistics and dataset-feature table used for the benchmark landscape heatmap.
-- `data/raw/reproducibility_and_gold_standard.xlsx` - truth-set, reproducibility, reporting, and benchmark-purpose annotations.
-- `data/raw/Benchmarki_Agnieszka.xlsx` - source workbook for the exploratory random-effects workflow.
-- `data/raw/edgren_rnafusion.xlsx` - RNAfusion-derived calls from Arriba, STAR-Fusion, and FusionCatcher on the Edgren dataset, together with the 99-fusion truth set.
+- `data/raw/master_analysis_input.xlsx` - minimal master workbook used as the primary analysis input for manuscript calculations. It contains cleaned observation-level data, benchmark metadata, dataset metadata, tool-name harmonization, Edgren truth-set annotations, and RNAfusion-derived Edgren calls.
+
+The remaining files in `data/raw/` are retained as curated source/supplementary workbooks from which the master input was assembled or cross-checked:
+
+- `data/raw/real_simulated.xlsx`
+- `data/raw/all_data.xlsx`
+- `data/raw/heatmap.xlsx`
+- `data/raw/reproducibility_and_gold_standard.xlsx`
+- `data/raw/Benchmarki_Agnieszka.xlsx`
+- `data/raw/edgren_rnafusion.xlsx`
 
 ## Reproducing the Python analyses
 
@@ -54,11 +58,13 @@ If you want to run individual scripts:
 ```bash
 python scripts/real_simulated_sensitivity.py
 python scripts/plot_real_simulated_metrics.py
+python scripts/read_length_analysis.py
 python scripts/plot_benchmark_statistics_heatmap.py
 python scripts/plot_benchmark_reporting_heatmap.py
 python scripts/precision_recall_tradeoff.py
 python scripts/new_tool_benchmark_performance.py
 python scripts/edgren_rnafusion_validation.py
+python scripts/exploratory_random_effects.py
 ```
 
 ## Optional exploratory random-effects workflow
@@ -90,6 +96,7 @@ Edgren-derived datasets were annotated as: `2.3`, `5.1`, `6.1`, `6.2`, `7.6`, `7
 - `results/benchmark_statistics/benchmark_statistics_heatmap.pdf`
 - `results/benchmark_reporting/benchmark_reporting_truthset_heatmap.pdf`
 - `results/real_simulated/real_vs_simulated_f1_precision_recall.pdf`
+- `results/read_length/read_length_f1.pdf`
 - `results/real_simulated/dataset_type_models.csv`
 - `results/real_simulated/dataset_type_models_without_edgren.csv`
 - `results/real_simulated/leave_one_benchmark_out_f1.csv`
@@ -98,6 +105,8 @@ Edgren-derived datasets were annotated as: `2.3`, `5.1`, `6.1`, `6.2`, `7.6`, `7
 - `results/edgren_rnafusion_validation/edgren_rnafusion_metrics_summary.csv`
 - `results/edgren_rnafusion_validation/edgren_rnafusion_metrics.pdf`
 - `results/figures/edgren_drift_scatter.pdf`
+- `results/figures/tool_ranking_f1.pdf`
+- `results/figures/heterogeneity_I2.pdf`
 - `results/tables/pooled_estimates.csv`
 
 ## Data provenance

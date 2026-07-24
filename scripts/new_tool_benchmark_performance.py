@@ -11,8 +11,7 @@ from real_simulated_sensitivity import load_table
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "new_tool_performance"
-ALL_DATA = DATA_DIR / "all_data.xlsx"
-REPRO_DATA = DATA_DIR / "reproducibility_and_gold_standard.xlsx"
+MASTER_DATA = DATA_DIR / "master_analysis_input.xlsx"
 METRICS = ["F1", "Precision", "Recall_Sensitivity"]
 
 
@@ -55,16 +54,34 @@ def new_tool_families(tool_names: list[str]) -> set[str]:
     return {canonical_family(tool) for tool in tool_names}
 
 
-def load_inputs() -> tuple[pd.DataFrame, pd.DataFrame]:
-    all_df = load_table(ALL_DATA).dropna(subset=["Benchmark", "Tool"]).copy()
-    repro = load_table(REPRO_DATA).dropna(subset=["Benchmark_number"]).copy()
+def study_label(row: pd.Series) -> str:
+    author = row.get("First_author", row.get("first_author", ""))
+    year = row.get("Year", row.get("year", row.get("year_x", "")))
+    year_text = str(int(year)) if pd.notna(year) and str(year).strip() else ""
+    return f"{author} {year_text}".strip()
 
+
+def load_inputs() -> tuple[pd.DataFrame, pd.DataFrame]:
+    all_df = load_table(MASTER_DATA, sheet_name="observations").dropna(subset=["benchmark_number", "tool_name_clean"]).copy()
+    repro = load_table(MASTER_DATA, sheet_name="benchmark_metadata").dropna(subset=["benchmark_number"]).copy()
+
+    all_df = all_df.rename(
+        columns={
+            "benchmark_number": "Benchmark",
+            "tool_name_clean": "Tool",
+            "f1_score": "F1",
+            "precision": "Precision",
+            "recall": "Recall_Sensitivity",
+            "dataset_id": "Dataset",
+        }
+    )
     all_df["Benchmark"] = all_df["Benchmark"].astype(int)
     all_df["Tool_clean"] = all_df["Tool"].map(clean_tool)
     all_df["Tool_family"] = all_df["Tool_clean"].map(canonical_family)
     for metric in METRICS:
         all_df[metric] = pd.to_numeric(all_df[metric], errors="coerce")
 
+    repro = repro.rename(columns={"benchmark_number": "Benchmark_number", "new_tool_annotation": "New_tool?"})
     repro["Benchmark"] = repro["Benchmark_number"].astype(int)
     repro["New_tool_list"] = repro["New_tool?"].map(parse_new_tool)
     repro["New_tool_families"] = repro["New_tool_list"].map(new_tool_families)
@@ -92,7 +109,7 @@ def summarize_benchmark(all_df: pd.DataFrame, repro_row: pd.Series) -> dict[str,
     if new_tools.empty:
         return {
             "Benchmark": benchmark,
-            "Study": f"{repro_row.get('First_author', '')} {int(repro_row.get('Year')) if pd.notna(repro_row.get('Year')) else ''}".strip(),
+            "Study": study_label(repro_row),
             "New_tool": "; ".join(repro_row["New_tool_list"]),
             "status": "new tool not found in all_data",
         }
@@ -105,7 +122,7 @@ def summarize_benchmark(all_df: pd.DataFrame, repro_row: pd.Series) -> dict[str,
         if recall_ranked_new.empty or recall_ranked_all.empty:
             return {
                 "Benchmark": benchmark,
-                "Study": f"{repro_row.get('First_author', '')} {int(repro_row.get('Year')) if pd.notna(repro_row.get('Year')) else ''}".strip(),
+                "Study": study_label(repro_row),
                 "New_tool": "; ".join(repro_row["New_tool_list"]),
                 "status": "new tool found but F1 unavailable",
             }
@@ -113,7 +130,7 @@ def summarize_benchmark(all_df: pd.DataFrame, repro_row: pd.Series) -> dict[str,
         best_overall_recall = recall_ranked_all.iloc[0]
         return {
             "Benchmark": benchmark,
-            "Study": f"{repro_row.get('First_author', '')} {int(repro_row.get('Year')) if pd.notna(repro_row.get('Year')) else ''}".strip(),
+            "Study": study_label(repro_row),
             "New_tool": "; ".join(repro_row["New_tool_list"]),
             "status": "recall only",
             "n_tools": tool_summary.shape[0],
@@ -156,7 +173,7 @@ def summarize_benchmark(all_df: pd.DataFrame, repro_row: pd.Series) -> dict[str,
 
     return {
         "Benchmark": benchmark,
-        "Study": f"{repro_row.get('First_author', '')} {int(repro_row.get('Year')) if pd.notna(repro_row.get('Year')) else ''}".strip(),
+        "Study": study_label(repro_row),
         "New_tool": "; ".join(repro_row["New_tool_list"]),
         "status": "ok",
         "n_tools": n_tools,

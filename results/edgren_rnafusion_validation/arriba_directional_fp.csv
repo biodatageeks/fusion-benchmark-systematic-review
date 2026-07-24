@@ -55,7 +55,7 @@ Arriba,FITM2--UQCC1,"(frozenset({'FITM2'}), frozenset({'UQCC1'}))","('FITM2', 'U
 Arriba,FOXA1--TTC6,"(frozenset({'FOXA1'}), frozenset({'TTC6'}))","('FOXA1', 'TTC6')",,False,directional
 Arriba,FRG1GP--ERG,"(frozenset({'FRG1GP'}), frozenset({'ERG'}))","('FRG1GP', 'ERG')",,False,directional
 Arriba,GABRB3--RYR3,"(frozenset({'GABRB3'}), frozenset({'RYR3'}))","('GABRB3', 'RYR3')",,False,directional
-Arriba,GCN1--MSI1,"(frozenset({'GCN1L1', 'GCN1'}), frozenset({'MSI1'}))","('GCN1|GCN1L1', 'MSI1')",,False,directional
+Arriba,GCN1--MSI1,"(frozenset({'GCN1', 'GCN1L1'}), frozenset({'MSI1'}))","('GCN1|GCN1L1', 'MSI1')",,False,directional
 Arriba,INIP--C5,"(frozenset({'INIP'}), frozenset({'C5'}))","('INIP', 'C5')",,False,directional
 Arriba,INIP--CDC26,"(frozenset({'INIP'}), frozenset({'CDC26'}))","('INIP', 'CDC26')",,False,directional
 Arriba,IQSEC1--AC090946.1,"(frozenset({'IQSEC1'}), frozenset({'AC090946.1'}))","('IQSEC1', 'AC090946.1')",,False,directional
