@@ -1,0 +1,5 @@
+Benchmark,Dataset,tool,precision,recall,F1,source
+7,Dataset7.7,Arriba,0.29,0.455,0.354228187919463,"B7, Dataset7.7"
+7,Dataset7.7,STAR-Fusion,0.55,0.414,0.4724066390041494,"B7, Dataset7.7"
+7,Dataset7.7,FusionCatcher,0.61,0.273,0.3771913929784825,"B7, Dataset7.7"
+10,Dataset10.2,FusionCatcher,0.8709677419354839,0.2727272727272727,0.4153846153846154,"B10, Dataset10.2"

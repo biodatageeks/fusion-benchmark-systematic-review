@@ -1,14 +1,14 @@
 # Read-length analysis
 
-Input observations with 50/75/100 bp and F1: 214
+Input observations with 50/75/100 bp and F1: 223
 
 ## Mean F1 by read length
 - 50 bp: n=96, mean=0.528, median=0.523.
-- 75 bp: n=39, mean=0.553, median=0.671.
-- 100 bp: n=79, mean=0.597, median=0.748.
+- 75 bp: n=41, mean=0.590, median=0.672.
+- 100 bp: n=86, mean=0.575, median=0.732.
 
-Kruskal-Wallis H=4.37, p=0.1122.
+Kruskal-Wallis H=2.07, p=0.3551.
 
 ## Mixed-effects model, reference 100 bp
-- 75 bp: beta=0.254, 95% CI 0.169 to 0.340, p=4.95e-09.
-- 50 bp: beta=0.017, 95% CI -0.040 to 0.075, p=0.5519.
+- 75 bp: beta=0.239, 95% CI 0.161 to 0.317, p=1.77e-09.
+- 50 bp: beta=0.015, 95% CI -0.040 to 0.070, p=0.5899.

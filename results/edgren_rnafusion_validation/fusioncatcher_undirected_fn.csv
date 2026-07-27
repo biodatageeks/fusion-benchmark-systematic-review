@@ -1,10 +1,10 @@
 Gene1,Gene2,truth_pair,truth_key,truth_id,truth_fusion,tool,matching
-DIDO1,TTI1|KIAA0406,"(frozenset({'DIDO1'}), frozenset({'KIAA0406', 'TTI1'}))","('DIDO1', 'KIAA0406|TTI1')",7,DIDO1--TTI1|KIAA0406,FusionCatcher,undirected
+DIDO1,TTI1|KIAA0406,"(frozenset({'DIDO1'}), frozenset({'TTI1', 'KIAA0406'}))","('DIDO1', 'KIAA0406|TTI1')",7,DIDO1--TTI1|KIAA0406,FusionCatcher,undirected
 LAMP1,MCF2L,"(frozenset({'LAMP1'}), frozenset({'MCF2L'}))","('LAMP1', 'MCF2L')",9,LAMP1--MCF2L,FusionCatcher,undirected
 GLB1,CMTM7,"(frozenset({'GLB1'}), frozenset({'CMTM7'}))","('GLB1', 'CMTM7')",10,GLB1--CMTM7,FusionCatcher,undirected
 MED1,UPS32,"(frozenset({'MED1'}), frozenset({'UPS32'}))","('MED1', 'UPS32')",14,MED1--UPS32,FusionCatcher,undirected
 PIP4K2B,RAD51C,"(frozenset({'PIP4K2B'}), frozenset({'RAD51C'}))","('PIP4K2B', 'RAD51C')",15,PIP4K2B--RAD51C,FusionCatcher,undirected
-THRA,AC090627.1|SKAP1,"(frozenset({'THRA'}), frozenset({'SKAP1', 'AC090627.1'}))","('THRA', 'AC090627.1|SKAP1')",20,THRA--AC090627.1|SKAP1,FusionCatcher,undirected
+THRA,AC090627.1|SKAP1,"(frozenset({'THRA'}), frozenset({'AC090627.1', 'SKAP1'}))","('THRA', 'AC090627.1|SKAP1')",20,THRA--AC090627.1|SKAP1,FusionCatcher,undirected
 NFS1,PREX1,"(frozenset({'NFS1'}), frozenset({'PREX1'}))","('NFS1', 'PREX1')",31,NFS1--PREX1,FusionCatcher,undirected
 ATAD5,TLK2,"(frozenset({'ATAD5'}), frozenset({'TLK2'}))","('ATAD5', 'TLK2')",32,ATAD5--TLK2,FusionCatcher,undirected
 COL14A1,MTSS1,"(frozenset({'COL14A1'}), frozenset({'MTSS1'}))","('COL14A1', 'MTSS1')",33,COL14A1--MTSS1,FusionCatcher,undirected
@@ -24,7 +24,7 @@ TBL1XR1,RGS17,"(frozenset({'TBL1XR1'}), frozenset({'RGS17'}))","('TBL1XR1', 'RGS
 RPS6KB1,DIAPH3,"(frozenset({'RPS6KB1'}), frozenset({'DIAPH3'}))","('RPS6KB1', 'DIAPH3')",58,RPS6KB1--DIAPH3,FusionCatcher,undirected
 AHCYL1,RAD51C,"(frozenset({'AHCYL1'}), frozenset({'RAD51C'}))","('AHCYL1', 'RAD51C')",59,AHCYL1--RAD51C,FusionCatcher,undirected
 ABCA5,PPP4R1L,"(frozenset({'ABCA5'}), frozenset({'PPP4R1L'}))","('ABCA5', 'PPP4R1L')",60,ABCA5--PPP4R1L,FusionCatcher,undirected
-C16orf45|MPV17L|RP11-1021N1.1|C16ORF45,ABCC1,"(frozenset({'RP11-1021N1.1', 'C16ORF45', 'MPV17L'}), frozenset({'ABCC1'}))","('C16ORF45|MPV17L|RP11-1021N1.1', 'ABCC1')",61,C16orf45|MPV17L|RP11-1021N1.1|C16ORF45--ABCC1,FusionCatcher,undirected
+C16orf45|MPV17L|RP11-1021N1.1|C16ORF45,ABCC1,"(frozenset({'MPV17L', 'C16ORF45', 'RP11-1021N1.1'}), frozenset({'ABCC1'}))","('C16ORF45|MPV17L|RP11-1021N1.1', 'ABCC1')",61,C16orf45|MPV17L|RP11-1021N1.1|C16ORF45--ABCC1,FusionCatcher,undirected
 C16orf62,IQCK,"(frozenset({'C16ORF62'}), frozenset({'IQCK'}))","('C16ORF62', 'IQCK')",62,C16orf62--IQCK,FusionCatcher,undirected
 MYO6,SENP6,"(frozenset({'MYO6'}), frozenset({'SENP6'}))","('MYO6', 'SENP6')",64,MYO6--SENP6,FusionCatcher,undirected
 POP1,MATN2,"(frozenset({'POP1'}), frozenset({'MATN2'}))","('POP1', 'MATN2')",65,POP1--MATN2,FusionCatcher,undirected
@@ -36,15 +36,15 @@ SYTL2,PICALM,"(frozenset({'SYTL2'}), frozenset({'PICALM'}))","('SYTL2', 'PICALM'
 ADAMTS19,SLC27A6,"(frozenset({'ADAMTS19'}), frozenset({'SLC27A6'}))","('ADAMTS19', 'SLC27A6')",71,ADAMTS19--SLC27A6,FusionCatcher,undirected
 ARHGAP19,DRG1,"(frozenset({'ARHGAP19'}), frozenset({'DRG1'}))","('ARHGAP19', 'DRG1')",72,ARHGAP19--DRG1,FusionCatcher,undirected
 MYO9B,FCHO1,"(frozenset({'MYO9B'}), frozenset({'FCHO1'}))","('MYO9B', 'FCHO1')",73,MYO9B--FCHO1,FusionCatcher,undirected
-ANKS1A,UHRF1BP1,"(frozenset({'ANKS1A'}), frozenset({'BLTP3A', 'UHRF1BP1'}))","('ANKS1A', 'BLTP3A|UHRF1BP1')",75,ANKS1A--UHRF1BP1,FusionCatcher,undirected
+ANKS1A,UHRF1BP1,"(frozenset({'ANKS1A'}), frozenset({'UHRF1BP1', 'BLTP3A'}))","('ANKS1A', 'BLTP3A|UHRF1BP1')",75,ANKS1A--UHRF1BP1,FusionCatcher,undirected
 B3GNTL1,SLC9A8,"(frozenset({'B3GNTL1'}), frozenset({'SLC9A8'}))","('B3GNTL1', 'SLC9A8')",77,B3GNTL1--SLC9A8,FusionCatcher,undirected
 BCAS3,AMPD1,"(frozenset({'BCAS3'}), frozenset({'AMPD1'}))","('BCAS3', 'AMPD1')",78,BCAS3--AMPD1,FusionCatcher,undirected
 BCAS3,ATXN7,"(frozenset({'BCAS3'}), frozenset({'ATXN7'}))","('BCAS3', 'ATXN7')",79,BCAS3--ATXN7,FusionCatcher,undirected
 BCAS4,ZMYND8,"(frozenset({'BCAS4'}), frozenset({'ZMYND8'}))","('BCAS4', 'ZMYND8')",80,BCAS4--ZMYND8,FusionCatcher,undirected
-CHEK2,XBP1|ENSG00000226471,"(frozenset({'CHEK2'}), frozenset({'XBP1', 'ENSG00000226471'}))","('CHEK2', 'ENSG00000226471|XBP1')",81,CHEK2--XBP1|ENSG00000226471,FusionCatcher,undirected
+CHEK2,XBP1|ENSG00000226471,"(frozenset({'CHEK2'}), frozenset({'ENSG00000226471', 'XBP1'}))","('CHEK2', 'ENSG00000226471|XBP1')",81,CHEK2--XBP1|ENSG00000226471,FusionCatcher,undirected
 KCND3,PPM1E,"(frozenset({'KCND3'}), frozenset({'PPM1E'}))","('KCND3', 'PPM1E')",82,KCND3--PPM1E,FusionCatcher,undirected
-MTAP|RP11-145E5.5,CDKN2BAS|CDKN2B-AS1,"(frozenset({'RP11-145E5.5', 'MTAP'}), frozenset({'CDKN2BAS', 'CDKN2B-AS1'}))","('MTAP|RP11-145E5.5', 'CDKN2B-AS1|CDKN2BAS')",83,MTAP|RP11-145E5.5--CDKN2BAS|CDKN2B-AS1,FusionCatcher,undirected
-NAV1|IPO9-AS1,GPR37L1,"(frozenset({'NAV1', 'IPO9-AS1'}), frozenset({'GPR37L1'}))","('IPO9-AS1|NAV1', 'GPR37L1')",84,NAV1|IPO9-AS1--GPR37L1,FusionCatcher,undirected
+MTAP|RP11-145E5.5,CDKN2BAS|CDKN2B-AS1,"(frozenset({'MTAP', 'RP11-145E5.5'}), frozenset({'CDKN2BAS', 'CDKN2B-AS1'}))","('MTAP|RP11-145E5.5', 'CDKN2B-AS1|CDKN2BAS')",83,MTAP|RP11-145E5.5--CDKN2BAS|CDKN2B-AS1,FusionCatcher,undirected
+NAV1|IPO9-AS1,GPR37L1,"(frozenset({'IPO9-AS1', 'NAV1'}), frozenset({'GPR37L1'}))","('IPO9-AS1|NAV1', 'GPR37L1')",84,NAV1|IPO9-AS1--GPR37L1,FusionCatcher,undirected
 NCOA3,SULF2,"(frozenset({'NCOA3'}), frozenset({'SULF2'}))","('NCOA3', 'SULF2')",85,NCOA3--SULF2,FusionCatcher,undirected
 PLCG1,TOP1,"(frozenset({'PLCG1'}), frozenset({'TOP1'}))","('PLCG1', 'TOP1')",86,PLCG1--TOP1,FusionCatcher,undirected
 PNPLA7,WDR85|DPH7,"(frozenset({'PNPLA7'}), frozenset({'WDR85', 'DPH7'}))","('PNPLA7', 'DPH7|WDR85')",87,PNPLA7--WDR85|DPH7,FusionCatcher,undirected
@@ -52,10 +52,10 @@ PTPRG,CCDC129,"(frozenset({'PTPRG'}), frozenset({'CCDC129'}))","('PTPRG', 'CCDC1
 PTPRN2,FAM62B,"(frozenset({'PTPRN2'}), frozenset({'FAM62B'}))","('PTPRN2', 'FAM62B')",89,PTPRN2--FAM62B,FusionCatcher,undirected
 RAD51C,ATXN7,"(frozenset({'RAD51C'}), frozenset({'ATXN7'}))","('RAD51C', 'ATXN7')",90,RAD51C--ATXN7,FusionCatcher,undirected
 SGPP2,ULK4,"(frozenset({'SGPP2'}), frozenset({'ULK4'}))","('SGPP2', 'ULK4')",92,SGPP2--ULK4,FusionCatcher,undirected
-SULF2,PRICKLE2|RP11-129B22.1|PRICKLE2-AS1,"(frozenset({'SULF2'}), frozenset({'PRICKLE2-AS1', 'RP11-129B22.1', 'PRICKLE2'}))","('SULF2', 'PRICKLE2|PRICKLE2-AS1|RP11-129B22.1')",93,SULF2--PRICKLE2|RP11-129B22.1|PRICKLE2-AS1,FusionCatcher,undirected
+SULF2,PRICKLE2|RP11-129B22.1|PRICKLE2-AS1,"(frozenset({'SULF2'}), frozenset({'PRICKLE2', 'PRICKLE2-AS1', 'RP11-129B22.1'}))","('SULF2', 'PRICKLE2|PRICKLE2-AS1|RP11-129B22.1')",93,SULF2--PRICKLE2|RP11-129B22.1|PRICKLE2-AS1,FusionCatcher,undirected
 TEX14,PTPRG,"(frozenset({'TEX14'}), frozenset({'PTPRG'}))","('TEX14', 'PTPRG')",94,TEX14--PTPRG,FusionCatcher,undirected
 TOP1,CR593014,"(frozenset({'TOP1'}), frozenset({'CR593014'}))","('TOP1', 'CR593014')",95,TOP1--CR593014,FusionCatcher,undirected
 TSPAN9,TEAD4,"(frozenset({'TSPAN9'}), frozenset({'TEAD4'}))","('TSPAN9', 'TEAD4')",96,TSPAN9--TEAD4,FusionCatcher,undirected
-UBE2V1|TMEM189-UBE2V1,TBX2|TBX2-AS1,"(frozenset({'TMEM189-UBE2V1', 'UBE2V1'}), frozenset({'TBX2-AS1', 'TBX2'}))","('TMEM189-UBE2V1|UBE2V1', 'TBX2|TBX2-AS1')",97,UBE2V1|TMEM189-UBE2V1--TBX2|TBX2-AS1,FusionCatcher,undirected
-VAV3,AK123199|AP4B1-AS1|AP4B1|PTPN22|RP5-1073O3.2,"(frozenset({'VAV3'}), frozenset({'RP5-1073O3.2', 'PTPN22', 'AP4B1-AS1', 'AP4B1', 'AK123199'}))","('VAV3', 'AK123199|AP4B1|AP4B1-AS1|PTPN22|RP5-1073O3.2')",98,VAV3--AK123199|AP4B1-AS1|AP4B1|PTPN22|RP5-1073O3.2,FusionCatcher,undirected
+UBE2V1|TMEM189-UBE2V1,TBX2|TBX2-AS1,"(frozenset({'UBE2V1', 'TMEM189-UBE2V1'}), frozenset({'TBX2-AS1', 'TBX2'}))","('TMEM189-UBE2V1|UBE2V1', 'TBX2|TBX2-AS1')",97,UBE2V1|TMEM189-UBE2V1--TBX2|TBX2-AS1,FusionCatcher,undirected
+VAV3,AK123199|AP4B1-AS1|AP4B1|PTPN22|RP5-1073O3.2,"(frozenset({'VAV3'}), frozenset({'AP4B1', 'RP5-1073O3.2', 'AP4B1-AS1', 'AK123199', 'PTPN22'}))","('VAV3', 'AK123199|AP4B1|AP4B1-AS1|PTPN22|RP5-1073O3.2')",98,VAV3--AK123199|AP4B1-AS1|AP4B1|PTPN22|RP5-1073O3.2,FusionCatcher,undirected
 ZMYND8,USP32,"(frozenset({'ZMYND8'}), frozenset({'USP32'}))","('ZMYND8', 'USP32')",99,ZMYND8--USP32,FusionCatcher,undirected

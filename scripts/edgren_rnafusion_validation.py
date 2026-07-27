@@ -11,7 +11,7 @@ os.environ.setdefault("XDG_CACHE_HOME", str(Path(__file__).resolve().parents[1] 
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from real_simulated_sensitivity import load_table
+from real_simulated_sensitivity import DEFAULT_INPUT, load_table, normalize_columns
 
 
 INPUT = Path(__file__).resolve().parents[1] / "data" / "raw" / "edgren_rnafusion.xlsx"
@@ -160,27 +160,74 @@ def evaluate_tool(
     return summary, tp, fp, fn
 
 
-def plot_metrics(summary: pd.DataFrame) -> None:
+def load_paper_reference() -> pd.DataFrame:
+    master = normalize_columns(load_table(DEFAULT_INPUT))
+    truth_total = pd.to_numeric(master["TruthTotal"], errors="coerce")
+    if "Is_Edgren_Binary" in master.columns:
+        edgren_mask = master["Is_Edgren_Binary"].astype(str).str.lower().str.strip().eq("yes")
+    else:
+        edgren_mask = master["Is_Edgren"].astype(str).str.lower().str.strip().isin(["true", "yes", "1"])
+    reference = master[
+        edgren_mask
+        & truth_total.eq(99)
+        & master["Tool"].isin(TOOL_COLUMNS)
+    ][["Benchmark", "Dataset", "Tool", "Precision", "Recall", "F1"]].copy()
+    reference = reference.rename(
+        columns={
+            "Tool": "tool",
+            "Precision": "precision",
+            "Recall": "recall",
+        }
+    )
+    reference["source"] = "B" + reference["Benchmark"].astype(str) + ", " + reference["Dataset"].astype(str)
+    reference.to_csv(OUTPUT_DIR / "published_edgren_tp99_reference_metrics.csv", index=False)
+    return reference
+
+
+def plot_metrics(summary: pd.DataFrame, paper_reference: pd.DataFrame | None = None) -> None:
     directional = summary[summary["matching"].eq("undirected")].copy()
     tools = directional["tool"].tolist()
     metrics = ["precision", "recall", "F1"]
     colors = {"precision": "#4C78A8", "recall": "#F58518", "F1": "#54A24B"}
+    reference_lookup: dict[tuple[str, str], list[float]] = {}
+    if paper_reference is not None and not paper_reference.empty:
+        for _, row in paper_reference.iterrows():
+            for metric in metrics:
+                if pd.isna(row[metric]):
+                    continue
+                reference_lookup.setdefault((row["tool"], metric), []).append(row[metric])
 
     fig, ax = plt.subplots(figsize=(7.4, 4.9))
     width = 0.23
     x_positions = range(len(tools))
+    reference_label_added = False
     for offset, metric in enumerate(metrics):
         values = directional[metric].tolist()
         positions = [x + (offset - 1) * width for x in x_positions]
         ax.bar(positions, values, width=width, label=metric.capitalize(), color=colors[metric])
         for x, value in zip(positions, values):
             ax.text(x, value + 0.015, f"{value:.2f}", ha="center", va="bottom", fontsize=8)
+        for tool, x in zip(tools, positions):
+            reference_values = reference_lookup.get((tool, metric), [])
+            if not reference_values:
+                continue
+            for reference_value in reference_values:
+                ax.hlines(
+                    reference_value,
+                    x - width * 0.46,
+                    x + width * 0.46,
+                    colors="black",
+                    linewidth=2.2,
+                    zorder=5,
+                    label="Published Edgren TP99 value(s)" if not reference_label_added else None,
+                )
+                reference_label_added = True
 
     ax.set_xticks(list(x_positions))
     ax.set_xticklabels(tools)
     ax.set_ylim(0, 1.02)
     ax.set_ylabel("Metric value")
-    ax.legend(frameon=False, ncol=3, loc="upper center", bbox_to_anchor=(0.5, 1.12))
+    ax.legend(frameon=False, ncol=2, loc="upper center", bbox_to_anchor=(0.5, 1.16))
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
     ax.grid(axis="y", color="#E6E6E6", linewidth=0.8)
@@ -271,7 +318,8 @@ def main() -> None:
     pd.concat(all_tp, ignore_index=True).to_csv(OUTPUT_DIR / "all_true_positives.csv", index=False)
     pd.concat(all_fp, ignore_index=True).to_csv(OUTPUT_DIR / "all_false_positives.csv", index=False)
     pd.concat(all_fn, ignore_index=True).to_csv(OUTPUT_DIR / "all_false_negatives.csv", index=False)
-    plot_metrics(summary)
+    paper_reference = load_paper_reference()
+    plot_metrics(summary, paper_reference)
     write_overlap_summary()
 
     print(summary.to_string(index=False, float_format=lambda value: f"{value:.3f}"))

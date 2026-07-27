@@ -10,7 +10,7 @@ STAR-Fusion,BCAS4--BCAS3,"(frozenset({'BCAS4'}), frozenset({'BCAS3'}))","('BCAS4
 STAR-Fusion,BSG--NFIX,"(frozenset({'BSG'}), frozenset({'NFIX'}))","('BSG', 'NFIX')",44.0,True,directional
 STAR-Fusion,CCDC85C--SETD3,"(frozenset({'CCDC85C'}), frozenset({'SETD3'}))","('CCDC85C', 'SETD3')",25.0,True,directional
 STAR-Fusion,CPNE1--PI3,"(frozenset({'CPNE1'}), frozenset({'PI3'}))","('CPNE1', 'PI3')",10.0,True,directional
-STAR-Fusion,CSE1L--AL035685.1,"(frozenset({'CSE1L'}), frozenset({'RP4-791K14.2', 'AL035685.1'}))","('CSE1L', 'AL035685.1|RP4-791K14.2')",22.0,True,directional
+STAR-Fusion,CSE1L--AL035685.1,"(frozenset({'CSE1L'}), frozenset({'AL035685.1', 'RP4-791K14.2'}))","('CSE1L', 'AL035685.1|RP4-791K14.2')",22.0,True,directional
 STAR-Fusion,CYTH1--EIF3H,"(frozenset({'CYTH1'}), frozenset({'EIF3H'}))","('CYTH1', 'EIF3H')",28.0,True,directional
 STAR-Fusion,DHX35--ITCH,"(frozenset({'DHX35'}), frozenset({'ITCH'}))","('DHX35', 'ITCH')",29.0,True,directional
 STAR-Fusion,DIDO1--TTI1,"(frozenset({'DIDO1'}), frozenset({'TTI1'}))","('DIDO1', 'TTI1')",6.0,True,directional
@@ -20,7 +20,7 @@ STAR-Fusion,MED1--STXBP4,"(frozenset({'MED1'}), frozenset({'STXBP4'}))","('MED1'
 STAR-Fusion,MYO9B--FCHO1,"(frozenset({'MYO9B'}), frozenset({'FCHO1'}))","('MYO9B', 'FCHO1')",72.0,True,directional
 STAR-Fusion,NOTCH1--NUP214,"(frozenset({'NOTCH1'}), frozenset({'NUP214'}))","('NOTCH1', 'NUP214')",46.0,True,directional
 STAR-Fusion,PIP4K2B--RAD51C,"(frozenset({'PIP4K2B'}), frozenset({'RAD51C'}))","('PIP4K2B', 'RAD51C')",14.0,True,directional
-STAR-Fusion,PPP1R12A--SEPTIN10,"(frozenset({'PPP1R12A'}), frozenset({'SEPTIN10', 'SEPT10'}))","('PPP1R12A', 'SEPT10|SEPTIN10')",45.0,True,directional
+STAR-Fusion,PPP1R12A--SEPTIN10,"(frozenset({'PPP1R12A'}), frozenset({'SEPT10', 'SEPTIN10'}))","('PPP1R12A', 'SEPT10|SEPTIN10')",45.0,True,directional
 STAR-Fusion,PREX1--CPNE1,"(frozenset({'PREX1'}), frozenset({'CPNE1'}))","('PREX1', 'CPNE1')",37.0,True,directional
 STAR-Fusion,RAB22A--MYO9B,"(frozenset({'RAB22A'}), frozenset({'MYO9B'}))","('RAB22A', 'MYO9B')",4.0,True,directional
 STAR-Fusion,RARA--PKIA,"(frozenset({'RARA'}), frozenset({'PKIA'}))","('RARA', 'PKIA')",23.0,True,directional
