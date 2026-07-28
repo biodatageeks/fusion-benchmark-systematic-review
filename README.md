@@ -1,6 +1,6 @@
 # RNA-seq fusion detection benchmark systematic review
 
-This repository contains curated extraction tables, analysis scripts, derived tables, and figures for a systematic comparative meta-analysis of published benchmarks of RNA-seq-based gene fusion detection tools.
+This repository contains curated extraction tables, analysis scripts, derived tables, and figures for a systematic comparative review of published benchmarks of RNA-seq-based gene fusion detection tools.
 
 The analysis evaluates how reported fusion detection performance depends on benchmark design, including dataset origin, truth-set definition, benchmark purpose, read length, and reproducibility-related reporting.
 
