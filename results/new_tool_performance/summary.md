@@ -2,9 +2,9 @@
 
 Benchmark-level comparison based on mean tool performance within each benchmark.
 
-New tool/family ranked first by mean F1 in 7 of 7 new-tool benchmarks with available F1.
-Using F1 where available and recall otherwise, the new tool/family ranked first in 8 of 8 new-tool benchmarks.
-New tool/family had higher mean F1 than the average of comparator tools in 7 of 7 benchmarks with available F1.
+New tool/family ranked first by mean F1 in 8 of 8 new-tool benchmarks with available F1.
+Using F1 where available and recall otherwise, the new tool/family ranked first in 9 of 9 new-tool benchmarks.
+New tool/family had higher mean F1 than the average of comparator tools in 8 of 8 benchmarks with available F1.
 
 | Benchmark | Study | New tool | best new tool | primary metric/rank | best overall | new mean F1 | others mean F1 | datasets best |
 |---:|---|---|---|---:|---|---:|---:|---:|
@@ -16,6 +16,7 @@ New tool/family had higher mean F1 than the average of comparator tools in 7 of 
 | 8 | Apostolides 2021 | MetaFusion | MetaFusion.top_3 | F1 1/9 | MetaFusion.top_3 | 0.832 | 0.593 | 6/6 |
 | 9 | Zhang 2016 | INTEGRATE | INTEGRATE C | F1 1/12 | INTEGRATE C | 0.694 | 0.262 | 1/1 |
 | 10 | Davidson 2015 | JAFFA | JAFFA-Hybrid | F1 1/7 | JAFFA-Hybrid | 0.795 | 0.529 | 1/2 |
+| 11 | Vicente-Garces 2023 | Fusion InPipe | Fusion InPipe-3 | F1 1/8 | Fusion InPipe-3 | 0.833 | 0.823 | 2/2 |
 
 ## Notes
 - Benchmark 4: recall only (SeekFusion)

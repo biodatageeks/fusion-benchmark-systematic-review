@@ -74,3 +74,11 @@ Benchmark,Tool_clean,Tool_family,Is_new_tool,F1,Precision,Recall_Sensitivity,F1_
 10,SOAPfuse,soapfuse,False,0.6783161806746713,0.8285087719298245,0.5770707070707071,3.0
 10,TopHat-Fusion,tophat-fusion,False,0.4492408999451253,0.568359375,0.44676767676767676,6.0
 10,deFuse,defuse,False,0.572391962565373,0.6959459459459459,0.4864646464646465,5.0
+11,Arriba,arriba,False,0.875,0.9665,0.8005,2.0
+11,CICERO,cicero,False,0.83,0.9665,0.732,5.0
+11,Fusion InPipe-3,fusion-inpipe,True,0.8999999999999999,0.8785000000000001,0.921,1.0
+11,Fusion InPipe-4,fusion-inpipe,True,0.8500000000000001,0.9375,0.7775,4.0
+11,Fusion InPipe-5,fusion-inpipe,True,0.75,0.9645,0.6145,7.0
+11,FusionCatcher,fusioncatcher,False,0.87,0.841,0.8985,3.0
+11,STAR-Fusion,star-fusion,False,0.7949999999999999,0.7685,0.823,6.0
+11,deFuse,defuse,False,0.745,0.8335,0.6795,8.0

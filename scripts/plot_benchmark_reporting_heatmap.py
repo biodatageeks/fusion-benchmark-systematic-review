@@ -15,7 +15,7 @@ from matplotlib.colors import ListedColormap
 from real_simulated_sensitivity import load_table
 
 
-INPUT = Path(__file__).resolve().parents[1] / "data" / "raw" / "reproducibility_and_gold_standard.xlsx"
+INPUT = Path(__file__).resolve().parents[1] / "data" / "raw" / "master_analysis_input.xlsx"
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "benchmark_reporting"
 
 
@@ -24,6 +24,7 @@ TRUTH_COLORS = {
     "Proxy-based": "#D95F02",
     "Published validated fusions": "#1B9E77",
     "RNA + WGS + experimental validation": "#386CB0",
+    "Clinically validated/expected fusions": "#E7298A",
     "Unknown": "#BDBDBD",
 }
 
@@ -40,6 +41,9 @@ def normalize_text(value: object) -> str:
 
 def truth_type(value: object) -> str:
     text = normalize_text(value)
+    text_lower = text.lower()
+    if "clinically validated" in text_lower or "clinically expected" in text_lower:
+        return "Clinically validated/expected fusions"
     if "wisdom" in text or "No defined" in text:
         return "No defined truth set / wisdom of crowds"
     if "Proxy" in text:
@@ -55,15 +59,15 @@ def status(value: object) -> str:
     text = normalize_text(value).lower()
     if not text or text == "nan":
         return "no"
-    if text in {"yes", "github"}:
-        return "yes"
-    if text.startswith("yes") and "tool only" not in text:
-        return "yes"
-    if "limited" in text or "partial" in text or "tool only" in text:
+    if "partial" in text or "limited" in text or "unclear" in text or "tool only" in text:
         return "partial"
     if "no or minimal" in text:
         return "partial"
-    if text == "no":
+    if text in {"yes", "github"}:
+        return "yes"
+    if text.startswith("yes"):
+        return "yes"
+    if text.startswith("no"):
         return "no"
     return "partial"
 
@@ -74,9 +78,9 @@ def new_tool_status(value: object) -> str:
 
 
 def reproducibility_status(row: pd.Series) -> str:
-    fully_reproducible = status(row["Fully_reproducible?"])
-    workflow = status(row["Workflow_(CWL/Snakemake)"])
-    container = status(row["Docker/Singularity"])
+    fully_reproducible = status(row["fully_reproducible"])
+    workflow = status(row["workflow_cwl_snakemake"])
+    container = status(row["docker_singularity"])
     if fully_reproducible == "yes":
         return "yes"
     if "yes" in {workflow, container} or "partial" in {workflow, container, fully_reproducible}:
@@ -85,26 +89,26 @@ def reproducibility_status(row: pd.Series) -> str:
 
 
 def prepare_heatmap_data() -> tuple[pd.DataFrame, pd.DataFrame]:
-    raw = load_table(INPUT).dropna(subset=["Benchmark_number"]).copy()
-    raw["Benchmark_number"] = raw["Benchmark_number"].astype(int)
-    raw["Benchmark"] = (
-        "B"
-        + raw["Benchmark_number"].astype(str)
-        + " "
-        + raw["First_author"].astype(str)
-        + " "
-        + raw["Year"].astype(int).astype(str)
+    raw = load_table(INPUT, sheet_name="benchmark_metadata").dropna(subset=["benchmark_number"]).copy()
+    raw["Benchmark_number"] = pd.to_numeric(raw["benchmark_number"], errors="coerce").astype(int)
+    raw["Year"] = pd.to_numeric(raw["year_x"], errors="coerce").astype(int)
+    raw["First_author"] = raw["first_author"]
+    raw["is_new_borderline_benchmark"] = raw["Benchmark_number"].eq(11)
+    raw = raw.sort_values(
+        ["is_new_borderline_benchmark", "Year", "Benchmark_number"],
+        ascending=[True, False, True],
     )
+    raw["Benchmark"] = raw["First_author"].astype(str) + " " + raw["Year"].astype(int).astype(str)
 
     display = pd.DataFrame(
         {
-            "Truth-set type": raw["Ground_truth_type"].apply(truth_type),
-            "Experimental validation": raw["Experimentally_validated?"].apply(status),
-            "Benchmark code": raw["Code_available"].apply(status),
-            "Tool versions": raw["version"].apply(status),
-            "Parameters": raw["Parameters_disclosed"].apply(status),
+            "Truth-set type": raw["ground_truth_type"].apply(truth_type),
+            "Experimental validation": raw["experimentally_validated"].apply(status),
+            "Benchmark code": raw["code_available"].apply(status),
+            "Tool versions": raw["tool_versions_reported"].apply(status),
+            "Parameters": raw["parameters_disclosed"].apply(status),
             "Fully reproducible": raw.apply(reproducibility_status, axis=1),
-            "New-tool paper": raw["New_tool?"].apply(new_tool_status),
+            "New-tool paper": raw["new_tool_annotation"].apply(new_tool_status),
         },
     )
     display.index = raw["Benchmark"].tolist()
@@ -120,7 +124,7 @@ def prepare_heatmap_data() -> tuple[pd.DataFrame, pd.DataFrame]:
 
 
 def draw_heatmap(display: pd.DataFrame, codes: pd.DataFrame) -> plt.Figure:
-    fig, ax = plt.subplots(figsize=(12.8, 6.2))
+    fig, ax = plt.subplots(figsize=(15.8, 6.2))
     ax.set_xlim(0, len(display.columns))
     ax.set_ylim(0, len(display.index))
     ax.invert_yaxis()
@@ -185,8 +189,9 @@ def draw_heatmap(display: pd.DataFrame, codes: pd.DataFrame) -> plt.Figure:
     first_legend = ax.legend(
         handles=truth_handles,
         title="Truth-set type",
-        loc="upper left",
-        bbox_to_anchor=(1.01, 1.0),
+        loc="upper right",
+        bbox_to_anchor=(0.995, 0.90),
+        bbox_transform=fig.transFigure,
         frameon=False,
         fontsize=9.5,
         title_fontsize=10.5,
@@ -195,13 +200,14 @@ def draw_heatmap(display: pd.DataFrame, codes: pd.DataFrame) -> plt.Figure:
     ax.legend(
         handles=status_handles,
         title="Reporting status",
-        loc="upper left",
-        bbox_to_anchor=(1.01, 0.47),
+        loc="upper right",
+        bbox_to_anchor=(0.995, 0.52),
+        bbox_transform=fig.transFigure,
         frameon=False,
         fontsize=9.5,
         title_fontsize=10.5,
     )
-    fig.tight_layout()
+    fig.subplots_adjust(left=0.11, right=0.73, bottom=0.24, top=0.88)
     return fig
 
 

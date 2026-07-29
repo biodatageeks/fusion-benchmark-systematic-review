@@ -13,7 +13,7 @@ FusionCatcher,CYTH1--EIF3H,"(frozenset({'CYTH1'}), frozenset({'EIF3H'}))","('CYT
 FusionCatcher,DHX35--ITCH,"(frozenset({'DHX35'}), frozenset({'ITCH'}))","('DHX35', 'ITCH')",29.0,True,directional
 FusionCatcher,MED1--STXBP4,"(frozenset({'MED1'}), frozenset({'STXBP4'}))","('MED1', 'STXBP4')",18.0,True,directional
 FusionCatcher,NOTCH1--NUP214,"(frozenset({'NOTCH1'}), frozenset({'NUP214'}))","('NOTCH1', 'NUP214')",46.0,True,directional
-FusionCatcher,PPP1R12A--SEPTIN10,"(frozenset({'PPP1R12A'}), frozenset({'SEPT10', 'SEPTIN10'}))","('PPP1R12A', 'SEPT10|SEPTIN10')",45.0,True,directional
+FusionCatcher,PPP1R12A--SEPTIN10,"(frozenset({'PPP1R12A'}), frozenset({'SEPTIN10', 'SEPT10'}))","('PPP1R12A', 'SEPT10|SEPTIN10')",45.0,True,directional
 FusionCatcher,PREX1--CPNE1,"(frozenset({'PREX1'}), frozenset({'CPNE1'}))","('PREX1', 'CPNE1')",37.0,True,directional
 FusionCatcher,RAB22A--MYO9B,"(frozenset({'RAB22A'}), frozenset({'MYO9B'}))","('RAB22A', 'MYO9B')",4.0,True,directional
 FusionCatcher,RARA--PKIA,"(frozenset({'RARA'}), frozenset({'PKIA'}))","('RARA', 'PKIA')",23.0,True,directional

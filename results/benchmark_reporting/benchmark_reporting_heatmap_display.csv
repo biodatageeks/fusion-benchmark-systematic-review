@@ -1,11 +1,12 @@
 ,Truth-set type,Experimental validation,Benchmark code,Tool versions,Parameters,Fully reproducible,New-tool paper
-B1 Haas 2019,No defined truth set / wisdom of crowds,no,yes,yes,yes,yes,yes
-B2 Uhrig 2021,Proxy-based,no,no,yes,yes,no,yes
-B3 Kumar 2016,RNA + WGS + experimental validation,yes,no,yes,yes,no,no
-B4 Balan 2021,RNA + WGS + experimental validation,yes,no,yes,yes,no,yes
-B5 Zhao 2017,Published validated fusions,partial,no,no,partial,no,yes
-B6 Vu 2018,Published validated fusions,partial,no,no,partial,no,yes
-B7 Singh 2021,Published validated fusions,partial,no,yes,yes,no,no
-B8 Apostolides 2021,Proxy-based,no,partial,no,no,no,yes
-B9 Zhang 2016,RNA + WGS + experimental validation,yes,no,no,partial,no,yes
-B10 Davidson 2015,Published validated fusions,partial,no,yes,yes,no,yes
+Uhrig 2021,Proxy-based,no,no,yes,yes,no,yes
+Balan 2021,RNA + WGS + experimental validation,yes,no,yes,partial,no,yes
+Singh 2021,Published validated fusions,no,no,yes,yes,no,no
+Apostolides 2021,Proxy-based,no,partial,no,no,no,yes
+Haas 2019,No defined truth set / wisdom of crowds,no,yes,yes,yes,yes,yes
+Vu 2018,Published validated fusions,no,no,no,partial,no,yes
+Zhao 2017,Published validated fusions,no,no,no,partial,no,yes
+Kumar 2016,RNA + WGS + experimental validation,yes,no,yes,yes,no,no
+Zhang 2016,RNA + WGS + experimental validation,yes,no,no,partial,no,yes
+Davidson 2015,Published validated fusions,no,no,yes,partial,no,yes
+Vicente-Garces 2023,Clinically validated/expected fusions,yes,partial,no,partial,no,yes

@@ -24,7 +24,7 @@ STAR-Fusion,MYO9B--FCHO1,"(frozenset({'MYO9B'}), frozenset({'FCHO1'}))","('MYO9B
 STAR-Fusion,NOTCH1--NUP214,"(frozenset({'NOTCH1'}), frozenset({'NUP214'}))","('NOTCH1', 'NUP214')",46.0,True,undirected
 STAR-Fusion,PAPOLA--AK7,"(frozenset({'PAPOLA'}), frozenset({'AK7'}))","('PAPOLA', 'AK7')",73.0,True,undirected
 STAR-Fusion,PIP4K2B--RAD51C,"(frozenset({'PIP4K2B'}), frozenset({'RAD51C'}))","('PIP4K2B', 'RAD51C')",14.0,True,undirected
-STAR-Fusion,PPP1R12A--SEPTIN10,"(frozenset({'PPP1R12A'}), frozenset({'SEPT10', 'SEPTIN10'}))","('PPP1R12A', 'SEPT10|SEPTIN10')",45.0,True,undirected
+STAR-Fusion,PPP1R12A--SEPTIN10,"(frozenset({'PPP1R12A'}), frozenset({'SEPTIN10', 'SEPT10'}))","('PPP1R12A', 'SEPT10|SEPTIN10')",45.0,True,undirected
 STAR-Fusion,PREX1--CPNE1,"(frozenset({'PREX1'}), frozenset({'CPNE1'}))","('PREX1', 'CPNE1')",37.0,True,undirected
 STAR-Fusion,RAB22A--MYO9B,"(frozenset({'RAB22A'}), frozenset({'MYO9B'}))","('RAB22A', 'MYO9B')",4.0,True,undirected
 STAR-Fusion,RARA--PKIA,"(frozenset({'RARA'}), frozenset({'PKIA'}))","('RARA', 'PKIA')",23.0,True,undirected

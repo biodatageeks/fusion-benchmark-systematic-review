@@ -12,7 +12,7 @@ TRIO,FBXL7,"(frozenset({'TRIO'}), frozenset({'FBXL7'}))","('TRIO', 'FBXL7')",40,
 WDR67,SLC30A8,"(frozenset({'WDR67'}), frozenset({'SLC30A8'}))","('WDR67', 'SLC30A8')",42,WDR67--SLC30A8,STAR-Fusion,undirected
 CBX3,C15orf57,"(frozenset({'CBX3'}), frozenset({'C15ORF57'}))","('CBX3', 'C15ORF57')",43,CBX3--C15orf57,STAR-Fusion,undirected
 RANBP10,PSKH1,"(frozenset({'RANBP10'}), frozenset({'PSKH1'}))","('RANBP10', 'PSKH1')",44,RANBP10--PSKH1,STAR-Fusion,undirected
-MSI1,GCN1L1,"(frozenset({'MSI1'}), frozenset({'GCN1', 'GCN1L1'}))","('MSI1', 'GCN1|GCN1L1')",51,MSI1--GCN1L1,STAR-Fusion,undirected
+MSI1,GCN1L1,"(frozenset({'MSI1'}), frozenset({'GCN1L1', 'GCN1'}))","('MSI1', 'GCN1|GCN1L1')",51,MSI1--GCN1L1,STAR-Fusion,undirected
 SLC25A24,NBPF6|NBPF4,"(frozenset({'SLC25A24'}), frozenset({'NBPF6', 'NBPF4'}))","('SLC25A24', 'NBPF4|NBPF6')",54,SLC25A24--NBPF6|NBPF4,STAR-Fusion,undirected
 USP31,CRYL1,"(frozenset({'USP31'}), frozenset({'CRYL1'}))","('USP31', 'CRYL1')",55,USP31--CRYL1,STAR-Fusion,undirected
 TBL1XR1,RGS17,"(frozenset({'TBL1XR1'}), frozenset({'RGS17'}))","('TBL1XR1', 'RGS17')",56,TBL1XR1--RGS17,STAR-Fusion,undirected
@@ -20,14 +20,14 @@ TAF4,BRIP1,"(frozenset({'TAF4'}), frozenset({'BRIP1'}))","('TAF4', 'BRIP1')",57,
 RPS6KB1,DIAPH3,"(frozenset({'RPS6KB1'}), frozenset({'DIAPH3'}))","('RPS6KB1', 'DIAPH3')",58,RPS6KB1--DIAPH3,STAR-Fusion,undirected
 AHCYL1,RAD51C,"(frozenset({'AHCYL1'}), frozenset({'RAD51C'}))","('AHCYL1', 'RAD51C')",59,AHCYL1--RAD51C,STAR-Fusion,undirected
 ABCA5,PPP4R1L,"(frozenset({'ABCA5'}), frozenset({'PPP4R1L'}))","('ABCA5', 'PPP4R1L')",60,ABCA5--PPP4R1L,STAR-Fusion,undirected
-C16orf45|MPV17L|RP11-1021N1.1|C16ORF45,ABCC1,"(frozenset({'MPV17L', 'C16ORF45', 'RP11-1021N1.1'}), frozenset({'ABCC1'}))","('C16ORF45|MPV17L|RP11-1021N1.1', 'ABCC1')",61,C16orf45|MPV17L|RP11-1021N1.1|C16ORF45--ABCC1,STAR-Fusion,undirected
+C16orf45|MPV17L|RP11-1021N1.1|C16ORF45,ABCC1,"(frozenset({'MPV17L', 'RP11-1021N1.1', 'C16ORF45'}), frozenset({'ABCC1'}))","('C16ORF45|MPV17L|RP11-1021N1.1', 'ABCC1')",61,C16orf45|MPV17L|RP11-1021N1.1|C16ORF45--ABCC1,STAR-Fusion,undirected
 C16orf62,IQCK,"(frozenset({'C16ORF62'}), frozenset({'IQCK'}))","('C16ORF62', 'IQCK')",62,C16orf62--IQCK,STAR-Fusion,undirected
 MYO6,SENP6,"(frozenset({'MYO6'}), frozenset({'SENP6'}))","('MYO6', 'SENP6')",64,MYO6--SENP6,STAR-Fusion,undirected
 POP1,MATN2,"(frozenset({'POP1'}), frozenset({'MATN2'}))","('POP1', 'MATN2')",65,POP1--MATN2,STAR-Fusion,undirected
 GATAD2B,NUP210L,"(frozenset({'GATAD2B'}), frozenset({'NUP210L'}))","('GATAD2B', 'NUP210L')",66,GATAD2B--NUP210L,STAR-Fusion,undirected
-ESR1,C6orf97|CCDC170,"(frozenset({'ESR1'}), frozenset({'CCDC170', 'C6ORF97'}))","('ESR1', 'C6ORF97|CCDC170')",67,ESR1--C6orf97|CCDC170,STAR-Fusion,undirected
+ESR1,C6orf97|CCDC170,"(frozenset({'ESR1'}), frozenset({'C6ORF97', 'CCDC170'}))","('ESR1', 'C6ORF97|CCDC170')",67,ESR1--C6orf97|CCDC170,STAR-Fusion,undirected
 DEPDC1B,ELOVL7,"(frozenset({'DEPDC1B'}), frozenset({'ELOVL7'}))","('DEPDC1B', 'ELOVL7')",68,DEPDC1B--ELOVL7,STAR-Fusion,undirected
-ATXN7L3,FAM171A2|GRN,"(frozenset({'ATXN7L3'}), frozenset({'FAM171A2', 'GRN'}))","('ATXN7L3', 'FAM171A2|GRN')",69,ATXN7L3--FAM171A2|GRN,STAR-Fusion,undirected
+ATXN7L3,FAM171A2|GRN,"(frozenset({'ATXN7L3'}), frozenset({'GRN', 'FAM171A2'}))","('ATXN7L3', 'FAM171A2|GRN')",69,ATXN7L3--FAM171A2|GRN,STAR-Fusion,undirected
 SYTL2,PICALM,"(frozenset({'SYTL2'}), frozenset({'PICALM'}))","('SYTL2', 'PICALM')",70,SYTL2--PICALM,STAR-Fusion,undirected
 ARHGAP19,DRG1,"(frozenset({'ARHGAP19'}), frozenset({'DRG1'}))","('ARHGAP19', 'DRG1')",72,ARHGAP19--DRG1,STAR-Fusion,undirected
 ANKS1A,UHRF1BP1,"(frozenset({'ANKS1A'}), frozenset({'UHRF1BP1', 'BLTP3A'}))","('ANKS1A', 'BLTP3A|UHRF1BP1')",75,ANKS1A--UHRF1BP1,STAR-Fusion,undirected
@@ -35,10 +35,10 @@ B3GNTL1,SLC9A8,"(frozenset({'B3GNTL1'}), frozenset({'SLC9A8'}))","('B3GNTL1', 'S
 BCAS3,AMPD1,"(frozenset({'BCAS3'}), frozenset({'AMPD1'}))","('BCAS3', 'AMPD1')",78,BCAS3--AMPD1,STAR-Fusion,undirected
 BCAS3,ATXN7,"(frozenset({'BCAS3'}), frozenset({'ATXN7'}))","('BCAS3', 'ATXN7')",79,BCAS3--ATXN7,STAR-Fusion,undirected
 BCAS4,ZMYND8,"(frozenset({'BCAS4'}), frozenset({'ZMYND8'}))","('BCAS4', 'ZMYND8')",80,BCAS4--ZMYND8,STAR-Fusion,undirected
-CHEK2,XBP1|ENSG00000226471,"(frozenset({'CHEK2'}), frozenset({'ENSG00000226471', 'XBP1'}))","('CHEK2', 'ENSG00000226471|XBP1')",81,CHEK2--XBP1|ENSG00000226471,STAR-Fusion,undirected
+CHEK2,XBP1|ENSG00000226471,"(frozenset({'CHEK2'}), frozenset({'XBP1', 'ENSG00000226471'}))","('CHEK2', 'ENSG00000226471|XBP1')",81,CHEK2--XBP1|ENSG00000226471,STAR-Fusion,undirected
 KCND3,PPM1E,"(frozenset({'KCND3'}), frozenset({'PPM1E'}))","('KCND3', 'PPM1E')",82,KCND3--PPM1E,STAR-Fusion,undirected
-MTAP|RP11-145E5.5,CDKN2BAS|CDKN2B-AS1,"(frozenset({'MTAP', 'RP11-145E5.5'}), frozenset({'CDKN2BAS', 'CDKN2B-AS1'}))","('MTAP|RP11-145E5.5', 'CDKN2B-AS1|CDKN2BAS')",83,MTAP|RP11-145E5.5--CDKN2BAS|CDKN2B-AS1,STAR-Fusion,undirected
-NAV1|IPO9-AS1,GPR37L1,"(frozenset({'IPO9-AS1', 'NAV1'}), frozenset({'GPR37L1'}))","('IPO9-AS1|NAV1', 'GPR37L1')",84,NAV1|IPO9-AS1--GPR37L1,STAR-Fusion,undirected
+MTAP|RP11-145E5.5,CDKN2BAS|CDKN2B-AS1,"(frozenset({'MTAP', 'RP11-145E5.5'}), frozenset({'CDKN2B-AS1', 'CDKN2BAS'}))","('MTAP|RP11-145E5.5', 'CDKN2B-AS1|CDKN2BAS')",83,MTAP|RP11-145E5.5--CDKN2BAS|CDKN2B-AS1,STAR-Fusion,undirected
+NAV1|IPO9-AS1,GPR37L1,"(frozenset({'NAV1', 'IPO9-AS1'}), frozenset({'GPR37L1'}))","('IPO9-AS1|NAV1', 'GPR37L1')",84,NAV1|IPO9-AS1--GPR37L1,STAR-Fusion,undirected
 NCOA3,SULF2,"(frozenset({'NCOA3'}), frozenset({'SULF2'}))","('NCOA3', 'SULF2')",85,NCOA3--SULF2,STAR-Fusion,undirected
 PLCG1,TOP1,"(frozenset({'PLCG1'}), frozenset({'TOP1'}))","('PLCG1', 'TOP1')",86,PLCG1--TOP1,STAR-Fusion,undirected
 PNPLA7,WDR85|DPH7,"(frozenset({'PNPLA7'}), frozenset({'WDR85', 'DPH7'}))","('PNPLA7', 'DPH7|WDR85')",87,PNPLA7--WDR85|DPH7,STAR-Fusion,undirected
@@ -49,6 +49,6 @@ SGPP2,ULK4,"(frozenset({'SGPP2'}), frozenset({'ULK4'}))","('SGPP2', 'ULK4')",92,
 TEX14,PTPRG,"(frozenset({'TEX14'}), frozenset({'PTPRG'}))","('TEX14', 'PTPRG')",94,TEX14--PTPRG,STAR-Fusion,undirected
 TOP1,CR593014,"(frozenset({'TOP1'}), frozenset({'CR593014'}))","('TOP1', 'CR593014')",95,TOP1--CR593014,STAR-Fusion,undirected
 TSPAN9,TEAD4,"(frozenset({'TSPAN9'}), frozenset({'TEAD4'}))","('TSPAN9', 'TEAD4')",96,TSPAN9--TEAD4,STAR-Fusion,undirected
-UBE2V1|TMEM189-UBE2V1,TBX2|TBX2-AS1,"(frozenset({'UBE2V1', 'TMEM189-UBE2V1'}), frozenset({'TBX2-AS1', 'TBX2'}))","('TMEM189-UBE2V1|UBE2V1', 'TBX2|TBX2-AS1')",97,UBE2V1|TMEM189-UBE2V1--TBX2|TBX2-AS1,STAR-Fusion,undirected
-VAV3,AK123199|AP4B1-AS1|AP4B1|PTPN22|RP5-1073O3.2,"(frozenset({'VAV3'}), frozenset({'AP4B1', 'RP5-1073O3.2', 'AP4B1-AS1', 'AK123199', 'PTPN22'}))","('VAV3', 'AK123199|AP4B1|AP4B1-AS1|PTPN22|RP5-1073O3.2')",98,VAV3--AK123199|AP4B1-AS1|AP4B1|PTPN22|RP5-1073O3.2,STAR-Fusion,undirected
+UBE2V1|TMEM189-UBE2V1,TBX2|TBX2-AS1,"(frozenset({'TMEM189-UBE2V1', 'UBE2V1'}), frozenset({'TBX2-AS1', 'TBX2'}))","('TMEM189-UBE2V1|UBE2V1', 'TBX2|TBX2-AS1')",97,UBE2V1|TMEM189-UBE2V1--TBX2|TBX2-AS1,STAR-Fusion,undirected
+VAV3,AK123199|AP4B1-AS1|AP4B1|PTPN22|RP5-1073O3.2,"(frozenset({'VAV3'}), frozenset({'RP5-1073O3.2', 'AP4B1-AS1', 'AK123199', 'AP4B1', 'PTPN22'}))","('VAV3', 'AK123199|AP4B1|AP4B1-AS1|PTPN22|RP5-1073O3.2')",98,VAV3--AK123199|AP4B1-AS1|AP4B1|PTPN22|RP5-1073O3.2,STAR-Fusion,undirected
 ZMYND8,USP32,"(frozenset({'ZMYND8'}), frozenset({'USP32'}))","('ZMYND8', 'USP32')",99,ZMYND8--USP32,STAR-Fusion,undirected

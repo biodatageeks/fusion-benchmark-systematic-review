@@ -3,10 +3,10 @@
 Tool-level means were calculated from observations with both recall/sensitivity and precision available.
 
 ## Correlations
-- all: n=308, Pearson r=0.318 (p=1.19e-08), Spearman rho=0.279 (p=6.25e-07).
-- without_edgren: n=241, Pearson r=0.339 (p=6.79e-08), Spearman rho=0.244 (p=1.27e-04).
-- real: n=148, Pearson r=0.003 (p=9.69e-01), Spearman rho=0.027 (p=7.41e-01).
-- real_without_edgren: n=81, Pearson r=0.024 (p=8.29e-01), Spearman rho=0.025 (p=8.22e-01).
+- all: n=324, Pearson r=0.335 (p=6.18e-10), Spearman rho=0.290 (p=1.07e-07).
+- without_edgren: n=257, Pearson r=0.352 (p=6.27e-09), Spearman rho=0.248 (p=5.81e-05).
+- real: n=164, Pearson r=0.126 (p=1.08e-01), Spearman rho=0.127 (p=1.06e-01).
+- real_without_edgren: n=97, Pearson r=0.163 (p=1.10e-01), Spearman rho=0.135 (p=1.86e-01).
 - simulated: n=154, Pearson r=0.445 (p=7.17e-09), Spearman rho=0.278 (p=4.80e-04).
 
 ## High recall / low precision profile
@@ -22,9 +22,9 @@ Tool-level means were calculated from observations with both recall/sensitivity 
 - ChimeraScan: recall - precision = 0.233; mean recall=0.672; mean precision=0.438; n=11.
 - JAFFA: recall - precision = 0.212; mean recall=0.567; mean precision=0.355; n=13.
 - STAR-SEQR: recall - precision = 0.196; mean recall=0.880; mean precision=0.684; n=9.
-- deFuse: recall - precision = 0.185; mean recall=0.701; mean precision=0.516; n=13.
 - EricScript: recall - precision = 0.175; mean recall=0.579; mean precision=0.404; n=16.
-- Arriba: recall - precision = 0.162; mean recall=0.790; mean precision=0.627; n=19.
 - MetaFusion: recall - precision = 0.162; mean recall=0.920; mean precision=0.757; n=6.
+- deFuse: recall - precision = 0.139; mean recall=0.698; mean precision=0.559; n=15.
+- Arriba: recall - precision = 0.131; mean recall=0.791; mean precision=0.660; n=21.
 - ChimeRScope: recall - precision = 0.131; mean recall=0.254; mean precision=0.123; n=7.
 - FusionMap: recall - precision = 0.111; mean recall=0.594; mean precision=0.483; n=12.

@@ -30,19 +30,19 @@ DISPLAY_NAMES = {
 }
 
 LABEL_OFFSETS = {
-    "ChimeraScan": (12, -4),
-    "Pizzly": (10, 14),
-    "STARChip": (12, -18),
+    "ChimeraScan": (10, -6),
+    "Pizzly": (10, 10),
+    "STARChip": (10, -14),
     "EricScript": (8, -2),
-    "JAFFA": (8, 8),
-    "SOAPfuse": (8, 0),
-    "ChimPipe": (6, 10),
-    "INTEGRATE": (8, -2),
-    "FuSeq": (8, 5),
-    "InFusion": (8, 6),
-    "TopHat-Fusion": (8, -2),
+    "JAFFA": (10, -12),
+    "SOAPfuse": (8, 6),
+    "ChimPipe": (10, 31),
+    "INTEGRATE": (12, -26),
+    "FuSeq": (8, 8),
+    "InFusion": (12, 5),
+    "TopHat-Fusion": (8, -14),
     "MapSplice": (8, 8),
-    "FusionCatcher": (8, 8),
+    "FusionCatcher": (8, 12),
     "STAR-Fusion": (8, 8),
     "Arriba": (8, 8),
 }
@@ -64,8 +64,8 @@ def compute_drift() -> pd.DataFrame:
 
 
 def plot_drift(drift: pd.DataFrame) -> None:
-    fig, ax = plt.subplots(figsize=(7.4, 6.6))
-    upper = max(drift[["f1_27", "f1_99"]].max().max() + 0.07, 0.70)
+    fig, ax = plt.subplots(figsize=(7.8, 6.8))
+    upper = max(drift[["f1_27", "f1_99"]].max().max() + 0.10, 0.72)
     ax.plot([0, upper], [0, upper], color="#777777", linestyle="--", linewidth=1.0)
     colors = drift["delta_f1"].map(lambda value: "#D55E00" if value < 0 else "#0072B2")
     ax.scatter(
@@ -86,8 +86,28 @@ def plot_drift(drift: pd.DataFrame) -> None:
             (row["f1_27"], row["f1_99"]),
             xytext=offset,
             textcoords="offset points",
-            fontsize=7.2,
-            alpha=0.9,
+            fontsize=7.4,
+            alpha=0.95,
+            zorder=4,
+            bbox={
+                "boxstyle": "round,pad=0.12",
+                "facecolor": "white",
+                "edgecolor": "none",
+                "alpha": 0.75,
+            },
+            arrowprops=(
+                {
+                    "arrowstyle": "-",
+                    "color": "#888888",
+                    "linewidth": 0.45,
+                    "shrinkA": 0,
+                    "shrinkB": 4,
+                    "alpha": 0.65,
+                }
+                if row["Tool_display"] in {"ChimPipe", "INTEGRATE", "InFusion"}
+                else None
+            ),
+            annotation_clip=False,
         )
 
     ax.set_xlim(0, upper)
@@ -95,7 +115,11 @@ def plot_drift(drift: pd.DataFrame) -> None:
     ax.set_aspect("equal", adjustable="box")
     ax.set_xlabel("F1 using 27-fusion truth set")
     ax.set_ylabel("F1 using 99-fusion truth set")
-    ax.set_title("Truth-set-induced F1 changes on identical Edgren RNA-seq data", fontsize=12)
+    ax.set_title(
+        "Truth-set-induced F1 changes on identical Edgren RNA-seq data",
+        fontsize=12.5,
+        pad=10,
+    )
     ax.grid(color="#E6E6E6", linewidth=0.8)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)

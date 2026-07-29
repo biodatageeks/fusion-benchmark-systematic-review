@@ -29,6 +29,7 @@ def parse_new_tool(value: object) -> list[str]:
 
 def canonical_family(tool: str) -> str:
     normalized = clean_tool(tool).lower().replace("_", "-")
+    normalized_hyphenated = normalized.replace(" ", "-")
     if normalized.startswith("trinityfusion"):
         return "trinityfusion"
     if normalized.startswith("jaffa"):
@@ -47,6 +48,8 @@ def canonical_family(tool: str) -> str:
         return "seekfusion"
     if normalized == "fuseq":
         return "fuseq"
+    if normalized_hyphenated.startswith("fusion-inpipe"):
+        return "fusion-inpipe"
     return normalized
 
 
@@ -111,7 +114,7 @@ def summarize_benchmark(all_df: pd.DataFrame, repro_row: pd.Series) -> dict[str,
             "Benchmark": benchmark,
             "Study": study_label(repro_row),
             "New_tool": "; ".join(repro_row["New_tool_list"]),
-            "status": "new tool not found in all_data",
+            "status": "new tool not found in observations",
         }
 
     ranked_new_tools = new_tools.dropna(subset=["F1"]).sort_values("F1", ascending=False)
