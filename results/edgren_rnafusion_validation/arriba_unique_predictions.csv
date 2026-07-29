@@ -71,7 +71,7 @@ Arriba,FOXA1--TTC6,"(frozenset({'FOXA1'}), frozenset({'TTC6'}))","('FOXA1', 'TTC
 Arriba,FRG1GP--ERG,"(frozenset({'FRG1GP'}), frozenset({'ERG'}))","('FRG1GP', 'ERG')"
 Arriba,GABRB3--RYR3,"(frozenset({'GABRB3'}), frozenset({'RYR3'}))","('GABRB3', 'RYR3')"
 Arriba,GATAD2B--NUP210L,"(frozenset({'GATAD2B'}), frozenset({'NUP210L'}))","('GATAD2B', 'NUP210L')"
-Arriba,GCN1--MSI1,"(frozenset({'GCN1L1', 'GCN1'}), frozenset({'MSI1'}))","('GCN1|GCN1L1', 'MSI1')"
+Arriba,GCN1--MSI1,"(frozenset({'GCN1', 'GCN1L1'}), frozenset({'MSI1'}))","('GCN1|GCN1L1', 'MSI1')"
 Arriba,GLB1--CMTM7,"(frozenset({'GLB1'}), frozenset({'CMTM7'}))","('GLB1', 'CMTM7')"
 Arriba,INIP--C5,"(frozenset({'INIP'}), frozenset({'C5'}))","('INIP', 'C5')"
 Arriba,INIP--CDC26,"(frozenset({'INIP'}), frozenset({'CDC26'}))","('INIP', 'CDC26')"

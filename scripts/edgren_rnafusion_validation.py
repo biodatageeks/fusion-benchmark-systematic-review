@@ -130,10 +130,24 @@ def evaluate_tool(
 ) -> tuple[dict[str, object], pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     truth_pairs = truth["truth_pair"].tolist()
     pred = predictions.copy()
+    scoring_key = pair_key if directional else undirected_pair_key
+    pred["scoring_key"] = pred["pred_pair"].map(scoring_key)
+    pred = pred.drop_duplicates("scoring_key").reset_index(drop=True)
     pred["truth_index"] = pred["pred_pair"].map(
         lambda pair: best_truth_match(pair, truth_pairs, directional=directional)
     )
-    pred["is_tp"] = pred["truth_index"].notna()
+    pred["is_reference_match"] = pred["truth_index"].notna()
+    pred["is_tp"] = False
+    matched_truth_indices: set[int] = set()
+    for index, row in pred.iterrows():
+        if pd.isna(row["truth_index"]):
+            continue
+        truth_index = int(row["truth_index"])
+        if truth_index in matched_truth_indices:
+            continue
+        matched_truth_indices.add(truth_index)
+        pred.loc[index, "is_tp"] = True
+
     tp_truth_indices = set(pred.loc[pred["is_tp"], "truth_index"].astype(int))
     fn = truth.loc[~truth.index.isin(tp_truth_indices)].copy()
     tp = pred[pred["is_tp"]].copy()
@@ -206,7 +220,7 @@ def plot_metrics(summary: pd.DataFrame, paper_reference: pd.DataFrame | None = N
         positions = [x + (offset - 1) * width for x in x_positions]
         ax.bar(positions, values, width=width, label=metric.capitalize(), color=colors[metric])
         for x, value in zip(positions, values):
-            ax.text(x, value + 0.015, f"{value:.2f}", ha="center", va="bottom", fontsize=8)
+            ax.text(x, value + 0.015, f"{value:.3f}", ha="center", va="bottom", fontsize=8)
         for tool, x in zip(tools, positions):
             reference_values = reference_lookup.get((tool, metric), [])
             if not reference_values:

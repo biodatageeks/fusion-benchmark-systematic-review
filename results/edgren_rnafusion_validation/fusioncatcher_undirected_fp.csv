@@ -1,10 +1,10 @@
-tool,Fusion,pred_pair,pred_key,truth_index,is_tp,matching
-FusionCatcher,ACACA--ERBB2,"(frozenset({'ACACA'}), frozenset({'ERBB2'}))","('ACACA', 'ERBB2')",,False,undirected
-FusionCatcher,BRD4--RFX1,"(frozenset({'BRD4'}), frozenset({'RFX1'}))","('BRD4', 'RFX1')",,False,undirected
-FusionCatcher,EEF1A1--ERBB2,"(frozenset({'EEF1A1'}), frozenset({'ERBB2'}))","('EEF1A1', 'ERBB2')",,False,undirected
-FusionCatcher,ERBB2--GRB7,"(frozenset({'ERBB2'}), frozenset({'GRB7'}))","('ERBB2', 'GRB7')",,False,undirected
-FusionCatcher,ITCH--ERBB2,"(frozenset({'ITCH'}), frozenset({'ERBB2'}))","('ITCH', 'ERBB2')",,False,undirected
-FusionCatcher,NPEPPS--TBC1D3,"(frozenset({'NPEPPS'}), frozenset({'TBC1D3'}))","('NPEPPS', 'TBC1D3')",,False,undirected
-FusionCatcher,SMG1--NPIPB5,"(frozenset({'SMG1'}), frozenset({'NPIPB5'}))","('SMG1', 'NPIPB5')",,False,undirected
-FusionCatcher,THRA--THRA1/BTR,"(frozenset({'THRA'}), frozenset({'THRA1/BTR'}))","('THRA', 'THRA1/BTR')",,False,undirected
-FusionCatcher,USP32--MED1,"(frozenset({'USP32'}), frozenset({'MED1'}))","('USP32', 'MED1')",,False,undirected
+tool,Fusion,pred_pair,pred_key,scoring_key,truth_index,is_reference_match,is_tp,matching
+FusionCatcher,ACACA--ERBB2,"(frozenset({'ACACA'}), frozenset({'ERBB2'}))","('ACACA', 'ERBB2')","('ACACA', 'ERBB2')",,False,False,undirected
+FusionCatcher,BRD4--RFX1,"(frozenset({'BRD4'}), frozenset({'RFX1'}))","('BRD4', 'RFX1')","('BRD4', 'RFX1')",,False,False,undirected
+FusionCatcher,EEF1A1--ERBB2,"(frozenset({'EEF1A1'}), frozenset({'ERBB2'}))","('EEF1A1', 'ERBB2')","('EEF1A1', 'ERBB2')",,False,False,undirected
+FusionCatcher,ERBB2--GRB7,"(frozenset({'ERBB2'}), frozenset({'GRB7'}))","('ERBB2', 'GRB7')","('ERBB2', 'GRB7')",,False,False,undirected
+FusionCatcher,ITCH--ERBB2,"(frozenset({'ITCH'}), frozenset({'ERBB2'}))","('ITCH', 'ERBB2')","('ERBB2', 'ITCH')",,False,False,undirected
+FusionCatcher,NPEPPS--TBC1D3,"(frozenset({'NPEPPS'}), frozenset({'TBC1D3'}))","('NPEPPS', 'TBC1D3')","('NPEPPS', 'TBC1D3')",,False,False,undirected
+FusionCatcher,SMG1--NPIPB5,"(frozenset({'SMG1'}), frozenset({'NPIPB5'}))","('SMG1', 'NPIPB5')","('NPIPB5', 'SMG1')",,False,False,undirected
+FusionCatcher,THRA--THRA1/BTR,"(frozenset({'THRA'}), frozenset({'THRA1/BTR'}))","('THRA', 'THRA1/BTR')","('THRA', 'THRA1/BTR')",,False,False,undirected
+FusionCatcher,USP32--MED1,"(frozenset({'USP32'}), frozenset({'MED1'}))","('USP32', 'MED1')","('MED1', 'USP32')",,False,False,undirected
