@@ -11,8 +11,6 @@ data/
   raw/          Manually curated source spreadsheets and master analysis input.
   processed/    CSV exports and enriched tables derived from raw spreadsheets.
 scripts/        Python scripts for main analyses and manuscript figures.
-scripts/meta_analysis_R/
-                Additional exploratory random-effects summaries and forest plots.
 results/
   real_simulated/              Mixed-effects real-vs-simulated analyses.
   benchmark_statistics/        Benchmark landscape heatmap and source tables.
@@ -66,26 +64,6 @@ python scripts/new_tool_benchmark_performance.py
 python scripts/edgren_rnafusion_validation.py
 python scripts/exploratory_random_effects.py
 ```
-
-## Optional exploratory random-effects workflow
-
-The exploratory random-effects summaries and forest plots require R and the `metafor` package:
-
-```r
-install.packages("metafor")
-```
-
-Then run:
-
-```bash
-python scripts/meta_analysis_R/01_export_from_excel.py
-python scripts/meta_analysis_R/02_data_quality_report.py
-Rscript scripts/meta_analysis_R/03_meta_analysis.R
-python scripts/meta_analysis_R/05_edgren_drift_figure.py
-python scripts/meta_analysis_R/04_make_figures.py
-```
-
-These analyses are descriptive and are used to quantify between-benchmark heterogeneity. They should not be interpreted as definitive universal rankings of fusion detection tools.
 
 ## Edgren dataset annotation
 
