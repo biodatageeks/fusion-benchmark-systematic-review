@@ -48,7 +48,7 @@ STAR-Fusion,NOTCH1--NUP214,"(frozenset({'NOTCH1'}), frozenset({'NUP214'}))","('N
 STAR-Fusion,PAPOLA--AK7,"(frozenset({'PAPOLA'}), frozenset({'AK7'}))","('PAPOLA', 'AK7')"
 STAR-Fusion,PGK1--MT-RNR2,"(frozenset({'PGK1'}), frozenset({'MT-RNR2'}))","('PGK1', 'MT-RNR2')"
 STAR-Fusion,PIP4K2B--RAD51C,"(frozenset({'PIP4K2B'}), frozenset({'RAD51C'}))","('PIP4K2B', 'RAD51C')"
-STAR-Fusion,PPP1R12A--SEPTIN10,"(frozenset({'PPP1R12A'}), frozenset({'SEPTIN10', 'SEPT10'}))","('PPP1R12A', 'SEPT10|SEPTIN10')"
+STAR-Fusion,PPP1R12A--SEPTIN10,"(frozenset({'PPP1R12A'}), frozenset({'SEPT10', 'SEPTIN10'}))","('PPP1R12A', 'SEPT10|SEPTIN10')"
 STAR-Fusion,PREX1--CPNE1,"(frozenset({'PREX1'}), frozenset({'CPNE1'}))","('PREX1', 'CPNE1')"
 STAR-Fusion,PTMA--EEF1A2,"(frozenset({'PTMA'}), frozenset({'EEF1A2'}))","('PTMA', 'EEF1A2')"
 STAR-Fusion,RAB22A--MYO9B,"(frozenset({'RAB22A'}), frozenset({'MYO9B'}))","('RAB22A', 'MYO9B')"

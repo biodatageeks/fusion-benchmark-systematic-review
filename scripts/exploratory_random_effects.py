@@ -248,33 +248,6 @@ def plot_edgren_drift_scatter(drift: pd.DataFrame) -> None:
     plt.close(fig)
 
 
-def plot_tool_ranking(pooled: pd.DataFrame) -> None:
-    f1 = pooled[pooled["metric"].eq("f1")].sort_values("pooled", ascending=True)
-    fig, ax = plt.subplots(figsize=(7.5, max(4.2, 0.35 * len(f1) + 1.2)))
-    y_pos = np.arange(len(f1))
-    ax.errorbar(
-        f1["pooled"],
-        y_pos,
-        xerr=[f1["pooled"] - f1["ci_lb"], f1["ci_ub"] - f1["pooled"]],
-        fmt="o",
-        color="#2F6DB3",
-        ecolor="#2F6DB3",
-        capsize=3,
-    )
-    ax.set_yticks(y_pos)
-    ax.set_yticklabels([f"{tool} (k={int(k)})" for tool, k in zip(f1["tool"], f1["k"])])
-    ax.set_xlim(0, 1)
-    ax.set_xlabel("Random-effects pooled F1-score (95% CI)")
-    ax.set_title("Exploratory pooled F1 estimates for recurrently evaluated tools")
-    ax.grid(axis="x", color="#E3E3E3")
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    fig.tight_layout()
-    fig.savefig(FIG_DIR / "tool_ranking_f1.png", dpi=600, bbox_inches="tight")
-    fig.savefig(FIG_DIR / "tool_ranking_f1.pdf", bbox_inches="tight")
-    plt.close(fig)
-
-
 def plot_i2(pooled: pd.DataFrame) -> None:
     metric_order = ["precision", "sensitivity", "f1"]
     f1_order = (
@@ -335,7 +308,6 @@ def main() -> None:
     drift = edgren_truth_set_drift(df)
     drift.to_csv(TABLE_DIR / "edgren_truth_set_drift.csv", index=False)
     plot_edgren_drift_scatter(drift)
-    plot_tool_ranking(pooled)
     plot_i2(pooled)
     write_summary(pooled, subgroup)
     print((TABLE_DIR / "random_effects_summary.md").read_text(encoding="utf-8"))
