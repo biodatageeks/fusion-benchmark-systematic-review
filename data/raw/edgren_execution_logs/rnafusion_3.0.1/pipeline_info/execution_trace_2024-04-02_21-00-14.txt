@@ -1,0 +1,2 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	a2/142ffb	1169903	NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)	FAILED	1	2024-04-02 21:00:21.961	1.3s	1.2s	-	-	-	-	-

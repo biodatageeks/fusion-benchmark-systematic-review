@@ -1,0 +1,13 @@
+{
+  "runs": [
+    "SRR064286",
+    "SRR064287",
+    "SRR064438",
+    "SRR064439",
+    "SRR064440",
+    "SRR064441"
+  ],
+  "files": 12,
+  "bytes": 5432369571,
+  "verification": "size, MD5, gzip -t"
+}

@@ -8,7 +8,7 @@ The analysis evaluates how reported fusion detection performance depends on benc
 
 ```text
 data/
-  raw/          Minimal curated input workbooks used by the analysis scripts.
+  raw/          Curated input workbooks and archived Edgren workflow execution records.
 scripts/        Python scripts for main analyses and manuscript figures.
 results/
   real_simulated/              Mixed-effects real-vs-simulated analyses.
@@ -27,6 +27,10 @@ supplementary/  Suggested supplementary/additional-file manifest.
 - `data/raw/edgren_rnafusion.xlsx` - curated RNAfusion output workbook used for the controlled Edgren/RNAfusion validation analysis.
 
 These two workbooks are the only required input files for reproducing the analyses in this repository.
+
+## Edgren workflow execution records
+
+Logs, reports, traces, timelines, parameters and software versions for the recovered RNAfusion **3.0.1** run and the **4.1.3** rerun are archived in [`data/raw/edgren_execution_logs/`](data/raw/edgren_execution_logs/README.md), with source-file mappings and SHA256 checksums. These are provenance records, separate from the curated prediction workbook and analysis inputs. See the archive README for run status and reproducibility limits.
 
 ## Reproducing the Python analyses
 

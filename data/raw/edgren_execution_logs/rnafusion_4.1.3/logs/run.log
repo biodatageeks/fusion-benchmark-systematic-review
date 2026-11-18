@@ -1,0 +1,47 @@
+Total compressed FASTQ: 5,432,369,571 bytes
+Downloading SRR064286_1.fastq.gz: 403,883,822 bytesDownloading SRR064286_2.fastq.gz: 407,709,835 bytes
+
+Verified SRR064286_1.fastq.gz
+Downloading SRR064287_1.fastq.gz: 326,497,959 bytes
+curl: (22) The requested URL returned error: 403
+Downloading SRR064287_2.fastq.gz: 339,107,496 bytes
+Verified SRR064286_2.fastq.gz
+Downloading SRR064438_1.fastq.gz: 655,377,929 bytes
+curl: (22) The requested URL returned error: 403
+Verified SRR064287_2.fastq.gz
+Traceback (most recent call last):
+  File "/data/ccle_fusions/side_projects/edgren_rnafusion/scripts/prepare_data.py", line 115, in <module>
+    main()
+    ~~~~^^
+  File "/data/ccle_fusions/side_projects/edgren_rnafusion/scripts/prepare_data.py", line 101, in main
+    list(pool.map(download, downloads))
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/ccle_fusions/envs/nextflow/lib/python3.14/concurrent/futures/_base.py", line 645, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/data/ccle_fusions/envs/nextflow/lib/python3.14/concurrent/futures/_base.py", line 312, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "/data/ccle_fusions/envs/nextflow/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/data/ccle_fusions/envs/nextflow/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/data/ccle_fusions/envs/nextflow/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/data/ccle_fusions/envs/nextflow/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/data/ccle_fusions/side_projects/edgren_rnafusion/scripts/prepare_data.py", line 54, in download
+    subprocess.run([
+    ~~~~~~~~~~~~~~^^
+        "curl", "--fail", "--location", "--retry", "5", "--retry-delay", "5",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        "https://" + url,
+        ^^^^^^^^^^^^^^^^^
+    ], check=True)
+    ^^^^^^^^^^^^^^
+  File "/data/ccle_fusions/envs/nextflow/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['curl', '--fail', '--location', '--retry', '5', '--retry-delay', '5', '--connect-timeout', '30', '--speed-limit', '1024', '--speed-time', '180', '--silent', '--show-error', '--continue-at', '-', '--output', '/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064287_1.fastq.gz.part', 'https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR064/SRR064287/SRR064287_1.fastq.gz']' returned non-zero exit status 22.

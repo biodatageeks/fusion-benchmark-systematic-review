@@ -1,0 +1,34 @@
+ARRIBA_ARRIBA:
+  arriba: 2.5.0
+FASTQC_RAW:
+  fastqc: 0.12.1
+FUSIONCATCHER_FUSIONCATCHER:
+  fusioncatcher: '1.35'
+FUSIONREPORT_DETECT:
+  fusion_report: 4.1.1
+GATK4_MARKDUPLICATES:
+  gatk4: 4.6.1.0
+  samtools: 1.21
+PICARD_COLLECTINSERTSIZEMETRICS:
+  picard: 3.3.0
+PICARD_COLLECTRNASEQMETRICS:
+  picard: 3.3.0
+SAMTOOLS_FLAGSTAT:
+  samtools: 1.23.1
+SAMTOOLS_IDXSTATS:
+  samtools: 1.23.1
+SAMTOOLS_INDEX:
+  samtools: 1.23.1
+SAMTOOLS_SORT:
+  samtools: 1.23.1
+SAMTOOLS_STATS:
+  samtools: 1.23.1
+STARFUSION_DETECT:
+  STAR-Fusion: 1.15.1
+STAR_ALIGN:
+  gawk: 5.1.0
+  samtools: 1.21
+  star: 2.7.11b
+Workflow:
+    nf-core/rnafusion: v4.1.3-g76ad76e
+    Nextflow: 25.10.4

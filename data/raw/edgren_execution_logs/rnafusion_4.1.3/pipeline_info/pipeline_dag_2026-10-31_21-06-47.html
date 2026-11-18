@@ -1,0 +1,395 @@
+<!--
+  ~ Copyright 2013-2024, Seqera Labs
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<pre class="mermaid" style="text-align: center;">
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#B6ECE2',
+      'primaryTextColor': '#160F26',
+      'primaryBorderColor': '#065647',
+      'lineColor': '#545555',
+      'clusterBkg': '#BABCBD22',
+      'clusterBorder': '#DDDEDE',
+      'fontFamily': 'arial'
+    }
+  }
+}%%
+flowchart TB
+    subgraph " "
+    v2["Channel.fromList"]
+    v14["Channel.fromPath"]
+    v16["Channel.fromPath"]
+    v20["Channel.fromPath"]
+    v26["Channel.fromPath"]
+    v30["Channel.fromPath"]
+    v35["Channel.fromPath"]
+    v37["Channel.fromPath"]
+    v38["Channel.fromPath"]
+    v39["Channel.fromPath"]
+    v40["Channel.fromPath"]
+    v41["Channel.fromPath"]
+    v45["Channel.fromPath"]
+    v49["Channel.fromPath"]
+    v75["interleave"]
+    v134["star_ignore_sjdbgtf"]
+    v148["index_format"]
+    v166["index_format"]
+    v230["tools_cutoff"]
+    v265[" "]
+    v275["Channel.of"]
+    v281["Channel.fromPath"]
+    v284["ch_workflow_summary"]
+    v288["ch_methods_description"]
+    v295["replace_names"]
+    v296["sample_names"]
+    end
+    subgraph "RNAFUSION [RNAFUSION]"
+    v76(["SAMTOOLS_COLLATEFASTQ"])
+    subgraph "RNAFUSION:FASTQ_FASTQC_UMITOOLS_FASTP [FASTQ_FASTQC_UMITOOLS_FASTP]"
+    v111(["FASTQC_RAW"])
+    v110(( ))
+    end
+    subgraph "RNAFUSION:FASTQ_ALIGN_STAR [FASTQ_ALIGN_STAR]"
+    v135(["STAR_ALIGN"])
+    subgraph "RNAFUSION:FASTQ_ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS_GENOME [BAM_SORT_STATS_SAMTOOLS_GENOME]"
+    v149(["SAMTOOLS_SORT"])
+    v154(["SAMTOOLS_INDEX"])
+    subgraph "RNAFUSION:FASTQ_ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS_GENOME:BAM_STATS_SAMTOOLS [BAM_STATS_SAMTOOLS]"
+    v157(["SAMTOOLS_STATS"])
+    v160(["SAMTOOLS_FLAGSTAT"])
+    v163(["SAMTOOLS_IDXSTATS"])
+    end
+    v156(( ))
+    end
+    subgraph "RNAFUSION:FASTQ_ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS_TRANSCRIPTOME [BAM_SORT_STATS_SAMTOOLS_TRANSCRIPTOME]"
+    v167(["SAMTOOLS_SORT"])
+    v172(["SAMTOOLS_INDEX"])
+    subgraph "RNAFUSION:FASTQ_ALIGN_STAR:BAM_SORT_STATS_SAMTOOLS_TRANSCRIPTOME:BAM_STATS_SAMTOOLS [BAM_STATS_SAMTOOLS]"
+    v175(["SAMTOOLS_STATS"])
+    v178(["SAMTOOLS_FLAGSTAT"])
+    v181(["SAMTOOLS_IDXSTATS"])
+    end
+    v174(( ))
+    end
+    end
+    v184(["SAMTOOLS_INDEX"])
+    v200(["ARRIBA_ARRIBA"])
+    v207(["STARFUSION_DETECT"])
+    subgraph "RNAFUSION:FUSIONCATCHER_WORKFLOW [FUSIONCATCHER_WORKFLOW]"
+    v214(["FUSIONCATCHER_FUSIONCATCHER"])
+    v217(( ))
+    end
+    v231(["FUSIONREPORT_DETECT"])
+    subgraph "RNAFUSION:QC_WORKFLOW [QC_WORKFLOW]"
+    v244(["PICARD_COLLECTRNASEQMETRICS"])
+    v249(["GATK4_MARKDUPLICATES"])
+    v255(["PICARD_COLLECTINSERTSIZEMETRICS"])
+    v241(( ))
+    v242(( ))
+    v243(( ))
+    v246(( ))
+    v247(( ))
+    v248(( ))
+    end
+    v297(["MULTIQC"])
+    subgraph "RNAFUSION:BUILD_REFERENCES [BUILD_REFERENCES]"
+    v15(( ))
+    v17(( ))
+    v21(( ))
+    v27(( ))
+    v31(( ))
+    v36(( ))
+    v42(( ))
+    v46(( ))
+    v50(( ))
+    v63(( ))
+    v64(( ))
+    v65(( ))
+    v66(( ))
+    end
+    v70(( ))
+    v71(( ))
+    v127(( ))
+    v130(( ))
+    v206(( ))
+    v292(( ))
+    v293(( ))
+    v294(( ))
+    v301(( ))
+    end
+    subgraph " "
+    v77[" "]
+    v78[" "]
+    v79[" "]
+    v112[" "]
+    v113["fastqc_raw_html"]
+    v136[" "]
+    v137[" "]
+    v138[" "]
+    v139["tab"]
+    v140["fastq"]
+    v141[" "]
+    v142["bam_sorted"]
+    v143[" "]
+    v144[" "]
+    v145[" "]
+    v146["log_progress"]
+    v147["log_out"]
+    v150[" "]
+    v151[" "]
+    v152[" "]
+    v153[" "]
+    v155[" "]
+    v158[" "]
+    v159["stats"]
+    v161[" "]
+    v162["flagstat"]
+    v164[" "]
+    v165["idxstats"]
+    v168[" "]
+    v169[" "]
+    v170[" "]
+    v171[" "]
+    v173[" "]
+    v176[" "]
+    v177["stats_transcript"]
+    v179[" "]
+    v180["flagstat_transcript"]
+    v182[" "]
+    v183["idxstats_transcript"]
+    v185[" "]
+    v190[" "]
+    v198[" "]
+    v201[" "]
+    v204[" "]
+    v208[" "]
+    v209[" "]
+    v212[" "]
+    v215[" "]
+    v216[" "]
+    v232[" "]
+    v233[" "]
+    v234[" "]
+    v235[" "]
+    v236[" "]
+    v237[" "]
+    v238[" "]
+    v245[" "]
+    v250[" "]
+    v251[" "]
+    v252[" "]
+    v253[" "]
+    v256[" "]
+    v298[" "]
+    v299[" "]
+    v300[" "]
+    v303[" "]
+    end
+    subgraph "PIPELINE_INITIALISATION [PIPELINE_INITIALISATION]"
+    v3(( ))
+    end
+    subgraph "PIPELINE_COMPLETION [PIPELINE_COMPLETION]"
+    v302(( ))
+    end
+    v2 --> v3
+    v14 --> v15
+    v16 --> v17
+    v20 --> v21
+    v26 --> v27
+    v30 --> v31
+    v35 --> v36
+    v37 --> v63
+    v38 --> v64
+    v39 --> v65
+    v40 --> v66
+    v41 --> v42
+    v45 --> v46
+    v49 --> v50
+    v75 --> v76
+    v15 --> v76
+    v71 --> v76
+    v76 --> v79
+    v76 --> v78
+    v76 --> v77
+    v76 --> v70
+    v76 --> v71
+    v110 --> v111
+    v111 --> v113
+    v111 --> v112
+    v111 --> v70
+    v134 --> v135
+    v17 --> v135
+    v36 --> v135
+    v127 --> v135
+    v135 --> v147
+    v135 --> v146
+    v135 --> v145
+    v135 --> v144
+    v135 --> v143
+    v135 --> v149
+    v135 --> v142
+    v135 --> v184
+    v135 --> v167
+    v135 --> v141
+    v135 --> v140
+    v135 --> v139
+    v135 --> v138
+    v135 --> v137
+    v135 --> v136
+    v135 --> v70
+    v135 --> v71
+    v148 --> v149
+    v130 --> v149
+    v149 --> v154
+    v149 --> v153
+    v149 --> v152
+    v149 --> v151
+    v149 --> v150
+    v149 --> v156
+    v154 --> v155
+    v154 --> v156
+    v130 --> v157
+    v156 --> v157
+    v157 --> v159
+    v157 --> v158
+    v156 --> v160
+    v160 --> v162
+    v160 --> v161
+    v156 --> v163
+    v163 --> v165
+    v163 --> v164
+    v166 --> v167
+    v130 --> v167
+    v167 --> v172
+    v167 --> v171
+    v167 --> v170
+    v167 --> v169
+    v167 --> v168
+    v167 --> v174
+    v172 --> v173
+    v172 --> v174
+    v130 --> v175
+    v174 --> v175
+    v175 --> v177
+    v175 --> v176
+    v174 --> v178
+    v178 --> v180
+    v178 --> v179
+    v174 --> v181
+    v181 --> v183
+    v181 --> v182
+    v184 --> v185
+    v184 --> v71
+    v71 --> v190
+    v71 --> v198
+    v15 --> v200
+    v17 --> v200
+    v63 --> v200
+    v64 --> v200
+    v65 --> v200
+    v66 --> v200
+    v71 --> v200
+    v200 --> v201
+    v200 --> v70
+    v200 --> v71
+    v71 --> v204
+    v71 --> v207
+    v206 --> v207
+    v207 --> v209
+    v207 --> v208
+    v207 --> v70
+    v207 --> v71
+    v71 --> v212
+    v42 --> v214
+    v110 --> v214
+    v214 --> v216
+    v214 --> v215
+    v214 --> v71
+    v214 --> v217
+    v230 --> v231
+    v50 --> v231
+    v71 --> v231
+    v231 --> v238
+    v231 --> v237
+    v231 --> v236
+    v231 --> v235
+    v231 --> v234
+    v231 --> v233
+    v231 --> v232
+    v71 --> v244
+    v241 --> v244
+    v242 --> v244
+    v243 --> v244
+    v244 --> v245
+    v244 --> v70
+    v244 --> v246
+    v71 --> v249
+    v247 --> v249
+    v248 --> v249
+    v249 --> v253
+    v249 --> v252
+    v249 --> v251
+    v249 --> v250
+    v249 --> v70
+    v249 --> v246
+    v71 --> v255
+    v255 --> v256
+    v255 --> v70
+    v255 --> v246
+    v265 --> v70
+    v275 --> v70
+    v281 --> v292
+    v284 --> v70
+    v288 --> v70
+    v295 --> v297
+    v296 --> v297
+    v70 --> v297
+    v292 --> v297
+    v293 --> v297
+    v294 --> v297
+    v297 --> v300
+    v297 --> v299
+    v297 --> v298
+    v297 --> v301
+    v302 --> v303
+    v3 --> v71
+    v15 --> v130
+    v15 --> v242
+    v15 --> v247
+    v21 --> v130
+    v21 --> v248
+    v27 --> v243
+    v31 --> v241
+    v46 --> v206
+    v217 --> v70
+    v246 --> v70
+    v71 --> v110
+    v110 --> v127
+    v301 --> v302
+
+</pre>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, maxTextSize: Number.MAX_SAFE_INTEGER, maxEdges: Number.MAX_SAFE_INTEGER });
+</script>
+</body>
+</html>

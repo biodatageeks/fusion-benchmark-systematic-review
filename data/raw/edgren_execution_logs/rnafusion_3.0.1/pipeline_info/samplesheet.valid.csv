@@ -1,0 +1,7 @@
+sample,single_end,fastq_1,fastq_2,strandedness
+SRR064286_T1,False,/data/samples/edgren/SRR064286/SRR064286_1.fastq.gz,/data/samples/edgren/SRR064286/SRR064286_2.fastq.gz,unstranded
+SRR064287_T1,False,/data/samples/edgren/SRR064287/SRR064287_1.fastq.gz,/data/samples/edgren/SRR064287/SRR064287_2.fastq.gz,unstranded
+SRR064438_T1,False,/data/samples/edgren/SRR064438/SRR064438_1.fastq.gz,/data/samples/edgren/SRR064438/SRR064438_2.fastq.gz,unstranded
+SRR064439_T1,False,/data/samples/edgren/SRR064439/SRR064439_1.fastq.gz,/data/samples/edgren/SRR064439/SRR064439_2.fastq.gz,unstranded
+SRR064440_T1,False,/data/samples/edgren/SRR064440/SRR064440_1.fastq.gz,/data/samples/edgren/SRR064440/SRR064440_2.fastq.gz,unstranded
+SRR064441_T1,False,/data/samples/edgren/SRR064441/SRR064441_1.fastq.gz,/data/samples/edgren/SRR064441/SRR064441_2.fastq.gz,unstranded

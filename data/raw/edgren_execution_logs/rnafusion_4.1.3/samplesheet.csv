@@ -1,0 +1,7 @@
+sample,fastq_1,fastq_2,strandedness
+SRR064286,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064286_1.fastq.gz,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064286_2.fastq.gz,unstranded
+SRR064287,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064287_1.fastq.gz,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064287_2.fastq.gz,unstranded
+SRR064438,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064438_1.fastq.gz,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064438_2.fastq.gz,unstranded
+SRR064439,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064439_1.fastq.gz,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064439_2.fastq.gz,unstranded
+SRR064440,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064440_1.fastq.gz,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064440_2.fastq.gz,unstranded
+SRR064441,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064441_1.fastq.gz,/data/ccle_fusions/side_projects/edgren_rnafusion/fastq/SRR064441_2.fastq.gz,unstranded

@@ -1,0 +1,357 @@
+Apr-02 21:00:10.577 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/rnafusion --all --input /data/nextflow_work/rnafusion/run3/samplesheet.csv --genomes_base /data/References --outdir /data/nextflow_work/rnafusion/run3 -profile docker
+Apr-02 21:00:10.653 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Apr-02 21:00:10.684 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/iostrows/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Apr-02 21:00:10.696 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-02 21:00:10.697 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-02 21:00:10.701 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Apr-02 21:00:10.712 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-02 21:00:10.735 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/iostrows/.nextflow/scm
+Apr-02 21:00:11.943 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/iostrows/.nextflow/assets/nf-core/rnafusion/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/rnafusion.git
+Apr-02 21:00:11.964 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Apr-02 21:00:11.972 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/iostrows/.nextflow/assets/nf-core/rnafusion/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/rnafusion.git
+Apr-02 21:00:13.125 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/iostrows/.nextflow/assets/nf-core/rnafusion/nextflow.config
+Apr-02 21:00:13.126 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/iostrows/.nextflow/assets/nf-core/rnafusion/nextflow.config
+Apr-02 21:00:13.161 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Apr-02 21:00:14.398 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, uzl_omics, ifb_core, denbi_qbic, alice, mjolnir_globe, uppmax, incliva, ilifu, uge, rosalind_uge, lugh, unibe_ibu, vai, czbiohub_aws, jax, ccga_med, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, icr_davros, ceres, munin, arm, rosalind, hasta, cfc, uzh, ebi_codon_slurm, ebc, ku_sund_dangpu, ccga_dx, crick, marvin, biohpc_gen, shifter, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, imperial, maestro, software_license, utd_europa, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, computerome, ucd_sonic, seg_globe, sanger, dkfz, pasteur, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, crukmi, csiro_petrichor, qmul_apocrita, docker, engaging, gis, hypatia, psmn, eva, nygc, fgcz, conda, crg, singularity, self_hosted_runner, tufts, uw_hyak_pedslabs, utd_sysbio, debug, genouest, cbe, phoenix, gitpod, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
+Apr-02 21:00:14.475 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Apr-02 21:00:14.475 [main] INFO  nextflow.cli.CmdRun - Launching `https://github.com/nf-core/rnafusion` [backstabbing_lattes] DSL2 - revision: 98f02be34c [master]
+Apr-02 21:00:14.476 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-validation]
+Apr-02 21:00:14.477 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Apr-02 21:00:14.477 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-validation]
+Apr-02 21:00:14.477 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: latest
+Apr-02 21:00:14.782 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.3' resolved
+Apr-02 21:00:14.783 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.3'
+Apr-02 21:00:14.790 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.3
+Apr-02 21:00:14.795 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/iostrows/.nextflow/secrets/store.json
+Apr-02 21:00:14.798 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@6e8f2094] - activable => nextflow.secret.LocalSecretsProvider@6e8f2094
+Apr-02 21:00:14.869 [main] DEBUG nextflow.Session - Session UUID: 22af7d77-2d26-4625-a3ae-bf22bfc22440
+Apr-02 21:00:14.869 [main] DEBUG nextflow.Session - Run name: backstabbing_lattes
+Apr-02 21:00:14.869 [main] DEBUG nextflow.Session - Executor pool size: 48
+Apr-02 21:00:14.878 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Apr-02 21:00:14.882 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=144; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Apr-02 21:00:14.921 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (17:07 CEST)
+  System: Linux 5.15.0-88-generic
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.22+7-post-Ubuntu-0ubuntu222.04.1
+  Encoding: UTF-8 (UTF-8)
+  Process: 1169385@iostrows [127.0.1.1]
+  CPUs: 48 - Mem: 251.7 GB (4.9 GB) - Swap: 8 GB (8 GB)
+Apr-02 21:00:14.943 [main] DEBUG nextflow.Session - Work-dir: /data/nextflow_work/rnafusion/run3/work [ext2/ext3]
+Apr-02 21:00:14.959 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Apr-02 21:00:14.970 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Apr-02 21:00:15.043 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Apr-02 21:00:15.057 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+Apr-02 21:00:15.338 [main] DEBUG nextflow.Session - Session start
+Apr-02 21:00:15.345 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /data/nextflow_work/rnafusion/run3/pipeline_info/execution_trace_2024-04-02_21-00-14.txt
+Apr-02 21:00:15.376 [main] DEBUG nextflow.Session - Using default localLib path: /home/iostrows/.nextflow/assets/nf-core/rnafusion/lib
+Apr-02 21:00:15.379 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/iostrows/.nextflow/assets/nf-core/rnafusion/lib
+Apr-02 21:00:15.380 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/iostrows/.nextflow/assets/nf-core/rnafusion/lib/nfcore_external_java_deps.jar
+Apr-02 21:00:15.868 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Apr-02 21:00:15.898 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters, paramsHelp:paramsHelp]; plugin Id: nf-validation
+Apr-02 21:00:15.921 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
+Apr-02 21:00:16.059 [main] DEBUG nextflow.validation.SchemaValidator - Finishing parameters validation
+Apr-02 21:00:17.795 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog, paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
+Apr-02 21:00:17.812 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/rnafusion v3.0.1-g98f02be[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrevision                          : [0;32mmaster[0m
+  [0;34mrunName                           : [0;32mbackstabbing_lattes[0m
+  [0;34mcontainerEngine                   : [0;32mdocker[0m
+  [0;34mlaunchDir                         : [0;32m/data/nextflow_work/rnafusion/run3[0m
+  [0;34mworkDir                           : [0;32m/data/nextflow_work/rnafusion/run3/work[0m
+  [0;34mprojectDir                        : [0;32m/home/iostrows/.nextflow/assets/nf-core/rnafusion[0m
+  [0;34muserName                          : [0;32miostrows[0m
+  [0;34mprofile                           : [0;32mdocker[0m
+  [0;34mconfigFiles                       : [0;32m[0m
+
+[1mInput/output options[0m
+  [0;34minput                             : [0;32m/data/nextflow_work/rnafusion/run3/samplesheet.csv[0m
+  [0;34moutdir                            : [0;32m/data/nextflow_work/rnafusion/run3[0m
+  [0;34mgenomes_base                      : [0;32m/data/References[0m
+  [0;34mensembl_version                   : [0;32m102[0m
+  [0;34mstarfusion_build                  : [0;32mtrue[0m
+  [0;34mall                               : [0;32mtrue[0m
+  [0;34marriba_ref                        : [0;32m/data/References/arriba[0m
+  [0;34marriba_ref_blacklist              : [0;32m/data/References/arriba/blacklist_hg38_GRCh38_v2.4.0.tsv.gz[0m
+  [0;34marriba_ref_cytobands              : [0;32m/data/References/arriba/cytobands_hg38_GRCh38_v2.4.0.tsv[0m
+  [0;34marriba_ref_known_fusions          : [0;32m/data/References/arriba/known_fusions_hg38_GRCh38_v2.4.0.tsv.gz[0m
+  [0;34marriba_ref_protein_domains        : [0;32m/data/References/arriba/protein_domains_hg38_GRCh38_v2.4.0.gff3[0m
+  [0;34mensembl_ref                       : [0;32m/data/References/ensembl[0m
+  [0;34mfusioncatcher_limitSjdbInsertNsj  : [0;32m2000000[0m
+  [0;34mfusioncatcher_ref                 : [0;32m/data/References/fusioncatcher/human_v102[0m
+  [0;34mfusioninspector_limitSjdbInsertNsj: [0;32m1000000[0m
+  [0;34mfusionreport_ref                  : [0;32m/data/References/fusion_report_db[0m
+  [0;34mhgnc_ref                          : [0;32m/data/References/hgnc/hgnc_complete_set.txt[0m
+  [0;34mhgnc_date                         : [0;32m/data/References/hgnc/HGNC-DB-timestamp.txt[0m
+  [0;34mstarfusion_ref                    : [0;32m/data/References/starfusion/ctat_genome_lib_build_dir[0m
+  [0;34mstarindex_ref                     : [0;32m/data/References/star[0m
+  [0;34mtools_cutoff                      : [0;32m1[0m
+
+[1mRead trimming options[0m
+  [0;34madapter_fasta                     : [0;32m[][0m
+
+[1mAlignment compression options[0m
+  [0;34mcram                              : [0;32m[][0m
+
+[1mReference genome options[0m
+  [0;34mgenome                            : [0;32mGRCh38[0m
+  [0;34mfasta                             : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.all.fa[0m
+  [0;34mfai                               : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.all.fa.fai[0m
+  [0;34mgtf                               : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.gtf[0m
+  [0;34mchrgtf                            : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.chr.gtf[0m
+  [0;34mtranscript                        : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.cdna.all.fa.gz[0m
+  [0;34mrefflat                           : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.chr.gtf.refflat[0m
+  [0;34mrrna_intervals                    : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.interval_list[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/rnafusion for your analysis please cite:
+
+* The pipeline
+  https://doi.org/10.5281/zenodo.151721952
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/rnafusion/blob/master/CITATIONS.md
+
+Apr-02 21:00:21.013 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK
+Apr-02 21:00:21.016 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMPLESHEET_CHECK` matches process NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK
+Apr-02 21:00:21.021 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.021 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.027 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Apr-02 21:00:21.033 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=48; memory=251.7 GB; capacity=48; pollInterval=100ms; dumpInterval=5m
+Apr-02 21:00:21.036 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Apr-02 21:00:21.172 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:CAT_FASTQ
+Apr-02 21:00:21.175 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.175 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.254 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:FASTQC
+Apr-02 21:00:21.254 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FASTQC` matches process NFCORE_RNAFUSION:RNAFUSION:FASTQC
+Apr-02 21:00:21.259 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.259 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.286 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA
+Apr-02 21:00:21.287 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:STAR_FOR_ARRIBA` matches process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA
+Apr-02 21:00:21.296 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.296 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.311 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA
+Apr-02 21:00:21.312 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ARRIBA` matches process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA
+Apr-02 21:00:21.314 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.314 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.331 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION
+Apr-02 21:00:21.332 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:STAR_FOR_STARFUSION` matches process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION
+Apr-02 21:00:21.334 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.334 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.344 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION
+Apr-02 21:00:21.345 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMTOOLS_INDEX_FOR_STARFUSION` matches process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION
+Apr-02 21:00:21.346 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.346 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.361 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION
+Apr-02 21:00:21.363 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.363 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.376 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER
+Apr-02 21:00:21.376 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FUSIONCATCHER` matches process NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER
+Apr-02 21:00:21.377 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.378 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.388 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE
+Apr-02 21:00:21.389 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.390 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.400 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE
+Apr-02 21:00:21.400 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:STRINGTIE_MERGE` matches process NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE
+Apr-02 21:00:21.401 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.401 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.413 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT
+Apr-02 21:00:21.414 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FUSIONREPORT` matches process NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT
+Apr-02 21:00:21.415 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.415 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.429 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR
+Apr-02 21:00:21.429 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FUSIONINSPECTOR` matches process NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR
+Apr-02 21:00:21.430 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.430 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.437 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV
+Apr-02 21:00:21.438 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.438 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.447 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT
+Apr-02 21:00:21.447 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:VCF_COLLECT` matches process NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT
+Apr-02 21:00:21.449 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.449 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.458 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION
+Apr-02 21:00:21.459 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ARRIBA_VISUALISATION` matches process NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION
+Apr-02 21:00:21.460 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.460 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.475 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS
+Apr-02 21:00:21.476 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PICARD_COLLECTRNASEQMETRICS` matches process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS
+Apr-02 21:00:21.476 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.477 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.489 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES
+Apr-02 21:00:21.490 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GATK4_MARKDUPLICATES` matches process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES
+Apr-02 21:00:21.491 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.491 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.501 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS
+Apr-02 21:00:21.502 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PICARD_COLLECTINSERTSIZEMETRICS` matches process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS
+Apr-02 21:00:21.503 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.503 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.537 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:CUSTOM_DUMPSOFTWAREVERSIONS
+Apr-02 21:00:21.537 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_DUMPSOFTWAREVERSIONS` matches process NFCORE_RNAFUSION:RNAFUSION:CUSTOM_DUMPSOFTWAREVERSIONS
+Apr-02 21:00:21.538 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.538 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.623 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:MULTIQC
+Apr-02 21:00:21.625 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MULTIQC` matches process NFCORE_RNAFUSION:RNAFUSION:MULTIQC
+Apr-02 21:00:21.626 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:00:21.626 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:00:21.633 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: SAMTOOLS_VIEW_FOR_STARFUSION, SAMTOOLS_SORT_FOR_ARRIBA, GATK4_BEDTOINTERVALLIST, NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE, STAR_FOR_ARRIBA, STARFUSION_DOWNLOAD, FUSIONCATCHER, FUSIONCATCHER_DOWNLOAD, STAR_FOR_STARFUSION, NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION, GATK4_CREATESEQUENCEDICTIONARY, FASTP, NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR, NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA, FASTQC_FOR_FASTP, NFCORE_RNAFUSION:RNAFUSION:MULTIQC, ENSEMBL_DOWNLOAD, GATK4_MARKDUPLICATES, NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA, CAT_FASTQ, NFCORE_RNAFUSION:RNAFUSION:CAT_FASTQ, GTF_TO_REFFLAT, NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION, STARFUSION, NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER, NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES, NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT, NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS, NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION, VCF_COLLECT, SAMTOOLS_INDEX_FOR_ARRIBA, CONVERT2BED, ARRIBA_VISUALISATION, FUSIONREPORT_DOWNLOAD, STAR_ALIGN, SAMTOOLS_INDEX_FOR_STARFUSION, SAMTOOLS_INDEX, FUSIONINSPECTOR, FASTQC, ARRIBA_DOWNLOAD, NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE, MULTIQC, NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK, NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT, NFCORE_RNAFUSION:RNAFUSION:FASTQC, STRINGTIE_MERGE, SAMTOOLS_SORT, SAMTOOLS_INDEX_FOR_STARFUSION_CRAM, SAMTOOLS_VIEW_FOR_ARRIBA, STARFUSION_BUILD, CAT_CAT, PICARD_COLLECTRNASEQMETRICS, HGNC_DOWNLOAD, SAMTOOLS_VIEW, NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS, SAMTOOLS_FAIDX, NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV, FUSIONREPORT, SAMPLESHEET_CHECK, RRNA_TRANSCRIPTS, AGAT_CONVERTSPGFF2TSV, NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION, STRINGTIE_STRINGTIE, PICARD_COLLECTINSERTSIZEMETRICS, ARRIBA, STAR_GENOMEGENERATE, CUSTOM_DUMPSOFTWAREVERSIONS, NFCORE_RNAFUSION:RNAFUSION:CUSTOM_DUMPSOFTWAREVERSIONS
+Apr-02 21:00:21.639 [main] DEBUG nextflow.Session - Igniting dataflow network (64)
+Apr-02 21:00:21.660 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK
+Apr-02 21:00:21.665 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:CAT_FASTQ
+Apr-02 21:00:21.665 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FASTQC
+Apr-02 21:00:21.668 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA
+Apr-02 21:00:21.670 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA
+Apr-02 21:00:21.672 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION
+Apr-02 21:00:21.673 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION
+Apr-02 21:00:21.673 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION
+Apr-02 21:00:21.673 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER
+Apr-02 21:00:21.682 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE
+Apr-02 21:00:21.683 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE
+Apr-02 21:00:21.684 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT
+Apr-02 21:00:21.684 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR
+Apr-02 21:00:21.685 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV
+Apr-02 21:00:21.685 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT
+Apr-02 21:00:21.686 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION
+Apr-02 21:00:21.686 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS
+Apr-02 21:00:21.686 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES
+Apr-02 21:00:21.687 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS
+Apr-02 21:00:21.689 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:CUSTOM_DUMPSOFTWAREVERSIONS
+Apr-02 21:00:21.689 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:MULTIQC
+Apr-02 21:00:21.692 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_495102806d35324a: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/picard/collectrnaseqmetrics/main.nf
+  Script_4e9882194484d3f6: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/starfusion/build/main.nf
+  Script_0047aff8629ea987: /home/iostrows/.nextflow/assets/nf-core/rnafusion/main.nf
+  Script_7209aa115a74352a: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/fusionreport/download/main.nf
+  Script_58fdc6fb9006d5cd: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/rnafusion.nf
+  Script_a3098d9767e43c91: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/vcf_collect/main.nf
+  Script_ade8fcbf89393501: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/arriba/main.nf
+  Script_fe0e47917c44c873: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/qc_workflow.nf
+  Script_8401e8f29e05aaca: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/trim_workflow.nf
+  Script_5b904a75d0649355: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/multiqc/main.nf
+  Script_93793aed3b208cd1: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/arriba/visualisation/main.nf
+  Script_57268e5eead73cde: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/build_references.nf
+  Script_27c81cbb944df3f5: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/custom/dumpsoftwareversions/main.nf
+  Script_5c5999f9b8964263: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/starfusion/download/main.nf
+  Script_595ba984958aaab7: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/fusionreport/detect/main.nf
+  Script_242ae44e6318343d: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/samtools/view/main.nf
+  Script_4e94e3cb5e733189: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/samtools/faidx/main.nf
+  Script_9ec759dbb6bad0f5: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/starfusion_workflow.nf
+  Script_dfc7d9d49ce28fe0: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/agat/convertspgff2tsv/main.nf
+  Script_bbbaa5c8102041bd: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/stringtie_workflow.nf
+  Script_6f8adebba91775d4: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/arriba/download/main.nf
+  Script_28a0e6e47f2a1bec: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/samplesheet_check.nf
+  Script_df53cfa6558d5d6c: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/fusioncatcher_workflow.nf
+  Script_f5fbdbfc0d009e58: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/fusioninspector_workflow.nf
+  Script_6a7bd07f029e1e93: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/uscs/custom_gtftogenepred/main.nf
+  Script_fac53f55764b554c: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/hgnc/main.nf
+  Script_6b5c08bcec8eb699: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/input_check.nf
+  Script_f5e54cc1565f6e4f: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/ensembl/main.nf
+  Script_3a4853af5a4c2beb: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/gatk4/bedtointervallist/main.nf
+  Script_d4eff0fbb7718e24: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/fusioncatcher/download/main.nf
+  Script_47dccdfc3553a111: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/fastp/main.nf
+  Script_e7315244939c5565: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/starfusion/detect/main.nf
+  Script_affddd509319ff3c: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/cat/cat/main.nf
+  Script_dd783542c3cf26e5: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/samtools/index/main.nf
+  Script_8f797b4332c100bc: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/star/align/main.nf
+  Script_32935af35870dbe1: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/arriba_workflow.nf
+  Script_26a7fb4968d6eabe: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/fusionreport_workflow.nf
+  Script_46101f09c8baea00: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/samtools/sort/main.nf
+  Script_03c93763e31bdbc6: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/fusioncatcher/detect/main.nf
+  Script_2b1eef4f292978a9: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/gatk4/createsequencedictionary/main.nf
+  Script_5c997fe28ed48327: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/stringtie/merge/main.nf
+  Script_f4ba90bf76b62d63: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/cat/fastq/main.nf
+  Script_c042698ffdedfe42: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/fusioninspector/main.nf
+  Script_ad5f207743ec5d0e: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/star/genomegenerate/main.nf
+  Script_23dd5a6521d90278: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/convert2bed/main.nf
+  Script_d18b39417fc86a15: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/rrnatranscripts/main.nf
+  Script_84be5a89329d9fc9: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/gatk4/markduplicates/main.nf
+  Script_dc0b96c39ab05fb4: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/picard/collectinsertsizemetrics/main.nf
+  Script_b61e4fafae3acc13: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/fastqc/main.nf
+  Script_70d113e39d74f54c: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/stringtie/stringtie/main.nf
+Apr-02 21:00:21.692 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Apr-02 21:00:21.692 [main] DEBUG nextflow.Session - Session await
+Apr-02 21:00:21.829 [Actor Thread 39] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/iostrows/.nextflow/assets/nf-core/rnafusion/bin/check_samplesheet.py
+Apr-02 21:00:21.862 [Actor Thread 46] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.002 s; external sort time: 0.019 s; total time: 0.021 s
+Apr-02 21:00:21.862 [Actor Thread 24] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.002 s; external sort time: 0.019 s; total time: 0.021 s
+Apr-02 21:00:21.873 [Actor Thread 24] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /data/nextflow_work/rnafusion/run3/work/collect-file/592df190b5a02b0ce4c895b929be86b0
+Apr-02 21:00:21.873 [Actor Thread 46] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /data/nextflow_work/rnafusion/run3/work/collect-file/ffac6828f1cf3b32d379d546fb73b33a
+Apr-02 21:00:21.885 [Actor Thread 46] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-1110222020535860230
+Apr-02 21:00:21.885 [Actor Thread 24] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-13230992549800469273
+Apr-02 21:00:21.958 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:00:21.961 [Task submitter] INFO  nextflow.Session - [a2/142ffb] Submitted process > NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)
+Apr-02 21:00:23.235 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv); status: COMPLETED; exit: 1; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/a2/142ffba6474c15578fcfde2f31b3d6]
+Apr-02 21:00:23.240 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv); work-dir=/data/nextflow_work/rnafusion/run3/work/a2/142ffba6474c15578fcfde2f31b3d6
+  error [nextflow.exception.ProcessFailedException]: Process `NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)` terminated with an error exit status (1)
+Apr-02 21:00:23.257 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)'
+
+Caused by:
+  Process `NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)` terminated with an error exit status (1)
+
+Command executed:
+
+  check_samplesheet.py \
+      samplesheet.csv \
+      samplesheet.valid.csv
+  
+  cat <<-END_VERSIONS > versions.yml
+  "NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK":
+      python: $(python --version | sed 's/Python //g')
+  END_VERSIONS
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  [CRITICAL] The FASTQ file has an unrecognized extension: /data/samples/edgren/SRR064286/SRR064286_1
+  It should be one of: .fq.gz, .fastq.gz On line 2.
+
+Work dir:
+  /data/nextflow_work/rnafusion/run3/work/a2/142ffba6474c15578fcfde2f31b3d6
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+Apr-02 21:00:23.293 [Task monitor] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
+Apr-02 21:00:23.300 [main] DEBUG nextflow.Session - Session await > all processes finished
+Apr-02 21:00:23.325 [Actor Thread 22] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Apr-02 21:00:23.332 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Apr-02 21:00:23.332 [Actor Thread 44] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Apr-02 21:00:23.333 [Actor Thread 48] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Apr-02 21:00:23.333 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Apr-02 21:00:23.366 [Actor Thread 42] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Apr-02 21:00:23.367 [Actor Thread 24] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Apr-02 21:00:23.372 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/rnafusion][0;31m Pipeline completed with errors[0m-
+Apr-02 21:00:23.391 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/rnafusion][0;31m Pipeline completed with errors[0m-
+Apr-02 21:00:23.397 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=4; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=1.2s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=6 GB; ]
+Apr-02 21:00:23.398 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Apr-02 21:00:23.411 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Apr-02 21:00:24.061 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Apr-02 21:00:24.292 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Apr-02 21:00:24.293 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-validation@1.1.3'
+Apr-02 21:00:24.293 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-validation
+Apr-02 21:00:24.317 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Apr-02 21:00:24.319 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

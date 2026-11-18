@@ -1,0 +1,1021 @@
+Apr-02 21:05:13.347 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/rnafusion --all --input /data/nextflow_work/rnafusion/run3/samplesheet.csv --genomes_base /data/References --outdir /data/nextflow_work/rnafusion/run3 -profile docker
+Apr-02 21:05:13.457 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Apr-02 21:05:13.484 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/iostrows/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Apr-02 21:05:13.496 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-02 21:05:13.498 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-02 21:05:13.502 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Apr-02 21:05:13.516 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-02 21:05:13.536 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/iostrows/.nextflow/scm
+Apr-02 21:05:14.700 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/iostrows/.nextflow/assets/nf-core/rnafusion/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/rnafusion.git
+Apr-02 21:05:14.719 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Apr-02 21:05:14.727 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/iostrows/.nextflow/assets/nf-core/rnafusion/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/rnafusion.git
+Apr-02 21:05:15.604 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/iostrows/.nextflow/assets/nf-core/rnafusion/nextflow.config
+Apr-02 21:05:15.605 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/iostrows/.nextflow/assets/nf-core/rnafusion/nextflow.config
+Apr-02 21:05:15.619 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Apr-02 21:05:17.010 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, uzl_omics, ifb_core, denbi_qbic, alice, mjolnir_globe, uppmax, incliva, ilifu, uge, rosalind_uge, lugh, unibe_ibu, vai, czbiohub_aws, jax, ccga_med, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, icr_davros, ceres, munin, arm, rosalind, hasta, cfc, uzh, ebi_codon_slurm, ebc, ku_sund_dangpu, ccga_dx, crick, marvin, biohpc_gen, shifter, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, imperial, maestro, software_license, utd_europa, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, computerome, ucd_sonic, seg_globe, sanger, dkfz, pasteur, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, crukmi, csiro_petrichor, qmul_apocrita, docker, engaging, gis, hypatia, psmn, eva, nygc, fgcz, conda, crg, singularity, self_hosted_runner, tufts, uw_hyak_pedslabs, utd_sysbio, debug, genouest, cbe, phoenix, gitpod, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
+Apr-02 21:05:17.057 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Apr-02 21:05:17.058 [main] INFO  nextflow.cli.CmdRun - Launching `https://github.com/nf-core/rnafusion` [dreamy_pasteur] DSL2 - revision: 98f02be34c [master]
+Apr-02 21:05:17.059 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-validation]
+Apr-02 21:05:17.060 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Apr-02 21:05:17.060 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-validation]
+Apr-02 21:05:17.060 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: latest
+Apr-02 21:05:17.312 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.3' resolved
+Apr-02 21:05:17.312 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.3'
+Apr-02 21:05:17.320 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.3
+Apr-02 21:05:17.326 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/iostrows/.nextflow/secrets/store.json
+Apr-02 21:05:17.329 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@38f617f4] - activable => nextflow.secret.LocalSecretsProvider@38f617f4
+Apr-02 21:05:17.394 [main] DEBUG nextflow.Session - Session UUID: b0bfe780-b846-476b-8ba5-3c7b112a08d5
+Apr-02 21:05:17.394 [main] DEBUG nextflow.Session - Run name: dreamy_pasteur
+Apr-02 21:05:17.394 [main] DEBUG nextflow.Session - Executor pool size: 48
+Apr-02 21:05:17.401 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Apr-02 21:05:17.406 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=144; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Apr-02 21:05:17.426 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (17:07 CEST)
+  System: Linux 5.15.0-88-generic
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.22+7-post-Ubuntu-0ubuntu222.04.1
+  Encoding: UTF-8 (UTF-8)
+  Process: 1175627@iostrows [127.0.1.1]
+  CPUs: 48 - Mem: 251.7 GB (4.7 GB) - Swap: 8 GB (8 GB)
+Apr-02 21:05:17.443 [main] DEBUG nextflow.Session - Work-dir: /data/nextflow_work/rnafusion/run3/work [ext2/ext3]
+Apr-02 21:05:17.459 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Apr-02 21:05:17.469 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Apr-02 21:05:17.540 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Apr-02 21:05:17.552 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 49; maxThreads: 1000
+Apr-02 21:05:17.623 [main] DEBUG nextflow.Session - Session start
+Apr-02 21:05:17.630 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /data/nextflow_work/rnafusion/run3/pipeline_info/execution_trace_2024-04-02_21-05-16.txt
+Apr-02 21:05:17.641 [main] DEBUG nextflow.Session - Using default localLib path: /home/iostrows/.nextflow/assets/nf-core/rnafusion/lib
+Apr-02 21:05:17.645 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/iostrows/.nextflow/assets/nf-core/rnafusion/lib
+Apr-02 21:05:17.645 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/iostrows/.nextflow/assets/nf-core/rnafusion/lib/nfcore_external_java_deps.jar
+Apr-02 21:05:18.070 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Apr-02 21:05:18.086 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters, paramsHelp:paramsHelp]; plugin Id: nf-validation
+Apr-02 21:05:18.102 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
+Apr-02 21:05:18.253 [main] DEBUG nextflow.validation.SchemaValidator - Finishing parameters validation
+Apr-02 21:05:19.801 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog, paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
+Apr-02 21:05:19.815 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/rnafusion v3.0.1-g98f02be[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrevision                          : [0;32mmaster[0m
+  [0;34mrunName                           : [0;32mdreamy_pasteur[0m
+  [0;34mcontainerEngine                   : [0;32mdocker[0m
+  [0;34mlaunchDir                         : [0;32m/data/nextflow_work/rnafusion/run3[0m
+  [0;34mworkDir                           : [0;32m/data/nextflow_work/rnafusion/run3/work[0m
+  [0;34mprojectDir                        : [0;32m/home/iostrows/.nextflow/assets/nf-core/rnafusion[0m
+  [0;34muserName                          : [0;32miostrows[0m
+  [0;34mprofile                           : [0;32mdocker[0m
+  [0;34mconfigFiles                       : [0;32m[0m
+
+[1mInput/output options[0m
+  [0;34minput                             : [0;32m/data/nextflow_work/rnafusion/run3/samplesheet.csv[0m
+  [0;34moutdir                            : [0;32m/data/nextflow_work/rnafusion/run3[0m
+  [0;34mgenomes_base                      : [0;32m/data/References[0m
+  [0;34mensembl_version                   : [0;32m102[0m
+  [0;34mstarfusion_build                  : [0;32mtrue[0m
+  [0;34mall                               : [0;32mtrue[0m
+  [0;34marriba_ref                        : [0;32m/data/References/arriba[0m
+  [0;34marriba_ref_blacklist              : [0;32m/data/References/arriba/blacklist_hg38_GRCh38_v2.4.0.tsv.gz[0m
+  [0;34marriba_ref_cytobands              : [0;32m/data/References/arriba/cytobands_hg38_GRCh38_v2.4.0.tsv[0m
+  [0;34marriba_ref_known_fusions          : [0;32m/data/References/arriba/known_fusions_hg38_GRCh38_v2.4.0.tsv.gz[0m
+  [0;34marriba_ref_protein_domains        : [0;32m/data/References/arriba/protein_domains_hg38_GRCh38_v2.4.0.gff3[0m
+  [0;34mensembl_ref                       : [0;32m/data/References/ensembl[0m
+  [0;34mfusioncatcher_limitSjdbInsertNsj  : [0;32m2000000[0m
+  [0;34mfusioncatcher_ref                 : [0;32m/data/References/fusioncatcher/human_v102[0m
+  [0;34mfusioninspector_limitSjdbInsertNsj: [0;32m1000000[0m
+  [0;34mfusionreport_ref                  : [0;32m/data/References/fusion_report_db[0m
+  [0;34mhgnc_ref                          : [0;32m/data/References/hgnc/hgnc_complete_set.txt[0m
+  [0;34mhgnc_date                         : [0;32m/data/References/hgnc/HGNC-DB-timestamp.txt[0m
+  [0;34mstarfusion_ref                    : [0;32m/data/References/starfusion/ctat_genome_lib_build_dir[0m
+  [0;34mstarindex_ref                     : [0;32m/data/References/star[0m
+  [0;34mtools_cutoff                      : [0;32m1[0m
+
+[1mRead trimming options[0m
+  [0;34madapter_fasta                     : [0;32m[][0m
+
+[1mAlignment compression options[0m
+  [0;34mcram                              : [0;32m[][0m
+
+[1mReference genome options[0m
+  [0;34mgenome                            : [0;32mGRCh38[0m
+  [0;34mfasta                             : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.all.fa[0m
+  [0;34mfai                               : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.all.fa.fai[0m
+  [0;34mgtf                               : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.gtf[0m
+  [0;34mchrgtf                            : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.chr.gtf[0m
+  [0;34mtranscript                        : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.cdna.all.fa.gz[0m
+  [0;34mrefflat                           : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.chr.gtf.refflat[0m
+  [0;34mrrna_intervals                    : [0;32m/data/References/ensembl/Homo_sapiens.GRCh38.102.interval_list[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/rnafusion for your analysis please cite:
+
+* The pipeline
+  https://doi.org/10.5281/zenodo.151721952
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/rnafusion/blob/master/CITATIONS.md
+
+Apr-02 21:05:23.189 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK
+Apr-02 21:05:23.191 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMPLESHEET_CHECK` matches process NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK
+Apr-02 21:05:23.196 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.197 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.203 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Apr-02 21:05:23.208 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=48; memory=251.7 GB; capacity=48; pollInterval=100ms; dumpInterval=5m
+Apr-02 21:05:23.210 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Apr-02 21:05:23.337 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:CAT_FASTQ
+Apr-02 21:05:23.339 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.340 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.356 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:FASTQC
+Apr-02 21:05:23.356 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FASTQC` matches process NFCORE_RNAFUSION:RNAFUSION:FASTQC
+Apr-02 21:05:23.358 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.359 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.380 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA
+Apr-02 21:05:23.382 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:STAR_FOR_ARRIBA` matches process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA
+Apr-02 21:05:23.387 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.387 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.400 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA
+Apr-02 21:05:23.400 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ARRIBA` matches process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA
+Apr-02 21:05:23.402 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.402 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.421 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION
+Apr-02 21:05:23.421 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:STAR_FOR_STARFUSION` matches process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION
+Apr-02 21:05:23.423 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.423 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.434 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION
+Apr-02 21:05:23.435 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMTOOLS_INDEX_FOR_STARFUSION` matches process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION
+Apr-02 21:05:23.436 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.437 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.451 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION
+Apr-02 21:05:23.456 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.456 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.484 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER
+Apr-02 21:05:23.485 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FUSIONCATCHER` matches process NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER
+Apr-02 21:05:23.486 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.487 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.505 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE
+Apr-02 21:05:23.507 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.507 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.517 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE
+Apr-02 21:05:23.518 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:STRINGTIE_MERGE` matches process NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE
+Apr-02 21:05:23.518 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.518 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.529 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT
+Apr-02 21:05:23.529 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FUSIONREPORT` matches process NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT
+Apr-02 21:05:23.530 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.530 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.542 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR
+Apr-02 21:05:23.542 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FUSIONINSPECTOR` matches process NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR
+Apr-02 21:05:23.543 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.543 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.550 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV
+Apr-02 21:05:23.551 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.551 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.558 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT
+Apr-02 21:05:23.558 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:VCF_COLLECT` matches process NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT
+Apr-02 21:05:23.559 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.559 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.568 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION
+Apr-02 21:05:23.569 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ARRIBA_VISUALISATION` matches process NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION
+Apr-02 21:05:23.570 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.570 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.581 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS
+Apr-02 21:05:23.582 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PICARD_COLLECTRNASEQMETRICS` matches process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS
+Apr-02 21:05:23.583 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.583 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.594 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES
+Apr-02 21:05:23.595 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GATK4_MARKDUPLICATES` matches process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES
+Apr-02 21:05:23.597 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.597 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.605 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS
+Apr-02 21:05:23.605 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PICARD_COLLECTINSERTSIZEMETRICS` matches process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS
+Apr-02 21:05:23.606 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.606 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.634 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:CUSTOM_DUMPSOFTWAREVERSIONS
+Apr-02 21:05:23.634 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_DUMPSOFTWAREVERSIONS` matches process NFCORE_RNAFUSION:RNAFUSION:CUSTOM_DUMPSOFTWAREVERSIONS
+Apr-02 21:05:23.635 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.635 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.699 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_RNAFUSION:RNAFUSION:MULTIQC
+Apr-02 21:05:23.700 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MULTIQC` matches process NFCORE_RNAFUSION:RNAFUSION:MULTIQC
+Apr-02 21:05:23.701 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-02 21:05:23.701 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-02 21:05:23.707 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: SAMTOOLS_VIEW_FOR_STARFUSION, SAMTOOLS_SORT_FOR_ARRIBA, GATK4_BEDTOINTERVALLIST, NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE, STAR_FOR_ARRIBA, STARFUSION_DOWNLOAD, FUSIONCATCHER, FUSIONCATCHER_DOWNLOAD, STAR_FOR_STARFUSION, NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION, GATK4_CREATESEQUENCEDICTIONARY, FASTP, NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR, NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA, FASTQC_FOR_FASTP, NFCORE_RNAFUSION:RNAFUSION:MULTIQC, ENSEMBL_DOWNLOAD, GATK4_MARKDUPLICATES, NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA, CAT_FASTQ, NFCORE_RNAFUSION:RNAFUSION:CAT_FASTQ, GTF_TO_REFFLAT, NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION, STARFUSION, NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER, NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES, NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT, NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS, NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION, VCF_COLLECT, SAMTOOLS_INDEX_FOR_ARRIBA, ARRIBA_VISUALISATION, CONVERT2BED, FUSIONREPORT_DOWNLOAD, STAR_ALIGN, SAMTOOLS_INDEX_FOR_STARFUSION, FUSIONINSPECTOR, SAMTOOLS_INDEX, FASTQC, ARRIBA_DOWNLOAD, NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE, MULTIQC, NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK, NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT, NFCORE_RNAFUSION:RNAFUSION:FASTQC, SAMTOOLS_SORT, STRINGTIE_MERGE, SAMTOOLS_VIEW_FOR_ARRIBA, SAMTOOLS_INDEX_FOR_STARFUSION_CRAM, STARFUSION_BUILD, CAT_CAT, PICARD_COLLECTRNASEQMETRICS, HGNC_DOWNLOAD, SAMTOOLS_VIEW, NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS, SAMTOOLS_FAIDX, NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV, FUSIONREPORT, SAMPLESHEET_CHECK, RRNA_TRANSCRIPTS, AGAT_CONVERTSPGFF2TSV, NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION, STRINGTIE_STRINGTIE, PICARD_COLLECTINSERTSIZEMETRICS, ARRIBA, CUSTOM_DUMPSOFTWAREVERSIONS, STAR_GENOMEGENERATE, NFCORE_RNAFUSION:RNAFUSION:CUSTOM_DUMPSOFTWAREVERSIONS
+Apr-02 21:05:23.720 [main] DEBUG nextflow.Session - Igniting dataflow network (64)
+Apr-02 21:05:23.736 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK
+Apr-02 21:05:23.745 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:CAT_FASTQ
+Apr-02 21:05:23.746 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FASTQC
+Apr-02 21:05:23.748 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA
+Apr-02 21:05:23.748 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA
+Apr-02 21:05:23.750 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION
+Apr-02 21:05:23.751 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION
+Apr-02 21:05:23.752 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION
+Apr-02 21:05:23.760 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER
+Apr-02 21:05:23.760 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE
+Apr-02 21:05:23.760 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE
+Apr-02 21:05:23.760 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT
+Apr-02 21:05:23.761 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR
+Apr-02 21:05:23.770 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV
+Apr-02 21:05:23.771 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT
+Apr-02 21:05:23.774 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION
+Apr-02 21:05:23.774 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS
+Apr-02 21:05:23.774 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES
+Apr-02 21:05:23.776 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS
+Apr-02 21:05:23.777 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:CUSTOM_DUMPSOFTWAREVERSIONS
+Apr-02 21:05:23.777 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_RNAFUSION:RNAFUSION:MULTIQC
+Apr-02 21:05:23.785 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_495102806d35324a: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/picard/collectrnaseqmetrics/main.nf
+  Script_4e9882194484d3f6: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/starfusion/build/main.nf
+  Script_0047aff8629ea987: /home/iostrows/.nextflow/assets/nf-core/rnafusion/main.nf
+  Script_7209aa115a74352a: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/fusionreport/download/main.nf
+  Script_58fdc6fb9006d5cd: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/rnafusion.nf
+  Script_ade8fcbf89393501: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/arriba/main.nf
+  Script_a3098d9767e43c91: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/vcf_collect/main.nf
+  Script_fe0e47917c44c873: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/qc_workflow.nf
+  Script_8401e8f29e05aaca: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/trim_workflow.nf
+  Script_5b904a75d0649355: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/multiqc/main.nf
+  Script_93793aed3b208cd1: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/arriba/visualisation/main.nf
+  Script_57268e5eead73cde: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/build_references.nf
+  Script_27c81cbb944df3f5: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/custom/dumpsoftwareversions/main.nf
+  Script_5c5999f9b8964263: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/starfusion/download/main.nf
+  Script_595ba984958aaab7: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/fusionreport/detect/main.nf
+  Script_242ae44e6318343d: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/samtools/view/main.nf
+  Script_4e94e3cb5e733189: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/samtools/faidx/main.nf
+  Script_9ec759dbb6bad0f5: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/starfusion_workflow.nf
+  Script_dfc7d9d49ce28fe0: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/agat/convertspgff2tsv/main.nf
+  Script_bbbaa5c8102041bd: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/stringtie_workflow.nf
+  Script_6f8adebba91775d4: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/arriba/download/main.nf
+  Script_28a0e6e47f2a1bec: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/samplesheet_check.nf
+  Script_df53cfa6558d5d6c: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/fusioncatcher_workflow.nf
+  Script_f5fbdbfc0d009e58: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/fusioninspector_workflow.nf
+  Script_6a7bd07f029e1e93: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/uscs/custom_gtftogenepred/main.nf
+  Script_fac53f55764b554c: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/hgnc/main.nf
+  Script_6b5c08bcec8eb699: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/input_check.nf
+  Script_f5e54cc1565f6e4f: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/ensembl/main.nf
+  Script_d4eff0fbb7718e24: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/fusioncatcher/download/main.nf
+  Script_3a4853af5a4c2beb: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/gatk4/bedtointervallist/main.nf
+  Script_e7315244939c5565: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/starfusion/detect/main.nf
+  Script_47dccdfc3553a111: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/fastp/main.nf
+  Script_affddd509319ff3c: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/cat/cat/main.nf
+  Script_dd783542c3cf26e5: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/samtools/index/main.nf
+  Script_8f797b4332c100bc: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/star/align/main.nf
+  Script_32935af35870dbe1: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/arriba_workflow.nf
+  Script_26a7fb4968d6eabe: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/fusionreport_workflow.nf
+  Script_46101f09c8baea00: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/samtools/sort/main.nf
+  Script_03c93763e31bdbc6: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/fusioncatcher/detect/main.nf
+  Script_2b1eef4f292978a9: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/gatk4/createsequencedictionary/main.nf
+  Script_5c997fe28ed48327: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/stringtie/merge/main.nf
+  Script_f4ba90bf76b62d63: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/cat/fastq/main.nf
+  Script_c042698ffdedfe42: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/local/fusioninspector/main.nf
+  Script_ad5f207743ec5d0e: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/star/genomegenerate/main.nf
+  Script_23dd5a6521d90278: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/convert2bed/main.nf
+  Script_d18b39417fc86a15: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/local/rrnatranscripts/main.nf
+  Script_84be5a89329d9fc9: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/gatk4/markduplicates/main.nf
+  Script_dc0b96c39ab05fb4: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/picard/collectinsertsizemetrics/main.nf
+  Script_b61e4fafae3acc13: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../modules/nf-core/fastqc/main.nf
+  Script_70d113e39d74f54c: /home/iostrows/.nextflow/assets/nf-core/rnafusion/./workflows/../subworkflows/local/../../modules/nf-core/stringtie/stringtie/main.nf
+Apr-02 21:05:23.785 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Apr-02 21:05:23.785 [main] DEBUG nextflow.Session - Session await
+Apr-02 21:05:23.927 [Actor Thread 40] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/iostrows/.nextflow/assets/nf-core/rnafusion/bin/check_samplesheet.py
+Apr-02 21:05:23.947 [Actor Thread 32] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.002 s; external sort time: 0.019 s; total time: 0.021 s
+Apr-02 21:05:23.947 [Actor Thread 21] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.002 s; external sort time: 0.019 s; total time: 0.021 s
+Apr-02 21:05:23.957 [Actor Thread 32] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /data/nextflow_work/rnafusion/run3/work/collect-file/c6879096cbee3faf779355364f822549
+Apr-02 21:05:23.957 [Actor Thread 21] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /data/nextflow_work/rnafusion/run3/work/collect-file/54cbe69c0ae52b3bd602076db6043533
+Apr-02 21:05:23.968 [Actor Thread 32] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-8732356578665399486
+Apr-02 21:05:23.968 [Actor Thread 21] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-11235415419223665260
+Apr-02 21:05:24.044 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:05:24.047 [Task submitter] INFO  nextflow.Session - [a5/098eb4] Submitted process > NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv)
+Apr-02 21:05:25.892 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: NFCORE_RNAFUSION:RNAFUSION:INPUT_CHECK:SAMPLESHEET_CHECK (samplesheet.csv); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/a5/098eb4cf28c3cc1691c15bddb7b4e4]
+Apr-02 21:05:25.925 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=144; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Apr-02 21:05:26.063 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:05:26.064 [Task submitter] INFO  nextflow.Session - [6d/3eb871] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064286)
+Apr-02 21:05:26.115 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:05:26.117 [Task submitter] INFO  nextflow.Session - [1a/9708b0] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064438)
+Apr-02 21:05:26.136 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:05:26.137 [Task submitter] INFO  nextflow.Session - [ab/048fb1] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064439)
+Apr-02 21:05:26.196 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:05:26.197 [Task submitter] INFO  nextflow.Session - [b1/bfae69] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064287)
+Apr-02 21:05:26.207 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:05:26.208 [Task submitter] INFO  nextflow.Session - [e9/f0a0fb] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064441)
+Apr-02 21:05:26.219 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:05:26.221 [Task submitter] INFO  nextflow.Session - [89/2a84ad] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064440)
+Apr-02 21:05:59.507 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b1/bfae69f95647dc11ac71c3770d6218]
+Apr-02 21:06:04.470 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/6d/3eb871e2e4cba7b906c7b297ae029f]
+Apr-02 21:06:04.481 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:06:04.481 [Task submitter] INFO  nextflow.Session - [9d/c4af36] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064286)
+Apr-02 21:06:04.637 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/ab/048fb1c64b2917fbe740a641d9043c]
+Apr-02 21:06:07.401 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/89/2a84ad0d240b59255af3cad61f78af]
+Apr-02 21:06:07.410 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:06:07.411 [Task submitter] INFO  nextflow.Session - [aa/8e35bd] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064438)
+Apr-02 21:06:08.468 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/e9/f0a0fb22ad0f0f395c8411f28bd7d7]
+Apr-02 21:06:28.929 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: NFCORE_RNAFUSION:RNAFUSION:FASTQC (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/1a/9708b0791b8c75e5269a802082659d]
+Apr-02 21:06:28.936 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:06:28.937 [Task submitter] INFO  nextflow.Session - [19/5581cc] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064438)
+Apr-02 21:10:04.897 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/aa/8e35bd7b85156aa281a70383be5313]
+Apr-02 21:10:04.903 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:10:04.904 [Task submitter] INFO  nextflow.Session - [30/5a45e6] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064286)
+Apr-02 21:10:05.417 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Apr-02 21:10:05.417 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:10:05.417 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:10:05.418 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:10:05.418 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<11:1>
+Apr-02 21:10:05.418 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<12:1>
+Apr-02 21:10:05.418 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:10:05.418 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:10:05.418 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:10:23.362 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/9d/c4af36be20d79ea5c88ce8134e287b]
+~> TaskHandler[id: 10; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/19/5581cc391964486ecbd2133ff1e30b]
+~> TaskHandler[id: 3; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/30/5a45e67ffb40d29e1fef399a93f221]
+Apr-02 21:10:26.913 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 15 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/70/7d5ae98ba5f20184b85fda2196bf5f]
+~> TaskHandler[id: 19; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c9/2d9556976056cbfa4c81a762ba2eec]
+~> TaskHandler[id: 23; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c6/49dc6887c8d9ba35ecbb529634b5d7]
+~> TaskHandler[id: 13; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/99/bd26d59dc69bfe990ce0f38a43ec77]
+~> TaskHandler[id: 4; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/bf/e794c793940e81b5bc7666b8cfb5ef]
+~> TaskHandler[id: 17; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/eb/232532650fa94c0ba787003630edf8]
+~> TaskHandler[id: 15; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8b/623de5c250ef637910f31c2cdbab88]
+~> TaskHandler[id: 18; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/5e/8526ea93ad5bdeedc6b0c0124ac225]
+~> TaskHandler[id: 7; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/82/022f85912431e81fb83ba8dc342f37]
+~> TaskHandler[id: 25; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/be/7e0a39004bf10a065047af1b605639]
+.. remaining tasks omitted.
+Apr-02 21:11:39.296 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/9d/c4af36be20d79ea5c88ce8134e287b]
+Apr-02 21:11:39.300 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:11:39.301 [Task submitter] INFO  nextflow.Session - [70/7d5ae9] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064287)
+Apr-02 21:11:39.314 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Apr-02 21:11:39.314 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:11:39.314 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:11:39.314 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:11:39.314 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<11:1>
+Apr-02 21:11:39.314 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<12:1>
+Apr-02 21:11:39.315 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:11:39.315 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:11:39.315 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:15:07.659 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/19/5581cc391964486ecbd2133ff1e30b]
+Apr-02 21:15:07.666 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:15:07.667 [Task submitter] INFO  nextflow.Session - [c9/2d9556] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064440)
+Apr-02 21:15:07.671 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:15:07.671 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:15:07.672 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:15:07.672 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:15:07.672 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:15:07.672 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:15:08.673 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:15:08.674 [Task submitter] INFO  nextflow.Session - [76/715f39] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064438)
+Apr-02 21:15:08.678 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:15:08.678 [Task submitter] INFO  nextflow.Session - [61/629246] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064438)
+Apr-02 21:15:23.384 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 5 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/30/5a45e67ffb40d29e1fef399a93f221]
+~> TaskHandler[id: 6; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064287); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/70/7d5ae98ba5f20184b85fda2196bf5f]
+~> TaskHandler[id: 19; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c9/2d9556976056cbfa4c81a762ba2eec]
+~> TaskHandler[id: 28; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/76/715f39f3619ca420a2dcb47de01afc]
+~> TaskHandler[id: 29; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/61/62924648e7aa1e7da558642a2edcb9]
+Apr-02 21:15:27.685 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 17 -- tasks to be submitted are shown below
+~> TaskHandler[id: 23; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c6/49dc6887c8d9ba35ecbb529634b5d7]
+~> TaskHandler[id: 13; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/99/bd26d59dc69bfe990ce0f38a43ec77]
+~> TaskHandler[id: 4; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/bf/e794c793940e81b5bc7666b8cfb5ef]
+~> TaskHandler[id: 17; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/eb/232532650fa94c0ba787003630edf8]
+~> TaskHandler[id: 15; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8b/623de5c250ef637910f31c2cdbab88]
+~> TaskHandler[id: 18; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/5e/8526ea93ad5bdeedc6b0c0124ac225]
+~> TaskHandler[id: 7; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/82/022f85912431e81fb83ba8dc342f37]
+~> TaskHandler[id: 25; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/be/7e0a39004bf10a065047af1b605639]
+~> TaskHandler[id: 24; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/65/98febea266a4ccabe34f9e766416fe]
+~> TaskHandler[id: 21; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/d8/266fcd3fb697974602407d5bc3a9bd]
+.. remaining tasks omitted.
+Apr-02 21:15:30.982 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/76/715f39f3619ca420a2dcb47de01afc]
+Apr-02 21:15:30.985 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Apr-02 21:15:30.985 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 21:16:21.770 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/61/62924648e7aa1e7da558642a2edcb9]
+Apr-02 21:19:21.725 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/70/7d5ae98ba5f20184b85fda2196bf5f]
+Apr-02 21:19:21.738 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:19:21.738 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:19:21.738 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:19:21.738 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:19:21.738 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:19:21.738 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:19:21.756 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:19:21.757 [Task submitter] INFO  nextflow.Session - [c6/49dc68] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064441)
+Apr-02 21:19:21.761 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:19:21.761 [Task submitter] INFO  nextflow.Session - [9e/b02cf0] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064287)
+Apr-02 21:19:21.765 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:19:21.765 [Task submitter] INFO  nextflow.Session - [ca/fadfd5] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064287)
+Apr-02 21:19:34.297 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/9e/b02cf000078f09fff9dd41f0ec9bb4]
+Apr-02 21:19:34.300 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Apr-02 21:19:34.300 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 21:20:00.875 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/ca/fadfd5de1c8c4521c97ae57ca2a991]
+Apr-02 21:20:23.421 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 3; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/30/5a45e67ffb40d29e1fef399a93f221]
+~> TaskHandler[id: 19; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c9/2d9556976056cbfa4c81a762ba2eec]
+~> TaskHandler[id: 23; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c6/49dc6887c8d9ba35ecbb529634b5d7]
+Apr-02 21:20:27.884 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 21 -- tasks to be submitted are shown below
+~> TaskHandler[id: 13; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/99/bd26d59dc69bfe990ce0f38a43ec77]
+~> TaskHandler[id: 4; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/bf/e794c793940e81b5bc7666b8cfb5ef]
+~> TaskHandler[id: 17; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/eb/232532650fa94c0ba787003630edf8]
+~> TaskHandler[id: 15; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8b/623de5c250ef637910f31c2cdbab88]
+~> TaskHandler[id: 18; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/5e/8526ea93ad5bdeedc6b0c0124ac225]
+~> TaskHandler[id: 7; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/82/022f85912431e81fb83ba8dc342f37]
+~> TaskHandler[id: 25; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/be/7e0a39004bf10a065047af1b605639]
+~> TaskHandler[id: 24; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/65/98febea266a4ccabe34f9e766416fe]
+~> TaskHandler[id: 21; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/d8/266fcd3fb697974602407d5bc3a9bd]
+~> TaskHandler[id: 20; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2e/15f6f427eda667b59de00b11290699]
+.. remaining tasks omitted.
+Apr-02 21:20:49.312 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c9/2d9556976056cbfa4c81a762ba2eec]
+Apr-02 21:20:49.316 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:20:49.317 [Task submitter] INFO  nextflow.Session - [99/bd26d5] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064439)
+Apr-02 21:20:49.327 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:20:49.328 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:20:49.328 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:20:49.328 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:20:49.328 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:20:49.328 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:20:50.322 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:20:50.322 [Task submitter] INFO  nextflow.Session - [b0/0d3f5e] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064440)
+Apr-02 21:20:50.328 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:20:50.328 [Task submitter] INFO  nextflow.Session - [c4/78d956] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064440)
+Apr-02 21:21:03.965 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b0/0d3f5e876e077521487e2a0f3bffac]
+Apr-02 21:21:03.968 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Apr-02 21:21:03.968 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 21:21:29.070 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c4/78d9567a72a5ed30b6a41472c386f5]
+Apr-02 21:23:07.496 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c6/49dc6887c8d9ba35ecbb529634b5d7]
+Apr-02 21:23:07.500 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:23:07.501 [Task submitter] INFO  nextflow.Session - [bf/e794c7] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064286)
+Apr-02 21:23:07.508 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Apr-02 21:23:07.509 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:23:07.509 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:23:07.509 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:23:07.509 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<11:1>
+Apr-02 21:23:07.509 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<12:1>
+Apr-02 21:23:07.509 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:23:07.509 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:23:07.509 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:24:53.182 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/30/5a45e67ffb40d29e1fef399a93f221]
+Apr-02 21:24:53.189 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:24:53.189 [Task submitter] INFO  nextflow.Session - [eb/232532] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064439)
+Apr-02 21:25:23.450 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 13; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/99/bd26d59dc69bfe990ce0f38a43ec77]
+~> TaskHandler[id: 4; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/bf/e794c793940e81b5bc7666b8cfb5ef]
+~> TaskHandler[id: 17; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/eb/232532650fa94c0ba787003630edf8]
+Apr-02 21:25:28.215 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 23 -- tasks to be submitted are shown below
+~> TaskHandler[id: 15; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8b/623de5c250ef637910f31c2cdbab88]
+~> TaskHandler[id: 18; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/5e/8526ea93ad5bdeedc6b0c0124ac225]
+~> TaskHandler[id: 7; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/82/022f85912431e81fb83ba8dc342f37]
+~> TaskHandler[id: 25; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/be/7e0a39004bf10a065047af1b605639]
+~> TaskHandler[id: 24; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/65/98febea266a4ccabe34f9e766416fe]
+~> TaskHandler[id: 21; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/d8/266fcd3fb697974602407d5bc3a9bd]
+~> TaskHandler[id: 20; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2e/15f6f427eda667b59de00b11290699]
+~> TaskHandler[id: 22; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4f/5faab57673901121ccf5b4f606757f]
+~> TaskHandler[id: 26; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/93/4dac998edec1c08d826042b40361d0]
+~> TaskHandler[id: 27; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/1e/f77000b84616b3997668a1ad8d5829]
+.. remaining tasks omitted.
+Apr-02 21:26:10.610 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/99/bd26d59dc69bfe990ce0f38a43ec77]
+Apr-02 21:26:10.615 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:26:10.615 [Task submitter] INFO  nextflow.Session - [8b/623de5] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064287)
+Apr-02 21:26:10.625 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:26:10.625 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:26:10.625 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:26:10.626 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:26:10.626 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:26:10.626 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:26:11.620 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:26:11.621 [Task submitter] INFO  nextflow.Session - [f8/dbd4e2] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064439)
+Apr-02 21:26:11.624 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:26:11.624 [Task submitter] INFO  nextflow.Session - [4a/a4bb0f] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064439)
+Apr-02 21:26:24.045 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/f8/dbd4e2c3d05fe803abeb7e11799cf2]
+Apr-02 21:26:24.049 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Apr-02 21:26:24.049 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 21:26:49.814 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4a/a4bb0fff237fee26ba0bedecfb9cb6]
+Apr-02 21:28:14.355 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/eb/232532650fa94c0ba787003630edf8]
+Apr-02 21:28:14.361 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:28:14.361 [Task submitter] INFO  nextflow.Session - [5e/8526ea] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064438)
+Apr-02 21:28:14.363 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Apr-02 21:28:14.363 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:28:14.363 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:28:14.363 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:28:14.364 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<11:1>
+Apr-02 21:28:14.364 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<12:1>
+Apr-02 21:28:14.364 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:28:14.364 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:28:14.364 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:29:01.644 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/bf/e794c793940e81b5bc7666b8cfb5ef]
+Apr-02 21:29:01.651 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:29:01.651 [Task submitter] INFO  nextflow.Session - [82/022f85] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064287)
+Apr-02 21:29:01.653 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:29:01.654 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:29:01.654 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:29:01.654 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:29:01.654 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:29:01.654 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:29:02.656 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:29:02.657 [Task submitter] INFO  nextflow.Session - [f4/762b15] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064286)
+Apr-02 21:29:02.660 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:29:02.661 [Task submitter] INFO  nextflow.Session - [46/53e396] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064286)
+Apr-02 21:29:19.812 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/46/53e3966c55c4d95354dbc0bfc4dde3]
+Apr-02 21:29:19.814 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Apr-02 21:29:19.814 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 21:29:50.234 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 56; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/f4/762b15e1b71c3638433efa3ba32a10]
+Apr-02 21:30:23.496 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 15; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064287); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8b/623de5c250ef637910f31c2cdbab88]
+~> TaskHandler[id: 18; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/5e/8526ea93ad5bdeedc6b0c0124ac225]
+~> TaskHandler[id: 7; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064287); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/82/022f85912431e81fb83ba8dc342f37]
+Apr-02 21:30:28.248 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 29 -- tasks to be submitted are shown below
+~> TaskHandler[id: 25; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/be/7e0a39004bf10a065047af1b605639]
+~> TaskHandler[id: 24; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/65/98febea266a4ccabe34f9e766416fe]
+~> TaskHandler[id: 21; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/d8/266fcd3fb697974602407d5bc3a9bd]
+~> TaskHandler[id: 20; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2e/15f6f427eda667b59de00b11290699]
+~> TaskHandler[id: 22; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4f/5faab57673901121ccf5b4f606757f]
+~> TaskHandler[id: 26; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/93/4dac998edec1c08d826042b40361d0]
+~> TaskHandler[id: 27; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/1e/f77000b84616b3997668a1ad8d5829]
+~> TaskHandler[id: 30; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/34/8ec70240f8c72a2fa924fa76fb9675]
+~> TaskHandler[id: 32; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/63/ef4744f2d847325bc0c2cc41924df8]
+~> TaskHandler[id: 31; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2a/5a2ec4001ae8c1cb5cbddf28eb567f]
+.. remaining tasks omitted.
+Apr-02 21:32:49.524 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/82/022f85912431e81fb83ba8dc342f37]
+Apr-02 21:32:49.531 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:32:49.531 [Task submitter] INFO  nextflow.Session - [be/7e0a39] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064441)
+Apr-02 21:32:49.539 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Apr-02 21:32:49.540 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:32:49.540 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:32:49.540 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:32:49.540 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<11:1>
+Apr-02 21:32:49.540 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<12:1>
+Apr-02 21:32:49.540 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:32:49.540 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:32:49.540 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:35:23.535 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 15; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064287); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8b/623de5c250ef637910f31c2cdbab88]
+~> TaskHandler[id: 18; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/5e/8526ea93ad5bdeedc6b0c0124ac225]
+~> TaskHandler[id: 25; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/be/7e0a39004bf10a065047af1b605639]
+Apr-02 21:35:28.591 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 29 -- tasks to be submitted are shown below
+~> TaskHandler[id: 24; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/65/98febea266a4ccabe34f9e766416fe]
+~> TaskHandler[id: 21; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/d8/266fcd3fb697974602407d5bc3a9bd]
+~> TaskHandler[id: 20; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2e/15f6f427eda667b59de00b11290699]
+~> TaskHandler[id: 22; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4f/5faab57673901121ccf5b4f606757f]
+~> TaskHandler[id: 26; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/93/4dac998edec1c08d826042b40361d0]
+~> TaskHandler[id: 27; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/1e/f77000b84616b3997668a1ad8d5829]
+~> TaskHandler[id: 30; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/34/8ec70240f8c72a2fa924fa76fb9675]
+~> TaskHandler[id: 32; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/63/ef4744f2d847325bc0c2cc41924df8]
+~> TaskHandler[id: 31; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2a/5a2ec4001ae8c1cb5cbddf28eb567f]
+~> TaskHandler[id: 33; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b3/714e7b88844686e40f22a00b4bd970]
+.. remaining tasks omitted.
+Apr-02 21:37:14.691 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8b/623de5c250ef637910f31c2cdbab88]
+Apr-02 21:37:14.698 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:37:14.699 [Task submitter] INFO  nextflow.Session - [65/98febe] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064441)
+Apr-02 21:38:35.995 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/be/7e0a39004bf10a065047af1b605639]
+Apr-02 21:38:35.998 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:38:35.999 [Task submitter] INFO  nextflow.Session - [d8/266fcd] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064440)
+Apr-02 21:38:36.004 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:38:36.004 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:38:36.004 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:38:36.004 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:38:36.004 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:38:36.004 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STAR_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:38:37.004 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:38:37.005 [Task submitter] INFO  nextflow.Session - [03/009732] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064441)
+Apr-02 21:38:37.010 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:38:37.013 [Task submitter] INFO  nextflow.Session - [e4/2dbb0f] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064441)
+Apr-02 21:38:51.560 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 61; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/03/00973200890745e2a20a9b263f7eca]
+Apr-02 21:38:51.563 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Apr-02 21:38:51.563 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:SAMTOOLS_INDEX_FOR_STARFUSION > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 21:39:19.812 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 64; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTINSERTSIZEMETRICS (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/e4/2dbb0f96244706b65b828325a016c6]
+Apr-02 21:40:23.549 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 18; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/5e/8526ea93ad5bdeedc6b0c0124ac225]
+~> TaskHandler[id: 24; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/65/98febea266a4ccabe34f9e766416fe]
+~> TaskHandler[id: 21; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/d8/266fcd3fb697974602407d5bc3a9bd]
+Apr-02 21:40:28.843 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 31 -- tasks to be submitted are shown below
+~> TaskHandler[id: 20; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2e/15f6f427eda667b59de00b11290699]
+~> TaskHandler[id: 22; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4f/5faab57673901121ccf5b4f606757f]
+~> TaskHandler[id: 26; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/93/4dac998edec1c08d826042b40361d0]
+~> TaskHandler[id: 27; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/1e/f77000b84616b3997668a1ad8d5829]
+~> TaskHandler[id: 30; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/34/8ec70240f8c72a2fa924fa76fb9675]
+~> TaskHandler[id: 32; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/63/ef4744f2d847325bc0c2cc41924df8]
+~> TaskHandler[id: 31; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2a/5a2ec4001ae8c1cb5cbddf28eb567f]
+~> TaskHandler[id: 33; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b3/714e7b88844686e40f22a00b4bd970]
+~> TaskHandler[id: 38; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b5/2d0588ab0d3b7c516c357631b2c51e]
+~> TaskHandler[id: 37; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/12/71da77a89ef9c50080efd12ca3b4d2]
+.. remaining tasks omitted.
+Apr-02 21:41:45.239 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/d8/266fcd3fb697974602407d5bc3a9bd]
+Apr-02 21:41:45.243 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:41:45.244 [Task submitter] INFO  nextflow.Session - [2e/15f6f4] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064439)
+Apr-02 21:41:45.250 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Apr-02 21:41:45.251 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<6:1>
+Apr-02 21:41:45.251 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Apr-02 21:41:45.251 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<8:1>
+Apr-02 21:41:45.251 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<11:1>
+Apr-02 21:41:45.251 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<12:1>
+Apr-02 21:41:45.251 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<13:1>
+Apr-02 21:41:45.251 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<14:1>
+Apr-02 21:41:45.251 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:STAR_FOR_ARRIBA > Skipping output binding because one or more optional files are missing: fileoutparam<15:1>
+Apr-02 21:42:57.293 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/5e/8526ea93ad5bdeedc6b0c0124ac225]
+Apr-02 21:42:57.300 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:42:57.301 [Task submitter] INFO  nextflow.Session - [4f/5faab5] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064440)
+Apr-02 21:45:23.559 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 24; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/65/98febea266a4ccabe34f9e766416fe]
+~> TaskHandler[id: 20; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2e/15f6f427eda667b59de00b11290699]
+~> TaskHandler[id: 22; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4f/5faab57673901121ccf5b4f606757f]
+Apr-02 21:45:29.361 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 30 -- tasks to be submitted are shown below
+~> TaskHandler[id: 26; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/93/4dac998edec1c08d826042b40361d0]
+~> TaskHandler[id: 27; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/1e/f77000b84616b3997668a1ad8d5829]
+~> TaskHandler[id: 30; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/34/8ec70240f8c72a2fa924fa76fb9675]
+~> TaskHandler[id: 32; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/63/ef4744f2d847325bc0c2cc41924df8]
+~> TaskHandler[id: 31; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2a/5a2ec4001ae8c1cb5cbddf28eb567f]
+~> TaskHandler[id: 33; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b3/714e7b88844686e40f22a00b4bd970]
+~> TaskHandler[id: 38; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b5/2d0588ab0d3b7c516c357631b2c51e]
+~> TaskHandler[id: 37; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/12/71da77a89ef9c50080efd12ca3b4d2]
+~> TaskHandler[id: 35; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/bc/181300cb3cfac6e62c35b98eedf010]
+~> TaskHandler[id: 39; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/86/c0de16e3306b4f1e60ebdb3a69706d]
+.. remaining tasks omitted.
+Apr-02 21:49:07.953 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/65/98febea266a4ccabe34f9e766416fe]
+Apr-02 21:49:07.963 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:49:07.963 [Task submitter] INFO  nextflow.Session - [93/4dac99] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064438)
+Apr-02 21:49:07.966 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:49:07.967 [Task submitter] INFO  nextflow.Session - [1e/f77000] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064286)
+Apr-02 21:50:23.598 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- submitted tasks are shown below
+~> TaskHandler[id: 20; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2e/15f6f427eda667b59de00b11290699]
+~> TaskHandler[id: 22; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4f/5faab57673901121ccf5b4f606757f]
+~> TaskHandler[id: 26; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/93/4dac998edec1c08d826042b40361d0]
+~> TaskHandler[id: 27; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/1e/f77000b84616b3997668a1ad8d5829]
+Apr-02 21:50:30.000 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 28 -- tasks to be submitted are shown below
+~> TaskHandler[id: 30; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/34/8ec70240f8c72a2fa924fa76fb9675]
+~> TaskHandler[id: 32; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/63/ef4744f2d847325bc0c2cc41924df8]
+~> TaskHandler[id: 31; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2a/5a2ec4001ae8c1cb5cbddf28eb567f]
+~> TaskHandler[id: 33; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b3/714e7b88844686e40f22a00b4bd970]
+~> TaskHandler[id: 38; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b5/2d0588ab0d3b7c516c357631b2c51e]
+~> TaskHandler[id: 37; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/12/71da77a89ef9c50080efd12ca3b4d2]
+~> TaskHandler[id: 35; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/bc/181300cb3cfac6e62c35b98eedf010]
+~> TaskHandler[id: 39; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/86/c0de16e3306b4f1e60ebdb3a69706d]
+~> TaskHandler[id: 43; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/57/f5713b10c0356904960cc61879a555]
+~> TaskHandler[id: 41; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/a8/3bcb53a979c993e469c6850225e0cb]
+.. remaining tasks omitted.
+Apr-02 21:51:52.471 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/1e/f77000b84616b3997668a1ad8d5829]
+Apr-02 21:51:52.478 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:51:52.479 [Task submitter] INFO  nextflow.Session - [34/8ec702] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064438)
+Apr-02 21:52:33.836 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/93/4dac998edec1c08d826042b40361d0]
+Apr-02 21:52:33.840 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:52:33.841 [Task submitter] INFO  nextflow.Session - [2a/5a2ec4] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064438)
+Apr-02 21:52:53.492 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2e/15f6f427eda667b59de00b11290699]
+Apr-02 21:52:53.498 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:52:53.499 [Task submitter] INFO  nextflow.Session - [63/ef4744] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064438)
+Apr-02 21:53:52.100 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/34/8ec70240f8c72a2fa924fa76fb9675]
+Apr-02 21:53:52.105 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:53:52.105 [Task submitter] INFO  nextflow.Session - [b3/714e7b] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064438)
+Apr-02 21:55:23.613 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- submitted tasks are shown below
+~> TaskHandler[id: 22; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4f/5faab57673901121ccf5b4f606757f]
+~> TaskHandler[id: 31; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2a/5a2ec4001ae8c1cb5cbddf28eb567f]
+~> TaskHandler[id: 32; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/63/ef4744f2d847325bc0c2cc41924df8]
+~> TaskHandler[id: 33; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b3/714e7b88844686e40f22a00b4bd970]
+Apr-02 21:55:30.466 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 25 -- tasks to be submitted are shown below
+~> TaskHandler[id: 38; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b5/2d0588ab0d3b7c516c357631b2c51e]
+~> TaskHandler[id: 37; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/12/71da77a89ef9c50080efd12ca3b4d2]
+~> TaskHandler[id: 35; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/bc/181300cb3cfac6e62c35b98eedf010]
+~> TaskHandler[id: 39; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/86/c0de16e3306b4f1e60ebdb3a69706d]
+~> TaskHandler[id: 43; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/57/f5713b10c0356904960cc61879a555]
+~> TaskHandler[id: 41; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/a8/3bcb53a979c993e469c6850225e0cb]
+~> TaskHandler[id: 44; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2d/0baf52477ded11e381731d75b690f0]
+~> TaskHandler[id: 45; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/e8/ad1da2f7081f278ef637dce512fe43]
+~> TaskHandler[id: 46; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/58/4d5b3efecbd701419f2d401b53fd84]
+~> TaskHandler[id: 50; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/87/60fa2651b8f40cd2620c6635310577]
+.. remaining tasks omitted.
+Apr-02 21:55:58.972 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONCATCHER_WORKFLOW:FUSIONCATCHER (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4f/5faab57673901121ccf5b4f606757f]
+Apr-02 21:55:58.979 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:55:58.980 [Task submitter] INFO  nextflow.Session - [b5/2d0588] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064287)
+Apr-02 21:57:14.343 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2a/5a2ec4001ae8c1cb5cbddf28eb567f]
+Apr-02 21:57:14.346 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:57:14.347 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Apr-02 21:57:14.347 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 21:57:14.347 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<3:1>
+Apr-02 21:57:14.347 [Task submitter] INFO  nextflow.Session - [12/71da77] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064287)
+Apr-02 21:58:51.545 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b3/714e7b88844686e40f22a00b4bd970]
+Apr-02 21:58:51.553 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:58:51.554 [Task submitter] INFO  nextflow.Session - [bc/181300] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064287)
+Apr-02 21:59:25.413 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/12/71da77a89ef9c50080efd12ca3b4d2]
+Apr-02 21:59:25.417 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Apr-02 21:59:25.418 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 21:59:25.418 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<3:1>
+Apr-02 21:59:25.418 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:59:25.418 [Task submitter] INFO  nextflow.Session - [86/c0de16] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064287)
+Apr-02 21:59:58.965 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/bc/181300cb3cfac6e62c35b98eedf010]
+Apr-02 21:59:58.971 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 21:59:58.972 [Task submitter] INFO  nextflow.Session - [57/f5713b] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064440)
+Apr-02 22:00:23.710 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- submitted tasks are shown below
+~> TaskHandler[id: 32; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/63/ef4744f2d847325bc0c2cc41924df8]
+~> TaskHandler[id: 38; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064287); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b5/2d0588ab0d3b7c516c357631b2c51e]
+~> TaskHandler[id: 39; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064287); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/86/c0de16e3306b4f1e60ebdb3a69706d]
+~> TaskHandler[id: 43; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/57/f5713b10c0356904960cc61879a555]
+Apr-02 22:00:30.986 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 21 -- tasks to be submitted are shown below
+~> TaskHandler[id: 41; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/a8/3bcb53a979c993e469c6850225e0cb]
+~> TaskHandler[id: 44; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2d/0baf52477ded11e381731d75b690f0]
+~> TaskHandler[id: 45; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/e8/ad1da2f7081f278ef637dce512fe43]
+~> TaskHandler[id: 46; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/58/4d5b3efecbd701419f2d401b53fd84]
+~> TaskHandler[id: 50; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/87/60fa2651b8f40cd2620c6635310577]
+~> TaskHandler[id: 49; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/fc/d50f7ccb6e21e528cfc5f73f1a1a70]
+~> TaskHandler[id: 51; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/6e/6dd5f47604f3e9fdfa348304509f47]
+~> TaskHandler[id: 52; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8a/d59b1b01b291f2f45beb0d3bce3f56]
+~> TaskHandler[id: 53; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/fb/bf8041f5a73f764781abe8ebdef7a5]
+~> TaskHandler[id: 57; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/62/ce17ca1b2091219672ec58bd28df6b]
+.. remaining tasks omitted.
+Apr-02 22:01:20.556 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/57/f5713b10c0356904960cc61879a555]
+Apr-02 22:01:20.563 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:01:20.563 [Task submitter] INFO  nextflow.Session - [a8/3bcb53] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064440)
+Apr-02 22:01:41.662 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/86/c0de16e3306b4f1e60ebdb3a69706d]
+Apr-02 22:01:41.666 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:01:41.666 [Task submitter] INFO  nextflow.Session - [e8/ad1da2] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064440)
+Apr-02 22:03:53.238 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b5/2d0588ab0d3b7c516c357631b2c51e]
+Apr-02 22:03:53.245 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:03:53.245 [Task submitter] INFO  nextflow.Session - [2d/0baf52] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064440)
+Apr-02 22:03:53.882 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/a8/3bcb53a979c993e469c6850225e0cb]
+Apr-02 22:03:53.887 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Apr-02 22:03:53.887 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:03:53.887 [Task submitter] INFO  nextflow.Session - [58/4d5b3e] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064441)
+Apr-02 22:03:53.887 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 22:03:53.887 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<3:1>
+Apr-02 22:04:50.663 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/e8/ad1da2f7081f278ef637dce512fe43]
+Apr-02 22:04:50.669 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:04:50.671 [Task submitter] INFO  nextflow.Session - [87/60fa26] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064439)
+Apr-02 22:05:21.561 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/63/ef4744f2d847325bc0c2cc41924df8]
+Apr-02 22:05:21.565 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:05:21.565 [Task submitter] INFO  nextflow.Session - [fc/d50f7c] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064439)
+Apr-02 22:05:21.568 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:05:21.568 [Task submitter] INFO  nextflow.Session - [8a/d59b1b] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064439)
+Apr-02 22:05:23.763 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 5 -- submitted tasks are shown below
+~> TaskHandler[id: 44; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2d/0baf52477ded11e381731d75b690f0]
+~> TaskHandler[id: 46; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/58/4d5b3efecbd701419f2d401b53fd84]
+~> TaskHandler[id: 50; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/87/60fa2651b8f40cd2620c6635310577]
+~> TaskHandler[id: 49; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/fc/d50f7ccb6e21e528cfc5f73f1a1a70]
+~> TaskHandler[id: 52; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8a/d59b1b01b291f2f45beb0d3bce3f56]
+Apr-02 22:05:31.572 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 16 -- tasks to be submitted are shown below
+~> TaskHandler[id: 51; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/6e/6dd5f47604f3e9fdfa348304509f47]
+~> TaskHandler[id: 53; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/fb/bf8041f5a73f764781abe8ebdef7a5]
+~> TaskHandler[id: 57; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/62/ce17ca1b2091219672ec58bd28df6b]
+~> TaskHandler[id: 58; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/27/9cbb8c6f73092fc8415822562f423f]
+~> TaskHandler[id: 55; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b1/3e8d56b3179146475f7a50eb271af2]
+~> TaskHandler[id: 59; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/16/25c7fafd198f22efc439cbdae4d3b0]
+~> TaskHandler[id: 60; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/60/39cd07bdce8e65fcc4ca97670aa1c8]
+~> TaskHandler[id: 63; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/5a/f0166122296b37e33743929d385ff6]
+~> TaskHandler[id: 62; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4d/edb78b2c75073b5138ccdc4dd6cc85]
+~> TaskHandler[id: 65; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c1/37256f9a5511cfe49717b1ddbab86c]
+.. remaining tasks omitted.
+Apr-02 22:06:02.276 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/87/60fa2651b8f40cd2620c6635310577]
+Apr-02 22:06:02.280 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:06:02.280 [Task submitter] INFO  nextflow.Session - [fb/bf8041] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064439)
+Apr-02 22:06:45.761 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/58/4d5b3efecbd701419f2d401b53fd84]
+Apr-02 22:06:45.766 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:06:45.767 [Task submitter] INFO  nextflow.Session - [62/ce17ca] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064286)
+Apr-02 22:07:28.486 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/fc/d50f7ccb6e21e528cfc5f73f1a1a70]
+Apr-02 22:07:28.491 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Apr-02 22:07:28.491 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 22:07:28.491 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<3:1>
+Apr-02 22:07:28.492 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:07:28.492 [Task submitter] INFO  nextflow.Session - [b1/3e8d56] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064286)
+Apr-02 22:07:55.285 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/fb/bf8041f5a73f764781abe8ebdef7a5]
+Apr-02 22:07:55.294 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:07:55.295 [Task submitter] INFO  nextflow.Session - [16/25c7fa] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064286)
+Apr-02 22:07:56.098 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8a/d59b1b01b291f2f45beb0d3bce3f56]
+Apr-02 22:07:56.105 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:07:56.105 [Task submitter] INFO  nextflow.Session - [60/39cd07] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064287)
+Apr-02 22:08:04.384 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 57; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/62/ce17ca1b2091219672ec58bd28df6b]
+Apr-02 22:08:04.388 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:08:04.388 [Task submitter] INFO  nextflow.Session - [5a/f01661] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064441)
+Apr-02 22:09:22.596 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 63; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_STRINGTIE (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/5a/f0166122296b37e33743929d385ff6]
+Apr-02 22:09:22.606 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:09:22.606 [Task submitter] INFO  nextflow.Session - [4d/edb78b] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064441)
+Apr-02 22:09:38.506 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 60; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/60/39cd07bdce8e65fcc4ca97670aa1c8]
+Apr-02 22:09:38.516 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:09:38.516 [Task submitter] INFO  nextflow.Session - [f5/be8c6a] Submitted process > NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064441)
+Apr-02 22:10:08.024 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 55; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b1/3e8d56b3179146475f7a50eb271af2]
+Apr-02 22:10:08.027 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:10:08.028 [Task submitter] INFO  nextflow.Session - [9d/81fbcc] Submitted process > NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064440)
+Apr-02 22:10:08.028 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Apr-02 22:10:08.028 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 22:10:08.028 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<3:1>
+Apr-02 22:10:23.855 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 5 -- submitted tasks are shown below
+~> TaskHandler[id: 44; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2d/0baf52477ded11e381731d75b690f0]
+~> TaskHandler[id: 59; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/16/25c7fafd198f22efc439cbdae4d3b0]
+~> TaskHandler[id: 62; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4d/edb78b2c75073b5138ccdc4dd6cc85]
+~> TaskHandler[id: 66; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/f5/be8c6ac325e260578ce4fba692ac41]
+~> TaskHandler[id: 67; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/9d/81fbccfd9175dddf4b79f2a85b7667]
+Apr-02 22:10:32.036 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 11 -- tasks to be submitted are shown below
+~> TaskHandler[id: 51; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/6e/6dd5f47604f3e9fdfa348304509f47]
+~> TaskHandler[id: 58; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/27/9cbb8c6f73092fc8415822562f423f]
+~> TaskHandler[id: 65; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c1/37256f9a5511cfe49717b1ddbab86c]
+~> TaskHandler[id: 68; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (1); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/40/0d5b6477ee570821852c80fca3995b]
+~> TaskHandler[id: 69; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (2); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/af/2381ea86cf6c9a2026393b55281ce5]
+~> TaskHandler[id: 70; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (3); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8f/88d2c4290d8127e2dad94eea3909b7]
+~> TaskHandler[id: 71; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/ee/d78c486d0ea475089ae3a1427dec37]
+~> TaskHandler[id: 72; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (4); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/40/7ca3b096d2779c706c14f1421abfca]
+~> TaskHandler[id: 73; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (5); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/a4/f9b66fe612893f9b9fe1277057950b]
+~> TaskHandler[id: 74; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (6); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/3e/0e673760db00e6de5e296dc0ec640f]
+Apr-02 22:10:46.234 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 59; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/16/25c7fafd198f22efc439cbdae4d3b0]
+Apr-02 22:10:46.239 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:10:46.239 [Task submitter] INFO  nextflow.Session - [40/0d5b64] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (1)
+Apr-02 22:11:05.777 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 68; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (1); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/40/0d5b6477ee570821852c80fca3995b]
+Apr-02 22:11:05.781 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:11:05.781 [Task submitter] INFO  nextflow.Session - [af/2381ea] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (2)
+Apr-02 22:11:27.163 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 69; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (2); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/af/2381ea86cf6c9a2026393b55281ce5]
+Apr-02 22:11:27.170 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:11:27.171 [Task submitter] INFO  nextflow.Session - [8f/88d2c4] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (3)
+Apr-02 22:11:49.295 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 70; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (3); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/8f/88d2c4290d8127e2dad94eea3909b7]
+Apr-02 22:11:49.301 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:11:49.301 [Task submitter] INFO  nextflow.Session - [ee/d78c48] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064438)
+Apr-02 22:12:00.815 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 67; name: NFCORE_RNAFUSION:RNAFUSION:ARRIBA_WORKFLOW:ARRIBA (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/9d/81fbccfd9175dddf4b79f2a85b7667]
+Apr-02 22:12:00.824 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:12:00.824 [Task submitter] INFO  nextflow.Session - [40/7ca3b0] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (4)
+Apr-02 22:12:05.192 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 62; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/4d/edb78b2c75073b5138ccdc4dd6cc85]
+Apr-02 22:12:05.195 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Apr-02 22:12:05.195 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Apr-02 22:12:05.195 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:GATK4_MARKDUPLICATES > Skipping output binding because one or more optional files are missing: fileoutparam<3:1>
+Apr-02 22:12:05.196 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:12:05.197 [Task submitter] INFO  nextflow.Session - [a4/f9b66f] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (5)
+Apr-02 22:12:09.900 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 71; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/ee/d78c486d0ea475089ae3a1427dec37]
+Apr-02 22:12:09.904 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:12:09.904 [Task submitter] INFO  nextflow.Session - [3e/0e6737] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (6)
+Apr-02 22:12:17.477 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2d/0baf52477ded11e381731d75b690f0]
+Apr-02 22:12:17.483 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:12:17.484 [Task submitter] INFO  nextflow.Session - [6e/6dd5f4] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064439)
+Apr-02 22:12:21.850 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 72; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (4); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/40/7ca3b096d2779c706c14f1421abfca]
+Apr-02 22:12:21.852 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:12:21.853 [Task submitter] INFO  nextflow.Session - [df/b6fd7e] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064287)
+Apr-02 22:12:28.729 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 75; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/df/b6fd7ec6e78d3f0ca7eb32218de450]
+Apr-02 22:12:28.733 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:12:28.733 [Task submitter] INFO  nextflow.Session - [83/3f0880] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064440)
+Apr-02 22:12:28.990 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 73; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (5); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/a4/f9b66fe612893f9b9fe1277057950b]
+Apr-02 22:12:30.200 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 74; name: NFCORE_RNAFUSION:RNAFUSION:STRINGTIE_WORKFLOW:STRINGTIE_MERGE (6); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/3e/0e673760db00e6de5e296dc0ec640f]
+Apr-02 22:12:30.204 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:12:30.204 [Task submitter] INFO  nextflow.Session - [27/9cbb8c] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064286)
+Apr-02 22:12:35.618 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 77; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/83/3f0880fec476424d2e0af98bb89faf]
+Apr-02 22:12:40.784 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 66; name: NFCORE_RNAFUSION:RNAFUSION:QC_WORKFLOW:PICARD_COLLECTRNASEQMETRICS (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/f5/be8c6ac325e260578ce4fba692ac41]
+Apr-02 22:12:40.787 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:12:40.788 [Task submitter] INFO  nextflow.Session - [c1/37256f] Submitted process > NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064441)
+Apr-02 22:15:23.936 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 51; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/6e/6dd5f47604f3e9fdfa348304509f47]
+~> TaskHandler[id: 58; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/27/9cbb8c6f73092fc8415822562f423f]
+~> TaskHandler[id: 65; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c1/37256f9a5511cfe49717b1ddbab86c]
+Apr-02 22:15:32.723 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 76; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/54/cb68e8b3c15aca627151759de18682]
+~> TaskHandler[id: 78; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/ad/340c61b2a4058bab5e54298b232608]
+~> TaskHandler[id: 79; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/06/d0b28d4d39cc7c623435f49fc92e26]
+Apr-02 22:20:23.981 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 51; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/6e/6dd5f47604f3e9fdfa348304509f47]
+~> TaskHandler[id: 58; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/27/9cbb8c6f73092fc8415822562f423f]
+~> TaskHandler[id: 65; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c1/37256f9a5511cfe49717b1ddbab86c]
+Apr-02 22:20:32.789 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 76; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064438); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/54/cb68e8b3c15aca627151759de18682]
+~> TaskHandler[id: 78; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064287); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/ad/340c61b2a4058bab5e54298b232608]
+~> TaskHandler[id: 79; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064440); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/06/d0b28d4d39cc7c623435f49fc92e26]
+Apr-02 22:20:47.084 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 58; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/27/9cbb8c6f73092fc8415822562f423f]
+Apr-02 22:20:47.089 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:20:47.090 [Task submitter] INFO  nextflow.Session - [54/cb68e8] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064438)
+Apr-02 22:21:42.585 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/6e/6dd5f47604f3e9fdfa348304509f47]
+Apr-02 22:21:42.589 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:21:42.590 [Task submitter] INFO  nextflow.Session - [ad/340c61] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064287)
+Apr-02 22:21:59.610 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 65; name: NFCORE_RNAFUSION:RNAFUSION:STARFUSION_WORKFLOW:STARFUSION (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c1/37256f9a5511cfe49717b1ddbab86c]
+Apr-02 22:21:59.631 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:21:59.631 [Task submitter] INFO  nextflow.Session - [06/d0b28d] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064440)
+Apr-02 22:25:24.033 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 76; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/54/cb68e8b3c15aca627151759de18682]
+~> TaskHandler[id: 78; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064287); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/ad/340c61b2a4058bab5e54298b232608]
+~> TaskHandler[id: 79; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/06/d0b28d4d39cc7c623435f49fc92e26]
+Apr-02 22:25:33.690 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 80; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/91/8e87146116d880ff43e9127e633a09]
+~> TaskHandler[id: 81; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/90/f4a01b4c2a5c0d0d1497cd0121225a]
+~> TaskHandler[id: 82; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/02/d8c77a556a1817b87a9ae60e215c16]
+Apr-02 22:30:24.091 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 76; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/54/cb68e8b3c15aca627151759de18682]
+~> TaskHandler[id: 78; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064287); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/ad/340c61b2a4058bab5e54298b232608]
+~> TaskHandler[id: 79; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/06/d0b28d4d39cc7c623435f49fc92e26]
+Apr-02 22:30:33.773 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 80; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064286); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/91/8e87146116d880ff43e9127e633a09]
+~> TaskHandler[id: 81; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/90/f4a01b4c2a5c0d0d1497cd0121225a]
+~> TaskHandler[id: 82; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/02/d8c77a556a1817b87a9ae60e215c16]
+Apr-02 22:33:27.546 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 78; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/ad/340c61b2a4058bab5e54298b232608]
+Apr-02 22:33:27.551 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:33:27.551 [Task submitter] INFO  nextflow.Session - [91/8e8714] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064286)
+Apr-02 22:33:27.555 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:33:27.555 [Task submitter] INFO  nextflow.Session - [90/f4a01b] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064439)
+Apr-02 22:33:28.559 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:33:28.559 [Task submitter] INFO  nextflow.Session - [f6/0af238] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064287)
+Apr-02 22:33:41.994 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 80; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/91/8e87146116d880ff43e9127e633a09]
+Apr-02 22:33:42.002 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:33:42.003 [Task submitter] INFO  nextflow.Session - [02/d8c77a] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064441)
+Apr-02 22:33:42.066 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 84; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/f6/0af238a45b215330d10f0fd4019253]
+Apr-02 22:33:42.124 [Actor Thread 19] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/iostrows/.nextflow/assets/nf-core/rnafusion/bin/vcf_collect.py
+Apr-02 22:33:43.070 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:33:43.070 [Task submitter] INFO  nextflow.Session - [53/8c20d5] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064287)
+Apr-02 22:33:43.311 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 81; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/90/f4a01b4c2a5c0d0d1497cd0121225a]
+Apr-02 22:33:43.315 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:33:43.316 [Task submitter] INFO  nextflow.Session - [cd/08190b] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064287)
+Apr-02 22:33:50.418 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 82; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONREPORT_WORKFLOW:FUSIONREPORT (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/02/d8c77a556a1817b87a9ae60e215c16]
+Apr-02 22:33:53.800 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 86; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/53/8c20d5991b472aeb79801401a41645]
+Apr-02 22:35:01.891 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 79; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/06/d0b28d4d39cc7c623435f49fc92e26]
+Apr-02 22:35:01.896 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:35:01.896 [Task submitter] INFO  nextflow.Session - [f0/dffda9] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064286)
+Apr-02 22:35:02.901 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:35:02.901 [Task submitter] INFO  nextflow.Session - [de/ddf98f] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064440)
+Apr-02 22:35:02.905 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:35:02.906 [Task submitter] INFO  nextflow.Session - [42/2385dd] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064440)
+Apr-02 22:35:08.930 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 89; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/de/ddf98f266b05932fd42095a2284bd5]
+Apr-02 22:35:09.936 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:35:09.937 [Task submitter] INFO  nextflow.Session - [2a/c393e1] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064440)
+Apr-02 22:35:12.594 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 91; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2a/c393e1f1e45b1ad39b461a316aa954]
+Apr-02 22:35:24.115 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- submitted tasks are shown below
+~> TaskHandler[id: 76; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/54/cb68e8b3c15aca627151759de18682]
+~> TaskHandler[id: 83; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064287); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/cd/08190bab32fce4f7ac2d8fadc9233d]
+~> TaskHandler[id: 85; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/f0/dffda9f567e542d7c398982cf088d2]
+~> TaskHandler[id: 90; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064440); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/42/2385dd1b82ea58c1e0ba9e4e54cea3]
+Apr-02 22:35:34.601 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 2 -- tasks to be submitted are shown below
+~> TaskHandler[id: 87; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064439); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/01/099d85b2e084fdc889021a869e11e6]
+~> TaskHandler[id: 88; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b1/7423d0b8fdd25259c311c567f3fe8e]
+Apr-02 22:36:45.632 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 76; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/54/cb68e8b3c15aca627151759de18682]
+Apr-02 22:36:45.636 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:36:45.636 [Task submitter] INFO  nextflow.Session - [01/099d85] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064439)
+Apr-02 22:36:47.475 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:36:47.476 [Task submitter] INFO  nextflow.Session - [41/5b4592] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064438)
+Apr-02 22:37:03.770 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 92; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/41/5b4592c07fe8edcc898245ba312c9c]
+Apr-02 22:37:04.797 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:37:04.797 [Task submitter] INFO  nextflow.Session - [31/603475] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064438)
+Apr-02 22:37:08.978 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 94; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/31/603475140a4a304c2f9b0119a76212]
+Apr-02 22:37:10.141 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 83; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064287); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/cd/08190bab32fce4f7ac2d8fadc9233d]
+Apr-02 22:37:10.147 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:37:10.147 [Task submitter] INFO  nextflow.Session - [a3/814e64] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064438)
+Apr-02 22:39:23.695 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 90; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064440); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/42/2385dd1b82ea58c1e0ba9e4e54cea3]
+Apr-02 22:40:24.120 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 85; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/f0/dffda9f567e542d7c398982cf088d2]
+~> TaskHandler[id: 87; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/01/099d85b2e084fdc889021a869e11e6]
+~> TaskHandler[id: 93; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064438); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/a3/814e64e710bd4ed5fd696c05f47cb9]
+Apr-02 22:40:34.714 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 88; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064441); status: NEW; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b1/7423d0b8fdd25259c311c567f3fe8e]
+Apr-02 22:43:37.013 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 93; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064438); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/a3/814e64e710bd4ed5fd696c05f47cb9]
+Apr-02 22:43:37.019 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:43:37.019 [Task submitter] INFO  nextflow.Session - [b1/7423d0] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064441)
+Apr-02 22:45:24.137 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 85; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/f0/dffda9f567e542d7c398982cf088d2]
+~> TaskHandler[id: 87; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/01/099d85b2e084fdc889021a869e11e6]
+~> TaskHandler[id: 88; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b1/7423d0b8fdd25259c311c567f3fe8e]
+Apr-02 22:48:08.982 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 87; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/01/099d85b2e084fdc889021a869e11e6]
+Apr-02 22:48:09.140 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:48:09.140 [Task submitter] INFO  nextflow.Session - [09/541b13] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064439)
+Apr-02 22:48:09.147 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:48:09.147 [Task submitter] INFO  nextflow.Session - [d0/7c27ab] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064439)
+Apr-02 22:48:23.664 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 95; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/09/541b130e4728a21db08569151b5b8f]
+Apr-02 22:48:23.678 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:48:23.678 [Task submitter] INFO  nextflow.Session - [ac/9ec0e0] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064439)
+Apr-02 22:48:26.142 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 97; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/ac/9ec0e07437bb84d6eda25eb3c80b95]
+Apr-02 22:48:32.826 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 85; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/f0/dffda9f567e542d7c398982cf088d2]
+Apr-02 22:48:32.842 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:48:32.842 [Task submitter] INFO  nextflow.Session - [fd/7a4138] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064286)
+Apr-02 22:48:32.845 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:48:32.845 [Task submitter] INFO  nextflow.Session - [3f/43b3fd] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064286)
+Apr-02 22:48:43.572 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 98; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/fd/7a413836a14c92153c19e285f29968]
+Apr-02 22:48:43.584 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:48:43.584 [Task submitter] INFO  nextflow.Session - [2c/79b4cb] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064286)
+Apr-02 22:48:46.007 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 100; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/2c/79b4cb9c81d89fd75c153d7fca9fae]
+Apr-02 22:50:24.225 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 88; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b1/7423d0b8fdd25259c311c567f3fe8e]
+~> TaskHandler[id: 96; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064439); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/d0/7c27abe2de221c2a12dfdb07968995]
+~> TaskHandler[id: 99; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064286); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/3f/43b3fd96c636921e3fa4005adeccf7]
+Apr-02 22:52:57.602 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 99; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064286); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/3f/43b3fd96c636921e3fa4005adeccf7]
+Apr-02 22:54:09.117 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 96; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064439); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/d0/7c27abe2de221c2a12dfdb07968995]
+Apr-02 22:54:48.440 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 88; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:FUSIONINSPECTOR (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/b1/7423d0b8fdd25259c311c567f3fe8e]
+Apr-02 22:54:48.608 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:54:48.608 [Task submitter] INFO  nextflow.Session - [c2/9c92b2] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064441)
+Apr-02 22:54:48.613 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:54:48.613 [Task submitter] INFO  nextflow.Session - [18/1c1c9c] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064441)
+Apr-02 22:54:56.093 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 101; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:AGAT_CONVERTSPGFF2TSV (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/18/1c1c9ca6260d1914c9fd7db7b20198]
+Apr-02 22:54:56.121 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:54:56.121 [Task submitter] INFO  nextflow.Session - [75/0994a0] Submitted process > NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064441)
+Apr-02 22:54:58.579 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 103; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:VCF_COLLECT (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/75/0994a0deca1e5e49d25086c0f3623e]
+Apr-02 22:55:24.229 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 102; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064441); status: RUNNING; exit: -; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c2/9c92b24a8b454c493b93035a4c378f]
+Apr-02 22:59:47.411 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 102; name: NFCORE_RNAFUSION:RNAFUSION:FUSIONINSPECTOR_WORKFLOW:ARRIBA_VISUALISATION (SRR064441); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/c2/9c92b24a8b454c493b93035a4c378f]
+Apr-02 22:59:47.636 [Actor Thread 25] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 103; slices: 1; internal sort time: 0.131 s; external sort time: 0.038 s; total time: 0.169 s
+Apr-02 22:59:48.146 [Actor Thread 25] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /data/nextflow_work/rnafusion/run3/work/collect-file/69d4ebce5e5a142115276d1e82806e2e
+Apr-02 22:59:48.291 [Actor Thread 25] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-1674692670383313838
+Apr-02 22:59:48.593 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:59:48.593 [Task submitter] INFO  nextflow.Session - [33/0e289d] Submitted process > NFCORE_RNAFUSION:RNAFUSION:CUSTOM_DUMPSOFTWAREVERSIONS (1)
+Apr-02 22:59:51.720 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 104; name: NFCORE_RNAFUSION:RNAFUSION:CUSTOM_DUMPSOFTWAREVERSIONS (1); status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/33/0e289de5634b3c110e3e8567e677a7]
+Apr-02 22:59:51.734 [Actor Thread 46] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/iostrows/.nextflow/assets/nf-core/rnafusion/assets/multiqc_config.yml
+Apr-02 22:59:51.786 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-02 22:59:51.787 [Task submitter] INFO  nextflow.Session - [91/024e07] Submitted process > NFCORE_RNAFUSION:RNAFUSION:MULTIQC
+Apr-02 23:00:21.825 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 105; name: NFCORE_RNAFUSION:RNAFUSION:MULTIQC; status: COMPLETED; exit: 0; error: -; workDir: /data/nextflow_work/rnafusion/run3/work/91/024e07bced276ec45455b1c19f6ea0]
+Apr-02 23:00:21.831 [main] DEBUG nextflow.Session - Session await > all processes finished
+Apr-02 23:00:21.926 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Apr-02 23:00:21.926 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Apr-02 23:00:22.444 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Apr-02 23:00:22.550 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/rnafusion][0;32m Pipeline completed successfully[0m-
+Apr-02 23:00:22.765 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/rnafusion][0;32m Pipeline completed successfully[0m-
+Apr-02 23:00:22.903 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=105; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=2d 15h 31m 49s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=6; peakCpus=39; peakMemory=234 GB; ]
+Apr-02 23:00:22.904 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Apr-02 23:00:22.945 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Apr-02 23:00:24.773 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Apr-02 23:00:25.141 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Apr-02 23:00:25.142 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-validation@1.1.3'
+Apr-02 23:00:25.142 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-validation
+Apr-02 23:00:25.227 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Apr-02 23:00:25.254 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

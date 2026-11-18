@@ -1,0 +1,87 @@
+<EXPERIMENT_SET>
+<EXPERIMENT accession="SRX025828" alias="BT474_experiment_insert_100" center_name="Institute for Molecular Medicine Finland, Universi" broker_name="NCBI">
+  <IDENTIFIERS>
+    <PRIMARY_ID>SRX025828</PRIMARY_ID>
+    <SUBMITTER_ID namespace="Institute for Molecular Medicine Finland, Universi">BT474_experiment_insert_100</SUBMITTER_ID>
+  </IDENTIFIERS>
+  <TITLE>paired-end sequencing of BT-474 cDNA.</TITLE>
+  <STUDY_REF accession="SRP003186">
+    <IDENTIFIERS>
+      <PRIMARY_ID>SRP003186</PRIMARY_ID>
+      <SUBMITTER_ID namespace="Institute for Molecular Medicine Finland, Universi">Breast cancer fusion genes</SUBMITTER_ID>
+    </IDENTIFIERS>
+  </STUDY_REF>
+  <DESIGN>
+    <DESIGN_DESCRIPTION/>
+    <SAMPLE_DESCRIPTOR accession="SRS107529">
+      <IDENTIFIERS>
+        <PRIMARY_ID>SRS107529</PRIMARY_ID>
+        <SUBMITTER_ID namespace="Institute for Molecular Medicine Finland, Universi">BT-474</SUBMITTER_ID>
+      </IDENTIFIERS>
+    </SAMPLE_DESCRIPTOR>
+    <LIBRARY_DESCRIPTOR>
+      <LIBRARY_NAME>FIMM-OK-BT474-1</LIBRARY_NAME>
+      <LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY>
+      <LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+      <LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION>
+      <LIBRARY_LAYOUT>
+        <PAIRED NOMINAL_LENGTH="100"/>
+      </LIBRARY_LAYOUT>
+    </LIBRARY_DESCRIPTOR>
+    <SPOT_DESCRIPTOR>
+      <SPOT_DECODE_SPEC>
+        <READ_SPEC>
+          <READ_INDEX>0</READ_INDEX>
+          <READ_CLASS>Application Read</READ_CLASS>
+          <READ_TYPE>Forward</READ_TYPE>
+          <BASE_COORD>1</BASE_COORD>
+        </READ_SPEC>
+        <READ_SPEC>
+          <READ_INDEX>1</READ_INDEX>
+          <READ_CLASS>Application Read</READ_CLASS>
+          <READ_TYPE>Reverse</READ_TYPE>
+          <BASE_COORD>51</BASE_COORD>
+        </READ_SPEC>
+      </SPOT_DECODE_SPEC>
+    </SPOT_DESCRIPTOR>
+  </DESIGN>
+  <PLATFORM>
+    <ILLUMINA>
+      <INSTRUMENT_MODEL>Illumina Genome Analyzer II</INSTRUMENT_MODEL>
+    </ILLUMINA>
+  </PLATFORM>
+  <PROCESSING/>
+  <EXPERIMENT_LINKS>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SAMPLE</DB>
+        <ID>SRS107529</ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMISSION</DB>
+        <ID>SRA023117</ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-FASTQ-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRX025828&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+    <EXPERIMENT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMITTED-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRX025828&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+      </XREF_LINK>
+    </EXPERIMENT_LINK>
+  </EXPERIMENT_LINKS>
+  <EXPERIMENT_ATTRIBUTES>
+    <EXPERIMENT_ATTRIBUTE>
+      <TAG>ENA-STATUS</TAG>
+      <VALUE>PUBLIC</VALUE>
+    </EXPERIMENT_ATTRIBUTE>
+  </EXPERIMENT_ATTRIBUTES>
+</EXPERIMENT>
+</EXPERIMENT_SET>

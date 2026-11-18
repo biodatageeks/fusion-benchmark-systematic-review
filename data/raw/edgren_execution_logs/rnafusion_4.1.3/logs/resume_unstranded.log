@@ -1,0 +1,3487 @@
+Total compressed FASTQ: 5,432,369,571 bytes
+Downloading SRR064287_1.fastq.gz: 326,497,959 bytes
+Downloading SRR064438_1.fastq.gz: 655,377,929 bytes
+curl: (56) OpenSSL SSL_read: error:0A000126:SSL routines::unexpected eof while reading, errno 0
+curl: (56) OpenSSL SSL_read: error:0A000126:SSL routines::unexpected eof while reading, errno 0
+Verified SRR064287_1.fastq.gz
+Downloading SRR064438_2.fastq.gz: 682,275,929 bytes
+Verified SRR064438_1.fastq.gz
+Downloading SRR064439_1.fastq.gz: 408,741,831 bytes
+Verified SRR064438_2.fastq.gz
+Downloading SRR064439_2.fastq.gz: 393,618,275 bytes
+Verified SRR064439_1.fastq.gz
+Downloading SRR064440_1.fastq.gz: 448,543,836 bytes
+Verified SRR064439_2.fastq.gz
+Downloading SRR064440_2.fastq.gz: 466,006,350 bytes
+Verified SRR064440_1.fastq.gz
+Downloading SRR064441_1.fastq.gz: 448,248,793 bytes
+Verified SRR064440_2.fastq.gz
+Downloading SRR064441_2.fastq.gz: 452,357,516 bytes
+Verified SRR064441_1.fastq.gz
+Verified SRR064441_2.fastq.gz
+Nextflow 26.10.4 is available - Please consider updating your version to it
+
+ N E X T F L O W   ~  version 25.10.4
+
+WARN: It appears you have never run this project before -- Option `-resume` is ignored
+Launching `https://github.com/nf-core/rnafusion` [lethal_tuckerman] DSL2 - revision: 76ad76e7c3 [4.1.3]
+
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/rnafusion 4.1.3
+------------------------------------------------------
+
+Input/output options
+  input                     : /data/ccle_fusions/side_projects/edgren_rnafusion/samplesheet.csv
+  outdir                    : /data/ccle_fusions/side_projects/edgren_rnafusion/results
+  genomes_base              : /data/ccle_fusions/references/rnafusion
+  genome_gencode_version    : 46
+  tools                     : arriba,starfusion,fusioncatcher,fusionreport
+  arriba_ref_blacklist      : /data/ccle_fusions/references/rnafusion/GRCh38/arriba/2.5.0/blacklist_hg38_GRCh38_v2.5.0.tsv.gz
+  arriba_ref_cytobands      : /data/ccle_fusions/references/rnafusion/GRCh38/arriba/2.5.0/cytobands_hg38_GRCh38_v2.5.0.tsv
+  arriba_ref_known_fusions  : /data/ccle_fusions/references/rnafusion/GRCh38/arriba/2.5.0/known_fusions_hg38_GRCh38_v2.5.0.tsv.gz
+  arriba_ref_protein_domains: /data/ccle_fusions/references/rnafusion/GRCh38/arriba/2.5.0/protein_domains_hg38_GRCh38_v2.5.0.gff3
+  fusioncatcher_ref         : /data/ccle_fusions/references/rnafusion/GRCh38/gencode_v46/fusioncatcher/
+  fusionreport_ref          : /data/ccle_fusions/references/rnafusion/GRCh38/fusion_report_db
+  hgnc_ref                  : /data/ccle_fusions/references/rnafusion/GRCh38/hgnc/hgnc_complete_set.txt
+  hgnc_date                 : /data/ccle_fusions/references/rnafusion/GRCh38/hgnc/HGNC-DB-timestamp.txt
+  salmon_index              : /data/ccle_fusions/references/rnafusion/GRCh38/gencode_v46/salmon
+  starfusion_ref            : /data/ccle_fusions/references/rnafusion/GRCh38/gencode_v46/starfusion/ctat_genome_lib_build_dir
+  dfam_hmm                  : https://www.dfam.org/releases/Dfam_3.8/infrastructure/dfamscan/homo_sapiens_dfam.hmm
+  dfam_h3f                  : https://www.dfam.org/releases/Dfam_3.8/infrastructure/dfamscan/homo_sapiens_dfam.hmm.h3f
+  dfam_h3i                  : https://www.dfam.org/releases/Dfam_3.8/infrastructure/dfamscan/homo_sapiens_dfam.hmm.h3i
+  dfam_h3m                  : https://www.dfam.org/releases/Dfam_3.8/infrastructure/dfamscan/homo_sapiens_dfam.hmm.h3m
+  dfam_h3p                  : https://www.dfam.org/releases/Dfam_3.8/infrastructure/dfamscan/homo_sapiens_dfam.hmm.h3p
+  pfam_file                 : http://ftp.ebi.ac.uk/pub/databases/Pfam/releases/Pfam37.4/Pfam-A.hmm.gz
+  starindex_ref             : /data/ccle_fusions/references/rnafusion/GRCh38/gencode_v46/star
+
+Read trimming options
+  trim_tail                 : 0
+  trim_tail_fusioncatcher   : 0
+
+Reference genome options
+  fasta                     : /data/ccle_fusions/references/rnafusion/GRCh38/gencode_v46/gencode/Homo_sapiens_GRCh38_46_dna_primary_assembly.fa
+  fai                       : /data/ccle_fusions/references/rnafusion/GRCh38/gencode_v46/gencode/Homo_sapiens_GRCh38_46_dna_primary_assembly.fa.fai
+  genome                    : GRCh38
+  gtf                       : /data/ccle_fusions/references/rnafusion/GRCh38/gencode_v46/gencode/Homo_sapiens_GRCh38_46.gtf
+  refflat                   : /data/ccle_fusions/references/rnafusion/GRCh38/gencode_v46/gencode/Homo_sapiens_GRCh38_46.gtf.refflat
+  rrna_intervals            : /data/ccle_fusions/references/rnafusion/GRCh38/gencode_v46/gencode/Homo_sapiens_GRCh38_46.gtf.interval_list
+  no_cosmic                 : true
+  fusion_annot_lib          : https://github.com/FusionAnnotator/CTAT_HumanFusionLib/releases/download/v0.3.0/fusion_lib.Mar2021.dat.gz
+  dfam_version              : 3.8
+  pfam_version              : 37.4
+
+Generic options
+  trace_report_suffix       : 2026-10-31_21-06-47
+  star_limit_bam_sort_ram   : 55000000000
+
+Core Nextflow options
+  revision                  : 4.1.3
+  runName                   : lethal_tuckerman
+  containerEngine           : docker
+  launchDir                 : /data/ccle_fusions/side_projects/edgren_rnafusion/run
+  workDir                   : /data/ccle_fusions/side_projects/edgren_rnafusion/work
+  projectDir                : /data/ccle_fusions/cache/nextflow/assets/nf-core/rnafusion
+  userName                  : ubuntu
+  profile                   : docker
+  configFiles               : /data/ccle_fusions/cache/nextflow/assets/nf-core/rnafusion/nextflow.config, /data/ccle_fusions/side_projects/edgren_rnafusion/rnafusion.config
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+------------------------------------------------------
+
+* The pipeline
+    https://doi.org/10.5281/zenodo.17641566
+
+* The nf-core framework
+    https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+    https://github.com/nf-core/rnafusion/blob/master/CITATIONS.md
+
+WARN: The following invalid input values have been detected:
+
+* --max_cpus: 16
+* --max_time: 240.h
+* --max_memory: 60 GB
+
+
+WARN: Skipping COSMIC DB download from `FUSIONREPORT_DOWNLOAD` and skip using it in `FUSIONREPORT`
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[-        ] RNA…_UMITOOLS_FASTP:FASTQC_RAW -
+[-        ] RNA…ASTQ_ALIGN_STAR:STAR_ALIGN -
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT -
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[-        ] RNA…_UMITOOLS_FASTP:FASTQC_RAW -
+[-        ] RNA…ASTQ_ALIGN_STAR:STAR_ALIGN -
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT -
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       -
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    -
+[-        ] RNA…USIONCATCHER_FUSIONCATCHER -
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[-        ] RNA…_UMITOOLS_FASTP:FASTQC_RAW -
+[-        ] RNA…ASTQ_ALIGN_STAR:STAR_ALIGN -
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT -
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       -
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    -
+[-        ] RNA…USIONCATCHER_FUSIONCATCHER -
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[-        ] RNA…_UMITOOLS_FASTP:FASTQC_RAW -
+[-        ] RNA…ASTQ_ALIGN_STAR:STAR_ALIGN -
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT -
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       -
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    -
+[-        ] RNA…USIONCATCHER_FUSIONCATCHER -
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (1)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[-        ] RNA…_UMITOOLS_FASTP:FASTQC_RAW | 0 of 6
+[6b/4f1675] RNA…TAR:STAR_ALIGN (SRR064287) | 0 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT -
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       -
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    -
+[-        ] RNA…USIONCATCHER_FUSIONCATCHER | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (2)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[-        ] RNA…_UMITOOLS_FASTP:FASTQC_RAW | 0 of 6
+[15/165bd2] RNA…TAR:STAR_ALIGN (SRR064438) | 0 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT -
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       -
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    -
+[-        ] RNA…USIONCATCHER_FUSIONCATCHER | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (2)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[-        ] RNA…_UMITOOLS_FASTP:FASTQC_RAW | 0 of 6
+[6b/4f1675] RNA…TAR:STAR_ALIGN (SRR064287) | 1 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 1
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 1
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 1
+[-        ] RNA…USIONCATCHER_FUSIONCATCHER | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (3)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[-        ] RNA…_UMITOOLS_FASTP:FASTQC_RAW | 0 of 6
+[15/165bd2] RNA…TAR:STAR_ALIGN (SRR064438) | 2 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 2
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 2
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 2
+[-        ] RNA…USIONCATCHER_FUSIONCATCHER | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (4)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[-        ] RNA…_UMITOOLS_FASTP:FASTQC_RAW | 0 of 6
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 2 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 2
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 2
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 2
+[-        ] RNA…USIONCATCHER_FUSIONCATCHER | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (4)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[-        ] RNA…_UMITOOLS_FASTP:FASTQC_RAW | 0 of 6
+[75/f1b367] RNA…TAR:STAR_ALIGN (SRR064439) | 3 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 3
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 3
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 3
+[-        ] RNA…USIONCATCHER_FUSIONCATCHER | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (5)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[-        ] RNA…_UMITOOLS_FASTP:FASTQC_RAW | 0 of 6
+[75/f1b367] RNA…TAR:STAR_ALIGN (SRR064439) | 3 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 3
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 3
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 3
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (6)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[57/4f3ceb] RNA…STP:FASTQC_RAW (SRR064440) | 0 of 6
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (7)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[01/7c58c1] RNA…STP:FASTQC_RAW (SRR064439) | 0 of 6
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (7)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[57/4f3ceb] RNA…STP:FASTQC_RAW (SRR064440) | 1 of 6
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (8)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[a1/04dfa5] RNA…STP:FASTQC_RAW (SRR064438) | 2 of 6
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (9)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[a1/04dfa5] RNA…STP:FASTQC_RAW (SRR064438) | 3 of 6
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (9)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[a1/04dfa5] RNA…STP:FASTQC_RAW (SRR064438) | 3 of 6
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (10)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[73/949e9a] RNA…STP:FASTQC_RAW (SRR064287) | 4 of 6
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (11)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 5 of 6
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (11)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 5 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNAFUSION:SAMTOOLS_INDEX       | 0 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (12)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[c6/ec4dd5] RNA…SAMTOOLS_INDEX (SRR064287) | 0 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        -
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS -
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES -
+Plus 2 more processes waiting for tasks…
+
+executor >  local (13)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[2a/b391ed] RNA…SAMTOOLS_INDEX (SRR064438) | 1 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 1
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS | 0 of 1
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES | 0 of 1
+[-        ] RNA…D_COLLECTINSERTSIZEMETRICS | 0 of 1
+Plus 1 more processes waiting for tasks…
+
+executor >  local (14)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[34/09f92a] RNA…SAMTOOLS_INDEX (SRR064439) | 2 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 1
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS | 0 of 2
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES | 0 of 1
+[-        ] RNA…D_COLLECTINSERTSIZEMETRICS | 0 of 2
+Plus 1 more processes waiting for tasks…
+
+executor >  local (14)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[34/09f92a] RNA…SAMTOOLS_INDEX (SRR064439) | 2 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 2
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS | 0 of 2
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES | 0 of 2
+[-        ] RNA…D_COLLECTINSERTSIZEMETRICS | 0 of 2
+Plus 1 more processes waiting for tasks…
+
+executor >  local (15)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[34/09f92a] RNA…SAMTOOLS_INDEX (SRR064439) | 3 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 3
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[-        ] RNA…ICARD_COLLECTRNASEQMETRICS | 0 of 3
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES | 0 of 3
+[-        ] RNA…D_COLLECTINSERTSIZEMETRICS | 0 of 3
+Plus 1 more processes waiting for tasks…
+
+executor >  local (16)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cb/8190df] RNA…TRNASEQMETRICS (SRR064287) | 0 of 4
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES | 0 of 4
+[-        ] RNA…D_COLLECTINSERTSIZEMETRICS | 0 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (16)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cb/8190df] RNA…TRNASEQMETRICS (SRR064287) | 0 of 4
+[-        ] RNA…KFLOW:GATK4_MARKDUPLICATES | 0 of 4
+[-        ] RNA…D_COLLECTINSERTSIZEMETRICS | 0 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (17)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cb/8190df] RNA…TRNASEQMETRICS (SRR064287) | 1 of 4
+[d5/fbb490] RNA…MARKDUPLICATES (SRR064287) | 0 of 4
+[-        ] RNA…D_COLLECTINSERTSIZEMETRICS | 0 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (18)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cb/8190df] RNA…TRNASEQMETRICS (SRR064287) | 1 of 4
+[d5/fbb490] RNA…MARKDUPLICATES (SRR064287) | 1 of 4
+[bc/002038] RNA…ERTSIZEMETRICS (SRR064287) | 0 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (19)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[a9/f59d41] RNA…_FUSIONCATCHER (SRR064439) | 0 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cb/8190df] RNA…TRNASEQMETRICS (SRR064287) | 1 of 4
+[d5/fbb490] RNA…MARKDUPLICATES (SRR064287) | 1 of 4
+[bc/002038] RNA…ERTSIZEMETRICS (SRR064287) | 1 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (20)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[e2/12544d] RNA…_FUSIONCATCHER (SRR064286) | 1 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cb/8190df] RNA…TRNASEQMETRICS (SRR064287) | 1 of 4
+[d5/fbb490] RNA…MARKDUPLICATES (SRR064287) | 1 of 4
+[bc/002038] RNA…ERTSIZEMETRICS (SRR064287) | 1 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (21)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[e2/12544d] RNA…_FUSIONCATCHER (SRR064286) | 1 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[ef/954713] RNA…TRNASEQMETRICS (SRR064438) | 1 of 4
+[d5/fbb490] RNA…MARKDUPLICATES (SRR064287) | 1 of 4
+[1a/903aaf] RNA…ERTSIZEMETRICS (SRR064438) | 2 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (22)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[e2/12544d] RNA…_FUSIONCATCHER (SRR064286) | 1 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[ef/954713] RNA…TRNASEQMETRICS (SRR064438) | 2 of 4
+[3f/414714] RNA…MARKDUPLICATES (SRR064438) | 1 of 4
+[1a/903aaf] RNA…ERTSIZEMETRICS (SRR064438) | 2 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (23)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[e2/12544d] RNA…_FUSIONCATCHER (SRR064286) | 1 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[ae/208acb] RNA…TRNASEQMETRICS (SRR064439) | 2 of 4
+[3f/414714] RNA…MARKDUPLICATES (SRR064438) | 2 of 4
+[1a/903aaf] RNA…ERTSIZEMETRICS (SRR064438) | 2 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (24)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[e2/12544d] RNA…_FUSIONCATCHER (SRR064286) | 2 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[ae/208acb] RNA…TRNASEQMETRICS (SRR064439) | 2 of 4
+[3f/414714] RNA…MARKDUPLICATES (SRR064438) | 2 of 4
+[1a/903aaf] RNA…ERTSIZEMETRICS (SRR064438) | 2 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (25)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[e2/12544d] RNA…_FUSIONCATCHER (SRR064286) | 2 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[ae/208acb] RNA…TRNASEQMETRICS (SRR064439) | 3 of 4
+[be/507424] RNA…MARKDUPLICATES (SRR064439) | 2 of 4
+[1a/903aaf] RNA…ERTSIZEMETRICS (SRR064438) | 2 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (26)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[e2/12544d] RNA…_FUSIONCATCHER (SRR064286) | 2 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[ae/208acb] RNA…TRNASEQMETRICS (SRR064439) | 3 of 4
+[be/507424] RNA…MARKDUPLICATES (SRR064439) | 3 of 4
+[23/44e879] RNA…ERTSIZEMETRICS (SRR064439) | 2 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (27)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[e2/12544d] RNA…_FUSIONCATCHER (SRR064286) | 2 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cd/8bc3e6] RNA…TRNASEQMETRICS (SRR064286) | 3 of 4
+[be/507424] RNA…MARKDUPLICATES (SRR064439) | 3 of 4
+[23/44e879] RNA…ERTSIZEMETRICS (SRR064439) | 3 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (28)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[e2/12544d] RNA…_FUSIONCATCHER (SRR064286) | 2 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cd/8bc3e6] RNA…TRNASEQMETRICS (SRR064286) | 4 of 4
+[be/507424] RNA…MARKDUPLICATES (SRR064439) | 3 of 4
+[cf/864148] RNA…ERTSIZEMETRICS (SRR064286) | 3 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (29)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[e2/12544d] RNA…_FUSIONCATCHER (SRR064286) | 2 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cd/8bc3e6] RNA…TRNASEQMETRICS (SRR064286) | 4 of 4
+[02/febcb4] RNA…MARKDUPLICATES (SRR064286) | 3 of 4
+[cf/864148] RNA…ERTSIZEMETRICS (SRR064286) | 4 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (29)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[d9/c91c09] RNA…TAR:STAR_ALIGN (SRR064286) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[e2/12544d] RNA…_FUSIONCATCHER (SRR064286) | 2 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cd/8bc3e6] RNA…TRNASEQMETRICS (SRR064286) | 4 of 4
+[02/febcb4] RNA…MARKDUPLICATES (SRR064286) | 4 of 4
+[cf/864148] RNA…ERTSIZEMETRICS (SRR064286) | 4 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (30)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 4 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 4
+[fd/3a5a3b] RNA…_FUSIONCATCHER (SRR064440) | 3 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cd/8bc3e6] RNA…TRNASEQMETRICS (SRR064286) | 4 of 4
+[02/febcb4] RNA…MARKDUPLICATES (SRR064286) | 4 of 4
+[cf/864148] RNA…ERTSIZEMETRICS (SRR064286) | 4 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (31)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 4
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 3 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cd/8bc3e6] RNA…TRNASEQMETRICS (SRR064286) | 4 of 4
+[02/febcb4] RNA…MARKDUPLICATES (SRR064286) | 4 of 4
+[cf/864148] RNA…ERTSIZEMETRICS (SRR064286) | 4 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (31)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[48/0a8e0e] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 3 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cd/8bc3e6] RNA…TRNASEQMETRICS (SRR064286) | 4 of 4
+[02/febcb4] RNA…MARKDUPLICATES (SRR064286) | 4 of 4
+[cf/864148] RNA…ERTSIZEMETRICS (SRR064286) | 4 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (32)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[27/260ad1] RNA…SAMTOOLS_INDEX (SRR064440) | 4 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 4
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 3 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cd/8bc3e6] RNA…TRNASEQMETRICS (SRR064286) | 4 of 4
+[02/febcb4] RNA…MARKDUPLICATES (SRR064286) | 4 of 4
+[cf/864148] RNA…ERTSIZEMETRICS (SRR064286) | 4 of 4
+Plus 1 more processes waiting for tasks…
+
+executor >  local (32)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[27/260ad1] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 5
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 3 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[cd/8bc3e6] RNA…TRNASEQMETRICS (SRR064286) | 4 of 5
+[02/febcb4] RNA…MARKDUPLICATES (SRR064286) | 4 of 5
+[cf/864148] RNA…ERTSIZEMETRICS (SRR064286) | 4 of 5
+Plus 1 more processes waiting for tasks…
+
+executor >  local (33)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[27/260ad1] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 5
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 3 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 4 of 5
+[02/febcb4] RNA…MARKDUPLICATES (SRR064286) | 4 of 5
+[cf/864148] RNA…ERTSIZEMETRICS (SRR064286) | 4 of 5
+Plus 1 more processes waiting for tasks…
+
+executor >  local (33)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[27/260ad1] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 5
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 3 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 4 of 5
+[02/febcb4] RNA…MARKDUPLICATES (SRR064286) | 4 of 5
+[cf/864148] RNA…ERTSIZEMETRICS (SRR064286) | 4 of 5
+Plus 1 more processes waiting for tasks…
+
+executor >  local (34)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[27/260ad1] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 5
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 3 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 5 of 5
+[6d/d5fc65] RNA…MARKDUPLICATES (SRR064440) | 4 of 5
+[cf/864148] RNA…ERTSIZEMETRICS (SRR064286) | 4 of 5
+Plus 1 more processes waiting for tasks…
+
+executor >  local (35)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[27/260ad1] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 5
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 3 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 5 of 5
+[6d/d5fc65] RNA…MARKDUPLICATES (SRR064440) | 5 of 5
+[26/769d4d] RNA…ERTSIZEMETRICS (SRR064440) | 4 of 5
+Plus 1 more processes waiting for tasks…
+
+executor >  local (35)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[27/260ad1] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 5
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 3 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 5 of 5
+[6d/d5fc65] RNA…MARKDUPLICATES (SRR064440) | 5 of 5
+[26/769d4d] RNA…ERTSIZEMETRICS (SRR064440) | 4 of 5
+Plus 1 more processes waiting for tasks…
+
+executor >  local (35)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[27/260ad1] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 5
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 3 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 5 of 5
+[6d/d5fc65] RNA…MARKDUPLICATES (SRR064440) | 5 of 5
+[26/769d4d] RNA…ERTSIZEMETRICS (SRR064440) | 5 of 5
+Plus 1 more processes waiting for tasks…
+
+executor >  local (36)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[27/260ad1] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 5
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 4 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 5 of 5
+[6d/d5fc65] RNA…MARKDUPLICATES (SRR064440) | 5 of 5
+[26/769d4d] RNA…ERTSIZEMETRICS (SRR064440) | 5 of 5
+Plus 1 more processes waiting for tasks…
+
+executor >  local (36)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[5e/fc03c6] RNA…TAR:STAR_ALIGN (SRR064440) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[27/260ad1] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 5
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[60/4691ae] RNA…_FUSIONCATCHER (SRR064287) | 4 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 5 of 5
+[6d/d5fc65] RNA…MARKDUPLICATES (SRR064440) | 5 of 5
+[26/769d4d] RNA…ERTSIZEMETRICS (SRR064440) | 5 of 5
+Plus 1 more processes waiting for tasks…
+
+executor >  local (37)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 5 of 6
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 5
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[27/260ad1] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 5
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 5
+[e8/55236e] RNA…_FUSIONCATCHER (SRR064441) | 5 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 5 of 5
+[6d/d5fc65] RNA…MARKDUPLICATES (SRR064440) | 5 of 5
+[26/769d4d] RNA…ERTSIZEMETRICS (SRR064440) | 5 of 5
+Plus 1 more processes waiting for tasks…
+
+executor >  local (39)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 6
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 5 of 6
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 5
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 5 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 5 of 5
+[6d/d5fc65] RNA…MARKDUPLICATES (SRR064440) | 5 of 5
+[26/769d4d] RNA…ERTSIZEMETRICS (SRR064440) | 5 of 5
+Plus 1 more processes waiting for tasks…
+
+executor >  local (39)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 6
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 5 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 5 of 6
+[6d/d5fc65] RNA…MARKDUPLICATES (SRR064440) | 5 of 6
+[26/769d4d] RNA…ERTSIZEMETRICS (SRR064440) | 5 of 6
+Plus 1 more processes waiting for tasks…
+
+executor >  local (40)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 6
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 5 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[37/1ca1b8] RNA…TRNASEQMETRICS (SRR064440) | 5 of 6
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 5 of 6
+[26/769d4d] RNA…ERTSIZEMETRICS (SRR064440) | 5 of 6
+Plus 1 more processes waiting for tasks…
+
+executor >  local (41)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 6
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 5 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 5 of 6
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[26/769d4d] RNA…ERTSIZEMETRICS (SRR064440) | 5 of 6
+Plus 1 more processes waiting for tasks…
+
+executor >  local (42)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 6
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 5 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 5 of 6
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 5 of 6
+Plus 1 more processes waiting for tasks…
+
+executor >  local (42)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 6
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 5 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 5 of 6
+Plus 1 more processes waiting for tasks…
+
+executor >  local (42)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 6
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[-        ] RNAFUSION:STARFUSION_DETECT    | 0 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 5 of 6
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (43)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[-        ] RNA…TOOLS_GENOME:SAMTOOLS_SORT | 0 of 6
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[c2/024a7b] RNA…RFUSION_DETECT (SRR064287) | 0 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (44)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[8f/5bbe76] RNA…:SAMTOOLS_SORT (SRR064287) | 0 of 6
+[-        ] RNA…OOLS_GENOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[c2/024a7b] RNA…RFUSION_DETECT (SRR064287) | 1 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (46)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[f7/f4a911] RNA…:SAMTOOLS_SORT (SRR064438) | 1 of 6
+[99/56bd79] RNA…SAMTOOLS_INDEX (SRR064287) | 0 of 1
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[c2/024a7b] RNA…RFUSION_DETECT (SRR064287) | 1 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (46)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[f7/f4a911] RNA…:SAMTOOLS_SORT (SRR064438) | 1 of 6
+[99/56bd79] RNA…SAMTOOLS_INDEX (SRR064287) | 1 of 1
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS | 0 of 1
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT | 0 of 1
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS | 0 of 1
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[c2/024a7b] RNA…RFUSION_DETECT (SRR064287) | 1 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (47)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[f7/f4a911] RNA…:SAMTOOLS_SORT (SRR064438) | 1 of 6
+[99/56bd79] RNA…SAMTOOLS_INDEX (SRR064287) | 1 of 1
+[69/a87ef2] RNA…SAMTOOLS_STATS (SRR064287) | 0 of 1
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT | 0 of 1
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS | 0 of 1
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[c2/024a7b] RNA…RFUSION_DETECT (SRR064287) | 1 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (48)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[f7/f4a911] RNA…:SAMTOOLS_SORT (SRR064438) | 1 of 6
+[99/56bd79] RNA…SAMTOOLS_INDEX (SRR064287) | 1 of 1
+[69/a87ef2] RNA…SAMTOOLS_STATS (SRR064287) | 1 of 1
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT | 0 of 1
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 0 of 1
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[c2/024a7b] RNA…RFUSION_DETECT (SRR064287) | 1 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (48)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[f7/f4a911] RNA…:SAMTOOLS_SORT (SRR064438) | 1 of 6
+[99/56bd79] RNA…SAMTOOLS_INDEX (SRR064287) | 1 of 1
+[69/a87ef2] RNA…SAMTOOLS_STATS (SRR064287) | 1 of 1
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT | 0 of 1
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 0 of 1
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[c2/024a7b] RNA…RFUSION_DETECT (SRR064287) | 1 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (49)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[f7/f4a911] RNA…:SAMTOOLS_SORT (SRR064438) | 1 of 6
+[99/56bd79] RNA…SAMTOOLS_INDEX (SRR064287) | 1 of 1
+[69/a87ef2] RNA…SAMTOOLS_STATS (SRR064287) | 1 of 1
+[14/7e7f83] RNA…TOOLS_FLAGSTAT (SRR064287) | 0 of 1
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 1 of 1
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[c2/024a7b] RNA…RFUSION_DETECT (SRR064287) | 1 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (49)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[f7/f4a911] RNA…:SAMTOOLS_SORT (SRR064438) | 1 of 6
+[99/56bd79] RNA…SAMTOOLS_INDEX (SRR064287) | 1 of 1
+[69/a87ef2] RNA…SAMTOOLS_STATS (SRR064287) | 1 of 1
+[14/7e7f83] RNA…TOOLS_FLAGSTAT (SRR064287) | 1 of 1
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 1 of 1
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[c2/024a7b] RNA…RFUSION_DETECT (SRR064287) | 1 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (50)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[f7/f4a911] RNA…:SAMTOOLS_SORT (SRR064438) | 2 of 6
+[99/56bd79] RNA…SAMTOOLS_INDEX (SRR064287) | 1 of 2
+[69/a87ef2] RNA…SAMTOOLS_STATS (SRR064287) | 1 of 1
+[14/7e7f83] RNA…TOOLS_FLAGSTAT (SRR064287) | 1 of 1
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 1 of 1
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[92/ee6348] RNA…RFUSION_DETECT (SRR064438) | 1 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (50)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[f7/f4a911] RNA…:SAMTOOLS_SORT (SRR064438) | 2 of 6
+[99/56bd79] RNA…SAMTOOLS_INDEX (SRR064287) | 1 of 2
+[69/a87ef2] RNA…SAMTOOLS_STATS (SRR064287) | 1 of 1
+[14/7e7f83] RNA…TOOLS_FLAGSTAT (SRR064287) | 1 of 1
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 1 of 1
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[92/ee6348] RNA…RFUSION_DETECT (SRR064438) | 2 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (51)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[f7/f4a911] RNA…:SAMTOOLS_SORT (SRR064438) | 2 of 6
+[99/56bd79] RNA…SAMTOOLS_INDEX (SRR064287) | 1 of 2
+[69/a87ef2] RNA…SAMTOOLS_STATS (SRR064287) | 1 of 1
+[14/7e7f83] RNA…TOOLS_FLAGSTAT (SRR064287) | 1 of 1
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 1 of 1
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 2 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (53)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[0b/06239f] RNA…:SAMTOOLS_SORT (SRR064439) | 2 of 6
+[e8/b3d91a] RNA…SAMTOOLS_INDEX (SRR064438) | 1 of 2
+[69/a87ef2] RNA…SAMTOOLS_STATS (SRR064287) | 1 of 1
+[14/7e7f83] RNA…TOOLS_FLAGSTAT (SRR064287) | 1 of 1
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 1 of 1
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (53)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[0b/06239f] RNA…:SAMTOOLS_SORT (SRR064439) | 2 of 6
+[e8/b3d91a] RNA…SAMTOOLS_INDEX (SRR064438) | 2 of 2
+[69/a87ef2] RNA…SAMTOOLS_STATS (SRR064287) | 1 of 2
+[14/7e7f83] RNA…TOOLS_FLAGSTAT (SRR064287) | 1 of 2
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 1 of 1
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (53)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[0b/06239f] RNA…:SAMTOOLS_SORT (SRR064439) | 2 of 6
+[e8/b3d91a] RNA…SAMTOOLS_INDEX (SRR064438) | 2 of 2
+[69/a87ef2] RNA…SAMTOOLS_STATS (SRR064287) | 1 of 2
+[14/7e7f83] RNA…TOOLS_FLAGSTAT (SRR064287) | 1 of 2
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 1 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (54)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[0b/06239f] RNA…:SAMTOOLS_SORT (SRR064439) | 2 of 6
+[e8/b3d91a] RNA…SAMTOOLS_INDEX (SRR064438) | 2 of 2
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 1 of 2
+[14/7e7f83] RNA…TOOLS_FLAGSTAT (SRR064287) | 1 of 2
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 1 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (55)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[0b/06239f] RNA…:SAMTOOLS_SORT (SRR064439) | 2 of 6
+[e8/b3d91a] RNA…SAMTOOLS_INDEX (SRR064438) | 2 of 2
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 2
+[66/2f1dd6] RNA…TOOLS_FLAGSTAT (SRR064438) | 1 of 2
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 1 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (55)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[0b/06239f] RNA…:SAMTOOLS_SORT (SRR064439) | 2 of 6
+[e8/b3d91a] RNA…SAMTOOLS_INDEX (SRR064438) | 2 of 2
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 2
+[66/2f1dd6] RNA…TOOLS_FLAGSTAT (SRR064438) | 1 of 2
+[8c/94aece] RNA…TOOLS_IDXSTATS (SRR064287) | 1 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (56)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[0b/06239f] RNA…:SAMTOOLS_SORT (SRR064439) | 2 of 6
+[e8/b3d91a] RNA…SAMTOOLS_INDEX (SRR064438) | 2 of 2
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 2
+[66/2f1dd6] RNA…TOOLS_FLAGSTAT (SRR064438) | 2 of 2
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 1 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (56)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[0b/06239f] RNA…:SAMTOOLS_SORT (SRR064439) | 2 of 6
+[e8/b3d91a] RNA…SAMTOOLS_INDEX (SRR064438) | 2 of 2
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 2
+[66/2f1dd6] RNA…TOOLS_FLAGSTAT (SRR064438) | 2 of 2
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 1 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (56)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[0b/06239f] RNA…:SAMTOOLS_SORT (SRR064439) | 2 of 6
+[e8/b3d91a] RNA…SAMTOOLS_INDEX (SRR064438) | 2 of 2
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 2
+[66/2f1dd6] RNA…TOOLS_FLAGSTAT (SRR064438) | 2 of 2
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 2 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (57)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 3 of 6
+[e8/b3d91a] RNA…SAMTOOLS_INDEX (SRR064438) | 2 of 3
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 2
+[66/2f1dd6] RNA…TOOLS_FLAGSTAT (SRR064438) | 2 of 2
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 2 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (57)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 3 of 6
+[e8/b3d91a] RNA…SAMTOOLS_INDEX (SRR064438) | 2 of 3
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 2
+[66/2f1dd6] RNA…TOOLS_FLAGSTAT (SRR064438) | 2 of 2
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 2 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (58)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 3 of 6
+[c1/2bb98d] RNA…SAMTOOLS_INDEX (SRR064439) | 2 of 3
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 2
+[66/2f1dd6] RNA…TOOLS_FLAGSTAT (SRR064438) | 2 of 2
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 2 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (58)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 3 of 6
+[c1/2bb98d] RNA…SAMTOOLS_INDEX (SRR064439) | 2 of 3
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 2
+[66/2f1dd6] RNA…TOOLS_FLAGSTAT (SRR064438) | 2 of 2
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 2 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (58)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 3 of 6
+[c1/2bb98d] RNA…SAMTOOLS_INDEX (SRR064439) | 3 of 3
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 3
+[66/2f1dd6] RNA…TOOLS_FLAGSTAT (SRR064438) | 2 of 3
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 2 of 2
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (58)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 3 of 6
+[c1/2bb98d] RNA…SAMTOOLS_INDEX (SRR064439) | 3 of 3
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 3
+[66/2f1dd6] RNA…TOOLS_FLAGSTAT (SRR064438) | 2 of 3
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 2 of 3
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (59)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 3 of 6
+[c1/2bb98d] RNA…SAMTOOLS_INDEX (SRR064439) | 3 of 3
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 3
+[31/61403e] RNA…TOOLS_FLAGSTAT (SRR064439) | 2 of 3
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 2 of 3
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (59)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 3 of 6
+[c1/2bb98d] RNA…SAMTOOLS_INDEX (SRR064439) | 3 of 3
+[e9/e3a480] RNA…SAMTOOLS_STATS (SRR064438) | 2 of 3
+[31/61403e] RNA…TOOLS_FLAGSTAT (SRR064439) | 2 of 3
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 2 of 3
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (60)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 3 of 6
+[c1/2bb98d] RNA…SAMTOOLS_INDEX (SRR064439) | 3 of 3
+[60/e3c1e2] RNA…SAMTOOLS_STATS (SRR064439) | 2 of 3
+[31/61403e] RNA…TOOLS_FLAGSTAT (SRR064439) | 3 of 3
+[15/48487a] RNA…TOOLS_IDXSTATS (SRR064438) | 2 of 3
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (61)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 3 of 6
+[c1/2bb98d] RNA…SAMTOOLS_INDEX (SRR064439) | 3 of 3
+[60/e3c1e2] RNA…SAMTOOLS_STATS (SRR064439) | 3 of 3
+[31/61403e] RNA…TOOLS_FLAGSTAT (SRR064439) | 3 of 3
+[a9/24ed30] RNA…TOOLS_IDXSTATS (SRR064439) | 2 of 3
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (61)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 3 of 6
+[c1/2bb98d] RNA…SAMTOOLS_INDEX (SRR064439) | 3 of 3
+[60/e3c1e2] RNA…SAMTOOLS_STATS (SRR064439) | 3 of 3
+[31/61403e] RNA…TOOLS_FLAGSTAT (SRR064439) | 3 of 3
+[a9/24ed30] RNA…TOOLS_IDXSTATS (SRR064439) | 3 of 3
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[3c/cf2613] RNA…RFUSION_DETECT (SRR064439) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (62)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[c1/2bb98d] RNA…SAMTOOLS_INDEX (SRR064439) | 3 of 4
+[60/e3c1e2] RNA…SAMTOOLS_STATS (SRR064439) | 3 of 3
+[31/61403e] RNA…TOOLS_FLAGSTAT (SRR064439) | 3 of 3
+[a9/24ed30] RNA…TOOLS_IDXSTATS (SRR064439) | 3 of 3
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:ARRIBA_ARRIBA        | 0 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 3 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (64)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 3 of 4
+[60/e3c1e2] RNA…SAMTOOLS_STATS (SRR064439) | 3 of 3
+[31/61403e] RNA…TOOLS_FLAGSTAT (SRR064439) | 3 of 3
+[a9/24ed30] RNA…TOOLS_IDXSTATS (SRR064439) | 3 of 3
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[26/0548fc] RNA…:ARRIBA_ARRIBA (SRR064287) | 0 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (64)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 3 of 4
+[60/e3c1e2] RNA…SAMTOOLS_STATS (SRR064439) | 3 of 3
+[31/61403e] RNA…TOOLS_FLAGSTAT (SRR064439) | 3 of 3
+[a9/24ed30] RNA…TOOLS_IDXSTATS (SRR064439) | 3 of 3
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[26/0548fc] RNA…:ARRIBA_ARRIBA (SRR064287) | 0 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (64)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[60/e3c1e2] RNA…SAMTOOLS_STATS (SRR064439) | 3 of 4
+[31/61403e] RNA…TOOLS_FLAGSTAT (SRR064439) | 3 of 4
+[a9/24ed30] RNA…TOOLS_IDXSTATS (SRR064439) | 3 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[26/0548fc] RNA…:ARRIBA_ARRIBA (SRR064287) | 0 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (65)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[60/e3c1e2] RNA…SAMTOOLS_STATS (SRR064439) | 3 of 4
+[31/61403e] RNA…TOOLS_FLAGSTAT (SRR064439) | 3 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 3 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[26/0548fc] RNA…:ARRIBA_ARRIBA (SRR064287) | 0 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (66)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[60/e3c1e2] RNA…SAMTOOLS_STATS (SRR064439) | 3 of 4
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 3 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[26/0548fc] RNA…:ARRIBA_ARRIBA (SRR064287) | 0 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (67)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[48/630a9c] RNA…SAMTOOLS_STATS (SRR064286) | 3 of 4
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[26/0548fc] RNA…:ARRIBA_ARRIBA (SRR064287) | 0 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (67)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[48/630a9c] RNA…SAMTOOLS_STATS (SRR064286) | 4 of 4
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[26/0548fc] RNA…:ARRIBA_ARRIBA (SRR064287) | 0 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  -
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (68)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[48/630a9c] RNA…SAMTOOLS_STATS (SRR064286) | 4 of 4
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[48/6d17ee] RNA…:ARRIBA_ARRIBA (SRR064438) | 1 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 1
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (68)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[48/630a9c] RNA…SAMTOOLS_STATS (SRR064286) | 4 of 4
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[48/6d17ee] RNA…:ARRIBA_ARRIBA (SRR064438) | 2 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 1
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (69)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[48/630a9c] RNA…SAMTOOLS_STATS (SRR064286) | 4 of 4
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[e0/42f5a8] RNA…:ARRIBA_ARRIBA (SRR064439) | 2 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 2
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (70)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[48/630a9c] RNA…SAMTOOLS_STATS (SRR064286) | 4 of 4
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[f9/2636a9] RNA…:ARRIBA_ARRIBA (SRR064286) | 3 of 6
+[c6/8ddfd5] RNA…RFUSION_DETECT (SRR064286) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 3
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (71)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[c1/a017e4] RNA…:SAMTOOLS_SORT (SRR064286) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[48/630a9c] RNA…SAMTOOLS_STATS (SRR064286) | 4 of 4
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[f9/2636a9] RNA…:ARRIBA_ARRIBA (SRR064286) | 4 of 6
+[ef/29d7f9] RNA…RFUSION_DETECT (SRR064440) | 4 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 4
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (72)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[30/e0ae02] RNA…:SAMTOOLS_SORT (SRR064440) | 4 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 4
+[48/630a9c] RNA…SAMTOOLS_STATS (SRR064286) | 4 of 4
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[f9/2636a9] RNA…:ARRIBA_ARRIBA (SRR064286) | 4 of 6
+[ef/29d7f9] RNA…RFUSION_DETECT (SRR064440) | 5 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 4
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (73)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[30/e0ae02] RNA…:SAMTOOLS_SORT (SRR064440) | 5 of 6
+[75/180feb] RNA…SAMTOOLS_INDEX (SRR064286) | 4 of 5
+[48/630a9c] RNA…SAMTOOLS_STATS (SRR064286) | 4 of 4
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[6e/b53f68] RNA…:ARRIBA_ARRIBA (SRR064440) | 4 of 6
+[ef/29d7f9] RNA…RFUSION_DETECT (SRR064440) | 5 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 4
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (74)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[30/e0ae02] RNA…:SAMTOOLS_SORT (SRR064440) | 5 of 6
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 4 of 5
+[48/630a9c] RNA…SAMTOOLS_STATS (SRR064286) | 4 of 4
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 4
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 4
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[6e/b53f68] RNA…:ARRIBA_ARRIBA (SRR064440) | 4 of 6
+[ef/29d7f9] RNA…RFUSION_DETECT (SRR064440) | 5 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 4
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (74)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[30/e0ae02] RNA…:SAMTOOLS_SORT (SRR064440) | 5 of 6
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[48/630a9c] RNA…SAMTOOLS_STATS (SRR064286) | 4 of 5
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 5
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[6e/b53f68] RNA…:ARRIBA_ARRIBA (SRR064440) | 4 of 6
+[ef/29d7f9] RNA…RFUSION_DETECT (SRR064440) | 5 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 4
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (75)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[30/e0ae02] RNA…:SAMTOOLS_SORT (SRR064440) | 5 of 6
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 4 of 5
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 5
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[6e/b53f68] RNA…:ARRIBA_ARRIBA (SRR064440) | 4 of 6
+[ef/29d7f9] RNA…RFUSION_DETECT (SRR064440) | 5 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 4
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (75)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[30/e0ae02] RNA…:SAMTOOLS_SORT (SRR064440) | 5 of 6
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 4 of 5
+[23/8c8cc8] RNA…TOOLS_FLAGSTAT (SRR064286) | 4 of 5
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[6e/b53f68] RNA…:ARRIBA_ARRIBA (SRR064440) | 4 of 6
+[ef/29d7f9] RNA…RFUSION_DETECT (SRR064440) | 5 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 4
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (76)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[30/e0ae02] RNA…:SAMTOOLS_SORT (SRR064440) | 5 of 6
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 5
+[96/e6b43c] RNA…TOOLS_FLAGSTAT (SRR064440) | 4 of 5
+[47/5b0967] RNA…TOOLS_IDXSTATS (SRR064286) | 4 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[6e/b53f68] RNA…:ARRIBA_ARRIBA (SRR064440) | 4 of 6
+[ef/29d7f9] RNA…RFUSION_DETECT (SRR064440) | 5 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 4
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (77)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[30/e0ae02] RNA…:SAMTOOLS_SORT (SRR064440) | 5 of 6
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 5
+[96/e6b43c] RNA…TOOLS_FLAGSTAT (SRR064440) | 5 of 5
+[d5/4f7240] RNA…TOOLS_IDXSTATS (SRR064440) | 4 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[6e/b53f68] RNA…:ARRIBA_ARRIBA (SRR064440) | 4 of 6
+[ef/29d7f9] RNA…RFUSION_DETECT (SRR064440) | 5 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 4
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (77)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[30/e0ae02] RNA…:SAMTOOLS_SORT (SRR064440) | 5 of 6
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 5
+[96/e6b43c] RNA…TOOLS_FLAGSTAT (SRR064440) | 5 of 5
+[d5/4f7240] RNA…TOOLS_IDXSTATS (SRR064440) | 5 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[6e/b53f68] RNA…:ARRIBA_ARRIBA (SRR064440) | 4 of 6
+[ef/29d7f9] RNA…RFUSION_DETECT (SRR064440) | 5 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 4
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (78)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[30/e0ae02] RNA…:SAMTOOLS_SORT (SRR064440) | 5 of 6
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 5
+[96/e6b43c] RNA…TOOLS_FLAGSTAT (SRR064440) | 5 of 5
+[d5/4f7240] RNA…TOOLS_IDXSTATS (SRR064440) | 5 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[6e/b53f68] RNA…:ARRIBA_ARRIBA (SRR064440) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 5 of 6
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (79)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 5 of 6
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 5
+[96/e6b43c] RNA…TOOLS_FLAGSTAT (SRR064440) | 5 of 5
+[d5/4f7240] RNA…TOOLS_IDXSTATS (SRR064440) | 5 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[6e/b53f68] RNA…:ARRIBA_ARRIBA (SRR064440) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (79)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 5 of 6
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 5
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 5
+[96/e6b43c] RNA…TOOLS_FLAGSTAT (SRR064440) | 5 of 5
+[d5/4f7240] RNA…TOOLS_IDXSTATS (SRR064440) | 5 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[6e/b53f68] RNA…:ARRIBA_ARRIBA (SRR064440) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (80)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 6
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 5
+[96/e6b43c] RNA…TOOLS_FLAGSTAT (SRR064440) | 5 of 5
+[d5/4f7240] RNA…TOOLS_IDXSTATS (SRR064440) | 5 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (80)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[b0/5fc16b] RNA…SAMTOOLS_INDEX (SRR064440) | 5 of 6
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 5
+[96/e6b43c] RNA…TOOLS_FLAGSTAT (SRR064440) | 5 of 5
+[d5/4f7240] RNA…TOOLS_IDXSTATS (SRR064440) | 5 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (81)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 5 of 6
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 5
+[96/e6b43c] RNA…TOOLS_FLAGSTAT (SRR064440) | 5 of 5
+[d5/4f7240] RNA…TOOLS_IDXSTATS (SRR064440) | 5 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (81)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 5 of 6
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 5
+[96/e6b43c] RNA…TOOLS_FLAGSTAT (SRR064440) | 5 of 5
+[d5/4f7240] RNA…TOOLS_IDXSTATS (SRR064440) | 5 of 5
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (81)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 6
+[96/e6b43c] RNA…TOOLS_FLAGSTAT (SRR064440) | 5 of 6
+[d5/4f7240] RNA…TOOLS_IDXSTATS (SRR064440) | 5 of 6
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (82)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 6
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 5 of 6
+[d5/4f7240] RNA…TOOLS_IDXSTATS (SRR064440) | 5 of 6
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (83)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[1b/ef4aab] RNA…SAMTOOLS_STATS (SRR064440) | 5 of 6
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 5 of 6
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (84)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 5 of 6
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (84)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 5 of 6
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (84)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 5 of 6
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[-        ] RNAFUSION:FUSIONREPORT_DETECT  | 0 of 5
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (85)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[82/5b9e92] RNA…NREPORT_DETECT (SRR064287) | 0 of 6
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (86)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[82/5b9e92] RNA…NREPORT_DETECT (SRR064287) | 1 of 6
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (87)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[02/6e601a] RNA…NREPORT_DETECT (SRR064438) | 2 of 6
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (88)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[18/611ed7] RNA…NREPORT_DETECT (SRR064286) | 2 of 6
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (88)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[41/ab80be] RNA…NREPORT_DETECT (SRR064439) | 3 of 6
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (89)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[18/611ed7] RNA…NREPORT_DETECT (SRR064286) | 4 of 6
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (90)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[68/512ff4] RNA…NREPORT_DETECT (SRR064440) | 5 of 6
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (90)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[68/512ff4] RNA…NREPORT_DETECT (SRR064440) | 5 of 6
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (90)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[99/a7e168] RNA…NREPORT_DETECT (SRR064441) | 6 of 6 ✔
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+Plus 1 more processes waiting for tasks…
+
+executor >  local (90)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[99/a7e168] RNA…NREPORT_DETECT (SRR064441) | 6 of 6 ✔
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+[-        ] RNAFUSION:MULTIQC              | 0 of 1
+
+executor >  local (91)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[99/a7e168] RNA…NREPORT_DETECT (SRR064441) | 6 of 6 ✔
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+[09/4f3e17] RNAFUSION:MULTIQC              | 0 of 1
+
+executor >  local (91)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[99/a7e168] RNA…NREPORT_DETECT (SRR064441) | 6 of 6 ✔
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+[09/4f3e17] RNAFUSION:MULTIQC              | 1 of 1 ✔
+
+executor >  local (91)
+[-        ] RNA…SION:SAMTOOLS_COLLATEFASTQ -
+[f2/3b1356] RNA…STP:FASTQC_RAW (SRR064286) | 6 of 6 ✔
+[3b/4898b1] RNA…TAR:STAR_ALIGN (SRR064441) | 6 of 6 ✔
+[fc/29e709] RNA…:SAMTOOLS_SORT (SRR064441) | 6 of 6 ✔
+[07/a69467] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[50/c3e112] RNA…SAMTOOLS_STATS (SRR064441) | 6 of 6 ✔
+[48/79a138] RNA…TOOLS_FLAGSTAT (SRR064441) | 6 of 6 ✔
+[c0/6cb32a] RNA…TOOLS_IDXSTATS (SRR064441) | 6 of 6 ✔
+[-        ] RNA…RANSCRIPTOME:SAMTOOLS_SORT -
+[-        ] RNA…ANSCRIPTOME:SAMTOOLS_INDEX -
+[-        ] RNA…TS_SAMTOOLS:SAMTOOLS_STATS -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_FLAGSTAT -
+[-        ] RNA…SAMTOOLS:SAMTOOLS_IDXSTATS -
+[67/5d612e] RNA…SAMTOOLS_INDEX (SRR064441) | 6 of 6 ✔
+[b0/f55e7a] RNA…:ARRIBA_ARRIBA (SRR064441) | 6 of 6 ✔
+[a4/e049a3] RNA…RFUSION_DETECT (SRR064441) | 6 of 6 ✔
+[53/ad4f88] RNA…_FUSIONCATCHER (SRR064438) | 6 of 6 ✔
+[99/a7e168] RNA…NREPORT_DETECT (SRR064441) | 6 of 6 ✔
+[03/118e09] RNA…TRNASEQMETRICS (SRR064441) | 6 of 6 ✔
+[49/893689] RNA…MARKDUPLICATES (SRR064441) | 6 of 6 ✔
+[14/4cea87] RNA…ERTSIZEMETRICS (SRR064441) | 6 of 6 ✔
+[09/4f3e17] RNAFUSION:MULTIQC              | 1 of 1 ✔
+-[nf-core/rnafusion] Pipeline completed successfully-
+Completed at: 01-Nov-2026 02:26:55
+Duration    : 5h 20m 4s
+CPU hours   : 45.3
+Succeeded   : 91
+
+
