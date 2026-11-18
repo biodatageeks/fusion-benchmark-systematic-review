@@ -1,0 +1,8 @@
+benchmark_number,column,new_value,reason,status
+11,read lenght 50,no info,"Vicente-Garces 2023 does not report read length; previously coded 'no' (not included) instead of 'not reported' (R1.5, Figure 3)",confirmed against source (AI pre-check 2026-11-17)
+11,read lenght 75,no info,as above,confirmed against source (AI pre-check 2026-11-17)
+11,read lenght 100,no info,as above,confirmed against source (AI pre-check 2026-11-17)
+11,read lenght 250,no info,as above,confirmed against source (AI pre-check 2026-11-17)
+1,ground_truth_type,Mixed: wisdom of crowds (60 cell lines) + published validated fusions (Edgren; 53),"Haas 2019 used a wisdom-of-crowds reference for the cell-line panel and a curated 53-fusion Edgren-derived set for breast cancer cell lines (R1.5, Figure 4; Supplementary Table S1)",confirmed against source (AI pre-check 2026-11-17)
+6,simulated,no,Vu 2018 has no simulated accuracy benchmark (simulation only used to build a paralog reference); its fourth dataset is a spike-in series (not extracted),confirmed against source (AI pre-check 2026-11-17)
+8,transciptome,yes,"Apostolides 2021: DREAM, sim50/sim101, BRCA, melanoma-CML and prostate data are whole-transcriptome RNA-seq; only the NTRK reference standard is targeted",confirmed against source (AI pre-check 2026-11-17)

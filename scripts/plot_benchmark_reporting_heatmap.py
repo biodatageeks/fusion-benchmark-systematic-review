@@ -13,14 +13,16 @@ import pandas as pd
 from matplotlib.colors import ListedColormap
 
 from real_simulated_sensitivity import load_table
+from revision_utils import apply_metadata_corrections
 
 
-INPUT = Path(__file__).resolve().parents[1] / "data" / "raw" / "master_analysis_input.xlsx"
+INPUT = Path(__file__).resolve().parents[1] / "data" / "processed" / "analysis_input.xlsx"
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "benchmark_reporting"
 
 
 TRUTH_COLORS = {
     "No defined truth set / wisdom of crowds": "#8C6BB1",
+    "Wisdom of crowds + published validated fusions": "#B3A2D6",
     "Proxy-based": "#D95F02",
     "Published validated fusions": "#1B9E77",
     "RNA + WGS + experimental validation": "#386CB0",
@@ -44,6 +46,8 @@ def truth_type(value: object) -> str:
     text_lower = text.lower()
     if "clinically validated" in text_lower or "clinically expected" in text_lower:
         return "Clinically validated/expected fusions"
+    if text_lower.startswith("mixed") and "wisdom" in text_lower:
+        return "Wisdom of crowds + published validated fusions"
     if "wisdom" in text or "No defined" in text:
         return "No defined truth set / wisdom of crowds"
     if "Proxy" in text:
@@ -90,14 +94,12 @@ def reproducibility_status(row: pd.Series) -> str:
 
 def prepare_heatmap_data() -> tuple[pd.DataFrame, pd.DataFrame]:
     raw = load_table(INPUT, sheet_name="benchmark_metadata").dropna(subset=["benchmark_number"]).copy()
+    raw = apply_metadata_corrections(raw)  # documented in data/curation/metadata_corrections.csv
     raw["Benchmark_number"] = pd.to_numeric(raw["benchmark_number"], errors="coerce").astype(int)
     raw["Year"] = pd.to_numeric(raw["year_x"], errors="coerce").astype(int)
     raw["First_author"] = raw["first_author"]
-    raw["is_new_borderline_benchmark"] = raw["Benchmark_number"].eq(11)
-    raw = raw.sort_values(
-        ["is_new_borderline_benchmark", "Year", "Benchmark_number"],
-        ascending=[True, False, True],
-    )
+    # Chronological order, oldest at the top (R3.5); ties broken alphabetically by first author.
+    raw = raw.sort_values(["Year", "First_author"], ascending=[True, True])
     raw["Benchmark"] = raw["First_author"].astype(str) + " " + raw["Year"].astype(int).astype(str)
 
     display = pd.DataFrame(

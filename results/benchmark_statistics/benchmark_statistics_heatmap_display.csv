@@ -1,12 +1,14 @@
 Benchmark,Tools,Datasets,Tool version,Transcriptome,Targeted,Simulated,Real cells,Real patients,PE,SE,50 bp,75 bp,100 bp,250 bp,Runtime,Memory
-Uhrig 2021,7,4,full,full,absent,full,full,full,full,absent,absent,full,full,absent,full,full
-Balan 2021,4,1,full,absent,full,absent,absent,full,full,absent,unknown,unknown,unknown,unknown,full,absent
-Singh 2021,16,4,full,full,absent,full,full,absent,full,absent,full,full,full,absent,partial,partial
-Apostolides 2021,8,7,absent,absent,full,full,full,full,full,absent,full,absent,full,absent,absent,absent
-Haas 2019,27,3,full,full,absent,full,full,absent,full,absent,full,absent,full,absent,full,absent
-Vu 2018,6,4,absent,full,absent,full,full,full,full,absent,full,absent,full,absent,partial,partial
-Zhao 2017,5,3,absent,full,absent,full,full,absent,full,full,absent,full,absent,absent,absent,absent
-Kumar 2016,12,4,full,full,absent,full,full,absent,full,absent,full,full,full,absent,full,full
-Zhang 2016,12,1,absent,full,absent,absent,full,absent,full,absent,unknown,unknown,unknown,unknown,absent,absent
-Davidson 2015,5,7,full,full,absent,full,full,absent,full,full,full,full,full,full,absent,absent
-Vicente-Garces 2023,8,2,absent,full,absent,absent,full,full,full,absent,absent,absent,absent,absent,absent,absent
+Davidson 2015,13,18,full,full,absent,full,full,absent,full,full,full,full,full,full,absent,absent
+Kumar 2016,12,9,full,full,absent,full,full,absent,full,absent,full,full,full,absent,full,full
+Liu 2016,15,6,full,full,absent,full,full,full,full,absent,full,full,full,absent,full,absent
+Zhang 2016,13,1,absent,full,absent,absent,full,absent,full,absent,unknown,unknown,unknown,unknown,absent,absent
+Zhao 2017,5,7,absent,full,absent,full,full,absent,full,full,absent,full,absent,absent,absent,absent
+Vu 2018,7,10,absent,full,absent,absent,full,full,full,absent,full,absent,full,absent,partial,partial
+Haas 2019,24,3,full,full,absent,full,full,absent,full,absent,full,absent,full,absent,full,absent
+Apostolides 2021,14,7,absent,full,full,full,full,full,full,absent,full,absent,full,absent,absent,absent
+Balan 2021,5,2,full,absent,full,absent,absent,full,full,absent,unknown,unknown,unknown,unknown,full,absent
+Creason 2021,9,1,partial,full,absent,full,full,absent,full,absent,absent,absent,full,absent,absent,absent
+Singh 2021,16,7,full,full,absent,full,full,absent,full,absent,full,full,full,absent,partial,partial
+Uhrig 2021,7,41,full,full,absent,full,full,full,full,absent,absent,full,full,absent,full,full
+Vicente-Garces 2023,8,3,absent,full,absent,absent,full,full,full,absent,unknown,unknown,unknown,unknown,absent,absent

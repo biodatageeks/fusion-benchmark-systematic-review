@@ -16,7 +16,7 @@ from scipy import stats
 from real_simulated_sensitivity import load_table
 
 
-DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "raw" / "master_analysis_input.xlsx"
+DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "processed" / "analysis_input.xlsx"
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "precision_recall_tradeoff"
 EDGREN_DATASETS = {"2.3", "5.1", "6.1", "6.2", "7.6", "7.7", "8.3", "10.2"}
 

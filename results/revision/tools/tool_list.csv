@@ -1,0 +1,66 @@
+tool,reported_names,tool_family,versions_reported,n_benchmarks,benchmarks,variant_or_filtered_output,first_publication_year,latest_release_date,last_commit_date,maintenance_status
+Arriba,Arriba,Arriba,0.8; 0.9; 1.0.0; 1.0.1; 1.1.0; Not confirmed,6,13; Apostolides 2021; Haas 2019; Singh 2021; Uhrig 2021; Vicente-Garces 2023,no,2021.0,2025-08-21,2025-09-21,active
+Arriba-hc,Arriba-hc,Arriba,1.1.0,1,Haas 2019,yes,2021.0,2025-08-21,2025-09-21,active
+Barnacle,Barnacle,Barnacle,Not confirmed,1,Davidson 2015,no,,,,
+Bellerophontes,Bellerophontes,Bellerophontes,0.4.0,1,Kumar 2016,no,2012.0,unknown,unknown,inactive
+BreakFusion,BreakFusion,BreakFusion,Not confirmed,2,Kumar 2016; Liu 2016,no,2012.0,2012,unknown,inactive
+BreakTrans,BreakTrans,BreakTrans,Not confirmed,1,Zhang 2016,no,2013.0,2013-06-15,unknown,inactive
+CICERO,CICERO,CICERO,Not confirmed,1,Vicente-Garces 2023,no,2020.0,2023-07-18,2025-04-21,active
+ChimPipe,ChimPipe,ChimPipe,0.9.5; Not confirmed,3,Haas 2019; Singh 2021; Zhao 2017,no,2017.0,2026-01-22,2026-01-22,active
+ChimeRScope,ChimeRScope,ChimeRScope,Not confirmed,1,Singh 2021,no,2017.0,unknown,2016-05-31,inactive
+ChimeraScan,ChimeraScan; Chimerascan; chimerascan,ChimeraScan,0.4.5; Not confirmed,5,Haas 2019; Kumar 2016; Liu 2016; Singh 2021; Zhang 2016,no,2011.0,2012-02-25,2012-09-12,inactive
+Comrad,Comrad,Comrad,Not confirmed,1,Zhang 2016,no,2011.0,2011-06-22,unknown,inactive
+EricScript,EricScript,EricScript,0.5.1; 0.5.3; 0.5.5b; Not confirmed; Not confirmed: the software version could not be verified from the available workflow definitions and container metadata.,6,13; Apostolides 2021; Haas 2019; Kumar 2016; Liu 2016; Singh 2021,no,2012.0,2016-05-03,unknown,inactive
+FuSeq,FuSeq,FuSeq,1.1.0; Not confirmed,2,Singh 2021; Vu 2018,no,2018.0,2020-10-20,2022-05-02,inactive
+FuSeq+assembly,FuSeq + de novo assembly,FuSeq,Not confirmed,1,Vu 2018,yes,2018.0,2020-10-20,2022-05-02,inactive
+Fusion InPipe-3,Fusion InPipe (>= 3/5 callers),Fusion InPipe,Not confirmed,1,Vicente-Garces 2023,yes,2023.0,unknown,unknown,unknown
+Fusion InPipe-4,Fusion InPipe (>= 4/5 callers),Fusion InPipe,Not confirmed,1,Vicente-Garces 2023,yes,2023.0,unknown,unknown,unknown
+Fusion InPipe-5,Fusion InPipe (>= 5/5 callers),Fusion InPipe,Not confirmed,1,Vicente-Garces 2023,yes,2023.0,unknown,unknown,unknown
+FusionCatcher,FusionCatcher,FusionCatcher,0.99.3d; 0.99.4c; 1.00; 1.10; Not confirmed; Not confirmed: the software version could not be verified from the available workflow definitions and container metadata.; v0994e,9,13; Davidson 2015; Haas 2019; Kumar 2016; Liu 2016; Singh 2021; Uhrig 2021; Vicente-Garces 2023; Zhang 2016,no,2014.0,2021-01-27,2026-04-16,active
+FusionHunter,FusionHunter,FusionHunter,1.4; Not confirmed,3,Haas 2019; Kumar 2016; Liu 2016,no,2011.0,2012-06-09,2015-10-15,inactive
+FusionMap,FusionMap,FusionMap,2015-03-31; Not confirmed,5,Apostolides 2021; Kumar 2016; Liu 2016; Vu 2018; Zhao 2017,no,2011.0,2018-01-08,unknown,inactive
+FusionQ,FusionQ,FusionQ,Not confirmed,1,Liu 2016,no,,,,
+FusionRnadt,FusionRnadt,FusionRnadt,Not confirmed: the software version could not be verified from the available workflow definitions and container metadata.,1,13,no,,,,
+GFusion,GFusion; gfusion,GFusion,Not confirmed; Not confirmed: the software version could not be verified from the available workflow definitions and container metadata.,2,13; Zhao 2017,no,2017.0,unknown,2018-12-07,inactive
+Hera,Hera,Hera,Not confirmed: the software version could not be verified from the available workflow definitions and container metadata.,1,13,no,,,,
+INTEGRATE,INTEGRATE,INTEGRATE,0.2.6; Not confirmed,2,Apostolides 2021; Singh 2021,no,2015.0,2016-11-16,2016-08-29,inactive
+INTEGRATE (GSNAP),INTEGRATE (GSNAP),INTEGRATE,Not confirmed,1,Zhang 2016,yes,2015.0,2016-11-16,2016-08-29,inactive
+INTEGRATE (STAR),INTEGRATE (STAR),INTEGRATE,Not confirmed,1,Zhang 2016,yes,2015.0,2016-11-16,2016-08-29,inactive
+INTEGRATE (TopHat2),INTEGRATE (TopHat2),INTEGRATE,Not confirmed,1,Zhang 2016,yes,2015.0,2016-11-16,2016-08-29,inactive
+INTEGRATE (combined),INTEGRATE (combined GSNAP/TopHat2/STAR),INTEGRATE,Not confirmed,1,Zhang 2016,yes,2015.0,2016-11-16,2016-08-29,inactive
+INTEGRATE (combined; 1 read),INTEGRATE (combined; 1 encompassing read),INTEGRATE,Not confirmed,1,Zhang 2016,yes,2015.0,2016-11-16,2016-08-29,inactive
+InFusion,InFusion,InFusion,0.8; commit 3be2ecb2a113,3,Haas 2019; Singh 2021; Uhrig 2021,no,2016.0,2018-04-03,2018-04-02,inactive
+JAFFA,JAFFA,JAFFA,1.06; 1.09; Not confirmed,5,Kumar 2016; Liu 2016; Singh 2021; Vu 2018; Zhao 2017,no,2015.0,2026-04-02,2026-10-21,active
+JAFFA-Assembly,JAFFA (Assembly); JAFFA-Assembly,JAFFA,1.06,2,Davidson 2015; Haas 2019,yes,2015.0,2026-04-02,2026-10-21,active
+JAFFA-Assembly (>1 read),JAFFA (Assembly; >1 read support),JAFFA,1.06,1,Davidson 2015,yes,2015.0,2026-04-02,2026-10-21,active
+JAFFA-Assembly (HC+MC),JAFFA (Assembly; HC+MC),JAFFA,1.06,1,Davidson 2015,yes,2015.0,2026-04-02,2026-10-21,active
+JAFFA-Direct,JAFFA (Direct); JAFFA-Direct,JAFFA,1.06; Not confirmed,3,4; Davidson 2015; Haas 2019,yes,2015.0,2026-04-02,2026-10-21,active
+JAFFA-Direct (>1 read),JAFFA (Direct; >1 read support),JAFFA,1.06,1,Davidson 2015,yes,2015.0,2026-04-02,2026-10-21,active
+JAFFA-Direct (HC+MC),JAFFA (Direct; HC+MC),JAFFA,1.06,1,Davidson 2015,yes,2015.0,2026-04-02,2026-10-21,active
+JAFFA-Hybrid,JAFFA (Hybrid); JAFFA-Hybrid,JAFFA,1.06; Not confirmed,3,4; Davidson 2015; Haas 2019,yes,2015.0,2026-04-02,2026-10-21,active
+Liu meta-caller,SOAPfuse + STAR + STAR-Fusion (meta-caller),Liu meta-caller,Not confirmed: the software version could not be verified from the available workflow definitions and container metadata.,1,13,yes,,,,
+MapSplice,MapSplice,MapSplice,2.1.9; 2.2.0; 2.2.1; Not confirmed,4,Haas 2019; Kumar 2016; Liu 2016; Singh 2021,no,2010.0,2016-06-13,2019-05-30,inactive
+MetaFusion,MetaFusion,MetaFusion,Not confirmed,1,Apostolides 2021,no,2021.0,unknown,2023-10-03,inactive
+MetaFusion-cf3,MetaFusion (callerfilter3),MetaFusion,Not confirmed,1,Apostolides 2021,yes,2021.0,unknown,2023-10-03,inactive
+MetaFusion-cf4,MetaFusion (callerfilter4),MetaFusion,Not confirmed,1,Apostolides 2021,yes,2021.0,unknown,2023-10-03,inactive
+MetaFusion-cf5,MetaFusion (callerfilter5),MetaFusion,Not confirmed,1,Apostolides 2021,yes,2021.0,unknown,2023-10-03,inactive
+MetaFusion-cf6,MetaFusion (callerfilter6),MetaFusion,Not confirmed,1,Apostolides 2021,yes,2021.0,unknown,2023-10-03,inactive
+MetaFusion-cf7,MetaFusion (callerfilter7),MetaFusion,Not confirmed,1,Apostolides 2021,yes,2021.0,unknown,2023-10-03,inactive
+MetaFusion.top_3,MetaFusion.top_3,MetaFusion,Not confirmed,1,Apostolides 2021,yes,2021.0,unknown,2023-10-03,inactive
+PRADA,PRADA,PRADA,1.2; Not confirmed,3,Haas 2019; Liu 2016; Uhrig 2021,no,2014.0,2014-03-11,unknown,inactive
+Pizzly,Pizzly; pizzly,Pizzly,0.37.3,2,Haas 2019; Singh 2021,no,2017.0,2017-07-20,2025-06-11,active
+SOAPfuse,SOAPfuse,SOAPfuse,1.26; 1.27; Not confirmed,7,Davidson 2015; Haas 2019; Kumar 2016; Liu 2016; Singh 2021; Uhrig 2021; Vu 2018,no,2013.0,2016-01-19,unknown,inactive
+STAR-Fusion,STAR-Fusion,STAR-Fusion,1.0.0; 1.4.0; 1.5.0; Not confirmed; Not confirmed: the software version could not be verified from the available workflow definitions and container metadata.,7,13; 4; Apostolides 2021; Haas 2019; Singh 2021; Uhrig 2021; Vicente-Garces 2023,no,2017.0,2025-07-01,2026-10-14,active
+STAR-SEQR,STAR-SEQR,STAR-SEQR,0.5.0; 0.6.0; 0.6.7; Not confirmed,3,13; Apostolides 2021; Haas 2019,no,2018.0,2018-04-06,2018-04-06,inactive
+STARChip,STARChip,STARChip,1.3e; Not confirmed,2,Haas 2019; Singh 2021,no,2018.0,2018-08-14,2018-08-14,inactive
+SeekFusion,SeekFusion,SeekFusion,Not confirmed,1,4,no,2021.0,unknown,2022-07-28,inactive
+ShortFuse,ShortFuse,ShortFuse,Not confirmed,1,Liu 2016,no,,,,
+SnowShoes-FTD,SnowShoes-FTD,SnowShoes-FTD,Not confirmed,1,Liu 2016,no,,,,
+TRUP,TRUP,TRUP,2015-21-05; Not confirmed,2,Vu 2018; Zhang 2016,no,2015.0,unknown,2019-02-05,inactive
+TopHat-Fusion,TopHat-Fusion,TopHat-Fusion,2.0.10; 2.0.13; 2.1.0; 2.1.0 (TopHat); Not confirmed,9,4; Davidson 2015; Haas 2019; Kumar 2016; Liu 2016; Singh 2021; Vu 2018; Zhang 2016; Zhao 2017,no,2011.0,2018-05-24,2018-05-24,inactive
+TrinityFusion-C,TrinityFusion-C,TrinityFusion,0.2.0,1,Haas 2019,yes,2019.0,2023-09-20,2024-06-27,active
+TrinityFusion-D,TrinityFusion-D,TrinityFusion,0.2.0,1,Haas 2019,yes,2019.0,2023-09-20,2024-06-27,active
+TrinityFusion-UC,TrinityFusion-UC,TrinityFusion,0.2.0,1,Haas 2019,yes,2019.0,2023-09-20,2024-06-27,active
+deFuse,deFuse,deFuse,0.6.1; 0.6.2; 0.8.1; Not confirmed,6,Apostolides 2021; Davidson 2015; Haas 2019; Liu 2016; Uhrig 2021; Vicente-Garces 2023,no,2011.0,2019-12-05,2019-12-05,inactive
+nFuse,nFuse,nFuse,0.2.1; Not confirmed,3,Haas 2019; Kumar 2016; Zhang 2016,no,2012.0,2013-07-15,unknown,inactive
+pyPRADA,pyPRADA,pyPRADA,Not confirmed,1,Zhang 2016,no,2014.0,2014-03-11,unknown,inactive

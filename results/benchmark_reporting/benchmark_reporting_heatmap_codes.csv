@@ -1,12 +1,14 @@
 ,Truth-set type,Experimental validation,Benchmark code,Tool versions,Parameters,Fully reproducible,New-tool paper
-Uhrig 2021,1,0,0,2,2,0,2
-Balan 2021,3,2,0,2,1,0,2
-Singh 2021,2,0,0,2,2,0,0
-Apostolides 2021,1,0,1,0,0,0,2
-Haas 2019,0,0,2,2,2,2,2
-Vu 2018,2,0,0,0,1,0,2
-Zhao 2017,2,0,0,0,1,0,2
-Kumar 2016,3,2,0,2,2,0,0
-Zhang 2016,3,2,0,0,1,0,2
-Davidson 2015,2,0,0,2,1,0,2
-Vicente-Garces 2023,4,2,1,0,1,0,2
+Davidson 2015,3,0,0,2,1,0,2
+Kumar 2016,4,2,0,2,2,0,0
+Liu 2016,3,0,1,2,2,0,0
+Zhang 2016,4,2,0,0,1,0,2
+Zhao 2017,3,0,0,0,1,0,2
+Vu 2018,3,0,0,0,1,0,2
+Haas 2019,1,0,2,2,2,2,2
+Apostolides 2021,2,0,1,0,0,0,2
+Balan 2021,4,2,0,2,1,0,2
+Creason 2021,2,1,2,1,2,1,0
+Singh 2021,3,0,0,2,2,0,0
+Uhrig 2021,2,0,0,2,2,0,2
+Vicente-Garces 2023,5,2,1,0,1,0,2

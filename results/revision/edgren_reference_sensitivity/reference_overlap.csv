@@ -1,0 +1,7 @@
+list_a,list_b,n_a,n_b,shared,only_in_a,a_nested_in_b
+TP27,TP53,27,53,27,0,True
+TP27,TP99,27,99,27,0,True
+TP53,TP27,53,27,27,26,False
+TP53,TP99,53,99,49,4,False
+TP99,TP27,99,27,27,72,False
+TP99,TP53,99,53,49,50,False

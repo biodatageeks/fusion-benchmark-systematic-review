@@ -1,0 +1,3 @@
+purpose,n_benchmarks,n_obs_f1,mean_of_benchmark_median_f1,min_benchmark_median_f1,max_benchmark_median_f1,largest_benchmark,largest_benchmark_n_obs_f1
+independent,3,209,0.5373162393162393,0.425,0.717948717948718,Singh 2021,110
+new tool,8,340,0.5479485601474021,0.06983568075117372,0.8333333333333334,Haas 2019,73

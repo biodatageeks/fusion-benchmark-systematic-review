@@ -1,0 +1,32 @@
+tool_reported,tool_name_clean,tool_family,is_variant_or_output,notes
+JAFFA (Direct),JAFFA-Direct,JAFFA,True,
+JAFFA (Direct; HC+MC),JAFFA-Direct (HC+MC),JAFFA,True,high- and medium-confidence calls
+JAFFA (Direct; >1 read support),JAFFA-Direct (>1 read),JAFFA,True,
+JAFFA (Assembly),JAFFA-Assembly,JAFFA,True,
+JAFFA (Assembly; HC+MC),JAFFA-Assembly (HC+MC),JAFFA,True,
+JAFFA (Assembly; >1 read support),JAFFA-Assembly (>1 read),JAFFA,True,
+JAFFA (Hybrid),JAFFA-Hybrid,JAFFA,True,
+chimerascan,ChimeraScan,ChimeraScan,False,
+gfusion,GFusion,GFusion,False,
+SnowShoes-FTD,SnowShoes-FTD,SnowShoes-FTD,False,
+FusionQ,FusionQ,FusionQ,False,
+Hera,Hera,Hera,False,
+FusionRnadt,FusionRnadt,FusionRnadt,False,
+ShortFuse,ShortFuse,ShortFuse,False,
+Barnacle,Barnacle,Barnacle,False,
+PacBio method,PacBio method,PacBio method,False,long-read method (Davidson 2015); excluded from models
+MetaFusion (callerfilter3),MetaFusion-cf3,MetaFusion,True,caller filter: at least 3 callers
+MetaFusion (callerfilter4),MetaFusion-cf4,MetaFusion,True,
+MetaFusion (callerfilter5),MetaFusion-cf5,MetaFusion,True,
+MetaFusion (callerfilter6),MetaFusion-cf6,MetaFusion,True,
+MetaFusion (callerfilter7),MetaFusion-cf7,MetaFusion,True,
+FuSeq + de novo assembly,FuSeq+assembly,FuSeq,True,
+Fusion InPipe (>= 5/5 callers),Fusion InPipe-5,Fusion InPipe,True,
+Fusion InPipe (>= 4/5 callers),Fusion InPipe-4,Fusion InPipe,True,
+Fusion InPipe (>= 3/5 callers),Fusion InPipe-3,Fusion InPipe,True,
+SOAPfuse + STAR + STAR-Fusion (meta-caller),Liu meta-caller,Liu meta-caller,True,meta-caller proposed by Liu et al. 2016
+INTEGRATE (combined GSNAP/TopHat2/STAR),INTEGRATE (combined),INTEGRATE,True,
+INTEGRATE (combined; 1 encompassing read),INTEGRATE (combined; 1 read),INTEGRATE,True,
+INTEGRATE (GSNAP),INTEGRATE (GSNAP),INTEGRATE,True,
+INTEGRATE (TopHat2),INTEGRATE (TopHat2),INTEGRATE,True,
+INTEGRATE (STAR),INTEGRATE (STAR),INTEGRATE,True,

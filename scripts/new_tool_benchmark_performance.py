@@ -11,7 +11,7 @@ from real_simulated_sensitivity import load_table
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "new_tool_performance"
-MASTER_DATA = DATA_DIR / "master_analysis_input.xlsx"
+MASTER_DATA = Path(__file__).resolve().parents[1] / "data" / "processed" / "analysis_input.xlsx"
 METRICS = ["F1", "Precision", "Recall_Sensitivity"]
 
 

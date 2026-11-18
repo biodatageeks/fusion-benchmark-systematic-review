@@ -1,0 +1,28 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\caption{\textbf{Real versus simulated benchmark settings under crossed dependence.} M1: cross-classified logit-normal mixed model with random intercepts for tool, biological dataset and benchmark (primary); M2: the same model on the metric scale; M0: submitted model, shown for comparison. Confidence intervals for M1 and M2 from a cluster bootstrap resampling whole benchmarks. Estimates are associations, not causal effects.}
+\label{tab:supp_crossed_models}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllrll}
+\toprule
+Metric & Model & Scale & Real vs simulated & 95\% CI & Obs/tools/datasets/benchmarks \\
+\midrule
+F1 & M1 crossed logit-normal & logit & -1.996 & -2.567 to -1.166 & 549/55/20/11 \\
+F1 & M1 crossed logit-normal & metric difference & -0.460 & -0.539 to -0.278 & 549/55/20/11 \\
+F1 & M2 crossed linear & metric & -0.352 & -0.422 to -0.218 & 549/55/20/11 \\
+F1 & M0 submitted model & metric & -0.334 & -0.370 to -0.299 (Wald) & 549/55/20/11 \\
+F1 & Within-benchmark contrast & metric & -0.279 & 5/6 negative & --/--/--/6 \\
+Precision & M1 crossed logit-normal & logit & -3.161 & -4.104 to -2.090 & 551/56/23/11 \\
+Precision & M1 crossed logit-normal & metric difference & -0.474 & -0.724 to -0.245 & 551/56/23/11 \\
+Precision & M2 crossed linear & metric & -0.403 & -0.525 to -0.258 & 551/56/23/11 \\
+Precision & M0 submitted model & metric & -0.393 & -0.429 to -0.357 (Wald) & 551/56/23/11 \\
+Precision & Within-benchmark contrast & metric & -0.387 & 6/7 negative & --/--/--/7 \\
+Recall & M1 crossed logit-normal & logit & -0.338 & -0.829 to 0.098 & 542/57/22/11 \\
+Recall & M1 crossed logit-normal & metric difference & -0.079 & -0.198 to 0.020 & 542/57/22/11 \\
+Recall & M2 crossed linear & metric & -0.095 & -0.154 to -0.021 & 542/57/22/11 \\
+Recall & M0 submitted model & metric & -0.123 & -0.164 to -0.082 (Wald) & 542/57/22/11 \\
+Recall & Within-benchmark contrast & metric & -0.114 & 7/8 negative & --/--/--/8 \\
+\bottomrule
+\end{tabular}}
+\end{table}

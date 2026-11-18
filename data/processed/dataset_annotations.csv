@@ -1,0 +1,116 @@
+benchmark,benchmark_number,dataset_name,datasets_sheet_name,dataset_type_reported,dataset_origin,real_subtype,read_length_bp,read_layout,length_reported,colour,shared_source_group,is_edgren,dataset_number,dataset_id,bio_dataset_id
+Creason 2021 (DREAM),13,DREAM final spike-in benchmark (aggregated),DREAM final spike-in benchmark (aggregated),Cell-line + spike-in,spike-in,spike-in,100.0,PE,100 PE,,,False,13.1,Dataset13.1,D_13.1
+Liu 2016,12,Type-1A (100X; insert 500 +/- 50 bp),Type-1A (Liu 2016),Synthetic,Simulated,simulated,100.0,PE,100 PE,,,False,12.1,Dataset12.1,LIU2016_SIM150
+Liu 2016,12,Type-1B (100X; insert 250 +/- 50 bp),Type-1B (Liu 2016),Synthetic,Simulated,simulated,100.0,PE,100 PE,,,False,12.2,Dataset12.2,LIU2016_SIM150
+Liu 2016,12,Type-3B (mean of 5 tissue backgrounds),Type-3B (Liu 2016),Synthetic + real background,Simulated,simulated,50.0,PE,50 PE,,,False,12.3,Dataset12.3,LIU2016_SIM150
+Liu 2016,12,Edgren (breast cancer; 4 cell lines pooled),Edgren,Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,12.4,Dataset12.4,EDGREN_BRCA_CELL_LINES
+Liu 2016,12,Melanoma (6 samples pooled),Berger,Real,Real,mixed,,,Not confirmed,FFFFE0B2,BERGER2010_MELANOMA,False,12.5,Dataset12.5,BERGER2010_MELANOMA
+Liu 2016,12,Prostate cancer (5 specimens pooled),Yu,Patient-derived,Real,patient-derived,,,Not confirmed,,,False,12.6,Dataset12.6,D_12.6
+Haas 2019,1,Haas 2019 simulated PE50 (5 replicates pooled),Haas 2019 simulated PE50 (5 replicates pooled),Synthetic,Simulated,simulated,50.0,PE,50 PE,FFD8CCF0,HAAS2019_SIMULATIONS,False,1.1,Dataset1.1,HAAS2019_SIMULATIONS
+Haas 2019,1,Haas 2019 simulated PE101 (5 replicates pooled),Haas 2019 simulated PE101 (5 replicates pooled),Synthetic,Simulated,simulated,101.0,PE,101 PE,FFD8CCF0,HAAS2019_SIMULATIONS,False,1.2,Dataset1.2,HAAS2019_SIMULATIONS
+Haas 2019,1,Haas 2019 cancer cell lines (56 pooled),Haas 2019 cancer cell lines (56 pooled),Cell-line,Real,cell line,,PE,Mixed PE lengths,,,False,1.3,Dataset1.3,D_1.3
+Uhrig 2021,2,Uhrig 2021: simulated 5x,Uhrig 2021: simulated 5x,Synthetic + real background,Simulated,simulated,75.0,PE,75 PE,,,False,2.1,Dataset2.1,UHRIG2021_SIM_H1
+Uhrig 2021,2,Uhrig 2021: simulated 10x,Uhrig 2021: simulated 10x,Synthetic + real background,Simulated,simulated,75.0,PE,75 PE,,,False,2.2,Dataset2.2,UHRIG2021_SIM_H1
+Uhrig 2021,2,Uhrig 2021: simulated 20x,Uhrig 2021: simulated 20x,Synthetic + real background,Simulated,simulated,75.0,PE,75 PE,,,False,2.3,Dataset2.3,UHRIG2021_SIM_H1
+Uhrig 2021,2,Uhrig 2021: simulated 30x,Uhrig 2021: simulated 30x,Synthetic + real background,Simulated,simulated,75.0,PE,75 PE,,,False,2.4,Dataset2.4,UHRIG2021_SIM_H1
+Uhrig 2021,2,Uhrig 2021: simulated 50x,Uhrig 2021: simulated 50x,Synthetic + real background,Simulated,simulated,75.0,PE,75 PE,,,False,2.5,Dataset2.5,UHRIG2021_SIM_H1
+Uhrig 2021,2,Uhrig 2021: simulated 80x,Uhrig 2021: simulated 80x,Synthetic + real background,Simulated,simulated,75.0,PE,75 PE,,,False,2.6,Dataset2.6,UHRIG2021_SIM_H1
+Uhrig 2021,2,Uhrig 2021: simulated 100x,Uhrig 2021: simulated 100x,Synthetic + real background,Simulated,simulated,75.0,PE,75 PE,,,False,2.7,Dataset2.7,UHRIG2021_SIM_H1
+Uhrig 2021,2,Uhrig 2021: simulated 150x,Uhrig 2021: simulated 150x,Synthetic + real background,Simulated,simulated,75.0,PE,75 PE,,,False,2.8,Dataset2.8,UHRIG2021_SIM_H1
+Uhrig 2021,2,Uhrig 2021: simulated 200x,Uhrig 2021: simulated 200x,Synthetic + real background,Simulated,simulated,75.0,PE,75 PE,,,False,2.9,Dataset2.9,UHRIG2021_SIM_H1
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-8.57 pMol (SRR1548811),Uhrig 2021: spike-in 10^-8.57 pMol (SRR1548811),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.10,Dataset2.10,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-8.57 pMol (SRR1544075),Uhrig 2021: spike-in 10^-8.57 pMol (SRR1544075),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.11,Dataset2.11,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-7.17 pMol (SRR1659967),Uhrig 2021: spike-in 10^-7.17 pMol (SRR1659967),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.12,Dataset2.12,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-7.17 pMol (SRR1659958),Uhrig 2021: spike-in 10^-7.17 pMol (SRR1659958),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.13,Dataset2.13,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-6.87 pMol (SRR1659966),Uhrig 2021: spike-in 10^-6.87 pMol (SRR1659966),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.14,Dataset2.14,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-6.87 pMol (SRR1659957),Uhrig 2021: spike-in 10^-6.87 pMol (SRR1659957),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.15,Dataset2.15,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-6.57 pMol (SRR1659965),Uhrig 2021: spike-in 10^-6.57 pMol (SRR1659965),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.16,Dataset2.16,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-6.57 pMol (SRR1659956),Uhrig 2021: spike-in 10^-6.57 pMol (SRR1659956),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.17,Dataset2.17,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-6.17 pMol (SRR1659964),Uhrig 2021: spike-in 10^-6.17 pMol (SRR1659964),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.18,Dataset2.18,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-6.17 pMol (SRR1659955),Uhrig 2021: spike-in 10^-6.17 pMol (SRR1659955),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.19,Dataset2.19,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-5.87 pMol (SRR1659968),Uhrig 2021: spike-in 10^-5.87 pMol (SRR1659968),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.20,Dataset2.20,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-5.87 pMol (SRR1659959),Uhrig 2021: spike-in 10^-5.87 pMol (SRR1659959),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.21,Dataset2.21,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-5.57 pMol (SRR1659963),Uhrig 2021: spike-in 10^-5.57 pMol (SRR1659963),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.22,Dataset2.22,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-5.57 pMol (SRR1659954),Uhrig 2021: spike-in 10^-5.57 pMol (SRR1659954),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.23,Dataset2.23,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-4.87 pMol (SRR1659962),Uhrig 2021: spike-in 10^-4.87 pMol (SRR1659962),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.24,Dataset2.24,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-4.87 pMol (SRR1659953),Uhrig 2021: spike-in 10^-4.87 pMol (SRR1659953),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.25,Dataset2.25,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-4.17 pMol (SRR1659961),Uhrig 2021: spike-in 10^-4.17 pMol (SRR1659961),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.26,Dataset2.26,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-4.17 pMol (SRR1659952),Uhrig 2021: spike-in 10^-4.17 pMol (SRR1659952),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.27,Dataset2.27,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-3.47 pMol (SRR1659960),Uhrig 2021: spike-in 10^-3.47 pMol (SRR1659960),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.28,Dataset2.28,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: spike-in 10^-3.47 pMol (SRR1659951),Uhrig 2021: spike-in 10^-3.47 pMol (SRR1659951),Cell-line + spike-in,spike-in,spike-in,101.0,PE,101 PE,FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,2.29,Dataset2.29,TEMBE2014_COLO829_SPIKEIN
+Uhrig 2021,2,Uhrig 2021: MCF-7 (ERR358487),Uhrig 2021: MCF-7 (ERR358487),Cell-line,Real,cell line,101.0,PE,101 PE,,,False,2.30,Dataset2.30,D_2.30
+Uhrig 2021,2,Uhrig 2021: MCF-7 (ERR358488),Uhrig 2021: MCF-7 (ERR358488),Cell-line,Real,cell line,101.0,PE,101 PE,,,False,2.31,Dataset2.31,D_2.31
+Uhrig 2021,2,Uhrig 2021: MCF-7 (SRR534293),Uhrig 2021: MCF-7 (SRR534293),Cell-line,Real,cell line,101.0,PE,101 PE,FFD7E9B4,ENCODE_MCF7_SRR534293,False,2.32,Dataset2.32,ENCODE_MCF7_SRR534293
+Uhrig 2021,2,Uhrig 2021: MCF-7 (SRR534294),Uhrig 2021: MCF-7 (SRR534294),Cell-line,Real,cell line,101.0,PE,101 PE,,,False,2.33,Dataset2.33,D_2.33
+Uhrig 2021,2,Uhrig 2021: MCF-7 (SRR064286),Uhrig 2021: MCF-7 (SRR064286),Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,2.34,Dataset2.34,EDGREN_BRCA_CELL_LINES
+Uhrig 2021,2,Uhrig 2021: KPL-4 (SRR064287),Uhrig 2021: KPL-4 (SRR064287),Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,2.35,Dataset2.35,EDGREN_BRCA_CELL_LINES
+Uhrig 2021,2,Uhrig 2021: BT-474 (SRR064438),Uhrig 2021: BT-474 (SRR064438),Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,2.36,Dataset2.36,EDGREN_BRCA_CELL_LINES
+Uhrig 2021,2,Uhrig 2021: BT-474 (SRR064439),Uhrig 2021: BT-474 (SRR064439),Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,2.37,Dataset2.37,EDGREN_BRCA_CELL_LINES
+Uhrig 2021,2,Uhrig 2021: SK-BR-3 (SRR064440),Uhrig 2021: SK-BR-3 (SRR064440),Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,2.38,Dataset2.38,EDGREN_BRCA_CELL_LINES
+Uhrig 2021,2,Uhrig 2021: SK-BR-3 (SRR064441),Uhrig 2021: SK-BR-3 (SRR064441),Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,2.39,Dataset2.39,EDGREN_BRCA_CELL_LINES
+Uhrig 2021,2,Uhrig 2021: ICGC-EOPC hallmark fusions,Uhrig 2021: ICGC-EOPC hallmark fusions,Patient-derived,Real,patient-derived,,,Not confirmed,,,False,2.40,Dataset2.40,D_2.40
+Uhrig 2021,2,Uhrig 2021: TCGA-DLBC hallmark fusions,Uhrig 2021: TCGA-DLBC hallmark fusions,Patient-derived,Real,patient-derived,,,Not confirmed,,,False,2.41,Dataset2.41,D_2.41
+Kumar 2016,3,Kumar 2016: positive FusionMap PE75,Kumar 2016: positive FusionMap PE75,Synthetic,Simulated,simulated,75.0,PE,75 PE,FFBCD3F5,FUSIONMAP_50_SYNTHETIC,False,3.1,Dataset3.1,FUSIONMAP_50_SYNTHETIC
+Kumar 2016,3,Kumar 2016: mixed FusionMap + Lib_75_R1 PE75,Kumar 2016: mixed FusionMap + Lib_75_R1 PE75,Synthetic,Simulated,simulated,75.0,PE,75 PE,FFBCD3F5,FUSIONMAP_50_SYNTHETIC,False,3.2,Dataset3.2,FUSIONMAP_50_SYNTHETIC
+Kumar 2016,3,Kumar 2016: negative Lib_50_R1,Kumar 2016: negative Lib_50_R1,Synthetic negative,negative control,negative control,50.0,PE,50 PE,,,False,3.3,Dataset3.3,D_3.3
+Kumar 2016,3,Kumar 2016: negative Lib_50_R2,Kumar 2016: negative Lib_50_R2,Synthetic negative,negative control,negative control,50.0,PE,50 PE,,,False,3.4,Dataset3.4,D_3.4
+Kumar 2016,3,Kumar 2016: negative Lib_75_R1,Kumar 2016: negative Lib_75_R1,Synthetic negative,negative control,negative control,75.0,PE,75 PE,,,False,3.5,Dataset3.5,D_3.5
+Kumar 2016,3,Kumar 2016: negative Lib_75_R2,Kumar 2016: negative Lib_75_R2,Synthetic negative,negative control,negative control,75.0,PE,75 PE,,,False,3.6,Dataset3.6,D_3.6
+Kumar 2016,3,Kumar 2016: negative Lib_100_R1,Kumar 2016: negative Lib_100_R1,Synthetic negative,negative control,negative control,100.0,PE,100 PE,,,False,3.7,Dataset3.7,D_3.7
+Kumar 2016,3,Kumar 2016: negative Lib_100_R2,Kumar 2016: negative Lib_100_R2,Synthetic negative,negative control,negative control,100.0,PE,100 PE,,,False,3.8,Dataset3.8,D_3.8
+Kumar 2016,3,Kumar 2016: Qin LNCaP (six runs combined),Kumar 2016: Qin LNCaP (six runs combined),Cell-line,Real,cell line,,PE,100/50 PE (reported),FFFFF0A6,QIN2015_LNCAP,False,3.9,Dataset3.9,QIN2015_LNCAP
+Balan 2021,4,Balan 2021: QIAseq neuro-oncology (23 libraries pooled) - Analysis 1,Balan 2021: QIAseq neuro-oncology (23 libraries pooled) - Analysis 1,Targeted RNA panel; clinical + spike-in,spike-in,spike-in,,,Not confirmed,,,False,4.1,Dataset4.1,BALAN2021_QIASEQ
+Balan 2021,4,Balan 2021: QIAseq neuro-oncology (23 libraries pooled) - Analysis 2,Balan 2021: QIAseq neuro-oncology (23 libraries pooled) - Analysis 2,Targeted RNA panel; clinical + spike-in,spike-in,spike-in,,,Not confirmed,,,False,4.2,Dataset4.2,BALAN2021_QIASEQ
+Zhao 2017,5,Zhao 2017: MCF7 (Edgren/Kim reference),Zhao 2017: MCF7 (Edgren/Kim reference),Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,5.1,Dataset5.1,EDGREN_BRCA_CELL_LINES
+Zhao 2017,5,Zhao 2017: BT-474 (Edgren/Kim reference),Zhao 2017: BT-474 (Edgren/Kim reference),Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,5.2,Dataset5.2,EDGREN_BRCA_CELL_LINES
+Zhao 2017,5,Zhao 2017: SK-BR-3 (Edgren/Kim reference),Zhao 2017: SK-BR-3 (Edgren/Kim reference),Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,5.3,Dataset5.3,EDGREN_BRCA_CELL_LINES
+Zhao 2017,5,Zhao 2017: breast cancer lines (three pooled),Zhao 2017: breast cancer lines (three pooled),Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,5.4,Dataset5.4,EDGREN_BRCA_CELL_LINES
+Zhao 2017,5,Zhao 2017: normal breast control,Zhao 2017: normal breast control,Normal control,negative control,negative control,,PE,PE; length not confirmed,,,False,5.5,Dataset5.5,D_5.5
+Zhao 2017,5,Zhao 2017: K562 single-end,Zhao 2017: K562 single-end,Cell-line,Real,cell line,76.0,SE,76 SE,,,False,5.6,Dataset5.6,D_5.6
+Zhao 2017,5,Zhao 2017: 42 artificial fusions + hESC background,Zhao 2017: 42 artificial fusions + hESC background,Synthetic + real background,Simulated,simulated,76.0,PE,76 PE,,,False,5.7,Dataset5.7,D_5.7
+Vu 2018,6,Vu 2018: breast TP27,Vu 2018: breast TP27,Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,6.1,Dataset6.1,EDGREN_BRCA_CELL_LINES
+Vu 2018,6,Vu 2018: breast TP99,Vu 2018: breast TP99,Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,6.2,Dataset6.2,EDGREN_BRCA_CELL_LINES
+Vu 2018,6,Vu 2018: melanoma,Vu 2018: melanoma,Cell-line + patient-derived cultures,Real,mixed,50.0,PE,50 PE,FFFFE0B2,BERGER2010_MELANOMA,False,6.3,Dataset6.3,BERGER2010_MELANOMA
+Vu 2018,6,Vu 2018: glioma,Vu 2018: glioma,Patient-derived,Real,patient-derived,101.0,PE,101 PE,FFCDE8D5,BAO2014_GLIOMA_13,False,6.4,Dataset6.4,BAO2014_GLIOMA_13
+Vu 2018,6,Vu 2018: spike-in SRR1659964 (min MR=3),Vu 2018: spike-in SRR1659964 (min MR=3),Synthetic spike-in + cell-line,spike-in,spike-in,100.0,PE,100 PE (reported),FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,6.5,Dataset6.5,TEMBE2014_COLO829_SPIKEIN
+Vu 2018,6,Vu 2018: spike-in 20 libraries (min MR=2),Vu 2018: spike-in 20 libraries (min MR=2),Synthetic spike-in + cell-line,spike-in,spike-in,100.0,PE,100 PE (reported),FFBFE6F1,TEMBE2014_COLO829_SPIKEIN,False,6.6,Dataset6.6,TEMBE2014_COLO829_SPIKEIN
+Vu 2018,6,Vu 2018: assembly BT474 SRR064439 TP27,Vu 2018: assembly BT474 SRR064439 TP27,Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,6.7,Dataset6.7,EDGREN_BRCA_CELL_LINES
+Vu 2018,6,Vu 2018: assembly BT474 SRR064439 TP99,Vu 2018: assembly BT474 SRR064439 TP99,Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,6.8,Dataset6.8,EDGREN_BRCA_CELL_LINES
+Vu 2018,6,Vu 2018: assembly melanoma SRR018266,Vu 2018: assembly melanoma SRR018266,Cell-line,Real,cell line,50.0,PE,50 PE,FFFFE0B2,BERGER2010_MELANOMA,False,6.9,Dataset6.9,BERGER2010_MELANOMA
+Vu 2018,6,Vu 2018: assembly glioma SRR934930,Vu 2018: assembly glioma SRR934930,Patient-derived,Real,patient-derived,101.0,PE,101 PE,FFCDE8D5,BAO2014_GLIOMA_13,False,6.10,Dataset6.10,BAO2014_GLIOMA_13
+Singh and Li 2021,7,Singh 2021: ChimPipe simulated PE50,Singh 2021: ChimPipe simulated PE50,Synthetic,Simulated,simulated,50.0,PE,50 PE,,,False,7.1,Dataset7.1,SINGH2021_CHIMSIM
+Singh and Li 2021,7,Singh 2021: ChimPipe simulated PE76,Singh 2021: ChimPipe simulated PE76,Synthetic,Simulated,simulated,76.0,PE,76 PE,,,False,7.2,Dataset7.2,SINGH2021_CHIMSIM
+Singh and Li 2021,7,Singh 2021: ChimPipe simulated PE101,Singh 2021: ChimPipe simulated PE101,Synthetic,Simulated,simulated,101.0,PE,101 PE,,,False,7.3,Dataset7.3,SINGH2021_CHIMSIM
+Singh and Li 2021,7,Singh 2021: InFusion simulated (68 gene pairs),Singh 2021: InFusion simulated (68 gene pairs),Synthetic,Simulated,simulated,75.0,PE,75 PE,,,False,7.4,Dataset7.4,D_7.4
+Singh and Li 2021,7,Singh 2021: Edgren TP27,Singh 2021: Edgren TP27,Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,7.5,Dataset7.5,EDGREN_BRCA_CELL_LINES
+Singh and Li 2021,7,Singh 2021: Edgren TP99,Singh 2021: Edgren TP99,Cell-line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,7.6,Dataset7.6,EDGREN_BRCA_CELL_LINES
+Singh and Li 2021,7,Singh 2021: Qin LNCaP (two PE101 runs),Singh 2021: Qin LNCaP (two PE101 runs),Cell-line,Real,cell line,101.0,PE,101 PE,FFFFF0A6,QIN2015_LNCAP,False,7.7,Dataset7.7,QIN2015_LNCAP
+Apostolides 2021,8,Apostolides 2021: DREAM,Apostolides 2021: DREAM,Synthetic,Simulated,simulated,101.0,PE,101 PE,,,False,8.1,Dataset8.1,D_8.1
+Apostolides 2021,8,Apostolides 2021: sim50,Apostolides 2021: sim50,Synthetic,Simulated,simulated,50.0,PE,50 PE,FFD8CCF0,HAAS2019_SIMULATIONS,False,8.2,Dataset8.2,HAAS2019_SIMULATIONS
+Apostolides 2021,8,Apostolides 2021: sim101,Apostolides 2021: sim101,Synthetic,Simulated,simulated,101.0,PE,101 PE,FFD8CCF0,HAAS2019_SIMULATIONS,False,8.3,Dataset8.3,HAAS2019_SIMULATIONS
+Apostolides 2021,8,Apostolides 2021: BRCA,Apostolides 2021: BRCA,Cell-line,Real,cell line,50.0,PE,50 PE (source Edgren),FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,8.4,Dataset8.4,EDGREN_BRCA_CELL_LINES
+Apostolides 2021,8,Apostolides 2021: Melanoma-CML,Apostolides 2021: Melanoma-CML,Cell-line + patient-derived cultures,Real,mixed,,,Not confirmed,FFFFE0B2,BERGER2010_MELANOMA,False,8.5,Dataset8.5,BERGER2010_MELANOMA
+Apostolides 2021,8,Apostolides 2021: NTRK,Apostolides 2021: NTRK,Synthetic spike-in; targeted RNA panel,spike-in,spike-in,,,Not confirmed,,,False,8.6,Dataset8.6,D_8.6
+Apostolides 2021,8,Apostolides 2021: BEERS,Apostolides 2021: BEERS,Synthetic negative,negative control,negative control,,,Not confirmed,FFD8DDE3,BEERS_NEGATIVE,False,8.7,Dataset8.7,BEERS_NEGATIVE
+Zhang 2016,9,Zhang 2016: HCC1395,Zhang 2016: HCC1395,Cell line,Real,cell line,,,Not confirmed,,,False,9.1,Dataset9.1,D_9.1
+Davidson 2015,10,Davidson 2015: FusionMap simulation,Davidson 2015: FusionMap simulation,Synthetic positive,Simulated,simulated,75.0,PE,75 PE,FFBCD3F5,FUSIONMAP_50_SYNTHETIC,False,10.1,Dataset10.1,FUSIONMAP_50_SYNTHETIC
+Davidson 2015,10,Davidson 2015: MiSeq simulation,Davidson 2015: MiSeq simulation,Synthetic mixed,Simulated,simulated,250.0,PE,250 PE,,,False,10.2,Dataset10.2,DAVIDSON2015_MISEQ_SIM
+Davidson 2015,10,Davidson 2015: BEERS negative,Davidson 2015: BEERS negative,Synthetic negative,negative control,negative control,100.0,PE,100 PE,FFD8DDE3,BEERS_NEGATIVE,False,10.3,Dataset10.3,BEERS_NEGATIVE
+Davidson 2015,10,Davidson 2015: Edgren (99-reference),Davidson 2015: Edgren (99-reference),Cell line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,10.4,Dataset10.4,EDGREN_BRCA_CELL_LINES
+Davidson 2015,10,Davidson 2015: ENCODE MCF-7,Davidson 2015: ENCODE MCF-7,Cell line,Real,cell line,100.0,PE,100 PE,FFD7E9B4,ENCODE_MCF7_SRR534293,False,10.5,Dataset10.5,ENCODE_MCF7_SRR534293
+Davidson 2015,10,Davidson 2015: glioma full depth,Davidson 2015: glioma full depth,Patient-derived,Real,patient-derived,100.0,PE,100 PE,FFCDE8D5,BAO2014_GLIOMA_13,False,10.6,Dataset10.6,BAO2014_GLIOMA_13
+Davidson 2015,10,Davidson 2015: glioma 1M pairs/sample,Davidson 2015: glioma 1M pairs/sample,Patient-derived,Real,patient-derived,100.0,PE,100 PE,FFCDE8D5,BAO2014_GLIOMA_13,False,10.7,Dataset10.7,BAO2014_GLIOMA_13
+Davidson 2015,10,Davidson 2015: glioma 2M pairs/sample,Davidson 2015: glioma 2M pairs/sample,Patient-derived,Real,patient-derived,100.0,PE,100 PE,FFCDE8D5,BAO2014_GLIOMA_13,False,10.8,Dataset10.8,BAO2014_GLIOMA_13
+Davidson 2015,10,Davidson 2015: glioma 5M pairs/sample,Davidson 2015: glioma 5M pairs/sample,Patient-derived,Real,patient-derived,100.0,PE,100 PE,FFCDE8D5,BAO2014_GLIOMA_13,False,10.9,Dataset10.9,BAO2014_GLIOMA_13
+Davidson 2015,10,Davidson 2015: glioma 10M pairs/sample,Davidson 2015: glioma 10M pairs/sample,Patient-derived,Real,patient-derived,100.0,PE,100 PE,FFCDE8D5,BAO2014_GLIOMA_13,False,10.10,Dataset10.10,BAO2014_GLIOMA_13
+Davidson 2015,10,Davidson 2015: MiSeq 100x fusion coverage,Davidson 2015: MiSeq 100x fusion coverage,Synthetic mixed,Simulated,simulated,250.0,PE,250 PE,,,False,10.11,Dataset10.11,DAVIDSON2015_MISEQ_SIM
+Davidson 2015,10,Davidson 2015: MiSeq 50x fusion coverage,Davidson 2015: MiSeq 50x fusion coverage,Synthetic mixed,Simulated,simulated,250.0,PE,250 PE,,,False,10.12,Dataset10.12,DAVIDSON2015_MISEQ_SIM
+Davidson 2015,10,Davidson 2015: MiSeq 10x fusion coverage,Davidson 2015: MiSeq 10x fusion coverage,Synthetic mixed,Simulated,simulated,250.0,PE,250 PE,,,False,10.13,Dataset10.13,DAVIDSON2015_MISEQ_SIM
+Davidson 2015,10,Davidson 2015: MiSeq 5x fusion coverage,Davidson 2015: MiSeq 5x fusion coverage,Synthetic mixed,Simulated,simulated,250.0,PE,250 PE,,,False,10.14,Dataset10.14,DAVIDSON2015_MISEQ_SIM
+Davidson 2015,10,Davidson 2015: MiSeq 2x fusion coverage,Davidson 2015: MiSeq 2x fusion coverage,Synthetic mixed,Simulated,simulated,250.0,PE,250 PE,,,False,10.15,Dataset10.15,DAVIDSON2015_MISEQ_SIM
+Davidson 2015,10,Davidson 2015: MiSeq 1x fusion coverage,Davidson 2015: MiSeq 1x fusion coverage,Synthetic mixed,Simulated,simulated,250.0,PE,250 PE,,,False,10.16,Dataset10.16,DAVIDSON2015_MISEQ_SIM
+Davidson 2015,10,Davidson 2015: Edgren (27-reference screening),Davidson 2015: Edgren (27-reference screening),Cell line,Real,cell line,50.0,PE,50 PE,FFFFD4DF,EDGREN_BRCA_CELL_LINES,True,10.17,Dataset10.17,EDGREN_BRCA_CELL_LINES
+Davidson 2015,10,Davidson 2015: PacBio MCF-7,Davidson 2015: PacBio MCF-7,Cell line,Real,cell line,,,Mean1929 nt; consensus sequences,,,False,10.18,Dataset10.18,D_10.18
+Vicente-Garcés 2023,11,Vicente-Garcés 2023: leukemia cell lines,Vicente-Garcés 2023: leukemia cell lines,Cell line,Real,cell line,151.0,PE,151 PE (LL-100 source),,,False,11.1,Dataset11.1,D_11.1
+Vicente-Garcés 2023,11,Vicente-Garcés 2023: pediatric leukemia patients,Vicente-Garcés 2023: pediatric leukemia patients,Patient-derived,Real,patient-derived,,,Not confirmed,,,False,11.2,Dataset11.2,D_11.2
+Vicente-Garcés 2023,11,Vicente-Garcés 2023: global aggregate,Vicente-Garcés 2023: global aggregate,Cell line + patient-derived (aggregate),Real,mixed,151.0,PE,151 PE (cell lines); patients not confirmed,,,False,11.3,Dataset11.3,D_11.3

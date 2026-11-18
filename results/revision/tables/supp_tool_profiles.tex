@@ -1,0 +1,64 @@
+{\scriptsize
+\begin{longtable}{llrlll}
+\caption{\textbf{Tool-level precision, recall and F1 by data origin.} Tools evaluated in at least two benchmarks for the given data origin. Precision on real data is observed precision against each benchmark's reference set and is affected by reference incompleteness. Summaries pool different datasets, truth sets and scoring rules and are descriptive; the full table is in \texttt{results/revision/tools/tool\_profiles.csv}.}\label{tab:supp_tool_profiles}\\
+\toprule
+Tool & Data & Obs/bench/datasets & Precision mean (median) & Recall mean (median) & F1 mean (median) \\
+\midrule
+\endfirsthead
+\toprule
+Tool & Data & Obs/bench/datasets & Precision mean (median) & Recall mean (median) & F1 mean (median) \\
+\midrule
+\endhead
+FusionCatcher & real & 34/8/15 & 0.58 (0.55) & 0.51 (0.42) & 0.45 (0.38) \\
+SOAPfuse & real & 32/7/12 & 0.37 (0.33) & 0.53 (0.56) & 0.34 (0.27) \\
+deFuse & real & 27/6/12 & 0.25 (0.18) & 0.52 (0.45) & 0.27 (0.19) \\
+TopHat-Fusion & real & 25/8/9 & 0.23 (0.18) & 0.49 (0.44) & 0.25 (0.20) \\
+Arriba & real & 22/5/12 & 0.43 (0.42) & 0.77 (0.84) & 0.45 (0.35) \\
+STAR-Fusion & real & 20/5/12 & 0.61 (0.71) & 0.65 (0.76) & 0.55 (0.56) \\
+InFusion & real & 16/3/9 & 0.27 (0.27) & 0.53 (0.60) & 0.38 (0.37) \\
+PRADA & real & 16/3/10 & 0.81 (0.90) & 0.42 (0.38) & 0.33 (0.40) \\
+FusionMap & real & 14/5/6 & 0.34 (0.28) & 0.47 (0.44) & 0.27 (0.30) \\
+JAFFA & real & 14/5/5 & 0.38 (0.46) & 0.50 (0.57) & 0.34 (0.31) \\
+FuSeq & real & 11/2/4 & 0.37 (0.33) & 0.67 (0.76) & 0.41 (0.40) \\
+EricScript & real & 10/5/5 & 0.10 (0.10) & 0.52 (0.54) & 0.15 (0.15) \\
+ChimeraScan & real & 9/5/6 & 0.21 (0.04) & 0.52 (0.48) & 0.11 (0.05) \\
+MapSplice & real & 8/4/5 & 0.41 (0.48) & 0.31 (0.21) & 0.29 (0.30) \\
+ChimPipe & real & 7/3/3 & 0.62 (0.62) & 0.59 (0.67) & 0.58 (0.70) \\
+JAFFA-Direct & real & 7/2/3 & 0.10 (0.05) & 0.70 (0.77) & 0.15 (0.09) \\
+INTEGRATE & real & 5/2/3 & 0.33 (0.32) & 0.45 (0.59) & 0.35 (0.35) \\
+TRUP & real & 5/2/4 & 0.55 (0.55) & 0.34 (0.34) & 0.13 (0.13) \\
+BreakFusion & real & 4/2/4 & -- & 0.11 (0.11) & 0.01 (0.00) \\
+FusionHunter & real & 4/3/4 & 0.63 (0.63) & 0.20 (0.20) & 0.42 (0.42) \\
+JAFFA-Assembly & real & 4/2/3 & 0.50 (0.48) & 0.48 (0.44) & 0.46 (0.46) \\
+Pizzly & real & 4/2/3 & 0.13 (0.03) & 0.49 (0.45) & 0.15 (0.06) \\
+STARChip & real & 4/2/3 & 0.23 (0.08) & 0.19 (0.15) & 0.25 (0.10) \\
+STAR-SEQR & real & 3/2/3 & 0.32 (0.25) & 0.81 (0.82) & 0.44 (0.37) \\
+nFuse & real & 3/3/3 & 0.29 (0.29) & 0.26 (0.33) & 0.30 (0.30) \\
+JAFFA-Hybrid & real & 2/2/2 & 0.18 (0.18) & 0.55 (0.55) & 0.28 (0.28) \\
+FusionCatcher & simulated & 30/6/7 & 0.90 (0.96) & 0.61 (0.66) & 0.74 (0.78) \\
+SOAPfuse & simulated & 28/6/7 & 0.85 (0.85) & 0.73 (0.80) & 0.82 (0.84) \\
+deFuse & simulated & 25/5/6 & 0.80 (0.89) & 0.66 (0.76) & 0.72 (0.85) \\
+TopHat-Fusion & simulated & 20/6/7 & 0.79 (0.96) & 0.39 (0.40) & 0.57 (0.54) \\
+Arriba & simulated & 18/4/5 & 0.86 (0.89) & 0.89 (0.92) & 0.87 (0.91) \\
+STAR-Fusion & simulated & 18/4/5 & 0.85 (0.87) & 0.77 (0.80) & 0.80 (0.84) \\
+InFusion & simulated & 15/3/4 & 0.76 (0.75) & 0.67 (0.70) & 0.71 (0.74) \\
+EricScript & simulated & 14/5/6 & 0.68 (0.86) & 0.66 (0.64) & 0.66 (0.74) \\
+PRADA & simulated & 14/3/3 & 0.99 (1.00) & 0.30 (0.27) & 0.45 (0.47) \\
+ChimeraScan & simulated & 11/4/5 & 0.68 (0.86) & 0.71 (0.82) & 0.64 (0.70) \\
+MapSplice & simulated & 11/4/5 & 0.93 (0.99) & 0.67 (0.64) & 0.69 (0.75) \\
+JAFFA & simulated & 10/4/5 & 0.55 (0.28) & 0.62 (0.56) & 0.57 (0.64) \\
+FusionMap & simulated & 9/4/5 & 0.73 (0.85) & 0.65 (0.64) & 0.66 (0.71) \\
+JAFFA-Direct & simulated & 9/2/3 & 0.98 (0.97) & 0.73 (0.85) & 0.85 (0.82) \\
+ChimPipe & simulated & 7/3/4 & 0.86 (0.93) & 0.62 (0.74) & 0.71 (0.83) \\
+INTEGRATE & simulated & 7/2/4 & 0.72 (0.81) & 0.66 (0.68) & 0.66 (0.67) \\
+Pizzly & simulated & 6/2/3 & 0.83 (0.82) & 0.78 (0.79) & 0.80 (0.77) \\
+STARChip & simulated & 6/2/3 & 0.54 (0.34) & 0.34 (0.22) & 0.40 (0.24) \\
+BreakFusion & simulated & 5/2/2 & 1.00 (1.00) & 0.04 (0.04) & 0.45 (0.51) \\
+STAR-SEQR & simulated & 5/2/2 & 0.88 (0.88) & 0.87 (0.93) & 0.87 (0.88) \\
+FusionHunter & simulated & 4/2/2 & 0.99 (0.99) & 0.34 (0.40) & 0.47 (0.57) \\
+nFuse & simulated & 4/2/2 & 0.97 (0.96) & 0.68 (0.78) & 0.77 (0.86) \\
+JAFFA-Assembly & simulated & 3/2/2 & 0.96 (0.99) & 0.65 (0.65) & 0.77 (0.75) \\
+JAFFA-Hybrid & simulated & 2/2/2 & 0.98 (0.98) & 0.80 (0.80) & 0.88 (0.88) \\
+\bottomrule
+\end{longtable}
+}

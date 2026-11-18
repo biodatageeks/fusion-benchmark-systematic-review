@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{\textbf{The user checklist (main text Table~2) applied to each included benchmark.} Entries are derived from the extracted benchmark metadata; WTS, whole transcriptome; PE/SE, paired/single-end; n.r., not reported. \TODO{add scoring unit and matching rule (dimension 3) per benchmark from the extraction}}
+\label{tab:supp_checklist_applied}
+\begin{tabular}{p{0.11\linewidth}p{0.2\linewidth}p{0.2\linewidth}p{0.08\linewidth}p{0.16\linewidth}p{0.13\linewidth}}
+\toprule
+Benchmark & 1 Data origin & 2 Truth set & 3 Granularity & 4 Execution & 5 Provenance \\
+\midrule
+Davidson 2015 & simulated, cell lines; WTS; PE/SE; 50/75/100/250 bp & Published validated fusions & -- & versions yes; parameters partial; code no & new tool (JAFFA) \\
+Kumar 2016 & simulated, cell lines; WTS; PE; 50/75/100 bp & RNA + WGS + PCR/Sanger/cDNA-capture; experimentally supported & -- & versions yes; parameters yes; code no & independent \\
+Liu 2016 & simulated, cell lines, patients; WTS; PE; 50/75/100 bp & Published validated fusions & -- & versions yes; parameters yes; code yes & independent \\
+Zhang 2016 & cell lines; WTS; PE; read length n.r. & RNA + WGS + PCR/Sanger/cDNA-capture; experimentally supported & -- & versions no; parameters partial; code no & new tool (INTEGRATE) \\
+Zhao 2017 & simulated, cell lines; WTS; PE/SE; 75 bp & Published validated fusions & -- & versions no; parameters partial; code no & new tool (GFusion) \\
+Vu 2018 & cell lines, patients; WTS; PE; 50/100 bp & Published validated fusions & -- & versions no; parameters partial; code no & new tool (FuSeq) \\
+Haas 2019 & simulated, cell lines; WTS; PE; 50/100 bp & Mixed: wisdom of crowds (60 cell lines) + published validated fusions (Edgren; 53) & -- & versions yes; parameters yes; code yes & new tool (STAR-Fusion and TrinityFusion) \\
+Apostolides 2021 & simulated, cell lines, patients; WTS + targeted; PE; 50/100 bp & Proxy-based (e.g. SV overlap, simulation) & -- & versions no; parameters no; code yes & new tool (MetaFusion) \\
+Balan 2021 & patients; targeted; PE; read length n.r. & RNA + WGS + PCR/Sanger/cDNA-capture; experimentally supported & -- & versions yes; parameters partial; code no & new tool (SeekFusion) \\
+Creason 2021 & simulated, cell lines; WTS; PE; 100 bp & Proxy-based (e.g. SV overlap, simulation) & -- & versions partial; parameters yes; code yes & independent \\
+Singh 2021 & simulated, cell lines; WTS; PE; 50/75/100 bp & Published validated fusions & -- & versions yes; parameters yes; code no & independent \\
+Uhrig 2021 & simulated, cell lines, patients; WTS; PE; 75/100 bp & Proxy-based (e.g. SV overlap, simulation) & -- & versions yes; parameters yes; code no & new tool (Arriba) \\
+Vicente-Garces 2023 & cell lines, patients; WTS; PE; read length n.r. & Clinically validated or clinically expected fusions; experimentally supported & -- & versions no; parameters partial; code partial & new tool (Fusion InPipe) \\
+\bottomrule
+\end{tabular}
+\end{table}

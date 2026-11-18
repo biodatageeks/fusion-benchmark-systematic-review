@@ -1,0 +1,6 @@
+context,n_benchmarks,n_bio_datasets,n_obs,n_tools,median_precision,median_recall,median_f1,benchmarks
+Simulated reads,8,9,329,43,0.9,0.7364999999999999,0.7654320987654321,Apostolides 2021; Davidson 2015; Haas 2019; Kumar 2016; Liu 2016; Singh 2021; Uhrig 2021; Zhao 2017
+Edgren breast cancer cell lines,7,1,147,39,0.46131528046421655,0.593,0.4,Apostolides 2021; Davidson 2015; Liu 2016; Singh 2021; Uhrig 2021; Vu 2018; Zhao 2017
+Other cancer cell lines,9,10,116,48,0.4358974358974359,0.46,0.3670498605537038,Davidson 2015; Haas 2019; Kumar 2016; Singh 2021; Uhrig 2021; Vicente-Garces 2023; Vu 2018; Zhang 2016; Zhao 2017
+"Patient-derived, whole transcriptome",5,5,76,25,0.1362433862433862,0.7505967741935484,0.16961342523224454,Davidson 2015; Liu 2016; Uhrig 2021; Vicente-Garces 2023; Vu 2018
+"Real, mixed patient-derived and cell-line material",3,1,34,27,0.275,0.647,0.267,Apostolides 2021; Liu 2016; Vu 2018

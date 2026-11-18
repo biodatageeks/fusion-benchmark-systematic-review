@@ -3,28 +3,29 @@
 Tool-level means were calculated from observations with both recall/sensitivity and precision available.
 
 ## Correlations
-- all: n=324, Pearson r=0.335 (p=6.18e-10), Spearman rho=0.290 (p=1.07e-07).
-- without_edgren: n=257, Pearson r=0.352 (p=6.27e-09), Spearman rho=0.248 (p=5.81e-05).
-- real: n=164, Pearson r=0.126 (p=1.08e-01), Spearman rho=0.127 (p=1.06e-01).
-- real_without_edgren: n=97, Pearson r=0.163 (p=1.10e-01), Spearman rho=0.135 (p=1.86e-01).
-- simulated: n=154, Pearson r=0.445 (p=7.17e-09), Spearman rho=0.278 (p=4.80e-04).
+- all: n=662, Pearson r=0.164 (p=2.23e-05), Spearman rho=0.089 (p=2.25e-02).
+- without_edgren: n=588, Pearson r=0.093 (p=2.48e-02), Spearman rho=0.012 (p=7.78e-01).
+- real: n=227, Pearson r=0.010 (p=8.86e-01), Spearman rho=-0.024 (p=7.20e-01).
+- real_without_edgren: n=180, Pearson r=-0.120 (p=1.09e-01), Spearman rho=-0.145 (p=5.14e-02).
+- simulated: n=252, Pearson r=0.260 (p=2.99e-05), Spearman rho=0.038 (p=5.49e-01).
 
 ## High recall / low precision profile
-- No tools met the quartile-based high recall / low precision definition.
+- FuSeq: mean recall=0.748, mean precision=0.413, mean F1=0.495, n=15.
 
 ## Low recall / high precision profile
-- PRADA: mean recall=0.535, mean precision=0.967, mean F1=0.684, n=3.
-- FusionHunter: mean recall=0.336, mean precision=0.859, mean F1=0.481, n=3.
-- TrinityFusion-D: mean recall=0.427, mean precision=0.960, mean F1=0.590, n=3.
+- PRADA: mean recall=0.475, mean precision=0.935, mean F1=0.592, n=30.
+- FusionHunter: mean recall=0.395, mean precision=0.900, mean F1=0.543, n=4.
+- TrinityFusion-D: mean recall=0.413, mean precision=0.960, mean F1=0.576, n=3.
+- MetaFusion-cf7: mean recall=0.369, mean precision=1.000, mean F1=0.527, n=6.
 
 ## Largest recall-minus-precision gaps
-- FuSeq: recall - precision = 0.244; mean recall=0.671; mean precision=0.428; n=10.
-- ChimeraScan: recall - precision = 0.233; mean recall=0.672; mean precision=0.438; n=11.
-- JAFFA: recall - precision = 0.212; mean recall=0.567; mean precision=0.355; n=13.
-- STAR-SEQR: recall - precision = 0.196; mean recall=0.880; mean precision=0.684; n=9.
-- EricScript: recall - precision = 0.175; mean recall=0.579; mean precision=0.404; n=16.
-- MetaFusion: recall - precision = 0.162; mean recall=0.920; mean precision=0.757; n=6.
-- deFuse: recall - precision = 0.139; mean recall=0.698; mean precision=0.559; n=15.
-- Arriba: recall - precision = 0.131; mean recall=0.791; mean precision=0.660; n=21.
-- ChimeRScope: recall - precision = 0.131; mean recall=0.254; mean precision=0.123; n=7.
-- FusionMap: recall - precision = 0.111; mean recall=0.594; mean precision=0.483; n=12.
+- JAFFA-Direct (HC+MC): recall - precision = 0.496; mean recall=0.687; mean precision=0.191; n=7.
+- Hera: recall - precision = 0.444; mean recall=0.457; mean precision=0.012; n=3.
+- deFuse: recall - precision = 0.355; mean recall=0.725; mean precision=0.370; n=50.
+- JAFFA-Direct: recall - precision = 0.349; mean recall=0.713; mean precision=0.363; n=10.
+- FuSeq: recall - precision = 0.335; mean recall=0.748; mean precision=0.413; n=15.
+- InFusion: recall - precision = 0.253; mean recall=0.600; mean precision=0.347; n=39.
+- STAR-SEQR: recall - precision = 0.245; mean recall=0.843; mean precision=0.598; n=11.
+- GFusion: recall - precision = 0.238; mean recall=0.799; mean precision=0.561; n=6.
+- Arriba: recall - precision = 0.202; mean recall=0.889; mean precision=0.687; n=50.
+- SOAPfuse: recall - precision = 0.190; mean recall=0.659; mean precision=0.468; n=57.

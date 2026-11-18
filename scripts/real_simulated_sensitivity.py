@@ -13,7 +13,7 @@ import pandas as pd
 import statsmodels.formula.api as smf
 
 
-DEFAULT_INPUT = Path(__file__).resolve().parents[1] / "data" / "raw" / "master_analysis_input.xlsx"
+DEFAULT_INPUT = Path(__file__).resolve().parents[1] / "data" / "processed" / "analysis_input.xlsx"  # built by scripts/build_analysis_input.py from data/raw/benchmark.xlsx
 DEFAULT_OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "real_simulated"
 
 
@@ -96,17 +96,61 @@ def _read_xlsx_without_openpyxl(path: Path, sheet_number: int | str = 1) -> pd.D
     return pd.DataFrame(padded[1:], columns=header)
 
 
+OBSERVATION_CORRECTIONS = Path(__file__).resolve().parents[1] / "data" / "curation" / "legacy_v1" / "observation_corrections.csv"
+
+
+def apply_observation_corrections(df: pd.DataFrame) -> pd.DataFrame:
+    """Apply source-verified corrections (tier == 'applied') to the observations sheet.
+
+    The extraction workbook itself is not modified; every correction is listed, with its
+    source, in data/curation/observation_corrections.csv. Rows with tier 'review' are
+    documented there but not applied until the authors decide.
+    """
+    if not OBSERVATION_CORRECTIONS.exists() or "observation_id" not in df.columns:
+        return df
+    corrections = pd.read_csv(OBSERVATION_CORRECTIONS, dtype=str)
+    corrections = corrections[corrections["tier"].str.strip().eq("applied")]
+    df = df.copy()
+    for _, row in corrections.iterrows():
+        mask = df["observation_id"].astype(str).eq(row["observation_id"])
+        if mask.sum() != 1:
+            raise ValueError(f"Correction for unknown observation: {row['observation_id']}")
+        field = row["field"]
+        if field not in df.columns:
+            raise KeyError(f"Correction refers to unknown field: {field}")
+        new = row["new_value"]
+        if pd.isna(new) or str(new).strip().upper() in {"NA", ""}:
+            value = np.nan
+        else:
+            try:
+                value = float(new)
+            except ValueError:
+                value = new
+        if isinstance(value, str) and pd.api.types.is_numeric_dtype(df[field]):
+            raise TypeError(f"Non-numeric correction for numeric field {field}: {new}")
+        if not isinstance(value, str) and not pd.api.types.is_numeric_dtype(df[field]):
+            df[field] = df[field].astype(object)
+        df.loc[mask, field] = value
+    return df
+
+
 def load_table(path: Path, sheet_name: str | int | None = None) -> pd.DataFrame:
     read_excel_kwargs = {}
-    if sheet_name is None and path.name == "master_analysis_input.xlsx":
+    if sheet_name is None and path.name in {"master_analysis_input.xlsx", "analysis_input.xlsx"}:
         sheet_name = "observations"
     if sheet_name is not None:
         read_excel_kwargs["sheet_name"] = sheet_name
     try:
-        return pd.read_excel(path, **read_excel_kwargs)
+        table = pd.read_excel(path, **read_excel_kwargs)
     except ImportError:
         sheet_number = sheet_name if sheet_name is not None else 1
-        return _read_xlsx_without_openpyxl(path, sheet_number=sheet_number)
+        table = _read_xlsx_without_openpyxl(path, sheet_number=sheet_number)
+    if path.name == "master_analysis_input.xlsx" and sheet_name == "observations":
+        table = apply_observation_corrections(table)
+    if path.name == "analysis_input.xlsx" and sheet_name == "observations" and "include_in_models" in table.columns:
+        # rows flagged by build_analysis_input.py (derived aggregates, long-read data, non-primary truth thresholds)
+        table = table[table["include_in_models"].astype(bool)].copy()
+    return table
 
 
 def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:

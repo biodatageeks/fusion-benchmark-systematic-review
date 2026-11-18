@@ -1,0 +1,4 @@
+real_subtype,n_obs,n_obs_f1,n_benchmarks,n_bio_datasets,median_f1,median_precision,median_recall
+cell line,263,167,11,11,0.3971631205673759,0.45,0.5
+mixed,34,33,3,1,0.267,0.275,0.647
+patient-derived,76,58,5,5,0.16961342523224454,0.1362433862433862,0.7505967741935484

@@ -1,0 +1,41 @@
+dataset_id,benchmark_number,bio_dataset_id,real_subtype,rationale,status
+Dataset1.1,1,HAAS2019_SIM_50BP,simulated,"Haas 2019 simulated reads (50 bp, 5 sets x 500 fusions); reused by Apostolides 2021 (Dataset8.1)",provisional
+Dataset1.2,1,HAAS2019_SIM_101BP,simulated,"Haas 2019 simulated reads (101 bp, 5 sets x 500 fusions); reused by Apostolides 2021 (Dataset8.2)",provisional
+Dataset1.3,1,HAAS2019_REAL_CELL_LINES,cell line,"Haas 2019 panel of 60 cell lines (incl. the 4 Edgren breast lines); wisdom-of-crowds reference; accuracy scored on the 56 non-breast lines (Haas 2019 Additional file 1, Tables S3, S9)",confirmed
+Dataset2.1,2,D_2.1,simulated,benchmark-specific dataset; no reuse identified,provisional
+Dataset2.2,2,TEMBE2014_COLO829_SPIKEIN,spike-in,"Tembe et al. 2014 COLO-829 spike-in series (SRP043081); also used by Vu 2018 (not extracted); Uhrig 2021 (PMC7919457, Suppl. Tables S1,S2,S4)",confirmed
+Dataset2.3,2,ENCODE_MCF7_SRR534293,cell line,"ENCODE MCF-7 RNA-seq (SRR534293), not the Edgren SRP003186 data; reference = Davidson-compiled list (69 pairs) + WGS/Sanger confirmations, open-ended, no fixed truth-set size; Uhrig 2021 (PMC7919457, Suppl. Tables S1,S2,S4)",confirmed
+Dataset2.4,2,ICGC_EOPC,patient-derived,"ICGC early-onset prostate cancer cohort (96 donors, 56 TMPRSS2-ERG positive); recall of hallmark fusion only; Uhrig 2021 (PMC7919457, Suppl. Tables S1,S2,S4)",confirmed
+Dataset2.5,2,TCGA_DLBC,patient-derived,"TCGA diffuse large B-cell lymphoma cohort (48 donors, 9 IG fusions); recall only; Uhrig 2021 (PMC7919457, Suppl. Tables S1,S2,S4)",confirmed
+Dataset3.1A,3,QIN2015_LNCAP,cell line,LNCaP prostate cancer runs SRR1657558-61 (50 nt) from Qin 2015; same runs as Apostolides 8.5B; not Edgren; Kumar 2016 (PMC4748267); SRA SRR1657556-61 (cell line: LNCaP),confirmed
+Dataset3.1B,3,QIN2015_LNCAP,cell line,LNCaP runs; Kumar pooled all six runs (2 x 100 nt SRR1657556-57 + 4 x 50 nt) against 44 validated fusions; same runs as Apostolides 8.5A/8.5B; Kumar 2016 (PMC4748267); SRA SRR1657556-61 (cell line: LNCaP),confirmed
+Dataset3.2,3,D_3.2,simulated,benchmark-specific dataset; no reuse identified,provisional
+Dataset4.1,4,D_4.1,patient-derived,benchmark-specific dataset; no reuse identified; real subtype inferred from benchmark metadata (patient material only),provisional
+Dataset5.1,5,EDGREN_BRCA_CELL_LINES,cell line,Edgren-derived breast cancer cell-line RNA-seq (SRP003186); same biological samples across benchmarks; truth-set definition differs,provisional
+Dataset5.2,5,D_5.2,cell line,benchmark-specific dataset; no reuse identified; real subtype inferred from benchmark metadata (no patient material in this benchmark),provisional
+Dataset5.3,5,D_5.3,simulated,benchmark-specific dataset; no reuse identified,provisional
+Dataset6.1,6,EDGREN_BRCA_CELL_LINES,cell line,Edgren-derived breast cancer cell-line RNA-seq (SRP003186); same biological samples across benchmarks; truth-set definition differs,provisional
+Dataset6.2,6,EDGREN_BRCA_CELL_LINES,cell line,Edgren-derived breast cancer cell-line RNA-seq (SRP003186); same biological samples across benchmarks; truth-set definition differs,provisional
+Dataset6.3,6,BERGER2010_MELANOMA,patient-derived,"Berger 2010 melanoma: 5 patient-derived short-term cultures + 501 Mel cell line (SRR018259-61, 65-67), 11 validated fusions; Vu 2018 (PMC6211471)",confirmed
+Dataset6.4,6,BAO2014_GLIOMA_13,patient-derived,"13 glioma tumour samples (SRP027383), 31 validated fusions; same subset as the JAFFA paper; Vu 2018 (PMC6211471)",confirmed
+Dataset7.1,7,D_7.1,simulated,benchmark-specific dataset; no reuse identified,provisional
+Dataset7.2,7,D_7.2,simulated,benchmark-specific dataset; no reuse identified,provisional
+Dataset7.3,7,D_7.3,simulated,benchmark-specific dataset; no reuse identified,provisional
+Dataset7.4,7,D_7.4,simulated,benchmark-specific dataset; no reuse identified,provisional
+Dataset7.5,7,QIN2015_LNCAP,cell line,"Singh & Li 'Qin dataset' (2 samples, 101 bp); assumed to be the LNCaP 100 nt runs SRR1657556-57 of Qin 2015 - confirm in Singh & Li Methods",verify
+Dataset7.6,7,EDGREN_BRCA_CELL_LINES,cell line,Edgren-derived breast cancer cell-line RNA-seq (SRP003186); same biological samples across benchmarks; truth-set definition differs,provisional
+Dataset7.7,7,EDGREN_BRCA_CELL_LINES,cell line,Edgren-derived breast cancer cell-line RNA-seq (SRP003186); same biological samples across benchmarks; truth-set definition differs,provisional
+Dataset8.1,8,HAAS2019_SIM_50BP,simulated,"identical parameters to Dataset1.1 (50 bp, 30M reads, 5 sets, 500 fusions)",confirmed
+Dataset8.2,8,HAAS2019_SIM_101BP,simulated,"identical parameters to Dataset1.2 (101 bp, 30M reads, 5 sets, 500 fusions)",confirmed
+Dataset8.3,8,EDGREN_BRCA_CELL_LINES,cell line,"the 4 Edgren breast cancer cell lines (BT474, KPL4, MCF7, SKBR3; SRP003186 via Haas/Broad); 53-fusion reference; Apostolides 2021 (Bioinformatics 37:3144; bioRxiv 10.1101/2020.09.17.302307)",confirmed
+Dataset8.4,8,BERGER2010_MELANOMA,mixed,"same 6 Berger melanoma samples plus 2 K-562 CML cell-line libraries (SRR018268-69), 17 reference fusions; Apostolides 2021 (Bioinformatics 37:3144; bioRxiv 10.1101/2020.09.17.302307)",confirmed
+Dataset8.5A,8,QIN2015_LNCAP,cell line,"LNCaP 100 nt runs SRR1657556-57 (use case, no metrics); Apostolides 2021 (Bioinformatics 37:3144; bioRxiv 10.1101/2020.09.17.302307)",confirmed
+Dataset8.5B,8,QIN2015_LNCAP,cell line,"LNCaP 50 nt runs SRR1657558-61 (use case, no metrics); Apostolides 2021 (Bioinformatics 37:3144; bioRxiv 10.1101/2020.09.17.302307)",confirmed
+Dataset8.6,8,DREAM_SMC_RNA_SIM45_SIM52,simulated,"SMC-RNA DREAM simulations sim45 (30 fusions) + sim52 (31 fusions), 101 bp; Apostolides 2021 (Bioinformatics 37:3144; bioRxiv 10.1101/2020.09.17.302307)",confirmed
+Dataset8.7,8,SERACARE_NTRK_REFERENCE,reference material,"Seracare NTRK fusion reference standard in GM24385 background, TruSight pan-cancer targeted panel; reclassified from real to spike-in/reference material; Apostolides 2021 (Bioinformatics 37:3144; bioRxiv 10.1101/2020.09.17.302307)",confirmed
+Dataset9,9,D_9,cell line,benchmark-specific dataset; no reuse identified; real subtype inferred from benchmark metadata (no patient material in this benchmark),provisional
+Dataset10,10,D_10,simulated,benchmark-specific dataset; no reuse identified,provisional
+Dataset10.1,10,D_10.1,simulated,benchmark-specific dataset; no reuse identified,provisional
+Dataset10.2,10,EDGREN_BRCA_CELL_LINES,cell line,Edgren-derived breast cancer cell-line RNA-seq (SRP003186); same biological samples across benchmarks; truth-set definition differs,provisional
+Dataset11.1,11,D_11.1,cell line,benchmark-specific dataset; no reuse identified,provisional
+Dataset11.2,11,D_11.2,patient-derived,benchmark-specific dataset; no reuse identified,provisional

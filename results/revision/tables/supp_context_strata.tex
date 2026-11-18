@@ -1,0 +1,18 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\caption{\textbf{Benchmark evidence by measurable use context.} Medians are descriptive and pool different tools, truth sets and scoring rules; contexts with few benchmarks do not support tool recommendations. Real-data subtype follows the curated dataset annotation (\texttt{data/curation/bio\_dataset\_map.csv}).}
+\label{tab:supp_context_strata}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+Context & Benchmarks & Datasets & Obs & Tools & Median precision & Median recall & Median F1 \\
+\midrule
+Simulated reads & 8 & 9 & 329 & 43 & 0.900 & 0.736 & 0.765 \\
+Edgren breast cancer cell lines & 7 & 1 & 147 & 39 & 0.461 & 0.593 & 0.400 \\
+Other cancer cell lines & 9 & 10 & 116 & 48 & 0.436 & 0.460 & 0.367 \\
+Patient-derived, whole transcriptome & 5 & 5 & 76 & 25 & 0.136 & 0.751 & 0.170 \\
+Real, mixed patient-derived and cell-line material & 3 & 1 & 34 & 27 & 0.275 & 0.647 & 0.267 \\
+\bottomrule
+\end{tabular}}
+\end{table}

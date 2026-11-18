@@ -14,9 +14,10 @@ from matplotlib import colormaps
 from matplotlib.colors import Normalize
 
 from real_simulated_sensitivity import load_table
+from revision_utils import apply_metadata_corrections
 
 
-INPUT = Path(__file__).resolve().parents[1] / "data" / "raw" / "master_analysis_input.xlsx"
+INPUT = Path(__file__).resolve().parents[1] / "data" / "processed" / "analysis_input.xlsx"
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "benchmark_statistics"
 
 METRIC_COLUMNS = ["number of tools", "number of datasets"]
@@ -99,13 +100,11 @@ def normalize_value(value: object) -> str:
 
 def prepare_data() -> tuple[pd.DataFrame, pd.DataFrame]:
     raw = load_table(INPUT, sheet_name="benchmark_metadata").dropna(subset=["benchmark_number"]).copy()
+    raw = apply_metadata_corrections(raw)  # documented in data/curation/metadata_corrections.csv
     raw["benchmark_number"] = pd.to_numeric(raw["benchmark_number"], errors="coerce").astype(int)
     raw["year"] = pd.to_numeric(raw["year_x"], errors="coerce")
-    raw["is_new_borderline_benchmark"] = raw["benchmark_number"].eq(11)
-    raw = raw.sort_values(
-        ["is_new_borderline_benchmark", "year", "benchmark_number"],
-        ascending=[True, False, True],
-    )
+    # Chronological order, oldest at the top (R3.5); ties broken alphabetically by first author.
+    raw = raw.sort_values(["year", "first_author"], ascending=[True, True])
     raw["Benchmark"] = raw["first_author"].astype(str) + " " + raw["year"].astype(int).astype(str)
     raw = raw.set_index("Benchmark")
 
