@@ -107,7 +107,8 @@ def fmt_p(value: float) -> str:
 
 def latex_escape(text: object) -> str:
     text = "" if pd.isna(text) else str(text)
-    for old, new in [("\\", r"\textbackslash{}"), ("&", r"\&"), ("%", r"\%"), ("_", r"\_"), ("#", r"\#")]:
+    for old, new in [("\\", r"\textbackslash{}"), ("{", r"\{"), ("}", r"\}"), ("&", r"\&"), ("%", r"\%"), ("_", r"\_"),
+                     ("#", r"\#"), ("$", r"\$"), ("^", r"\textasciicircum{}"), ("~", r"\textasciitilde{}")]:
         text = text.replace(old, new)
     return text
 

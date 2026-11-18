@@ -11,7 +11,7 @@ from __future__ import annotations
 import pandas as pd
 
 from real_simulated_sensitivity import DEFAULT_INPUT, load_table
-from revision_utils import CURATION, REVISION_DIR, fmt, load_observations, write_latex_table
+from revision_utils import CURATION, REVISION_DIR, benchmark_labels, fmt, load_observations, write_latex_table
 
 OUT = REVISION_DIR / "tools"
 TABLES = REVISION_DIR / "tables"
@@ -25,7 +25,7 @@ def main() -> int:
 
     # tool list: every harmonised name used in the observation table (incl. spike-in rows)
     raw["Benchmark_label"] = pd.to_numeric(raw["benchmark_number"], errors="coerce").astype(int).astype(str)
-    labels = df.drop_duplicates("Benchmark").set_index("Benchmark")["Benchmark_label"]
+    labels = benchmark_labels()
     raw["Benchmark_label"] = raw["Benchmark_label"].map(labels).fillna(raw["Benchmark_label"])
     tl = raw.groupby("tool_name_clean").agg(
         reported_names=("tool_reported", lambda s: "; ".join(sorted(set(map(str, s))))),
