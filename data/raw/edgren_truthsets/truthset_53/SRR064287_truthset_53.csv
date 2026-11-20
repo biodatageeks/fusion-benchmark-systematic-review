@@ -1,0 +1,4 @@
+truthset_size,truthset_id,sra_run,cell_line,gene1_raw,gene2_raw,source,source_locator,validation,genomic_rearrangement_validation,source_codes,annotation_note
+53,haas_53,SRR064287,KPL-4,BSG,NFIX,Haas / FusionBenchmarking,edgren.truthset.raw line 24,,,,
+53,haas_53,SRR064287,KPL-4,NOTCH1,NUP214,Haas / FusionBenchmarking,edgren.truthset.raw line 25,,,,
+53,haas_53,SRR064287,KPL-4,PPP1R12A,SEPT10,Haas / FusionBenchmarking,edgren.truthset.raw line 26,,,,

@@ -1,0 +1,13 @@
+truthset_size,truthset_id,sra_run,cell_line,gene1_raw,gene2_raw,source,source_locator,validation,genomic_rearrangement_validation,source_codes,annotation_note
+53,haas_53,SRR064440,SK-BR-3,ANKHD1,PCDH1,Haas / FusionBenchmarking,edgren.truthset.raw line 42,,,,
+53,haas_53,SRR064440,SK-BR-3,CCDC85C,SETD3,Haas / FusionBenchmarking,edgren.truthset.raw line 43,,,,
+53,haas_53,SRR064440,SK-BR-3,CSE1L,AL035685.1,Haas / FusionBenchmarking,edgren.truthset.raw line 44,,,,
+53,haas_53,SRR064440,SK-BR-3,CYTH1,EIF3H,Haas / FusionBenchmarking,edgren.truthset.raw line 45,,,,
+53,haas_53,SRR064440,SK-BR-3,DHX35,ITCH,Haas / FusionBenchmarking,edgren.truthset.raw line 46,,,,
+53,haas_53,SRR064440,SK-BR-3,KLHDC2,SNTB1,Haas / FusionBenchmarking,edgren.truthset.raw line 47,,,,
+53,haas_53,SRR064440,SK-BR-3,NFS1,PREX1,Haas / FusionBenchmarking,edgren.truthset.raw line 48,,,,
+53,haas_53,SRR064440,SK-BR-3,PREX1,CPNE1,Haas / FusionBenchmarking,edgren.truthset.raw line 49,,,,
+53,haas_53,SRR064440,SK-BR-3,RARA,PKIA,Haas / FusionBenchmarking,edgren.truthset.raw line 50,,,,
+53,haas_53,SRR064440,SK-BR-3,SUMF1,LRRFIP2,Haas / FusionBenchmarking,edgren.truthset.raw line 51,,,,
+53,haas_53,SRR064440,SK-BR-3,TATDN1,GSDMB,Haas / FusionBenchmarking,edgren.truthset.raw line 52,,,,
+53,haas_53,SRR064440,SK-BR-3,WDR67,ZNF704,Haas / FusionBenchmarking,edgren.truthset.raw line 53,,,,

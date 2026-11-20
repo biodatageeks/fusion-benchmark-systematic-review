@@ -1,0 +1,4 @@
+truthset_size,truthset_id,sra_run,cell_line,gene1_raw,gene2_raw,source,source_locator,validation,genomic_rearrangement_validation,source_codes,annotation_note
+27,edgren_2011_27,SRR064286,MCF-7,BCAS4,BCAS3,Edgren 2011,"Table 1, data row 25",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,Previously reported,,
+27,edgren_2011_27,SRR064286,MCF-7,ARFGEF2,SULF2,Edgren 2011,"Table 1, data row 26",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,Previously reported,,
+27,edgren_2011_27,SRR064286,MCF-7,RPS6KB1,TMEM49,Edgren 2011,"Table 1, data row 27",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,Previously reported,,
