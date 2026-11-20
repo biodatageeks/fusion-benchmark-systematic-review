@@ -1,0 +1,7 @@
+sample_id,run_accession,cell_line,read_layout,read_length_bp,read_pairs,experiment_accession,library_name,prediction_dir
+SRR064286,SRR064286,MCF-7,PAIRED,50,8412431,SRX025827,FIMM-OK-MCF7-1,data/raw/edgren_predictions/<workflow_version>/SRR064286
+SRR064287,SRR064287,KPL-4,PAIRED,50,6800166,SRX025832,FIMM-OK-KPL4-1,data/raw/edgren_predictions/<workflow_version>/SRR064287
+SRR064438,SRR064438,BT-474,PAIRED,50,13515132,SRX025828,FIMM-OK-BT474-1,data/raw/edgren_predictions/<workflow_version>/SRR064438
+SRR064439,SRR064439,BT-474,PAIRED,50,7915382,SRX025829,FIMM-OK-BT474-2,data/raw/edgren_predictions/<workflow_version>/SRR064439
+SRR064440,SRR064440,SK-BR-3,PAIRED,50,9048352,SRX025830,FIMM-OK-SKBR3-1,data/raw/edgren_predictions/<workflow_version>/SRR064440
+SRR064441,SRR064441,SK-BR-3,PAIRED,50,9097152,SRX025831,FIMM-OK-SKBR3-2,data/raw/edgren_predictions/<workflow_version>/SRR064441

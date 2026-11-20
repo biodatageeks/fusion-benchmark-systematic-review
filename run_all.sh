@@ -2,6 +2,9 @@
 set -euo pipefail
 
 PYTHON_BIN="${PYTHON_BIN:-python3}"
+# Reproducible outputs: fixed hash seed (set ordering in CSV files) and fixed PDF timestamps
+export PYTHONHASHSEED=0
+export SOURCE_DATE_EPOCH="${SOURCE_DATE_EPOCH:-1767225600}"
 
 # Build the analysis input from the curated extraction (data/raw/benchmark.xlsx)
 $PYTHON_BIN scripts/build_analysis_input.py
@@ -26,9 +29,7 @@ $PYTHON_BIN scripts/tool_tables.py
 $PYTHON_BIN scripts/edgren_published_consistency.py
 $PYTHON_BIN scripts/edgren_reference_sensitivity.py --legacy
 $PYTHON_BIN scripts/edgren_reference_sensitivity.py --pooled
-if [[ -f data/edgren/sample_manifest.csv && -f data/edgren/reference_events.csv ]]; then
-  $PYTHON_BIN scripts/edgren_reference_sensitivity.py --unit sample
-  $PYTHON_BIN scripts/edgren_reference_sensitivity.py --unit cell_line
-else
-  echo "Skipping per-sample Edgren re-scoring: data/edgren inputs not yet provided (see data/edgren/README.md)."
-fi
+$PYTHON_BIN scripts/edgren_reference_sensitivity.py   # per-sample scoring of the 3.0.1 and 4.1.3 runs (Figure 7, Table S11)
+
+# Checks of scoring rules, input consistency and reported numbers
+$PYTHON_BIN -m pytest -q tests

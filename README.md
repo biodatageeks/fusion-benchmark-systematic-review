@@ -73,6 +73,16 @@ python scripts/edgren_rnafusion_validation.py
 python scripts/exploratory_random_effects.py
 ```
 
+## Tests
+
+`./run_all.sh` ends with the test suite, which can also be run on its own (`python -m pytest -q tests`; about 3 s) and runs on every push ([`.github/workflows/tests.yml`](.github/workflows/tests.yml)):
+
+- [`tests/test_scoring_rules.py`](tests/test_scoring_rules.py) - Edgren scoring rules on synthetic examples: undirected matching, aliases, deduplication, one match per reference event, per-sample restriction to the run's own cell line, per-cell-line union, Arriba multi-gene labels.
+- [`tests/test_edgren_data.py`](tests/test_edgren_data.py) - Edgren inputs and reported results: list sizes per cell line and nesting, agreement with the per-run reference sets, prediction row counts, the 3.0.1 outputs reproducing the submitted pooled workbook, the submitted TP/FP/FN, the per-sample F1-scores reported in the manuscript, and no match to another cell line's reference only.
+- [`tests/test_analysis_input.py`](tests/test_analysis_input.py) - analysis input built from `benchmark.xlsx`: 1,182 records from 13 benchmarks, metrics in [0, 1], F1 consistent with precision and recall (SMC-RNA DREAM reports sample-averaged metrics and is checked separately), counts consistent with rates, annotations for every modelled record, and the units and point estimate of the primary cross-classified model.
+
+`run_all.sh` fixes `PYTHONHASHSEED` and `SOURCE_DATE_EPOCH`, so repeated runs give byte-identical results.
+
 ## Revision analyses (response to reviewers, BIB-26-2487)
 
 Added in branch `revision/bib-26-2487`. Raw extraction files are not modified; revision-specific curation is kept in separate, reviewable files.
@@ -89,10 +99,10 @@ Added in branch `revision/bib-26-2487`. Raw extraction files are not modified; r
 | Descriptive benchmark-level summaries (purpose, read length, real-data subtype, use contexts) | [`scripts/descriptive_benchmark_summaries.py`](scripts/descriptive_benchmark_summaries.py) | [`results/revision/descriptive/`](results/revision/descriptive/) |
 | Tool list and tool profiles with numbers of observations | [`scripts/tool_tables.py`](scripts/tool_tables.py) | [`results/revision/tools/`](results/revision/tools/) |
 | Consistency of published TP27 vs TP99 Edgren scores | [`scripts/edgren_published_consistency.py`](scripts/edgren_published_consistency.py) | [`results/revision/edgren_published/`](results/revision/edgren_published/) |
-| Per-sample, multi-reference Edgren re-scoring of the same predictions | [`scripts/edgren_reference_sensitivity.py`](scripts/edgren_reference_sensitivity.py) + [`data/edgren/`](data/edgren/) | [`results/revision/edgren_reference_sensitivity/`](results/revision/edgren_reference_sensitivity/) |
+| Per-sample, multi-reference Edgren re-scoring of the same predictions (both RNAfusion runs; per cell line, pooled and Arriba-label sensitivity analyses; agreement between runs) | [`scripts/edgren_reference_sensitivity.py`](scripts/edgren_reference_sensitivity.py) + [`data/edgren/`](data/edgren/README.md) + [`data/raw/edgren_predictions/`](data/raw/edgren_predictions/README.md) + [`data/raw/edgren_truthsets/`](data/raw/edgren_truthsets/README.md) | [`results/revision/edgren_reference_sensitivity/`](results/revision/edgren_reference_sensitivity/), Figure 7, Supplementary Table S11 |
 | Chronological ordering of Figures 3-4 | `scripts/plot_benchmark_*_heatmap.py` | `results/benchmark_*/` |
 
-LaTeX tables for the Supplement are written to [`results/revision/tables/`](results/revision/tables/). The per-sample Edgren analysis needs the per-sample RNAfusion predictions described in [`data/edgren/README.md`](data/edgren/README.md); the archived execution records in [`data/raw/edgren_execution_logs/`](data/raw/edgren_execution_logs/) do not include caller predictions.
+LaTeX tables for the Supplement are written to [`results/revision/tables/`](results/revision/tables/). Caller predictions of both Edgren runs are in [`data/raw/edgren_predictions/`](data/raw/edgren_predictions/README.md) and the per-run reference sets in [`data/raw/edgren_truthsets/`](data/raw/edgren_truthsets/README.md); execution records are in [`data/raw/edgren_execution_logs/`](data/raw/edgren_execution_logs/).
 
 ## Edgren dataset annotation
 
