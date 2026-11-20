@@ -1,0 +1,4 @@
+truthset_size,truthset_id,sra_run,cell_line,gene1_raw,gene2_raw,source,source_locator,validation,genomic_rearrangement_validation,source_codes,annotation_note
+99,davidson_2015_99,SRR064287,KPL-4,BSG,NFIX,Davidson 2015,Additional file 3 / True Positives / row 48,,,1,Source explicitly permits | alternatives and genes close to known positives; do not silently expand these labels into independent validated events
+99,davidson_2015_99,SRR064287,KPL-4,PPP1R12A,SEPT10,Davidson 2015,Additional file 3 / True Positives / row 49,,,1,Source explicitly permits | alternatives and genes close to known positives; do not silently expand these labels into independent validated events
+99,davidson_2015_99,SRR064287,KPL-4,NOTCH1,NUP214,Davidson 2015,Additional file 3 / True Positives / row 50,,,1,Source explicitly permits | alternatives and genes close to known positives; do not silently expand these labels into independent validated events
