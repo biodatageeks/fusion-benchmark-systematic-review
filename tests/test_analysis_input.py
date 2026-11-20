@@ -84,3 +84,14 @@ def test_squeeze_maps_into_open_interval():
 def test_latex_escape():
     from revision_utils import latex_escape
     assert latex_escape("a_b & 50% #1 $x^2$ {y} ~") == r"a\_b \& 50\% \#1 \$x\textasciicircum{}2\$ \{y\} \textasciitilde{}"
+
+
+def test_in_scope_tool_counts(obs):
+    # The long-read "PacBio method" record is out of scope; the manuscript reports 65 tools from 41 families,
+    # with 5-24 tools per benchmark (mean 11.3, median 12), matching Supplementary Table S6.
+    s = obs[obs.exclusion_reason.fillna("").str.contains("long-read") == False]
+    assert s.tool_name_clean.nunique() == 65 and s.tool_family.nunique() == 41
+    per = s.groupby("benchmark_number").tool_name_clean.nunique()
+    assert (per.min(), per.max(), round(per.mean(), 1), per.median()) == (5, 24, 11.3, 12)
+    caption = (REPO / "results" / "revision" / "tables" / "supp_tool_list.tex").read_text()
+    assert "(65 entries, 41 tool families)" in caption
