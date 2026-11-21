@@ -1,0 +1,12 @@
+benchmark,Dataset,tool,list_id,precision,recall,F1
+Singh 2021,Dataset7.5,Arriba,TP27,0.14,0.815,0.24
+Davidson 2015,Dataset10.17,FusionCatcher,TP27,0.5483870967741935,0.6296296296296297,0.5862068965517241
+Liu 2016,Dataset12.4,FusionCatcher,TP27,,,0.405
+Singh 2021,Dataset7.5,FusionCatcher,TP27,0.45,0.741,0.56
+Singh 2021,Dataset7.5,STAR-Fusion,TP27,0.3,0.815,0.44
+Apostolides 2021,Dataset8.4,Arriba,TP53,0.221,0.792,0.346
+Apostolides 2021,Dataset8.4,STAR-Fusion,TP53,0.569,0.774,0.6559999999999999
+Singh 2021,Dataset7.6,Arriba,TP99,0.29,0.455,0.35
+Davidson 2015,Dataset10.4,FusionCatcher,TP99,0.8709677419354839,0.2727272727272727,0.4153846153846154
+Singh 2021,Dataset7.6,FusionCatcher,TP99,0.61,0.273,0.38
+Singh 2021,Dataset7.6,STAR-Fusion,TP99,0.55,0.414,0.47

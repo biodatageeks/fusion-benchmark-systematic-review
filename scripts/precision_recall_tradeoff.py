@@ -18,7 +18,6 @@ from real_simulated_sensitivity import load_table
 
 DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "processed" / "analysis_input.xlsx"
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "precision_recall_tradeoff"
-EDGREN_DATASETS = {"2.3", "5.1", "6.1", "6.2", "7.6", "7.7", "8.3", "10.2"}
 
 
 def clean_tool(value: object) -> str:
@@ -67,7 +66,9 @@ def load_clean_data() -> pd.DataFrame:
         .str.replace("Dataset", "", regex=False)
         .str.strip()
     )
-    df["Is_Edgren"] = df["DatasetID"].isin(EDGREN_DATASETS)
+    # Edgren rows are flagged in the analysis input (is_edgren), not by dataset number:
+    # dataset numbers change when the extraction is redone.
+    df["Is_Edgren"] = df["is_edgren"].astype(str).str.lower().str.strip().isin(["true", "yes", "1"])
     df["Is_real"] = df["DatasetType"].str.startswith("real")
     df["Is_simulated"] = df["DatasetType"].eq("simulated")
     rename = {

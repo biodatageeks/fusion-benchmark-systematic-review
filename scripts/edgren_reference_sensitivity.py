@@ -276,8 +276,29 @@ def pooled_multi_reference() -> int:
     return 0
 
 
-def plot_per_sample(agg: pd.DataFrame) -> None:
-    """Figure 7: per-sample (micro-averaged) metrics of the same predictions against three reference lists."""
+def published_edgren_metrics() -> pd.DataFrame:
+    """Values published by the included benchmarks for the same callers on the Edgren data, per reference list.
+
+    Only observations with a stated list size (27, 53 or 99) are kept; reported values are used as published
+    (Liu et al. 2016 reported F1 only).
+    """
+    from revision_utils import load_observations
+
+    df = load_observations()
+    pub = df[(df.bio_dataset_id == "EDGREN_BRCA_CELL_LINES") & df.TruthTotal.isin([27, 53, 99])
+             & df.Tool.isin(TOOL_COLUMNS)].copy()
+    pub["list_id"] = "TP" + pub.TruthTotal.astype(int).astype(str)
+    pub = pub.rename(columns={"Tool": "tool", "Precision": "precision", "Recall": "recall", "Benchmark_label": "benchmark"})
+    pub = pub[["benchmark", "Dataset", "tool", "list_id", "precision", "recall", "F1"]].sort_values(["list_id", "tool", "benchmark"])
+    pub.to_csv(OUT / "published_edgren_metrics.csv", index=False)
+    return pub.reset_index(drop=True)
+
+
+def plot_per_sample(agg: pd.DataFrame, published: pd.DataFrame | None = None) -> None:
+    """Figure 7: per-sample (micro-averaged) metrics of the same predictions against three reference lists.
+
+    Black markers: values published for the same caller and list (pooled scoring of other runs and versions).
+    """
     import os
     os.environ.setdefault("MPLBACKEND", "Agg")
     import matplotlib.pyplot as plt
@@ -290,12 +311,20 @@ def plot_per_sample(agg: pd.DataFrame) -> None:
         sub = agg[agg.workflow_version == version]
         for c, metric in enumerate(["precision", "recall", "F1"]):
             ax = axes[r, c]
+            marked = False
             for j, lid in enumerate(LISTS):
                 vals = [sub[(sub.tool == t) & (sub.list_id == lid)][metric].iloc[0] for t in tools]
                 xs = [k + (j - 1) * 0.26 for k in range(len(tools))]
                 ax.bar(xs, vals, width=0.26, color=colors[lid], label=f"{n_ref[lid]}-fusion list")
                 for x, v in zip(xs, vals):
                     ax.text(x, v + 0.015, f"{v:.2f}", ha="center", fontsize=7)
+                if published is None:
+                    continue
+                for x, t in zip(xs, tools):
+                    for v in published[(published.tool == t) & (published.list_id == lid)][metric].dropna():
+                        ax.hlines(v, x - 0.12, x + 0.12, colors="black", linewidth=2.2, zorder=5,
+                                  label="Published value, same caller and list" if not marked else None)
+                        marked = True
             ax.set_xticks(range(len(tools)), tools)
             ax.set_ylim(0, 1.0)
             ax.spines[["top", "right"]].set_visible(False)
@@ -402,7 +431,7 @@ def per_sample_analysis() -> int:
     pooled_file = OUT / "pooled_metrics_by_list.csv"
     pooled = pd.read_csv(pooled_file) if pooled_file.exists() else None
     by_sample, agg = results["sample"]
-    plot_per_sample(agg)
+    plot_per_sample(agg, published_edgren_metrics())
     write_table_s11(m, ref, by_sample, agg, pooled)
     return 0
 

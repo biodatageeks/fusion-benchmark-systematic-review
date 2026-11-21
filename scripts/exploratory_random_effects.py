@@ -211,10 +211,30 @@ def edgren_sensitivity(df: pd.DataFrame, tools: list[str]) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+DRIFT_BENCHMARK = 7  # Singh and Li 2021: the only study scoring 16 tools against both Edgren lists
+
+
+def edgren_list_dataset(df: pd.DataFrame, n_reference: int) -> str:
+    """Dataset ID of the Singh and Li Edgren scoring against the n-fusion list.
+
+    Selected by content rather than by a fixed ID: dataset numbers change when the extraction is redone.
+    """
+    is_edgren = df["Is_Edgren_Binary"].astype(str).str.lower().str.strip().eq("yes")
+    ids = df.loc[
+        pd.to_numeric(df["Benchmark"], errors="coerce").eq(DRIFT_BENCHMARK)
+        & is_edgren
+        & pd.to_numeric(df["TruthTotal"], errors="coerce").eq(n_reference),
+        "Dataset",
+    ].unique()
+    if len(ids) != 1:
+        raise ValueError(f"expected one Edgren {n_reference}-fusion dataset in benchmark {DRIFT_BENCHMARK}, got {list(ids)}")
+    return ids[0]
+
+
 def edgren_truth_set_drift(df: pd.DataFrame) -> pd.DataFrame:
     columns = ["Tool", "TP", "FP", "FN", "prec_yi", "sens_yi", "f1_yi"]
-    truth_27 = df[df["Dataset"].eq("Dataset7.6")][columns].copy()
-    truth_99 = df[df["Dataset"].eq("Dataset7.7")][columns].copy()
+    truth_27 = df[df["Dataset"].eq(edgren_list_dataset(df, 27))][columns].copy()
+    truth_99 = df[df["Dataset"].eq(edgren_list_dataset(df, 99))][columns].copy()
     truth_27.columns = ["Tool", "TP_27", "FP_27", "FN_27", "precision_27", "recall_27", "f1_27"]
     truth_99.columns = ["Tool", "TP_99", "FP_99", "FN_99", "precision_99", "recall_99", "f1_99"]
     drift = truth_27.merge(truth_99, on="Tool", how="inner")
@@ -231,14 +251,16 @@ def plot_edgren_drift_scatter(drift: pd.DataFrame) -> None:
     colors = np.where(data["delta_f1"].lt(0), "#D17C3F", "#5A6FBB")
     ax.plot([0, limit], [0, limit], color="#555555", linestyle="--", linewidth=1, alpha=0.65)
     ax.scatter(data["f1_27"], data["f1_99"], s=58, color=colors, edgecolor="white", linewidth=0.6, zorder=3)
+    offsets = {"INTEGRATE": (4, -9), "ChimeraScan": (4, -8)}  # labels that would overlap a neighbour
     for _, row in data.iterrows():
-        ax.annotate(row["Tool"], (row["f1_27"], row["f1_99"]), xytext=(4, 4), textcoords="offset points", fontsize=7)
+        ax.annotate(row["Tool"], (row["f1_27"], row["f1_99"]), xytext=offsets.get(row["Tool"], (4, 4)),
+                    textcoords="offset points", fontsize=7)
     ax.set_xlim(0, limit)
     ax.set_ylim(0, limit)
     ax.set_aspect("equal", adjustable="box")
-    ax.set_xlabel("F1-score with 27-fusion truth set")
-    ax.set_ylabel("F1-score with 99-fusion truth set")
-    ax.set_title("Truth-set-induced F1-score changes on identical Edgren data")
+    ax.set_xlabel("F1-score with the 27-fusion reference list")
+    ax.set_ylabel("F1-score with the 99-fusion reference list")
+    ax.set_title("Reference-induced F1-score changes on identical Edgren data")
     ax.grid(color="#E3E3E3")
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)

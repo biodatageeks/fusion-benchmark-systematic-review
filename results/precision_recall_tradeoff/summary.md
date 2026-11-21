@@ -4,9 +4,9 @@ Tool-level means were calculated from observations with both recall/sensitivity 
 
 ## Correlations
 - all: n=662, Pearson r=0.164 (p=2.23e-05), Spearman rho=0.089 (p=2.25e-02).
-- without_edgren: n=588, Pearson r=0.093 (p=2.48e-02), Spearman rho=0.012 (p=7.78e-01).
+- without_edgren: n=575, Pearson r=0.159 (p=1.24e-04), Spearman rho=0.051 (p=2.26e-01).
 - real: n=227, Pearson r=0.010 (p=8.86e-01), Spearman rho=-0.024 (p=7.20e-01).
-- real_without_edgren: n=180, Pearson r=-0.120 (p=1.09e-01), Spearman rho=-0.145 (p=5.14e-02).
+- real_without_edgren: n=140, Pearson r=0.023 (p=7.90e-01), Spearman rho=-0.054 (p=5.28e-01).
 - simulated: n=252, Pearson r=0.260 (p=2.99e-05), Spearman rho=0.038 (p=5.49e-01).
 
 ## High recall / low precision profile

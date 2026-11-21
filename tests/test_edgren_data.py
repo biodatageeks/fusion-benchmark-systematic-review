@@ -106,3 +106,14 @@ def test_no_call_matches_only_a_reference_of_another_cell_line(manifest, ref):
                 for pp in p.pred_pair:
                     if not any(pairs_match(pp, q, False) for q in own):
                         assert not any(pairs_match(pp, q, False) for q in other), (version, tool, cl, pp)
+
+
+def test_published_markers_in_figure_7():
+    """Figure 7 markers: values the included benchmarks published for the same callers and Edgren list."""
+    from edgren_reference_sensitivity import published_edgren_metrics
+
+    pub = published_edgren_metrics()
+    assert pub.groupby("list_id").size().to_dict() == {"TP27": 5, "TP53": 2, "TP99": 4}
+    assert set(pub.benchmark) == {"Singh 2021", "Davidson 2015", "Liu 2016", "Apostolides 2021"}
+    star99 = pub[(pub.tool == "STAR-Fusion") & (pub.list_id == "TP99")].iloc[0]
+    assert (star99.precision, star99.recall, star99.F1) == pytest.approx((0.55, 0.414, 0.47))
