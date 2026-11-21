@@ -11,6 +11,11 @@ This manifest lists the repository files that can be referenced as supplementary
 2. `data/raw/edgren_rnafusion.xlsx`
    - RNAfusion-derived Arriba, STAR-Fusion, and FusionCatcher calls on the Edgren dataset, together with the 99-fusion truth set.
 
+3. `data/raw/manuscript_publication_selection.xlsx`
+   - Consolidated publication selection register for the author-corrected 2015-2025 window.
+   - Includes source records and abstracts, search strategies, report-level evidence, staged decisions, and PRISMA reconciliation.
+   - AI-assisted proposals remain pending human confirmation; this is not a completed historical screening log or final inclusion list.
+
 ## Main derived tables and figures
 
 - `results/real_simulated/`
