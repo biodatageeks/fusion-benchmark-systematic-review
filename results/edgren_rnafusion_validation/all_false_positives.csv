@@ -56,7 +56,7 @@ Arriba,FITM2--UQCC1,"(frozenset({'FITM2'}), frozenset({'UQCC1'}))","('FITM2', 'U
 Arriba,FOXA1--TTC6,"(frozenset({'FOXA1'}), frozenset({'TTC6'}))","('FOXA1', 'TTC6')","('FOXA1', 'TTC6')",,False,False,directional
 Arriba,FRG1GP--ERG,"(frozenset({'FRG1GP'}), frozenset({'ERG'}))","('FRG1GP', 'ERG')","('FRG1GP', 'ERG')",,False,False,directional
 Arriba,GABRB3--RYR3,"(frozenset({'GABRB3'}), frozenset({'RYR3'}))","('GABRB3', 'RYR3')","('GABRB3', 'RYR3')",,False,False,directional
-Arriba,GCN1--MSI1,"(frozenset({'GCN1', 'GCN1L1'}), frozenset({'MSI1'}))","('GCN1|GCN1L1', 'MSI1')","('GCN1|GCN1L1', 'MSI1')",,False,False,directional
+Arriba,GCN1--MSI1,"(frozenset({'GCN1L1', 'GCN1'}), frozenset({'MSI1'}))","('GCN1|GCN1L1', 'MSI1')","('GCN1|GCN1L1', 'MSI1')",,False,False,directional
 Arriba,INIP--C5,"(frozenset({'INIP'}), frozenset({'C5'}))","('INIP', 'C5')","('INIP', 'C5')",,False,False,directional
 Arriba,INIP--CDC26,"(frozenset({'INIP'}), frozenset({'CDC26'}))","('INIP', 'CDC26')","('INIP', 'CDC26')",,False,False,directional
 Arriba,IQSEC1--AC090946.1,"(frozenset({'IQSEC1'}), frozenset({'AC090946.1'}))","('IQSEC1', 'AC090946.1')","('IQSEC1', 'AC090946.1')",,False,False,directional
@@ -91,7 +91,7 @@ Arriba,PDCL2P2--RB1CC1,"(frozenset({'PDCL2P2'}), frozenset({'RB1CC1'}))","('PDCL
 Arriba,POFUT1--AC119751.3,"(frozenset({'POFUT1'}), frozenset({'AC119751.3'}))","('POFUT1', 'AC119751.3')","('POFUT1', 'AC119751.3')",,False,False,directional
 Arriba,POFUT1--MTND3P22,"(frozenset({'POFUT1'}), frozenset({'MTND3P22'}))","('POFUT1', 'MTND3P22')","('POFUT1', 'MTND3P22')",,False,False,directional
 Arriba,POLA2--MAP3K11,"(frozenset({'POLA2'}), frozenset({'MAP3K11'}))","('POLA2', 'MAP3K11')","('POLA2', 'MAP3K11')",,False,False,directional
-Arriba,PPM1D--USP32,"(frozenset({'PPM1D'}), frozenset({'USP32'}))","('PPM1D', 'USP32')","('PPM1D', 'USP32')",,False,False,directional
+Arriba,PPM1D--USP32,"(frozenset({'PPM1D'}), frozenset({'USP32', 'UPS32'}))","('PPM1D', 'UPS32|USP32')","('PPM1D', 'UPS32|USP32')",,False,False,directional
 Arriba,PPP6R3--SHANK2,"(frozenset({'PPP6R3'}), frozenset({'SHANK2'}))","('PPP6R3', 'SHANK2')","('PPP6R3', 'SHANK2')",,False,False,directional
 Arriba,PREX1--LINC01754,"(frozenset({'PREX1'}), frozenset({'LINC01754'}))","('PREX1', 'LINC01754')","('PREX1', 'LINC01754')",,False,False,directional
 Arriba,PREX1--RPL35AP,"(frozenset({'PREX1'}), frozenset({'RPL35AP'}))","('PREX1', 'RPL35AP')","('PREX1', 'RPL35AP')",,False,False,directional
@@ -227,7 +227,7 @@ Arriba,PDCL2P2--RB1CC1,"(frozenset({'PDCL2P2'}), frozenset({'RB1CC1'}))","('PDCL
 Arriba,POFUT1--AC119751.3,"(frozenset({'POFUT1'}), frozenset({'AC119751.3'}))","('POFUT1', 'AC119751.3')","('AC119751.3', 'POFUT1')",,False,False,undirected
 Arriba,POFUT1--MTND3P22,"(frozenset({'POFUT1'}), frozenset({'MTND3P22'}))","('POFUT1', 'MTND3P22')","('MTND3P22', 'POFUT1')",,False,False,undirected
 Arriba,POLA2--MAP3K11,"(frozenset({'POLA2'}), frozenset({'MAP3K11'}))","('POLA2', 'MAP3K11')","('MAP3K11', 'POLA2')",,False,False,undirected
-Arriba,PPM1D--USP32,"(frozenset({'PPM1D'}), frozenset({'USP32'}))","('PPM1D', 'USP32')","('PPM1D', 'USP32')",,False,False,undirected
+Arriba,PPM1D--USP32,"(frozenset({'PPM1D'}), frozenset({'USP32', 'UPS32'}))","('PPM1D', 'UPS32|USP32')","('PPM1D', 'UPS32|USP32')",,False,False,undirected
 Arriba,PPP6R3--SHANK2,"(frozenset({'PPP6R3'}), frozenset({'SHANK2'}))","('PPP6R3', 'SHANK2')","('PPP6R3', 'SHANK2')",,False,False,undirected
 Arriba,PREX1--LINC01754,"(frozenset({'PREX1'}), frozenset({'LINC01754'}))","('PREX1', 'LINC01754')","('LINC01754', 'PREX1')",,False,False,undirected
 Arriba,PREX1--RPL35AP,"(frozenset({'PREX1'}), frozenset({'RPL35AP'}))","('PREX1', 'RPL35AP')","('PREX1', 'RPL35AP')",,False,False,undirected
@@ -290,7 +290,7 @@ FusionCatcher,STX16--RAE1,"(frozenset({'STX16'}), frozenset({'RAE1'}))","('STX16
 FusionCatcher,THRA--THRA1/BTR,"(frozenset({'THRA'}), frozenset({'THRA1/BTR'}))","('THRA', 'THRA1/BTR')","('THRA', 'THRA1/BTR')",,False,False,directional
 FusionCatcher,TOB1--SYNRG,"(frozenset({'TOB1'}), frozenset({'SYNRG'}))","('TOB1', 'SYNRG')","('TOB1', 'SYNRG')",,False,False,directional
 FusionCatcher,TRPC4AP--MRPL45,"(frozenset({'TRPC4AP'}), frozenset({'MRPL45'}))","('TRPC4AP', 'MRPL45')","('TRPC4AP', 'MRPL45')",,False,False,directional
-FusionCatcher,USP32--MED1,"(frozenset({'USP32'}), frozenset({'MED1'}))","('USP32', 'MED1')","('USP32', 'MED1')",,False,False,directional
+FusionCatcher,USP32--MED1,"(frozenset({'USP32', 'UPS32'}), frozenset({'MED1'}))","('UPS32|USP32', 'MED1')","('UPS32|USP32', 'MED1')",,False,False,directional
 FusionCatcher,ACACA--ERBB2,"(frozenset({'ACACA'}), frozenset({'ERBB2'}))","('ACACA', 'ERBB2')","('ACACA', 'ERBB2')",,False,False,undirected
 FusionCatcher,BRD4--RFX1,"(frozenset({'BRD4'}), frozenset({'RFX1'}))","('BRD4', 'RFX1')","('BRD4', 'RFX1')",,False,False,undirected
 FusionCatcher,EEF1A1--ERBB2,"(frozenset({'EEF1A1'}), frozenset({'ERBB2'}))","('EEF1A1', 'ERBB2')","('EEF1A1', 'ERBB2')",,False,False,undirected
@@ -299,7 +299,6 @@ FusionCatcher,ITCH--ERBB2,"(frozenset({'ITCH'}), frozenset({'ERBB2'}))","('ITCH'
 FusionCatcher,NPEPPS--TBC1D3,"(frozenset({'NPEPPS'}), frozenset({'TBC1D3'}))","('NPEPPS', 'TBC1D3')","('NPEPPS', 'TBC1D3')",,False,False,undirected
 FusionCatcher,SMG1--NPIPB5,"(frozenset({'SMG1'}), frozenset({'NPIPB5'}))","('SMG1', 'NPIPB5')","('NPIPB5', 'SMG1')",,False,False,undirected
 FusionCatcher,THRA--THRA1/BTR,"(frozenset({'THRA'}), frozenset({'THRA1/BTR'}))","('THRA', 'THRA1/BTR')","('THRA', 'THRA1/BTR')",,False,False,undirected
-FusionCatcher,USP32--MED1,"(frozenset({'USP32'}), frozenset({'MED1'}))","('USP32', 'MED1')","('MED1', 'USP32')",,False,False,undirected
 STAR-Fusion,AC025048.4--HEATR6,"(frozenset({'AC025048.4'}), frozenset({'HEATR6'}))","('AC025048.4', 'HEATR6')","('AC025048.4', 'HEATR6')",,False,False,directional
 STAR-Fusion,AC053481.3--DIAPH3,"(frozenset({'AC053481.3'}), frozenset({'DIAPH3'}))","('AC053481.3', 'DIAPH3')","('AC053481.3', 'DIAPH3')",,False,False,directional
 STAR-Fusion,AC090527.2--AKAP13,"(frozenset({'AC090527.2'}), frozenset({'AKAP13'}))","('AC090527.2', 'AKAP13')","('AC090527.2', 'AKAP13')",,False,False,directional
@@ -335,7 +334,7 @@ STAR-Fusion,THRA--THRA1/BTR,"(frozenset({'THRA'}), frozenset({'THRA1/BTR'}))","(
 STAR-Fusion,TOB1--SYNRG,"(frozenset({'TOB1'}), frozenset({'SYNRG'}))","('TOB1', 'SYNRG')","('TOB1', 'SYNRG')",,False,False,directional
 STAR-Fusion,TRIM37--MYO19,"(frozenset({'TRIM37'}), frozenset({'MYO19'}))","('TRIM37', 'MYO19')","('TRIM37', 'MYO19')",5.0,True,False,directional
 STAR-Fusion,TRPC4AP--MRPL45,"(frozenset({'TRPC4AP'}), frozenset({'MRPL45'}))","('TRPC4AP', 'MRPL45')","('TRPC4AP', 'MRPL45')",,False,False,directional
-STAR-Fusion,USP32--MED1,"(frozenset({'USP32'}), frozenset({'MED1'}))","('USP32', 'MED1')","('USP32', 'MED1')",,False,False,directional
+STAR-Fusion,USP32--MED1,"(frozenset({'USP32', 'UPS32'}), frozenset({'MED1'}))","('UPS32|USP32', 'MED1')","('UPS32|USP32', 'MED1')",,False,False,directional
 STAR-Fusion,WASF3--COL5A1,"(frozenset({'WASF3'}), frozenset({'COL5A1'}))","('WASF3', 'COL5A1')","('WASF3', 'COL5A1')",,False,False,directional
 STAR-Fusion,AC025048.4--HEATR6,"(frozenset({'AC025048.4'}), frozenset({'HEATR6'}))","('AC025048.4', 'HEATR6')","('AC025048.4', 'HEATR6')",,False,False,undirected
 STAR-Fusion,AC053481.3--DIAPH3,"(frozenset({'AC053481.3'}), frozenset({'DIAPH3'}))","('AC053481.3', 'DIAPH3')","('AC053481.3', 'DIAPH3')",,False,False,undirected
@@ -365,5 +364,4 @@ STAR-Fusion,PTMA--EEF1A2,"(frozenset({'PTMA'}), frozenset({'EEF1A2'}))","('PTMA'
 STAR-Fusion,TADA2A--AL589743.3,"(frozenset({'TADA2A'}), frozenset({'AL589743.3'}))","('TADA2A', 'AL589743.3')","('AL589743.3', 'TADA2A')",,False,False,undirected
 STAR-Fusion,THRA--THRA1/BTR,"(frozenset({'THRA'}), frozenset({'THRA1/BTR'}))","('THRA', 'THRA1/BTR')","('THRA', 'THRA1/BTR')",,False,False,undirected
 STAR-Fusion,TRIM37--MYO19,"(frozenset({'TRIM37'}), frozenset({'MYO19'}))","('TRIM37', 'MYO19')","('MYO19', 'TRIM37')",5.0,True,False,undirected
-STAR-Fusion,USP32--MED1,"(frozenset({'USP32'}), frozenset({'MED1'}))","('USP32', 'MED1')","('MED1', 'USP32')",,False,False,undirected
 STAR-Fusion,WASF3--COL5A1,"(frozenset({'WASF3'}), frozenset({'COL5A1'}))","('WASF3', 'COL5A1')","('COL5A1', 'WASF3')",,False,False,undirected

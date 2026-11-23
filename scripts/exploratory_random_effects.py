@@ -212,7 +212,15 @@ def edgren_sensitivity(df: pd.DataFrame, tools: list[str]) -> pd.DataFrame:
 
 
 def edgren_truth_set_drift(df: pd.DataFrame) -> pd.DataFrame:
-    columns = ["Tool", "TP", "FP", "FN", "prec_yi", "sens_yi", "f1_yi"]
+    """Singh and Li 2021 scored the same predictions against the 27- and 99-fusion lists (Datasets 7.6 and 7.7).
+
+    Metrics are the values reported in the study; recomputing them from TP/FP/FN would use counts
+    that were back-calculated from rounded precision and recall.
+    """
+    df = df.copy()
+    for reported, computed in (("Precision", "prec_yi"), ("Recall", "sens_yi"), ("F1", "f1_yi")):
+        df[reported] = df[reported].fillna(df[computed])
+    columns = ["Tool", "TP", "FP", "FN", "Precision", "Recall", "F1"]
     truth_27 = df[df["Dataset"].eq("Dataset7.6")][columns].copy()
     truth_99 = df[df["Dataset"].eq("Dataset7.7")][columns].copy()
     truth_27.columns = ["Tool", "TP_27", "FP_27", "FN_27", "precision_27", "recall_27", "f1_27"]
@@ -261,7 +269,7 @@ def plot_i2(pooled: pd.DataFrame) -> None:
     height = 0.24
     colors = {"precision": "#D17C3F", "sensitivity": "#4C9A6A", "f1": "#5A6FBB"}
     for offset, metric in zip([-height, 0, height], metric_order):
-        ax.barh(y_pos + offset, pivot[metric], height=height, label=metric, color=colors[metric], alpha=0.86)
+        ax.barh(y_pos + offset, pivot[metric], height=height, label={"sensitivity": "recall", "f1": "F1-score"}.get(metric, metric), color=colors[metric], alpha=0.86)
     ax.axvline(75, color="#9C2F2F", linestyle="--", linewidth=1, label="I² = 75%")
     ax.set_yticks(y_pos)
     ax.set_yticklabels(pivot.index)

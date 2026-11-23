@@ -1,0 +1,33 @@
+tool,n_observations,n_benchmarks,mean_precision,mean_recall,profile,n_real_without_edgren,mean_precision_real_without_edgren,mean_recall_real_without_edgren
+Arriba,23,6,0.652,0.797,intermediate,5.0,0.54,0.677
+Arriba-hc,3,1,0.916,0.731,intermediate,,,
+ChimeraScan,29,6,0.394,0.578,intermediate,5.0,0.207,0.411
+ChimeRScope,7,1,0.123,0.254,low recall / low precision,,,
+ChimPipe,28,4,0.785,0.699,intermediate,4.0,0.427,0.582
+deFuse,35,9,0.667,0.653,intermediate,4.0,0.473,0.675
+EricScript,18,5,0.41,0.602,intermediate,4.0,0.044,0.542
+FuSeq,10,2,0.454,0.685,intermediate,3.0,0.256,0.68
+FusionCatcher,18,8,0.705,0.647,intermediate,5.0,0.676,0.61
+FusionHunter,4,2,0.771,0.423,intermediate,,,
+FusionMap,29,5,0.676,0.567,intermediate,5.0,0.236,0.525
+GFusion,3,2,0.569,0.779,intermediate,,,
+InFusion,12,3,0.612,0.555,intermediate,,,
+INTEGRATE,13,2,0.554,0.558,intermediate,,,
+JAFFA,13,3,0.355,0.567,intermediate,3.0,0.184,0.625
+JAFFA-Assembly,5,2,0.807,0.555,low recall / high precision,,,
+JAFFA-Direct,3,2,0.772,0.768,intermediate,,,
+JAFFA-Hybrid,3,2,0.722,0.735,intermediate,,,
+MapSplice,10,2,0.75,0.523,intermediate,,,
+MetaFusion,6,1,0.758,0.92,intermediate,,,
+MetaFusion.top_3,6,1,0.834,0.89,high recall / high precision,,,
+nFuse,4,2,0.625,0.614,intermediate,,,
+Pizzly,10,2,0.552,0.663,intermediate,,,
+PRADA,19,2,0.901,0.66,intermediate,3.0,0.686,0.619
+SOAPfuse,30,8,0.72,0.762,intermediate,4.0,0.39,0.699
+STAR-Fusion,23,6,0.665,0.712,intermediate,5.0,0.542,0.631
+STAR-SEQR,11,3,0.583,0.842,intermediate,,,
+STARChip,10,2,0.414,0.282,low recall / low precision,,,
+TopHat-Fusion,54,10,0.577,0.519,intermediate,7.0,0.266,0.381
+TrinityFusion-C,3,1,0.977,0.639,intermediate,,,
+TrinityFusion-D,3,1,0.961,0.412,low recall / high precision,,,
+TrinityFusion-UC,3,1,0.956,0.617,intermediate,,,

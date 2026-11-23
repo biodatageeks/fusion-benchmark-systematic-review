@@ -14,4 +14,4 @@ FusionCatcher,STX16--RAE1,"(frozenset({'STX16'}), frozenset({'RAE1'}))","('STX16
 FusionCatcher,THRA--THRA1/BTR,"(frozenset({'THRA'}), frozenset({'THRA1/BTR'}))","('THRA', 'THRA1/BTR')","('THRA', 'THRA1/BTR')",,False,False,directional
 FusionCatcher,TOB1--SYNRG,"(frozenset({'TOB1'}), frozenset({'SYNRG'}))","('TOB1', 'SYNRG')","('TOB1', 'SYNRG')",,False,False,directional
 FusionCatcher,TRPC4AP--MRPL45,"(frozenset({'TRPC4AP'}), frozenset({'MRPL45'}))","('TRPC4AP', 'MRPL45')","('TRPC4AP', 'MRPL45')",,False,False,directional
-FusionCatcher,USP32--MED1,"(frozenset({'USP32'}), frozenset({'MED1'}))","('USP32', 'MED1')","('USP32', 'MED1')",,False,False,directional
+FusionCatcher,USP32--MED1,"(frozenset({'USP32', 'UPS32'}), frozenset({'MED1'}))","('UPS32|USP32', 'MED1')","('UPS32|USP32', 'MED1')",,False,False,directional

@@ -1,10 +1,10 @@
 comparison,truth_fusions
 Arriba,49
-FusionCatcher,39
-STAR-Fusion,46
+FusionCatcher,40
+STAR-Fusion,47
 Arriba ∩ FusionCatcher,38
 Arriba ∩ STAR-Fusion,44
-FusionCatcher ∩ STAR-Fusion,38
+FusionCatcher ∩ STAR-Fusion,39
 all three tools,37
-any tool,51
-no tool,48
+any tool,52
+no tool,47

@@ -1,0 +1,11 @@
+truthset_size,truthset_id,sra_run,cell_line,gene1_raw,gene2_raw,source,source_locator,validation,genomic_rearrangement_validation,source_codes,annotation_note
+27,edgren_2011_27,SRR064441,SK-BR-3,TATDN1,GSDMB,Edgren 2011,"Table 1, data row 12",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,Yes,,
+27,edgren_2011_27,SRR064441,SK-BR-3,CSE1L,ENSG00000236127,Edgren 2011,"Table 1, data row 13",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,,,
+27,edgren_2011_27,SRR064441,SK-BR-3,RARA,PKIA,Edgren 2011,"Table 1, data row 14",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,Yes,,
+27,edgren_2011_27,SRR064441,SK-BR-3,ANKHD1,PCDH1,Edgren 2011,"Table 1, data row 15",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,Yes,,
+27,edgren_2011_27,SRR064441,SK-BR-3,CCDC85C,SETD3,Edgren 2011,"Table 1, data row 16",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,Yes,,
+27,edgren_2011_27,SRR064441,SK-BR-3,SUMF1,LRRFIP2,Edgren 2011,"Table 1, data row 17",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,,,
+27,edgren_2011_27,SRR064441,SK-BR-3,WDR67,ZNF704,Edgren 2011,"Table 1, data row 18",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,Yes,,
+27,edgren_2011_27,SRR064441,SK-BR-3,CYTH1,EIF3H,Edgren 2011,"Table 1, data row 19",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,Yes,,
+27,edgren_2011_27,SRR064441,SK-BR-3,DHX35,ITCH,Edgren 2011,"Table 1, data row 20",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,Yes,,
+27,edgren_2011_27,SRR064441,SK-BR-3,NFS1,PREX1,Edgren 2011,"Table 1, data row 21",RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,,,

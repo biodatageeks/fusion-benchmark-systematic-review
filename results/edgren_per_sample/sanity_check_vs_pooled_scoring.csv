@@ -1,0 +1,7 @@
+tool,matching,unique_predictions_here,unique_predictions_pooled,TP_here,TP_pooled,FP_here,FP_pooled,FN_here,FN_pooled
+Arriba,directional,184,184,41,41,143,143,58,58
+Arriba,undirected,182,182,49,49,133,133,50,50
+FusionCatcher,directional,48,48,32,32,16,16,67,67
+FusionCatcher,undirected,48,48,40,40,8,8,59,59
+STAR-Fusion,directional,76,76,39,39,37,37,60,60
+STAR-Fusion,undirected,76,76,47,47,29,29,52,52

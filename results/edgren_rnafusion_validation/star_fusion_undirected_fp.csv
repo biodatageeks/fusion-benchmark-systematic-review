@@ -27,5 +27,4 @@ STAR-Fusion,PTMA--EEF1A2,"(frozenset({'PTMA'}), frozenset({'EEF1A2'}))","('PTMA'
 STAR-Fusion,TADA2A--AL589743.3,"(frozenset({'TADA2A'}), frozenset({'AL589743.3'}))","('TADA2A', 'AL589743.3')","('AL589743.3', 'TADA2A')",,False,False,undirected
 STAR-Fusion,THRA--THRA1/BTR,"(frozenset({'THRA'}), frozenset({'THRA1/BTR'}))","('THRA', 'THRA1/BTR')","('THRA', 'THRA1/BTR')",,False,False,undirected
 STAR-Fusion,TRIM37--MYO19,"(frozenset({'TRIM37'}), frozenset({'MYO19'}))","('TRIM37', 'MYO19')","('MYO19', 'TRIM37')",5.0,True,False,undirected
-STAR-Fusion,USP32--MED1,"(frozenset({'USP32'}), frozenset({'MED1'}))","('USP32', 'MED1')","('MED1', 'USP32')",,False,False,undirected
 STAR-Fusion,WASF3--COL5A1,"(frozenset({'WASF3'}), frozenset({'COL5A1'}))","('WASF3', 'COL5A1')","('COL5A1', 'WASF3')",,False,False,undirected

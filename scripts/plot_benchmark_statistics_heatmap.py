@@ -101,11 +101,8 @@ def prepare_data() -> tuple[pd.DataFrame, pd.DataFrame]:
     raw = load_table(INPUT, sheet_name="benchmark_metadata").dropna(subset=["benchmark_number"]).copy()
     raw["benchmark_number"] = pd.to_numeric(raw["benchmark_number"], errors="coerce").astype(int)
     raw["year"] = pd.to_numeric(raw["year_x"], errors="coerce")
-    raw["is_new_borderline_benchmark"] = raw["benchmark_number"].eq(11)
-    raw = raw.sort_values(
-        ["is_new_borderline_benchmark", "year", "benchmark_number"],
-        ascending=[True, False, True],
-    )
+    # Rows in chronological order, most recent first (as stated in the figure caption).
+    raw = raw.sort_values(["year", "benchmark_number"], ascending=[False, True])
     raw["Benchmark"] = raw["first_author"].astype(str) + " " + raw["year"].astype(int).astype(str)
     raw = raw.set_index("Benchmark")
 

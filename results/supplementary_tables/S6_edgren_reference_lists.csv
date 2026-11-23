@@ -1,0 +1,104 @@
+cell_line,fusion,list_27,list_38,list_53,list_99,sources,evidence,records_merged
+BT-474,ACACA::STAC2,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+BT-474,CPNE1|RBM12::PI3,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+BT-474,DIDO1::TTI1|KIAA0406,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+BT-474,GLB1::CMTM7,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+BT-474,LAMP1::MCF2L,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+BT-474,RAB22A::MYO9B,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+BT-474,RPS6KB1::SNF8,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+BT-474,SKA2|TRIM37::MYO19,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+BT-474,STARD3::DOK5,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+BT-474,VAPB::IKZF3,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+BT-474,ZMYND8::CEP250,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+KPL-4,BSG::NFIX,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+KPL-4,NOTCH1::NUP214,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+KPL-4,PPP1R12A::SEPT10,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+MCF-7,ARFGEF2::SULF2,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+MCF-7,BCAS4::BCAS3,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+MCF-7,RPS6KB1::VMP1|TMEM49,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+SK-BR-3,ANKHD1|ANKHD1-EIF4EBP3::PCDH1,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+SK-BR-3,CCDC85C::SETD3,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+SK-BR-3,CSE1L::ENSG00000236127|RP4-791K14.2,True,False,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking,RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,3
+SK-BR-3,CYTH1::EIF3H|ENSG00000147677,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+SK-BR-3,DHX35::ITCH,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+SK-BR-3,NFS1::PREX1,True,False,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking,RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,3
+SK-BR-3,RARA::PKIA,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+SK-BR-3,SUMF1::LRRFIP2,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+SK-BR-3,TATDN1::GSDMB,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+SK-BR-3,WDR67|TBC1D31::ZNF704,True,True,True,True,Davidson 2015; Edgren 2011; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2; RT-PCR and Sanger reported in article; NFS1-PREX1 described as tentative,4
+BT-474,ACSF2|ENSG00000167107::MED1,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+BT-474,AHCTF1|ENSG00000153207::NAAA,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+BT-474,BCAS3::MED13,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+BT-474,MED1::STXBP4,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+BT-474,MED1::USP32,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+BT-474,MRPL45::TRPC4AP,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+BT-474,PIP4K2B::RAD51C,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+BT-474,RAE1::STX16-NPEPL1|STX16,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+BT-474,SYNRG::TOB1|ENSG00000141232,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+BT-474,THRA::AC090627.1|SKAP1,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+MCF-7,MSI1::GCN1L1,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+MCF-7,SMARCA4::CARM1,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+MCF-7,VMP1|TMEM49::AC099850.1|ENSG00000224738,False,True,True,True,Davidson 2015; Haas / FusionBenchmarking; Rodriguez-Martin et al. 2017; doi:10.1186/s12864-016-3404-9,Listed as RT-PCR validated in Table S2,3
+BT-474,FAM102A::CIZ1,False,False,True,False,Haas / FusionBenchmarking,,1
+BT-474,LIMA1::USP22,False,False,True,False,Haas / FusionBenchmarking,,1
+MCF-7,ADAMTS19::SLC27A6,False,False,True,True,Davidson 2015; Haas / FusionBenchmarking,,2
+MCF-7,AHCYL1::RAD51C,False,False,True,True,Davidson 2015; Haas / FusionBenchmarking,,2
+MCF-7,AK7::PAPOLA,False,False,True,True,Davidson 2015; Haas / FusionBenchmarking,,2
+MCF-7,ARHGAP19::DRG1,False,False,True,True,Davidson 2015; Haas / FusionBenchmarking,,2
+MCF-7,ATXN7L3::FAM171A2|GRN,False,False,True,True,Davidson 2015; Haas / FusionBenchmarking,,2
+MCF-7,MYH9::EIF3D,False,False,True,False,Haas / FusionBenchmarking,,1
+MCF-7,MYO9B::FCHO1,False,False,True,True,Davidson 2015; Haas / FusionBenchmarking,,2
+MCF-7,RPS6KB1::DIAPH3,False,False,True,True,Davidson 2015; Haas / FusionBenchmarking,,2
+MCF-7,SULF2::PRICKLE2|RP11-129B22.1|PRICKLE2-AS1,False,False,True,True,Davidson 2015; Haas / FusionBenchmarking,,2
+SK-BR-3,KLHDC2::SNTB1,False,False,True,False,Haas / FusionBenchmarking,,1
+SK-BR-3,PREX1::CPNE1,False,False,True,True,Davidson 2015; Haas / FusionBenchmarking,,2
+MCF-7,ABCA5::PPP4R1L,False,False,False,True,Davidson 2015,,1
+MCF-7,ANKS1A::UHRF1BP1,False,False,False,True,Davidson 2015,,1
+MCF-7,ATP1A1::AK222712|ZFP64|ENSG00000020256,False,False,False,True,Davidson 2015,,1
+MCF-7,B3GNTL1::SLC9A8,False,False,False,True,Davidson 2015,,1
+MCF-7,BCAS3::AMPD1,False,False,False,True,Davidson 2015,,1
+MCF-7,BCAS3::ATXN7,False,False,False,True,Davidson 2015,,1
+MCF-7,BCAS4::ZMYND8,False,False,False,True,Davidson 2015,,1
+MCF-7,C16orf45|MPV17L|RP11-1021N1.1|C16ORF45::ABCC1,False,False,False,True,Davidson 2015,,1
+MCF-7,C16orf62::IQCK,False,False,False,True,Davidson 2015,,1
+MCF-7,CHEK2::XBP1|ENSG00000226471,False,False,False,True,Davidson 2015,,1
+MCF-7,CXorf15|TXLNG::SYAP1,False,False,False,True,Davidson 2015,,1
+MCF-7,DEPDC1B::ELOVL7,False,False,False,True,Davidson 2015,,1
+MCF-7,ESR1::C6orf97|CCDC170,False,False,False,True,Davidson 2015,,1
+MCF-7,GATAD2B::NUP210L,False,False,False,True,Davidson 2015,,1
+MCF-7,KCND3::PPM1E,False,False,False,True,Davidson 2015,,1
+MCF-7,MTAP|RP11-145E5.5::CDKN2BAS|CDKN2B-AS1,False,False,False,True,Davidson 2015,,1
+MCF-7,MYO6::SENP6,False,False,False,True,Davidson 2015,,1
+MCF-7,NAV1|IPO9-AS1::GPR37L1,False,False,False,True,Davidson 2015,,1
+MCF-7,NCOA3::SULF2,False,False,False,True,Davidson 2015,,1
+MCF-7,PLCG1::TOP1,False,False,False,True,Davidson 2015,,1
+MCF-7,PNPLA7::WDR85|DPH7,False,False,False,True,Davidson 2015,,1
+MCF-7,POP1::MATN2,False,False,False,True,Davidson 2015,,1
+MCF-7,PTPRG::CCDC129,False,False,False,True,Davidson 2015,,1
+MCF-7,PTPRN2::FAM62B,False,False,False,True,Davidson 2015,,1
+MCF-7,RAD51C::ATXN7,False,False,False,True,Davidson 2015,,1
+MCF-7,RSBN1::AK123199|AP4B1-AS1|AP4B1,False,False,False,True,Davidson 2015,,1
+MCF-7,SGPP2::ULK4,False,False,False,True,Davidson 2015,,1
+MCF-7,SLC25A24::NBPF6|NBPF4,False,False,False,True,Davidson 2015,,1
+MCF-7,SYTL2::PICALM,False,False,False,True,Davidson 2015,,1
+MCF-7,TAF4::BRIP1,False,False,False,True,Davidson 2015,,1
+MCF-7,TBL1XR1::RGS17,False,False,False,True,Davidson 2015,,1
+MCF-7,TEX14::PTPRG,False,False,False,True,Davidson 2015,,1
+MCF-7,TOP1::CR593014,False,False,False,True,Davidson 2015,,1
+MCF-7,TSPAN9::TEAD4,False,False,False,True,Davidson 2015,,1
+MCF-7,UBE2V1|TMEM189-UBE2V1::TBX2|TBX2-AS1,False,False,False,True,Davidson 2015,,1
+MCF-7,USP31::CRYL1,False,False,False,True,Davidson 2015,,1
+MCF-7,VAV3::AK123199|AP4B1-AS1|AP4B1|PTPN22|RP5-1073O3.2,False,False,False,True,Davidson 2015,,1
+MCF-7,ZMYND8::USP32,False,False,False,True,Davidson 2015,,1
+SK-BR-3,ATAD5::TLK2,False,False,False,True,Davidson 2015,,1
+SK-BR-3,CBX3::C15orf57,False,False,False,True,Davidson 2015,,1
+SK-BR-3,COL14A1::MTSS1,False,False,False,True,Davidson 2015,,1
+SK-BR-3,DEPDC1B::PDE4D,False,False,False,True,Davidson 2015,,1
+SK-BR-3,KIAA1303::AB046838,False,False,False,True,Davidson 2015,,1
+SK-BR-3,PBRM1::WDR82,False,False,False,True,Davidson 2015,,1
+SK-BR-3,PLDN::AKAP13,False,False,False,True,Davidson 2015,,1
+SK-BR-3,RANBP10::PSKH1,False,False,False,True,Davidson 2015,,1
+SK-BR-3,TAF2::COLEC10,False,False,False,True,Davidson 2015,,1
+SK-BR-3,TRIO::FBXL7,False,False,False,True,Davidson 2015,,1
+SK-BR-3,VSTM2L::CTNNBL1,False,False,False,True,Davidson 2015,,1
+SK-BR-3,WDR67::SLC30A8,False,False,False,True,Davidson 2015,,1

@@ -1,22 +1,22 @@
 # Real vs simulated sensitivity analyses
 
-Input observations after cleaning: 376
-Benchmarks: 11
-Tools: 48
-Datasets: 35
+Input observations after cleaning: 586
+Benchmarks: 17
+Tools: 51
+Datasets: 77
 
 ## Dataset type models
 
 ### F1
-Mean simulated = 0.710; mean real = 0.425; beta real vs simulated = -0.305; 95% CI -0.344 to -0.265; p = 2.03e-51.
+Mean simulated = 0.685; mean real = 0.374; beta real vs simulated = -0.338; 95% CI -0.378 to -0.297; p = 1.90e-60.
 
 ### Precision
-Mean simulated = 0.786; mean real = 0.451; beta real vs simulated = -0.385; 95% CI -0.431 to -0.340; p = 5.52e-62.
+Mean simulated = 0.793; mean real = 0.421; beta real vs simulated = -0.420; 95% CI -0.466 to -0.374; p = 9.08e-72.
 
 ### Recall
-Mean simulated = 0.680; mean real = 0.527; beta real vs simulated = -0.172; 95% CI -0.220 to -0.124; p = 1.76e-12.
+Mean simulated = 0.651; mean real = 0.536; beta real vs simulated = -0.140; 95% CI -0.189 to -0.092; p = 1.76e-08.
 
 ## Excluding Edgren-labelled observations
-F1: n = 251; beta real vs simulated = -0.342; 95% CI -0.391 to -0.293; p = 1.02e-42.
-Precision: n = 254; beta real vs simulated = -0.412; 95% CI -0.465 to -0.358; p = 3.94e-51.
-Recall: n = 295; beta real vs simulated = -0.196; 95% CI -0.254 to -0.138; p = 3.26e-11.
+F1: n = 424; beta real vs simulated = -0.402; 95% CI -0.453 to -0.351; p = 2.98e-53.
+Precision: n = 372; beta real vs simulated = -0.474; 95% CI -0.531 to -0.416; p = 3.23e-58.
+Recall: n = 405; beta real vs simulated = -0.174; 95% CI -0.236 to -0.112; p = 4.17e-08.

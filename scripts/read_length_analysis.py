@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from scipy import stats
-import statsmodels.formula.api as smf
 
+from crossed_models import expit, fit_crossed, prepare
 from real_simulated_sensitivity import DEFAULT_INPUT, load_table, normalize_columns
 
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "read_length"
@@ -34,34 +34,51 @@ def canonical_read_length(value: float) -> float:
 
 
 def fit_read_length_model(df: pd.DataFrame) -> pd.DataFrame:
-    model_df = df.dropna(subset=["F1", "Read_length", "Benchmark", "Tool"]).copy()
-    model_df["Read_length"] = pd.to_numeric(model_df["Read_length"], errors="coerce").map(canonical_read_length)
-    model_df = model_df.dropna(subset=["Read_length"]).copy()
-    model_df["Read_length"] = model_df["Read_length"].astype(int).astype(str)
-    model_df["Read_length"] = pd.Categorical(model_df["Read_length"], categories=["100", "75", "50"])
-    model_df["Benchmark"] = model_df["Benchmark"].astype("category")
-    model_df["Tool"] = model_df["Tool"].astype("category")
+    """Read length (reference 100 bp) with crossed random intercepts for tool, biological dataset group and benchmark.
 
-    result = smf.mixedlm(
-        "F1 ~ Read_length + C(Benchmark)",
-        model_df,
-        groups=model_df["Tool"],
-    ).fit(reml=True)
+    Same models as the real-versus-simulated comparison (crossed_models.py): M1 on the logit scale, reported as the
+    difference in F1 for a typical tool, dataset group and benchmark, expit(b0 + b) - expit(b0), with the Wald CI
+    transformed the same way and the Wald p-value; M2 (same random effects, F1 scale) as a sensitivity analysis.
+    """
+    dm = pd.read_excel(DEFAULT_INPUT, sheet_name="dataset_metadata")[["dataset_id", "biological_dataset_group"]]
+    model_df = df.merge(dm, left_on="Dataset", right_on="dataset_id", how="left", validate="many_to_one")
+    model_df["Bio"] = model_df["biological_dataset_group"]
+    model_df = model_df.dropna(subset=["F1", "Read_length", "Benchmark", "Tool", "Bio"]).copy()
+    model_df["Read_length"] = model_df["Read_length"].astype(int).astype(str)
+    model_df["Benchmark"] = model_df["Benchmark"].astype(str)
+    model_df["Bio"] = model_df["Bio"].astype(str)
+    model_df = prepare(model_df, "F1")
+
+    formula = "{} ~ C(Read_length, Treatment('100'))"
+    m1, m2 = fit_crossed(model_df, formula.format("yl")), fit_crossed(model_df, formula.format("y"))
+    b0 = m1.params["Intercept"]
 
     rows = []
-    for term in ["Read_length[T.75]", "Read_length[T.50]"]:
-        ci = result.conf_int().loc[term]
+    for level in ["75", "50"]:
+        term = f"C(Read_length, Treatment('100'))[T.{level}]"
+        b = m1.params[term]
+        lo, hi = m1.conf_int().loc[term]
+        lo2, hi2 = m2.conf_int().loc[term]
         rows.append(
             {
-                "term": term,
-                "beta": result.params[term],
-                "ci_low": ci.iloc[0],
-                "ci_high": ci.iloc[1],
-                "p_value": result.pvalues[term],
+                "term": f"Read_length[T.{level}]",
+                "diff": expit(b0 + b) - expit(b0),
+                "ci_low": expit(b0 + lo) - expit(b0),
+                "ci_high": expit(b0 + hi) - expit(b0),
+                "p_value": m1.pvalues[term],
+                "logit_beta": b,
+                "logit_ci_low": lo,
+                "logit_ci_high": hi,
+                "m2_diff": m2.params[term],
+                "m2_ci_low": lo2,
+                "m2_ci_high": hi2,
+                "m2_p_value": m2.pvalues[term],
                 "n": int(model_df.shape[0]),
                 "n_tools": int(model_df["Tool"].nunique()),
+                "n_bio_groups": int(model_df["Bio"].nunique()),
                 "n_benchmarks": int(model_df["Benchmark"].nunique()),
-                "converged": bool(result.converged),
+                "m1_converged": bool(m1.converged),
+                "m2_converged": bool(m2.converged),
             }
         )
     return pd.DataFrame(rows)
@@ -173,12 +190,18 @@ def main() -> None:
     lines.append("")
     lines.append(f"Kruskal-Wallis H={h_stat:.2f}, p={format_p(h_p)}.")
     lines.append("")
-    lines.append("## Mixed-effects model, reference 100 bp")
+    lines.append("## Mixed-effects model with crossed random intercepts (tool, biological dataset group, benchmark), reference 100 bp")
+    first = model.iloc[0]
+    lines.append(
+        f"n={int(first['n'])} observations, {int(first['n_tools'])} tools, {int(first['n_bio_groups'])} dataset groups, "
+        f"{int(first['n_benchmarks'])} benchmarks; converged: M1 {bool(first['m1_converged'])}, M2 {bool(first['m2_converged'])}."
+    )
     for _, row in model.iterrows():
         label = "75 bp" if "75" in row["term"] else "50 bp"
         lines.append(
-            f"- {label}: beta={row['beta']:.3f}, 95% CI {row['ci_low']:.3f} to {row['ci_high']:.3f}, "
-            f"p={format_p(row['p_value'])}."
+            f"- {label}: M1 difference in F1={row['diff']:.3f}, 95% CI {row['ci_low']:.3f} to {row['ci_high']:.3f}, "
+            f"p={format_p(row['p_value'])}; M2 difference={row['m2_diff']:.3f}, 95% CI {row['m2_ci_low']:.3f} to "
+            f"{row['m2_ci_high']:.3f}, p={format_p(row['m2_p_value'])}."
         )
     (OUTPUT_DIR / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print((OUTPUT_DIR / "summary.md").read_text(encoding="utf-8"))

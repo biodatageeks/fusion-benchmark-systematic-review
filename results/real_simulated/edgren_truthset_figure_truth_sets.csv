@@ -1,9 +1,12 @@
-Benchmark,Dataset,Benchmark_label,TruthTotal
-10,Dataset10.2,B10 / Dataset10.2,99.0
-2,Dataset2.3,B2 / Dataset2.3,80.0
-5,Dataset5.1,B5 / Dataset5.1,37.0
-6,Dataset6.1,B6 / Dataset6.1,27.0
-6,Dataset6.2,B6 / Dataset6.2,99.0
-7,Dataset7.6,B7 / Dataset7.6,27.0
-7,Dataset7.7,B7 / Dataset7.7,99.0
-8,Dataset8.3,B8 / Dataset8.3,53.0
+Benchmark,Year,Dataset,Benchmark_label,TruthTotal
+18,2014,Dataset18.1,Nicorici 2014,40.0
+10,2015,Dataset10.2,Davidson 2015,99.0
+12,2016,Dataset12.4,Liu 2016,27.0
+5,2017,Dataset5.1,Zhao 2017,37.0
+15,2017,Dataset15.15,Rodriguez-Martin 2017,38.0
+15,2017,Dataset15.16,Rodriguez-Martin 2017,42.0
+6,2018,Dataset6.1,Vu 2018,27.0
+6,2018,Dataset6.2,Vu 2018,99.0
+7,2021,Dataset7.6,Singh 2021,27.0
+7,2021,Dataset7.7,Singh 2021,99.0
+8,2021,Dataset8.3,Apostolides 2021,53.0

@@ -56,7 +56,7 @@ Arriba,FITM2--UQCC1,"(frozenset({'FITM2'}), frozenset({'UQCC1'}))","('FITM2', 'U
 Arriba,FOXA1--TTC6,"(frozenset({'FOXA1'}), frozenset({'TTC6'}))","('FOXA1', 'TTC6')","('FOXA1', 'TTC6')",,False,False,directional
 Arriba,FRG1GP--ERG,"(frozenset({'FRG1GP'}), frozenset({'ERG'}))","('FRG1GP', 'ERG')","('FRG1GP', 'ERG')",,False,False,directional
 Arriba,GABRB3--RYR3,"(frozenset({'GABRB3'}), frozenset({'RYR3'}))","('GABRB3', 'RYR3')","('GABRB3', 'RYR3')",,False,False,directional
-Arriba,GCN1--MSI1,"(frozenset({'GCN1', 'GCN1L1'}), frozenset({'MSI1'}))","('GCN1|GCN1L1', 'MSI1')","('GCN1|GCN1L1', 'MSI1')",,False,False,directional
+Arriba,GCN1--MSI1,"(frozenset({'GCN1L1', 'GCN1'}), frozenset({'MSI1'}))","('GCN1|GCN1L1', 'MSI1')","('GCN1|GCN1L1', 'MSI1')",,False,False,directional
 Arriba,INIP--C5,"(frozenset({'INIP'}), frozenset({'C5'}))","('INIP', 'C5')","('INIP', 'C5')",,False,False,directional
 Arriba,INIP--CDC26,"(frozenset({'INIP'}), frozenset({'CDC26'}))","('INIP', 'CDC26')","('INIP', 'CDC26')",,False,False,directional
 Arriba,IQSEC1--AC090946.1,"(frozenset({'IQSEC1'}), frozenset({'AC090946.1'}))","('IQSEC1', 'AC090946.1')","('IQSEC1', 'AC090946.1')",,False,False,directional
@@ -91,7 +91,7 @@ Arriba,PDCL2P2--RB1CC1,"(frozenset({'PDCL2P2'}), frozenset({'RB1CC1'}))","('PDCL
 Arriba,POFUT1--AC119751.3,"(frozenset({'POFUT1'}), frozenset({'AC119751.3'}))","('POFUT1', 'AC119751.3')","('POFUT1', 'AC119751.3')",,False,False,directional
 Arriba,POFUT1--MTND3P22,"(frozenset({'POFUT1'}), frozenset({'MTND3P22'}))","('POFUT1', 'MTND3P22')","('POFUT1', 'MTND3P22')",,False,False,directional
 Arriba,POLA2--MAP3K11,"(frozenset({'POLA2'}), frozenset({'MAP3K11'}))","('POLA2', 'MAP3K11')","('POLA2', 'MAP3K11')",,False,False,directional
-Arriba,PPM1D--USP32,"(frozenset({'PPM1D'}), frozenset({'USP32'}))","('PPM1D', 'USP32')","('PPM1D', 'USP32')",,False,False,directional
+Arriba,PPM1D--USP32,"(frozenset({'PPM1D'}), frozenset({'USP32', 'UPS32'}))","('PPM1D', 'UPS32|USP32')","('PPM1D', 'UPS32|USP32')",,False,False,directional
 Arriba,PPP6R3--SHANK2,"(frozenset({'PPP6R3'}), frozenset({'SHANK2'}))","('PPP6R3', 'SHANK2')","('PPP6R3', 'SHANK2')",,False,False,directional
 Arriba,PREX1--LINC01754,"(frozenset({'PREX1'}), frozenset({'LINC01754'}))","('PREX1', 'LINC01754')","('PREX1', 'LINC01754')",,False,False,directional
 Arriba,PREX1--RPL35AP,"(frozenset({'PREX1'}), frozenset({'RPL35AP'}))","('PREX1', 'RPL35AP')","('PREX1', 'RPL35AP')",,False,False,directional

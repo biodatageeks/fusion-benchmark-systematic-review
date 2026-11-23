@@ -72,9 +72,12 @@ def status(value: object) -> str:
     return "partial"
 
 
-def new_tool_status(value: object) -> str:
-    text = normalize_text(value).lower()
-    return "no" if text == "no" or not text else "yes"
+def new_tool_status(purpose: object) -> str:
+    """Y for benchmarks that introduce a fusion detection tool (benchmark_purpose, as in the analyses).
+
+    Tan 2015 introduces a simulator and compares two existing callers, so it is not a new-tool paper.
+    """
+    return "yes" if normalize_text(purpose).lower().startswith("new-tool") else "no"
 
 
 def reproducibility_status(row: pd.Series) -> str:
@@ -93,11 +96,8 @@ def prepare_heatmap_data() -> tuple[pd.DataFrame, pd.DataFrame]:
     raw["Benchmark_number"] = pd.to_numeric(raw["benchmark_number"], errors="coerce").astype(int)
     raw["Year"] = pd.to_numeric(raw["year_x"], errors="coerce").astype(int)
     raw["First_author"] = raw["first_author"]
-    raw["is_new_borderline_benchmark"] = raw["Benchmark_number"].eq(11)
-    raw = raw.sort_values(
-        ["is_new_borderline_benchmark", "Year", "Benchmark_number"],
-        ascending=[True, False, True],
-    )
+    # Rows in chronological order, most recent first (as stated in the figure caption).
+    raw = raw.sort_values(["Year", "Benchmark_number"], ascending=[False, True])
     raw["Benchmark"] = raw["First_author"].astype(str) + " " + raw["Year"].astype(int).astype(str)
 
     display = pd.DataFrame(
@@ -108,7 +108,7 @@ def prepare_heatmap_data() -> tuple[pd.DataFrame, pd.DataFrame]:
             "Tool versions": raw["tool_versions_reported"].apply(status),
             "Parameters": raw["parameters_disclosed"].apply(status),
             "Fully reproducible": raw.apply(reproducibility_status, axis=1),
-            "New-tool paper": raw["new_tool_annotation"].apply(new_tool_status),
+            "New-tool paper": raw["benchmark_purpose"].apply(new_tool_status),
         },
     )
     display.index = raw["Benchmark"].tolist()

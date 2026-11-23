@@ -1,0 +1,8 @@
+Benchmark,Truthset,Source,Fusion_list
+2,69 + WGS-supported,"Davidson et al. 2015 validated fusions (69 distinct gene pairs), or breakpoints within 100 kb of a structural variant in matched MCF-7 WGS (Uhrig et al. 2021); no fixed-size truth set",69-pair list available (Davidson et al. 2015); WGS-supported events not provided as a list
+5,37,Edgren et al. 2011 and Kangaspeska et al. 2012.,unavalable
+6,27 or 99,TP27 — 27 validated fusion genes from Edgren et al. 2011.,available
+7,27 or 99,"TP99 — 99 validated/extended fusion genes,  Kangaspeska et al. and Davidson/JAFFA.",available
+8,53,from Haas et al. 2019,available
+1,53,wisdom of crowd,available
+10,99,a total of 99 fusions have previously been validated,available
