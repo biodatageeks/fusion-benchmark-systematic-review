@@ -1,0 +1,19 @@
+benchmark,purpose,library,read_length_bp,layout,truth_set_type,parameters_reported,n_tools,obs_simulated,obs_cell_line,obs_patient,obs_mixed,obs_spike_in,median_f1_simulated,median_f1_real
+Benelli 2012,New-tool benchmark,whole transcriptome,"50, 75, 100",PE,Proxy-based,yes,5,5,0,0,0,0,0.59,
+Jia 2013,New-tool benchmark,whole transcriptome,"50, 75",PE,Proxy-based,yes,3,27,0,0,0,0,0.892,
+Nicorici 2014,New-tool benchmark,whole transcriptome,50,PE,Published validated fusions,no,7,0,8,0,0,0,,0.583
+Davidson 2015,New-tool benchmark,whole transcriptome,"50, 75, 100, 250",PE/SE,Published validated fusions,partial,7,7,5,0,0,0,0.825,0.4
+Tan 2015,Simulator development with a two-caller comparison,whole transcriptome,75,PE,Proxy-based,yes,2,20,0,0,0,0,0.879,
+Kumar 2016,Independent comparison,whole transcriptome,"50, 75, 100",PE,RNA + WGS + experimental validation,yes,12,12,12,0,0,0,0.717,
+Zhang 2016,New-tool benchmark,whole transcriptome,not reported,PE,RNA + WGS + experimental validation,partial,12,0,12,0,0,0,,0.386
+Liu 2016,Independent comparison,whole transcriptome,"50, 75, 100",PE,Published validated fusions,yes,15,39,15,11,14,0,0.651,0.205
+Zhao 2017,New-tool benchmark,whole transcriptome,75,PE/SE,Published validated fusions,partial,5,5,10,0,0,0,0.312,0.583
+Rodriguez-Martin 2017,New-tool benchmark,whole transcriptome,"50, 75, 100",PE,Published validated fusions,yes,5,60,10,0,10,0,0.755,0.357
+Vu 2018,New-tool benchmark,whole transcriptome,"50, 100",PE,Published validated fusions,partial,6,0,12,6,6,0,,0.265
+Haas 2019,New-tool benchmark,whole transcriptome,"50, 100",PE,No defined truth set / wisdom of crowds,yes,25,48,27,0,0,0,0.849,0.563
+Uhrig 2021,New-tool benchmark,whole transcriptome,"75, 100",PE,Proxy-based,yes,7,7,14,7,0,7,0.499,
+Balan 2021,New-tool benchmark,targeted,not reported,PE,RNA + WGS + experimental validation,partial,4,0,0,0,4,0,,
+Singh 2021,Independent comparison,whole transcriptome,"50, 75, 100",PE,Published validated fusions,yes,16,64,48,0,0,0,0.699,0.24
+Apostolides 2021,New-tool benchmark,whole transcriptome/targeted,"50, 100",PE,Proxy-based,no,9,27,9,0,9,9,0.836,0.358
+Creason 2021,Independent comparison,whole transcriptome,100,PE,Proxy-based,yes,7,0,0,0,0,13,,
+Vicente-Garces 2023,New-tool benchmark,whole transcriptome,not reported,PE,Clinically validated/expected fusions,partial,8,0,8,8,0,0,,0.82

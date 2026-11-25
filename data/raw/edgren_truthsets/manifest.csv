@@ -17,3 +17,9 @@ truthset_size,truthset_id,sra_run,cell_line,events_for_cell_line,file
 99,davidson_2015_99,SRR064439,BT-474,21,truthset_99/SRR064439_truthset_99.csv
 99,davidson_2015_99,SRR064440,SK-BR-3,23,truthset_99/SRR064440_truthset_99.csv
 99,davidson_2015_99,SRR064441,SK-BR-3,23,truthset_99/SRR064441_truthset_99.csv
+38,chimpipe_2017_edgren_38,SRR064286,MCF-7,6,truthset_38/SRR064286_truthset_38.csv
+38,chimpipe_2017_edgren_38,SRR064287,KPL-4,3,truthset_38/SRR064287_truthset_38.csv
+38,chimpipe_2017_edgren_38,SRR064438,BT-474,21,truthset_38/SRR064438_truthset_38.csv
+38,chimpipe_2017_edgren_38,SRR064439,BT-474,21,truthset_38/SRR064439_truthset_38.csv
+38,chimpipe_2017_edgren_38,SRR064440,SK-BR-3,8,truthset_38/SRR064440_truthset_38.csv
+38,chimpipe_2017_edgren_38,SRR064441,SK-BR-3,8,truthset_38/SRR064441_truthset_38.csv

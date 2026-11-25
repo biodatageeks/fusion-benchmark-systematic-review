@@ -31,6 +31,21 @@ def jitter_positions(center: float, size: int, width: float = 0.12) -> np.ndarra
     return center + rng.uniform(-width, width, size=size)
 
 
+CROSSED_MODELS = Path(__file__).resolve().parents[1] / "results" / "crossed_models" / "real_vs_simulated_models.csv"
+
+
+def load_crossed_results() -> pd.DataFrame | None:
+    """Crossed random-effects model (crossed_models.py): difference on the metric scale, 95% CI from the
+    benchmark cluster bootstrap, Wald p. None if the file is absent (then the simpler model is shown)."""
+    if not CROSSED_MODELS.exists():
+        return None
+    d = pd.read_csv(CROSSED_MODELS)
+    m1 = d[(d["model"] == "M1") & (d["scale"] == "metric difference")]
+    boot = m1[m1["ci_method"].str.startswith("benchmark")].set_index("metric")
+    wald = m1[m1["ci_method"].str.startswith("Wald")].set_index("metric")
+    return pd.DataFrame({"estimate": boot["estimate"], "ci_low": boot["ci_low"], "ci_high": boot["ci_high"], "p_value": wald["p"]})
+
+
 def load_model_results(output_dir: Path) -> pd.DataFrame:
     path = output_dir / "dataset_type_models.csv"
     if not path.exists():
@@ -40,7 +55,7 @@ def load_model_results(output_dir: Path) -> pd.DataFrame:
     return pd.read_csv(path).set_index("metric")
 
 
-def add_metric_panel(ax: plt.Axes, df: pd.DataFrame, models: pd.DataFrame, metric: str) -> None:
+def add_metric_panel(ax: plt.Axes, df: pd.DataFrame, models: pd.DataFrame, metric: str, crossed: pd.DataFrame | None = None) -> None:
     metric_df = df.dropna(subset=[metric, "DatasetType"]).copy()
     groups = [
         metric_df.loc[metric_df["DatasetType"] == "simulated", metric],
@@ -74,14 +89,25 @@ def add_metric_panel(ax: plt.Axes, df: pd.DataFrame, models: pd.DataFrame, metri
             rasterized=True,
         )
 
-    result = models.loc[metric]
-    annotation = (
-        rf"$\beta$ = {result['beta_real_vs_simulated']:.3f}"
-        "\n"
-        rf"95% CI {result['ci_low']:.3f} to {result['ci_high']:.3f}"
-        "\n"
-        rf"$p$ = {result['p_value']:.2e}"
-    )
+    if crossed is not None:
+        result = crossed.loc[metric]
+        p = result["p_value"]
+        annotation = (
+            f"Difference {result['estimate']:.3f}"
+            "\n"
+            f"95% CI {result['ci_low']:.3f} to {result['ci_high']:.3f}"
+            "\n"
+            + (rf"$p$ = {p:.3f}" if p >= 0.001 else r"$p$ < 0.001")
+        )
+    else:
+        result = models.loc[metric]
+        annotation = (
+            rf"$\beta$ = {result['beta_real_vs_simulated']:.3f}"
+            "\n"
+            rf"95% CI {result['ci_low']:.3f} to {result['ci_high']:.3f}"
+            "\n"
+            rf"$p$ = {result['p_value']:.2e}"
+        )
     ax.text(
         0.04,
         0.05,
@@ -109,13 +135,15 @@ def main() -> None:
 
     df = normalize_columns(load_table(DEFAULT_INPUT))
     models = load_model_results(output_dir)
+    crossed = load_crossed_results()
 
     fig, axes = plt.subplots(1, 3, figsize=(10.8, 3.8), sharey=True)
     for ax, metric in zip(axes, METRICS):
-        add_metric_panel(ax, df, models, metric)
+        add_metric_panel(ax, df, models, metric, crossed)
 
     fig.suptitle(
-        "Performance estimates are lower for real than simulated RNA-seq datasets",
+        "Performance estimates for real and simulated RNA-seq datasets"
+        if crossed is not None else "Performance estimates are lower for real than simulated RNA-seq datasets",
         fontsize=13,
         fontweight="bold",
         y=1.03,

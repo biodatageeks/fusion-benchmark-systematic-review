@@ -23,7 +23,8 @@ def parse_new_tool(value: object) -> list[str]:
     text = str(value).strip()
     if not text or text.lower() == "no" or text.lower() == "nan":
         return []
-    text = re.sub(r"^yes,\s*", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"^yes\s*[,:]\s*", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s*\([^)]*\)", "", text)
     return [part.strip() for part in re.split(r"\s+and\s+|,", text) if part.strip()]
 
 

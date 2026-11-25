@@ -31,6 +31,9 @@ ALIASES = {
     "AL035685.1": {"RP4-791K14.2", "AL035685.1"},
     "UHRF1BP1": {"UHRF1BP1", "BLTP3A"},
     "BLTP3A": {"UHRF1BP1", "BLTP3A"},
+    # the 99-fusion list (Davidson 2015, Additional file 3) spells USP32 as UPS32 (BT-474 MED1--UPS32)
+    "UPS32": {"UPS32", "USP32"},
+    "USP32": {"UPS32", "USP32"},
 }
 
 

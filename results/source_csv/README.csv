@@ -1,0 +1,14 @@
+field,value
+purpose,Minimal master workbook used as input for manuscript calculations; supplementary tables should be derived from this file or from repository outputs.
+primary_observation_unit,tool-dataset-condition observation
+edgren_dataset_ids,"10.2, 5.1, 6.1, 6.2, 7.6, 7.7, 8.3, 12.4, 15.15, 15.16, 18.1"
+observation_rows,615
+tool_count_reported_names,56
+tool_count_clean_names,53
+dataset_count_observations,80
+observations_with_f1,546
+observations_with_precision_recall,471
+recommended_use,"Use observations for real/simulated, mixed models, leave-one-benchmark-out, read length, benchmark purpose, Edgren sensitivity, and precision-recall analyses."
+not_intended_as,This workbook is not the formatted supplementary information file; it is a clean analysis input.
+benchmarks,18 benchmarks
+biological_dataset_group,dataset_metadata column: the same biological data (same libraries or the same simulated design) used in several benchmarks share a group; otherwise group = dataset_id. Use it for crossed random effects. Cell colours are informal and not used by the analyses.

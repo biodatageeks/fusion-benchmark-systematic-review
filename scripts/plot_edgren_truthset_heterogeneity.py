@@ -33,12 +33,19 @@ def prepare_edgren_data() -> tuple[pd.DataFrame, pd.DataFrame]:
         edgren_mask = pd.Series(False, index=df.index)
     edgren = df[edgren_mask].copy()
     edgren = edgren.dropna(subset=["TruthTotal"])
-    edgren["Benchmark_label"] = "B" + edgren["Benchmark"].astype(str) + " / " + edgren["Dataset"].astype(str)
+    # bars labelled by study (author and year) in chronological order, as in Supplementary Table S1
+    meta = load_table(DEFAULT_INPUT, sheet_name="benchmark_metadata")
+    meta = meta.dropna(subset=["benchmark_number"])
+    years = dict(zip(meta["benchmark_number"].astype(int), pd.to_numeric(meta["year_x"], errors="coerce").astype(int)))
+    authors = dict(zip(meta["benchmark_number"].astype(int), meta["first_author"].astype(str)))
+    edgren["Benchmark"] = pd.to_numeric(edgren["Benchmark"], errors="coerce").astype(int)
+    edgren["Year"] = edgren["Benchmark"].map(years)
+    edgren["Benchmark_label"] = edgren["Benchmark"].map(authors) + " " + edgren["Year"].astype(str)
 
     truth_sets = (
-        edgren[["Benchmark", "Dataset", "Benchmark_label", "TruthTotal"]]
+        edgren[["Benchmark", "Year", "Dataset", "Benchmark_label", "TruthTotal"]]
         .drop_duplicates()
-        .sort_values(["Benchmark", "Dataset", "TruthTotal"])
+        .sort_values(["Year", "Benchmark", "TruthTotal"])
         .reset_index(drop=True)
     )
 

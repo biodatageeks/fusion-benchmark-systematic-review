@@ -193,6 +193,8 @@ def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
                 "independent_comparison": "independent_comparison",
                 "independent": "independent_comparison",
                 "comparison": "independent_comparison",
+                # Tan 2015: simulator paper comparing two callers it did not develop
+                "simulator_development_with_a_two_caller_comparison": "independent_comparison",
             }
         )
     elif "new_tool" in df.columns:
@@ -205,7 +207,7 @@ def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
         df["Introduced_tool"] = (
             df["new_tool"]
             .astype(str)
-            .str.replace(r"^yes,\s*", "", regex=True)
+            .str.replace(r"^yes\s*[,:]\s*", "", regex=True, case=False)
             .where(df["Benchmark_purpose"].eq("new_tool"), "")
         )
 

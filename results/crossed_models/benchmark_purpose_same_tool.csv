@@ -1,0 +1,7 @@
+metric,subset,n_tools_in_both,n_higher_in_new_tool,median_tool_diff_new_minus_independent,mean_tool_diff_new_minus_independent
+F1,all tools,21,18,0.17177221828595057,0.16044587126498205
+F1,without the authors' own new tool,20,17,0.13287629232078502,0.1572923426831176
+Precision,all tools,16,13,0.14223225363859654,0.13977984983329822
+Precision,without the authors' own new tool,15,12,0.12986576190476185,0.13863997685047497
+Recall,all tools,19,15,0.14734904437965657,0.1576786001064898
+Recall,without the authors' own new tool,18,13,0.12553680340823198,0.14768450549068796

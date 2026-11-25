@@ -7,4 +7,3 @@ FusionCatcher,ITCH--ERBB2,"(frozenset({'ITCH'}), frozenset({'ERBB2'}))","('ITCH'
 FusionCatcher,NPEPPS--TBC1D3,"(frozenset({'NPEPPS'}), frozenset({'TBC1D3'}))","('NPEPPS', 'TBC1D3')","('NPEPPS', 'TBC1D3')",,False,False,undirected
 FusionCatcher,SMG1--NPIPB5,"(frozenset({'SMG1'}), frozenset({'NPIPB5'}))","('SMG1', 'NPIPB5')","('NPIPB5', 'SMG1')",,False,False,undirected
 FusionCatcher,THRA--THRA1/BTR,"(frozenset({'THRA'}), frozenset({'THRA1/BTR'}))","('THRA', 'THRA1/BTR')","('THRA', 'THRA1/BTR')",,False,False,undirected
-FusionCatcher,USP32--MED1,"(frozenset({'USP32'}), frozenset({'MED1'}))","('USP32', 'MED1')","('MED1', 'USP32')",,False,False,undirected

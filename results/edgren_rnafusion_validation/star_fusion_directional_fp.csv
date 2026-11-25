@@ -34,5 +34,5 @@ STAR-Fusion,THRA--THRA1/BTR,"(frozenset({'THRA'}), frozenset({'THRA1/BTR'}))","(
 STAR-Fusion,TOB1--SYNRG,"(frozenset({'TOB1'}), frozenset({'SYNRG'}))","('TOB1', 'SYNRG')","('TOB1', 'SYNRG')",,False,False,directional
 STAR-Fusion,TRIM37--MYO19,"(frozenset({'TRIM37'}), frozenset({'MYO19'}))","('TRIM37', 'MYO19')","('TRIM37', 'MYO19')",5.0,True,False,directional
 STAR-Fusion,TRPC4AP--MRPL45,"(frozenset({'TRPC4AP'}), frozenset({'MRPL45'}))","('TRPC4AP', 'MRPL45')","('TRPC4AP', 'MRPL45')",,False,False,directional
-STAR-Fusion,USP32--MED1,"(frozenset({'USP32'}), frozenset({'MED1'}))","('USP32', 'MED1')","('USP32', 'MED1')",,False,False,directional
+STAR-Fusion,USP32--MED1,"(frozenset({'USP32', 'UPS32'}), frozenset({'MED1'}))","('UPS32|USP32', 'MED1')","('UPS32|USP32', 'MED1')",,False,False,directional
 STAR-Fusion,WASF3--COL5A1,"(frozenset({'WASF3'}), frozenset({'COL5A1'}))","('WASF3', 'COL5A1')","('WASF3', 'COL5A1')",,False,False,directional

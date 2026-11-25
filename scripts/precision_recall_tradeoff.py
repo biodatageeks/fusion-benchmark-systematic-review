@@ -18,7 +18,7 @@ from real_simulated_sensitivity import load_table
 
 DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "raw" / "master_analysis_input.xlsx"
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "results" / "precision_recall_tradeoff"
-EDGREN_DATASETS = {"2.3", "5.1", "6.1", "6.2", "7.6", "7.7", "8.3", "10.2"}
+EDGREN_DATASETS = {"5.1", "6.1", "6.2", "7.6", "7.7", "8.3", "10.2"}
 
 
 def clean_tool(value: object) -> str:
@@ -44,7 +44,7 @@ def canonical_tool(value: object) -> str:
     if normalized == "starchip":
         return "STARChip"
     if normalized == "arriba-hc":
-        return "Arriba_hc"
+        return "Arriba-hc"
     if normalized.startswith("integrate "):
         return text.replace(" ", "")
     return text
@@ -67,7 +67,10 @@ def load_clean_data() -> pd.DataFrame:
         .str.replace("Dataset", "", regex=False)
         .str.strip()
     )
-    df["Is_Edgren"] = df["DatasetID"].isin(EDGREN_DATASETS)
+    if "is_edgren" in df.columns:
+        df["Is_Edgren"] = df["is_edgren"].astype(str).str.lower().str.strip().isin(["true", "yes", "1"])
+    else:
+        df["Is_Edgren"] = df["DatasetID"].isin(EDGREN_DATASETS)
     df["Is_real"] = df["DatasetType"].str.startswith("real")
     df["Is_simulated"] = df["DatasetType"].eq("simulated")
     rename = {
